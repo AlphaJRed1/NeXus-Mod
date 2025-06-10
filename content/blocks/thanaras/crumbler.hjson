@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: Crumbler
+description: Grinds down nickel into sand. Used when sand is scarce or not present in certain sectors.
+size: 2
+hasPower: true
+hasItems: true
+craftTime: 210
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 5
+}
+]
+}
+consumes: {
+  power: 1.32
+  items: {
+    items: [
+nickel/1
+    ]
+  }
+}
+requirements: [
+nickel/80
+titanium/15
+]
+category: crafting
+outputItem: sand/2
+planet: thanaras
+research: {
+  parent: silicon-forge
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+      captureWave: 41
+planet: thanaras
+sector: 22
+difficulty: 8
+addStartingItems: false
+research: {
+  parent: luminescent-tendrils
+requiresUnlock: false
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+localizedName: Vion Plateau
+description: This once barren plateau has been overtaken by this vion material, turning it into a large amalgamation of different mineral floors and resources. Proceed with caution, however, as the Korru have set up three different spawn points throughout the lengthy flat. It appears there is a new resource here that they hope they obtain, so capture this sector and discover this item before they do.

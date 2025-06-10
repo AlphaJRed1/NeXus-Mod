@@ -1,0 +1,12 @@
+research: {
+parent: fake-titanium
+objectives: [tungsten]
+}
+type: Block
+name: Tungsten
+description: Used in drills, armor and ammunition. Required in the construction of more advanced structures.
+buildVisibility: hidden
+hiddenOnPlanets: [serpulo, erekir, thanaras]
+planet: thanaras
+hidden: true
+

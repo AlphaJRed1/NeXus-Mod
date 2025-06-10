@@ -1,0 +1,120 @@
+type: missile
+controller: MissileAI
+flying: true
+speed: 5
+hitSize: 8
+lifetime: 110
+hidden: true
+engineSize: 3
+engineOffset: 3
+rotateSpeed: 2
+missileAccelTime: 0
+lowAltitude: true
+drawCell: false
+health: 100
+allowedInPayloads: false
+outlineColor: ffa5a5
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+deathSound: microBoom
+trailLength: 20
+trailColor: ff5454
+trailWidth: 1.2
+engineColor: ff5454
+deathExplosionEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+colorFrom: ffbaba
+colorTo: ff4444
+sizeTo: 33
+lifetime: 15
+strokeFrom: 3
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 7
+    baseLength: 1
+length: 35
+    lifetime: 80
+lenFrom: 5
+lenTo: 2
+strokeFrom: 3
+strokeTo: 0
+    colorFrom: fff2f2
+    colorTo: ff6f6f
+    cone: 360
+interp: pow5Out
+}
+{
+    type: ParticleEffect
+    particles: 8
+    baseLength: 5
+length: 30
+    lifetime: 140
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: ffcece
+    colorTo: ff6f6f
+    cone: 360
+interp: circleOut
+sizeInterp: pow5In
+region: shell
+sprite: shell
+}
+]
+}
+weapons: [
+    {
+        shootCone: 360
+          mirror: true
+	alternate: false
+          x: 0
+          y: 0
+shootOnDeath: true
+shake: 4
+          bullet: {
+killShooter: true
+shootEffect: none
+smokeEffect: none
+type: BombBulletType
+instantDisappear: true
+despawnEffect: none
+hitEffect: none
+splashDamage: 195
+splashDamageRadius: 30
+status: cruxian-virality
+statusDuration: 360
+       }
+}
+]
+abilities: [
+{
+type: MoveEffectAbility
+teamColor: false
+   effect: {
+    type: ParticleEffect
+    particles: 3
+    baseLength: 5
+length: -2
+    lifetime: 60
+region: shell
+sprite: shell
+    sizeFrom: 3
+    sizeTo: 0
+    colorFrom: ffcece
+    colorTo: ff6f6f
+    cone: 360
+interp: circleOut
+sizeInterp: pow5In
+}
+y: 0
+x: 0
+interval: 3
+}
+]

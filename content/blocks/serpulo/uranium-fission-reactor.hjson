@@ -1,0 +1,45 @@
+Name: Uranium Fission Plant
+descirption: Uses uranium to slowly build up power, providing a huge amount of energy with the help of massive amounts of water.
+type: ImpactReactor
+size: 5
+scaledHealth: 110
+hasLiquids: true
+powerProduction: 216.6
+plasma1: 98fb98
+plasma2: 90ee90
+explosionDamage: 4500
+itemDuration: 210
+itemCapacity: 20
+warmupSpeed: 0.005
+consumes: {
+  power: 7.5
+  items: {
+    items: [
+      uranium/5
+    ]
+  }
+  liquid: {
+    liquid: water
+    amount: 1
+  }
+}
+requirements: [
+  surge-alloy/180
+  monolithium/360
+  silicon/700
+  lead/1500
+  uranium/275
+duplexon/150
+]
+category: power
+ambientSound: pulse
+ambientSoundVolume: 0.2
+research: {
+  parent: impact-reactor
+  objectives: [
+    {
+      type: OnSector
+      preset: viridescent-plain
+    }
+  ]
+}

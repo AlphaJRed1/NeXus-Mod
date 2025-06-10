@@ -1,0 +1,103 @@
+type: tank
+Name: Ruse
+description: Fires missiles at enemies. They knockback enemies and stun them for a while. Multiple Acacias can render one huge enemy useless.
+speed: 0.5
+health: 4360
+envDisabled: 0
+armor: 10
+itemCapacity: 0
+rotateSpeed: 2
+squareShape: true
+drag: 0.3
+accel: 0.7
+faceTarget: false
+outlineColor: 2e2f34
+hitSize: 17
+treadPullOffset: 3
+omniMovement: false
+treadRects: [
+{
+x: 8
+width: 5
+height: 10
+}
+]
+weapons: [
+ {
+    name: ruse-cannon
+    x: 0
+   layerOffset: 0.05
+    y: -4
+parts: [
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 1
+         moveY: 1
+         moveRot: -5
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+   mirror: false
+shootY: 3
+    reload: 200
+shake: 3
+   rotate: true
+   rotateSpeed: 2
+recoil: 3
+    shootSound: railgun
+    bullet: {
+   damage: 168
+frontColor: eddfff
+backColor: bf92f9
+width: 15
+height: 20
+lightColor: bf92f966
+intervalBullets: 2
+bulletInterval: 1
+intervalBullet: {
+type: LightningBulletType
+lightningLength: 7
+damage: 15
+lightningColor: bf92f9
+}
+trailWidth: 2.5
+trailLength: 25
+trailColor: bf92f9
+speed: 15
+hitSound: microBoom
+lifetime: 17
+fragBullets: 1
+fragBullet: {
+type: BombBulletType
+spin: 20
+damage: 3
+splashDamage: 20
+splashDamageRadius: 30
+frontColor: eddfff
+backColor: bf92f9
+hittable: false
+width: 13
+height: 18
+absorbable: false
+lifetime: 180
+intervalBullets: 2
+bulletInterval: 2
+intervalBullet: {
+type: LightningBulletType
+lightningLength: 9
+damage: 9
+buildingDamageMultiplier: 0.6
+lightningColor: bf92f9
+}
+}
+    }
+ }
+]
+
+planet: erekir
+

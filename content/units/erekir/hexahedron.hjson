@@ -1,0 +1,59 @@
+Name: Hexahedron
+description: fires high splash area bullets and rapid close heal. Can fly over terrain.
+type: legs
+hitSize: 16
+hovering: true
+envDisabled: 0
+allowLegStep: true
+shadowElevation: 0.4
+groundLayer: 60
+legCount: 6
+            legLength: 20
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -2
+            legBaseOffset: 6.7
+            legLengthScl: 0.96
+            legGroupSize: 2
+health: 3500
+stepShake: 0
+armor: 12
+speed: 0.7
+outlineColor: 2e2f34
+weapons: [
+ {
+    name: hexahedron-cannon
+    y: -7
+    x: 6.5
+    rotate: true
+rotationLimit: 30
+    recoil: 2
+  top: true
+    reload: 45
+    shootSound: microSmall
+inaccuracy: 20
+velocityRnd: 0.1
+shoot: {
+shots: 5
+}
+    bullet: {
+    damage: 32
+splashDamage: 11
+splashDamageRadius: 15
+    width: 11
+    height: 15
+pierceCap: 3
+pierceArmor: true
+pierceBuilding: true
+    lifetime: 25
+speed: 4
+trailWidth: 1.6
+trailLength: 13
+homingPower: 0.04
+homingRange: 100
+    }
+  }
+]
+planet: erekir
+research: tank-mech-hybrid-assembler
+alreadyUnlocked: true

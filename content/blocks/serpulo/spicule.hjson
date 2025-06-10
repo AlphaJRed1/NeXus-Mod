@@ -1,0 +1,124 @@
+Name: Spicule
+scaledHealth: 155
+description: Fires thorny bombs that explode into tiny armor piercing frag shards when detonated.
+type: ItemTurret
+size: 3
+range: 220
+reload: 90
+recoil: 3
+targetGround: true
+targetAir: true
+velocityRnd: 0.3
+rotateSpeed: 3
+ammoPerShot: 3
+shootY: 6
+shoot: {
+type: ShootAlternate
+shots: 3
+barrels: 3
+spread: 5
+}
+drawer: {
+type: DrawTurret
+parts: [
+    {
+        suffix : -2bar
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+       {
+        suffix : -mainbar
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -3
+         moveRot: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+}
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke2
+inaccuracy: 10
+alternate: false
+shootSound: artillery
+ammoTypes: {
+  graphite: {
+    type: BasicBulletType
+    damage: 5
+	spin: 10
+    drag: 0.065
+    speed: 15
+    lifetime: 60
+	sprite: nexus-mod-spicule-bomb
+    splashDamage: 15
+    splashDamageRadius: 30 
+    height: 11
+    width: 11
+    despawnEffect: flakExplosionBig
+    hitEffect: flakExplosionBig
+	shrinkY: 0
+fragBullets: 6
+    fragBullet: {
+    speed: 10
+    lifetime: 7
+    damage: 30
+    height: 11
+    width: 2
+    pierce: true
+	pierceArmor: true
+    }
+   }
+  thorium: {
+    type: BasicBulletType
+    damage: 9
+	spin: 10
+    drag: 0.065
+    speed: 15
+    lifetime: 60
+	sprite: nexus-mod-spicule-bomb
+    splashDamage: 26
+    splashDamageRadius: 30 
+    height: 13
+    width: 13
+    despawnEffect: flakExplosionBig
+    hitEffect: flakExplosionBig
+	shrinkY: 0
+fragBullets: 6
+    fragBullet: {
+    speed: 10
+    lifetime: 7
+    damage: 45
+    height: 11
+    width: 2
+    pierce: true
+	pierceArmor: true
+    }
+   }
+  }
+requirements: [
+  monolithium/100
+  silicon/100
+  thorium/65
+  graphite/50
+]
+category: turret
+research: {
+  parent: ripple
+  objectives: [
+    {
+      type: OnSector
+      preset: shoal-depth
+    }
+  ]
+}

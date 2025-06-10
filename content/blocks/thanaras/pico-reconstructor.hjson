@@ -1,0 +1,39 @@
+type: Reconstructor
+Name: Pico Reconstructor
+description: upgrades tier 2 Micro units into their tier 3 forms.
+size: 5
+constructTime: 3100
+consumes: {
+  power: 6.1
+    items: {
+      items: [
+	tungsten/90
+	silicon/100
+	nitinol/70
+	cryo-compound/45
+      ]
+    }
+}
+upgrades: [
+  [electron, neutron]
+  [division, rupture]
+  [molecule, iota]
+]
+requirements: [
+silicon/250
+tungsten/250
+nitinol/150
+nickel/480
+]
+category: units
+research: {
+  parent: nano-reconstructor
+  objectives: [
+    {
+      type: SectorComplete
+      preset: festering-oval
+    }
+  ]
+}
+researchCostMultiplier: 0.7
+

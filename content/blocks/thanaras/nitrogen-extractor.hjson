@@ -1,0 +1,59 @@
+type: AttributeCrafter
+name: Nitrogen Extractor
+description: Extracts frozen nitrogen from nitrogenous ice floors, dispensing them back as a gas.
+size: 3
+hasLiquids: true
+hasItems: false
+craftTime: 120
+baseEfficiency: 0
+attribute: nitrogenous
+maxBoost: 2
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid1
+drawLiquid: nitrogen
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 6
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid2
+drawLiquid: nitrogen
+}
+]
+}
+consumes: {
+power: 1.65
+}
+requirements: [
+nitinol/45
+tungsten/70
+silicon/70
+titanium/125
+]
+category: production
+outputLiquid: nitrogen/0.2
+planet: thanaras
+research: {
+  parent: nitinol-smelter
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+researchCostMultiplier: 0.7

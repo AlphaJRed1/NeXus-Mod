@@ -1,0 +1,58 @@
+type: LiquidTurret
+Name: Fissure
+description: Bursts out jets of fire by setting lead toxin ablaze.
+size: 2
+health: 600
+range: 100
+targetGround: true
+targetAir: true
+reload: 2
+    drawer: {
+type: DrawTurret
+basePrefix: admix-
+}
+    shootEffect: {
+type: MultiEffect
+effects: [ 
+pulverize,
+{
+   interp: pow5Out
+    type: ParticleEffect
+    particles: 11
+    sizeFrom: 5
+    sizeTo: 0
+    length: 120
+    baseLength: 0
+    lifetime: 60
+    colorFrom: fff7da
+    colorTo: ffdd58
+    cone: 15
+    }
+]
+  }
+    smokeEffect: ventSteam
+ammoTypes: {
+  lead-toxin: {
+damage: 13
+hitSize: 7
+ammoMultiplier: 3
+despawnEffect: none
+pierce: true
+width: 0
+hitEffect: hitFlameSmall
+status: burning
+lifetime: 20
+speed: 5
+keepVelocity: false
+statusDuration: 240
+collidesAir: false
+hittable: false
+}
+}
+requirements: [
+lead/90
+ metaglass/45
+admix/20
+]
+category: turret
+research: degrade

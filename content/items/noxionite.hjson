@@ -1,0 +1,10 @@
+type: material
+name: Noxionite
+description: A flammable and radioactive compound, the best of both worlds.
+flammability: 0.7
+radioactivity: 0.4
+hardness: 1
+cost: 2
+color: ceff00
+hiddenOnPlanets: [serpulo, erekir]
+research: tryphoton

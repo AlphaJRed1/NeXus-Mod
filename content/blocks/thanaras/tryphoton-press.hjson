@@ -1,0 +1,52 @@
+type: GenericCrafter
+name: Tryphoton Press
+description: Compresses tryphoton and extracts its juices, called tryplasma.
+size: 2
+hasLiquids: true
+hasItems: true
+craftTime: 60
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: tryplasma
+}
+{
+type: DrawPistons
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+power: 1.7
+items: {
+items: [
+tryphoton/2
+]
+}
+}
+requirements: [
+nickel/35
+silicon/10
+titanium/15
+]
+category: crafting
+outputLiquid: tryplasma/0.1
+planet: thanaras
+research: {
+  parent: silicon-forge
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCostMultiplier: 0.6

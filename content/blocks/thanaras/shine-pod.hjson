@@ -1,0 +1,26 @@
+type: LightBlock
+name: Shine Pod
+description: A well armored block that gives off light when powered.
+health: 300
+armor: 2
+size: 2
+radius: 100
+consumes: {
+power: 0.8
+}
+requirements: [
+tungsten/8
+titanium/20
+silicon/15
+]
+category: effect
+research: {
+  parent: mend-bolt
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+planet: thanaras

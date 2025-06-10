@@ -1,0 +1,12 @@
+captureWave: 30
+planet: serpulo
+sector: 177
+difficulty: 5
+research: {
+requiresUnlock: false
+  parent: core-shard
+  objectives: [
+  ]
+}
+localizedName: Reverent Junction
+description: "Traces of a new mineral ore have been discovered here, one that unlocks a new wave of tech that can be used for various purposes. Proceed with caution, however, as the Crux have managed to obtain this resource as well and are currently testing out the power of this new tech on you."

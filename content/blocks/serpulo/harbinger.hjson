@@ -1,0 +1,91 @@
+type: ItemTurret
+Name: Harbinger
+description: Blasts enemies with bursts of splash damaging bolts over long distances. Any nearby smaller units will get obliterated if in proximity to it's target.
+size: 6
+scaledHealth: 160
+range: 1025
+targetGround: true
+targetAir: true
+reload: 355
+ammoPerShot: 8
+shootY: 8
+recoil: 8
+rotateSpeed: 2.7
+cooldownTime: 500
+alternate: false
+consumes: {
+power: 11
+}
+drawer: {
+type: DrawTurret
+parts: [
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+         moveY: -1
+         moveRot: -35
+         progress: recoil
+          x: 13
+          y: 0
+    }
+    {
+        suffix : -back
+        type : RegionPart
+         mirror: true
+         under: true
+layerOffset: -0.001
+         moveX: 2
+         moveY: -2
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+   shoot: {
+shots: 3
+shotDelay: 35
+}
+shootCone: 2
+shake: 4
+shootSound: railgun
+unitSort: strongest
+ammoTypes: {
+  surge-alloy: {
+type: PointBulletType
+smokeEffect: smokeCloud
+shootEffect: instShoot
+hitEffect: instHit
+trailEffect: instTrail
+despawnEffect: instBomb
+trailSpacing: 20
+    damage: 950
+    splashDamage: 70
+    splashDamageRadius: 35
+buildingDamageMultiplier: 0.15
+    speed: 1025
+}
+}
+requirements: [
+metaglass/1500
+silicon/1500
+surge-alloy/1000
+duplexon/700
+plastanium/650
+copper/3000
+graphite/2000
+]
+category: turret
+research: {
+  parent: foreshadow
+  objectives: [
+    {
+      type: SectorComplete
+      preset: viridescent-plain
+    }
+  ]
+}

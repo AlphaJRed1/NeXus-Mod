@@ -1,0 +1,21 @@
+type: flying
+Name: Hybrid Tank Assembly Drone
+controller: AssemblerAI
+envDisabled: 0
+speed: 1.3
+hidden: true
+health: 80
+engineSize: 2
+engineOffset: 6
+accel: 0.11
+drag: 0.06
+payloadCapacity: 0
+outlineColor: 2e2f34
+allowedInPayloads: false
+useUnitCap: false
+logicControllable: false
+playerControllable: false
+hidden: true
+flying: true
+targetable: false
+createWreck: false

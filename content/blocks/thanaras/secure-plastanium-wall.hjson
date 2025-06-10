@@ -1,0 +1,22 @@
+name: Secure Plastanium Wall
+description: A strong secure wall that protects your buildings from enemies. Absorbs lasers.
+type: Wall
+health: 550
+size: 1
+absorbLasers: true
+armor: 5
+requirements: [
+tungsten/3
+plastanium/6
+]
+category: defense
+planet: thanaras
+research: {
+  parent: secure-tungsten-wall
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}

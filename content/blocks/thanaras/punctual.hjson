@@ -1,0 +1,98 @@
+type: ItemTurret
+Name: Punctual
+description: Fires a shotgun blast of heavy shells that knockback nearby enemies.
+size: 3
+health: 2600
+range: 120
+targetGround: true
+targetAir: true
+reload: 30
+hasItems: true
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+shootSound: microBlast
+cooldownTime: 50
+shootY: 7.4
+recoil: 2.5
+recoilTime: 45
+outlineColor: 101220
+shoot: {
+type: ShootSpread
+shots: 6
+spread: 6
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [    
+{
+        suffix : -barrel
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+{
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 1.6
+         moveY: -2
+         moveRot: -5
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+ammoTypes: {
+  tungsten: {
+    damage: 58
+pierceCap: 2
+    speed: 10
+    lifetime: 12
+    height: 14
+    width: 12
+frontColor: b3c3db
+backColor: 5d6b90
+hitColor: b3c3db
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+knockback: 5
+  }
+  }
+requirements: [
+nitinol/90
+silicon/125
+tungsten/125
+]
+category: turret
+research: {
+  parent: turf
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.2

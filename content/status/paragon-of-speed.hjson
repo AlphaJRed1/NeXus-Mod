@@ -1,0 +1,22 @@
+ type: StatusEffect
+name: paragon-of-speed
+localizedName: Paragon of Speed
+       speedMultiplier: 2
+	   color: ff65e0
+       effectChance: 0.3
+       effect: {
+ type: ParticleEffect
+    particles: 3
+    baseLength: 5
+length: 30
+    lifetime: 20
+	interp: circleOut
+    colorFrom: ff65e0
+    colorTo: a000a3
+    cone: 360
+line: true
+lenFrom: 3
+lenTo: 0
+strokeFrom: 3
+strokeTo: 1.5
+}

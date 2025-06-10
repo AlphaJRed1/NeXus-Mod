@@ -1,0 +1,58 @@
+type: GenericCrafter
+name: Cryo Forge
+description: Submerges and fuses titanium with nitrogen, creating cryo compound.
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 90
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: nitrogen
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+  power: 4.5
+  liquids: {
+    liquids: [
+	nitrogen/0.1
+    ]
+  }
+  items: {
+    items: [
+titanium/1
+    ]
+  }
+}
+requirements: [
+nickel/150
+titanium/70
+tungsten/60
+silicon/60
+]
+category: crafting
+outputItem: cryo-compound/1
+planet: thanaras
+research: {
+  parent: nitrogen-centralizer
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+researchCostMultiplier: 0.15

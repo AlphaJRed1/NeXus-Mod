@@ -1,0 +1,112 @@
+type: LiquidTurret
+Name: Subzero Tower
+description: Inflicts subzero freezing on enemies in its range, slowing them down and debuffing them.
+size: 3
+health: 1600
+range: 250
+targetGround: true
+targetAir: true
+recoil: 0
+rotateSpeed: 0
+shootCone: 360
+shootSound: shootfrost
+inaccuracy: 0
+cooldown: 0.007
+reload: 10
+shootY: 0
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 4
+    sizeTo: 255
+    strokeFrom: 0
+    strokeTo: 10
+    colorFrom: 8492ba50
+ interp: circleOut
+    colorTo: 555c9405
+}
+{
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 2
+    sizeTo: 10
+    baseLength: 10
+length: 150
+    lifetime: 50
+    colorFrom: 555c9445
+    colorTo: 8492ba05
+    cone: 360
+}
+]
+}
+
+    smokeEffect: none
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+}
+{
+type: DrawPlasma
+plasma1: 8492ba50
+plasma2: 555c9470
+}
+{
+type: DrawPulseShape
+color: 8492ba60
+}
+]
+}
+consumes: {
+power: 8.5
+}
+ammoTypes: {
+  nitrogen: {
+    damage: 1
+    splashDamage: 2
+    splashDamageRadius: 250
+    speed: 0
+    lifetime: 1
+    height: 0
+	knockback: 0
+ status: subzero-freezing
+statusDuration: 100
+    width: 0
+    despawnEffect: none
+hitEffect: {
+    type: ParticleEffect
+    particles: 4
+    sizeFrom: 1
+    sizeTo: 5
+    baseLength: 3
+length: 20
+    lifetime: 20
+    colorFrom: 555c9420
+    colorTo: 8492ba05
+    cone: 360
+}
+  }
+}
+requirements: [
+  silicon/200
+titanium/250
+tungsten/180
+cryo-compound/120
+]
+category: effect
+planet: thanaras
+research: {
+  parent: mend-bolt
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+researchCostMultiplier: 0.3

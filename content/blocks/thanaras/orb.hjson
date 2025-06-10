@@ -1,0 +1,108 @@
+type: ItemTurret
+Name: Orb
+description: Charges up a plasma core and strikes it repeatedly, sending off homing orbs that damage enemies.
+size: 2
+scaledHealth: 230
+range: 200
+targetGround: true
+targetAir: true
+reload: 45
+shootY: 0
+hasItems: true
+shootWarmupSpeed: 0.04
+minWarmup: 0.9
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+shootSound: microWoop
+recoil: 0
+cooldownTime: 100
+outlineColor: 101220
+inaccuracy: 30
+shoot: {
+shots: 2
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -arm
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+         moveY: 0
+         moveRot: -25
+         progress: warmup
+          x: 3
+          y: -3.5
+    }
+    {
+        suffix : -point
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: 5.5
+         moveRot: 0
+         progress: reload
+          x: 0
+          y: -5.5
+    }
+]
+}
+{
+type: DrawPlasma
+plasma1: ccffeb
+plasma2: 38ffb0
+}
+]
+}
+ammoTypes: {
+  tryphoton: {
+    damage: 22
+    speed: 5
+    lifetime: 45
+shrinkY: 0
+    height: 8
+    width: 8
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+homingPower: 0.05
+  }
+  }
+requirements: [
+nickel/65
+titanium/30
+]
+category: turret
+research: core-mors
+researchCostMultiplier: 0.05
+planet: thanaras

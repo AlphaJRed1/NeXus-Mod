@@ -1,0 +1,10 @@
+type: SeaBush
+name: Kitri Grass
+lobesMin: 4
+lobesMax: 6
+magMin: 5
+magMax: 8
+origin: 0.1
+spread: 10
+sclMin: 60
+sclMax: 100

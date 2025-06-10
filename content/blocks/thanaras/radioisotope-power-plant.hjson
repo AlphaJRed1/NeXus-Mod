@@ -1,0 +1,60 @@
+Name: Radio-Isotope Power Plant
+description: Generates a significant amount of power from uranium. Requires a constant flow of nitrogen as coolant. Will explode if an insufficient amount of coolant is supplied.
+type: NuclearReactor
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+liquidCapacity: 50
+heating: 0.02
+itemDuration: 400
+powerProduction: 50
+generateEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawWarmupRegion
+}
+{
+type: DrawLiquidRegion
+drawLiquid: nitrogen
+}
+]
+}
+fuelItem: uranium
+consumes: {
+liquid: {
+       liquid: nitrogen
+amount: 0.2
+coolant: true
+}
+items: {
+items: [
+uranium/2
+]
+}
+}
+requirements: [
+nitinol/280
+tungsten/300
+plastanium/90
+silicon/320
+cryo-compound/100
+]
+category: power
+research: {
+  parent: confliction-generator
+  objectives: [
+    {
+      type: SectorComplete
+      preset: vion-plateau
+    }
+  ]
+}
+planet: thanaras
+outputItem: depleted-uranium/2
+researchCostMultiplier: 0.7

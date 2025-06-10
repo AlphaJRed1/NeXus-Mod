@@ -1,0 +1,5 @@
+type: Floor
+name: Dense Vion Quartz
+variants: 4
+blendGroup: vion-quartz
+blendID: 20

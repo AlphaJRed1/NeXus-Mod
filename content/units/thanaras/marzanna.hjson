@@ -1,0 +1,161 @@
+type: flying
+Name: Marzanna
+description: Protector of Core: Mania.
+controller: BuilderAI
+defaultController: BuilderAI
+health: 225
+armor: 6
+speed: 3
+mineTier: 3
+mineSpeed: 8
+buildSpeed: 1.15
+engineOffset: 4
+engineSize: 0
+itemCapacity: 70
+lowAltitude: true
+rotateSpeed: 20
+hitSize: 13
+outlineColor: 1c2125
+drag: 0.05
+accel: 0.2
+flying: true
+isCounted: false
+isEnemy: false
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 7
+phase: 20
+stroke: 2.5
+layerOffset: -0.01
+color: ffd27e
+          x: 0
+          y: -5.5
+    }
+    {
+        type : HoverPart
+         mirror: true
+radius: 3.5
+phase: 20
+stroke: 2
+layerOffset: -0.01
+color: ffd27e
+          x: 5.6
+          y: -4
+    }
+]
+weapons: [
+ {
+  name: helpower
+parts: [
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: ffd27e
+stroke: 2
+layerOffset: 0.001
+haloRotateSpeed: 3
+shapes: 4
+triLength: 0
+triLengthTo: 4
+haloRadius: 3.2
+tri: true
+radius: 3.2
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: 0.001
+         under: false
+       color: ffd27e
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 2
+        radius: 3
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+
+  inaccuracy: 3
+  shootSound: microZap
+  rotate: false
+mirror: false
+  spacing: 0
+  top: true
+  x: 0
+  y: 6.6
+shootY: 0
+  reload: 35
+warmupSpeed: 0.04
+minWarmup: 0.9
+shoot: {
+shots: 2
+shotDelay: 3
+}
+  bullet: {
+ type: LaserBulletType
+      damage: 21
+      length: 130
+sideAngle: 0
+   width: 4.5
+sideWidth: 0
+      colors: [fcb26c, ffd27e, ffffff]
+      lightColor: ffd27e45
+collidesTeam: true
+healPercent: 3
+    lifetime: 15
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 15
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: ffd27e
+    colorTo: fcb26c
+}
+{
+ type: ParticleEffect
+line: true
+    particles: 4
+    strokeFrom: 1.5
+    strokeTo: 0.2
+	lenFrom: 4.5
+lenTo: 0
+    length: 25
+    baseLength: 0
+    lifetime: 30
+  interp: pow2Out
+sizeInterp: linear
+    colorFrom: ffd27e
+    colorTo: fcb26c
+    cone: 30
+}
+]
+}
+hitEffect: hitLaserBlast
+hitColor: ffd27e
+pierceCap: 3
+buildingDamageMultiplier: 0.01
+   }
+  }
+]
+
+research: core-mania
+alreadyUnlocked: true
+planet: thanaras

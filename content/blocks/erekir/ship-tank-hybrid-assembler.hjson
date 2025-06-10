@@ -1,0 +1,40 @@
+type: UnitAssembler
+Name: Ship-Tank Hybrid Assembler
+description: Combines the Ship and Tank families to create Ruse.
+size: 5
+dronesCreated: 4
+regionSuffix: -dark
+areaSize: 7
+droneType: hybrid-ship-assembler
+consumes: {
+power: 4
+liquids: {
+liquids: [
+neoplasm/0.1
+cyanogen/0.05
+]
+}
+}
+plans: [
+  {
+    unit: ruse
+    time: 3000
+    requirements: [
+	avert/3
+	stell/4
+	locus/1
+    ]
+  }
+]
+requirements: [
+thorium/350
+beryllium/500
+oxide/200
+silicon/500
+graphite/300
+]
+research: ship-refabricator
+researchCostMultiplier: 0.5
+category: units
+planet: erekir
+

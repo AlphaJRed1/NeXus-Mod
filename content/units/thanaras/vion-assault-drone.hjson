@@ -1,0 +1,127 @@
+Name: V-Assault Drone
+description: A flying vion drone that circles and drops plasma bombs on enemies. Occasionally boosts nearby units, inflicting them with the Paragon of Speed boost, which doubles their current speed.
+type: flying
+flying: true
+health: 525
+armor: 2
+speed: 2.2
+rotateSpeed: 3
+drag: 0.02
+accel: 0.1
+outlineColor: 1c2125
+hitSize: 10
+engineSize: 0
+lowAltitude: false
+targetAir: false
+faceTarget: false
+circleTarget: true
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 7
+phase: 15
+stroke: 2
+layerOffset: -0.0001
+color: ec49cb
+          x: 0
+          y: -6
+    }
+  ]
+weapons: [
+ {
+  name: vion-gunemdownboys
+  inaccuracy: 5
+  shootSound: shootPop
+shootCone: 360
+  rotate: false
+shootY: 5
+  x: 0
+  y: 0
+  reload: 22
+shootEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 1.5
+    sizeTo: 0
+    length: 5
+    baseLength: 0
+    lifetime: 80
+  interp: circleOut
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: 360
+}
+smokeEffect: none
+shoot: {
+shots: 2
+shotDelay: 10
+}
+  bullet: {
+type: BombBulletType
+frontColor: ff63e0
+backColor: dd1499
+lifetime: 50
+damage: 11
+splashDamage: 33
+splashDamageRadius: 20
+despawnEffect: none
+despawnHit: true
+hitEffect:  {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 5
+    sizeFrom: 2
+    sizeTo: 0
+    length: 23
+    baseLength: 5
+    lifetime: 60
+  interp: circleOut
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: 360
+}
+{
+type: WaveEffect
+    lifetime: 20
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 20
+    strokeFrom: 1.5
+    strokeTo: 0
+    colorFrom: ffb6f0
+    colorTo: dd1499
+}
+]
+}
+  }
+ }
+
+]
+abilities: [
+  {
+    type: StatusFieldAbility
+    reload: 200
+    range: 100
+duration: 150
+effect: paragon-of-speed
+activeEffect: {
+ type: ParticleEffect
+    particles: 8
+    baseLength: 5
+length: 100
+    lifetime: 20
+	interp: circleOut
+    colorFrom: ffb6f0
+    colorTo: ff63e0
+    cone: 360
+line: true
+lenFrom: 3
+lenTo: 0
+strokeFrom: 1.5
+strokeTo: 1.5
+}
+  }
+]

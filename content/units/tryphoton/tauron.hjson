@@ -1,0 +1,116 @@
+Name: Tauron
+description: A hovering unit that charges and fires powerful bullets.
+type: mech
+health: 16477
+armor: 17
+speed: 20
+useUnitCap: false
+rotateSpeed: 3
+omniMovement: false
+hitSize: 28
+outlineColor: 071a20
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+circleTarget: true
+accel: 0.01
+drag: 0.1
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 12
+    sizeFrom: 6
+    sizeTo: 0
+    baseLength: 5
+	length: 60
+    lifetime: 270
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+  {
+  name: tauron-eyestalk
+  inaccuracy: 0
+  rotate: true
+  spacing: 0
+  top: true
+  x: 9
+  y: 13
+	rotateSpeed: 5
+controllable: false
+autoTarget: true
+reload: 99999999
+bullet: {
+instantDisappear: true
+hitEffect: none
+despawnHit: true
+  }
+}
+  {
+  name: tumor
+  inaccuracy: 0
+  rotate: true
+  spacing: 0
+  top: true
+  x: 11
+  y: -10
+controllable: false
+autoTarget: true
+reload: 99999999
+bullet: {
+instantDisappear: true
+hitEffect: none
+despawnHit: true
+  }
+  }
+  {
+  name: ramemjohn
+  inaccuracy: 0
+  shootSound: tryphoScream
+  rotate: false
+  spacing: 0
+  top: false
+  x: 0
+  y: 0
+minShootVelocity: 0.95
+alwaysShooting: true
+	mirror: false
+shootEffect: none
+smokeEffect: none
+ shootY: 18
+shoot: {
+type: ShootAlternate
+shots: 6
+spread: 4.5
+barrels: 6
+}
+  reload: 2
+  bullet: {
+    damage: 63
+pierce: true
+hitSound: tryphoRam
+knockback: 3
+pierceBuilding: true
+speed: 1
+lifetime: 1
+   }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 220
+radScale: 2.5
+radAmountScale: 2.5
+  }
+]

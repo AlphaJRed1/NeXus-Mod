@@ -1,0 +1,248 @@
+Name: Pyrrhic
+description: Fires burst after burst of piercing shells at enemies. At its core is an aggressive energy field which explodes into cruxian essence missiles every few seconds.
+details: Once known as Project Quentumbra, the Crux tried to replicate and reverse engineer the Quell from Erekir with the tier 4 Flying unit Antumbra. Needless to say, this was the only sucessful attempt as a Supression Field was just not capable with what tech they had. An aggressive energy field took its place, in which they discovered a way to aggro the orb even more with the power of unadultured hate, causing it release deadly missiles when tempted.
+type: flying
+flying: true
+health: 9400
+armor: 6
+forceMultiTarget: true
+speed: 1.1
+rotateSpeed: 1.2
+drag: 0.02
+accel: 0.05
+hitSize: 25
+engineOffset: 18
+engineSize: 6.2
+lowAltitude: true
+circleTarget: true
+itemCapacity: 160
+weapons: [
+ {
+mirror: false
+  x: 0
+shootY: 0
+shake: 9
+  y: 1.9
+  reload: 270
+rotate: false
+range: 300
+maxRange: 300
+shootCone: 360
+shootSound: largeCannon
+chargeSound: plasmadrop
+shoot: {
+firstShotDelay: 50
+shots: 6
+type: ShootSpread
+spread: 30
+}
+  bullet: {
+range: 300
+maxRange: 300
+chargeEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+colorFrom: ff4444
+colorTo: ffbaba
+sizeFrom: 40
+sizeTo: 1
+lifetime: 30
+strokeFrom: 0
+strokeTo: 4
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 18
+    baseLength: 45
+length: -45
+    lifetime: 40
+lenFrom: 4
+lenTo: 6
+strokeFrom: 0
+strokeTo: 3
+    colorFrom: ff6f6f
+    colorTo: fff2f2
+    cone: 360
+interp: pow5In
+}
+{
+    type: ParticleEffect
+    particles: 14
+    baseLength: -40
+length: 40
+    lifetime: 50
+    sizeFrom: 0
+    sizeTo: 4
+    colorFrom: ff6f6f
+    colorTo: ffcece
+region: shell
+sprite: shell
+    cone: 360
+interp: pow2In
+sizeInterp: linear
+}
+]
+}
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+colorFrom: ffbaba
+colorTo: ff4444
+sizeTo: 35
+lifetime: 14
+strokeFrom: 3.5
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 3
+    baseLength: 1
+length: 50
+    lifetime: 70
+lenFrom: 6
+lenTo: 3
+strokeFrom: 3
+strokeTo: 0
+    colorFrom: fff2f2
+    colorTo: ff6f6f
+    cone: 30
+interp: pow5Out
+}
+{
+    type: ParticleEffect
+    particles: 2
+    baseLength: 0
+length: 30
+    lifetime: 140
+    sizeFrom: 4
+region: shell
+sprite: shell
+    sizeTo: 0
+    colorFrom: ffcece
+    colorTo: ff6f6f
+    cone: 360
+interp: circleOut
+sizeInterp: pow5In
+}
+]
+}
+smokeEffect: none
+spawnUnit: cruxian-essence-missile
+instantDisappear: true
+  }
+  }
+
+  {
+  name: pyrrhic-gun
+ejectEffect: casing1
+  x: 16.5
+top: true
+shootY: 8
+shake: 1
+shadow: 8
+  y: 8.2
+  reload: 20
+rotate: true
+rotateSpeed: 2.5
+shootSound: shootBig
+shoot: {
+shots: 2
+shotDelay: 8
+}
+  bullet: {
+    damage: 65
+pierceCap: 2
+pierceBuilding: true
+    length: 17
+    speed: 7
+    lifetime: 26
+    height: 17
+    width: 10
+shootEffect: shootBig
+frontColor: fff2f2
+backColor: ff6f6f
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+colorFrom: ffbaba
+colorTo: ff4444
+sizeTo: 15
+lifetime: 10
+strokeFrom: 2.5
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 5
+    baseLength: 1
+length: 25
+    lifetime: 70
+lenFrom: 5
+lenTo: 3
+strokeFrom: 3
+strokeTo: 0
+    colorFrom: fff2f2
+    colorTo: ff6f6f
+    cone: 30
+interp: pow5Out
+}
+]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+colorFrom: ffbaba
+colorTo: ff4444
+sizeTo: 15
+lifetime: 10
+strokeFrom: 2.5
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 5
+    baseLength: 1
+length: 25
+    lifetime: 70
+lenFrom: 5
+lenTo: 3
+strokeFrom: 3
+strokeTo: 0
+    colorFrom: fff2f2
+    colorTo: ff6f6f
+    cone: 360
+interp: pow5Out
+}
+]
+}
+  }
+  }
+
+]
+abilities: [
+  {
+    type: EnergyFieldAbility
+   damage: 100
+reload: 100
+    range: 180
+y: 1.9
+    shootSound: shootSmite
+healPercent: 2.5
+displayHeal: false
+maxTargets: 15
+status: cruxian-virality
+statusDuration: 360
+color: ff4242
+effectRadius: 7
+blinkScl: 21
+  }
+]

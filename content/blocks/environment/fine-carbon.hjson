@@ -1,0 +1,6 @@
+type: Floor
+name: Fine Carbon Stone
+variants: 4
+speedMultiplier: 0.7
+itemDrop: sand
+playerUnmineable: true

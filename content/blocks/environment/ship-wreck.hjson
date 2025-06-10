@@ -1,0 +1,6 @@
+type: TallBlock
+name: Ship Wreck
+variants: 1
+clipSize: 350
+shadowAlpha: 0.5
+shadowOffset: -3

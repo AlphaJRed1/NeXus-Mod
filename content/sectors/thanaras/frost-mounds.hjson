@@ -1,0 +1,17 @@
+      captureWave: 36
+planet: thanaras
+sector: 2
+difficulty: 7
+addStartingItems: false
+research: {
+  parent: infested-grounds
+requiresUnlock: false
+  objectives: [annexion-generator, crumbler,
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+localizedName: Frost Mounds
+description: Hidden on the dark side of Thanaras, nitrogen has deposited into many frozen mounds, complete with sharp crystals that litter around them. A most unfortunate predicament would have to be the lack of tryphoton and sand in this region, slowing down production and progression by an incomprehensible amount. Use your newly researched Crumbler and Annexion Generators to get past these limitations and capture this sector.

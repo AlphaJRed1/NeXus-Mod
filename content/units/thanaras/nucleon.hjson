@@ -1,0 +1,270 @@
+Name: Nucleon
+description: An incredibly powerful hover mech, equipped with two chest cannons that fire lightning shells, and two massive arm cannons bursting out piercing lightning darts.
+type: hover
+hovering: true
+health: 30200
+armor: 20
+speed: 0.6
+rotateSpeed: 1
+drag: 0.05
+accel: 0.05
+hitSize: 40
+engineSize: 3
+outlineColor: 1c2125
+parts: [
+    {
+        type : HoverPart
+         mirror: true
+radius: 25
+phase: 40
+stroke: 5
+layerOffset: -0.001
+color: 69ffc4
+          x: 13
+          y: -8
+    }
+    {
+        type : HoverPart
+         mirror: false
+radius: 25
+phase: 40
+stroke: 5
+layerOffset: -0.001
+color: 69ffc4
+          x: 0
+          y: 8
+    }
+    {
+        suffix : -mini-wing
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+layerOffset: -0.0001
+         moveY: 0
+         moveRot: 200
+         progress: warmup
+          x: 14
+          y: -8
+    }
+    {
+        suffix : -wing
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+layerOffset: -0.0001
+         moveY: 0
+         moveRot: 130
+         progress: warmup
+          x: 14
+          y: -8
+    }
+]
+weapons: [
+   {
+  name: nucleon-front-cannon
+  inaccuracy: 0
+  shootSound: quakeSmall
+  rotate: false
+  spacing: 0
+  top: false
+layerOffset: -0.00001
+shake: 1
+shootY: 11.1
+  x: 8.5
+  y: 0
+  reload: 12
+  recoil: 2.5
+  bullet: {
+    damage: 85
+pierceCap: 2
+pierceBuilding: true
+    height: 17
+    width: 12
+    lifetime: 30
+    speed: 8
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: sparkShoot
+lightning: 2
+lightningLength: 7
+lightningDamage: 12
+hitShake: 1
+lightningColor: ccffeb
+     }
+  }
+   {
+  name: nucleon-gun
+  inaccuracy: 0
+  shootSound: microHit
+shake: 10
+  rotate: false
+  spacing: 0
+shootCone: 100
+  top: false
+layerOffset: -0.00001
+  x: 21
+  y: 0
+  reload: 120
+shootY: 13.6
+  recoil: 4
+shoot: {
+type: ShootAlternate
+shots: 4
+barrels: 4
+spread: 2.1
+}
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 8
+phase: 35
+stroke: 3
+layerOffset: 0.0001
+color: 69ffc4
+          x: 0
+          y: -9.6
+    }
+]
+  bullet: {
+    damage: 125
+hitShake: 7
+hitEffect: microBoom
+sprite: nexus-mod-powerslash
+pierceCap: 4
+pierceBuilding: true
+    height: 26
+    width: 15
+    lifetime: 30
+    speed: 6
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+shootEffect: sparkShoot
+smokeEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 3
+    baseLength: 2
+length: 30
+    lifetime: 100
+sizeFrom: 4
+sizeTo: 0
+    colorFrom: 869d9a25
+    colorTo: 515b6560
+    cone: 30
+interp: pow2Out
+sizeInterp: pow5In
+}
+{
+    type: WaveEffect
+    lifetime: 30
+sizeFrom: 1
+sizeTo: 20
+    colorFrom: ccffeb
+    colorTo: ccffeb
+}
+]
+}
+lightning: 3
+lightningLength: 9
+lightningDamage: 20
+lightningColor: ccffeb
+	bulletInterval: 2
+intervalBullets: 2
+intervalSpread: 180
+intervalAngle: 0
+ intervalRandomSpread: 0
+     intervalBullet: {
+  type: LightningBulletType
+  damage: 22
+  lightningLength: 5
+   lightningColor: 38ffb0
+}
+trailInterval: 1
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sizeTo: 13
+interp: pow10Out
+strokeFrom: 5
+    colorFrom: ccffeb
+    colorTo: ccffeb
+lifetime: 40
+}
+{
+type: WaveEffect
+sizeFrom: 5
+sizeTo: 0
+interp: pow2In
+strokeFrom: 1.2
+    colorFrom: 38ffb050
+    colorTo: 00ab9450
+lifetime: 70
+}
+]
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 8
+    baseLength: 2
+length: 30
+    lifetime: 80
+lenFrom: 6
+lenTo: 2
+strokeFrom: 3
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+    cone: 360
+interp: circleOut
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 6
+    baseLength: 0
+length: 40
+    lifetime: 45
+lenFrom: 8
+lenTo: 4
+strokeFrom: 2
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+    cone: 30
+interp: pow10Out
+}
+{
+type: WaveEffect
+sizeTo: 25
+strokeFrom: 4
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+interp: circleOut
+lifetime: 20
+}
+]
+}
+despawnHit: true
+despawnEffect: none
+ 
+     }
+  }
+]
+research: ion
+researchCostMultiplier: 0.7

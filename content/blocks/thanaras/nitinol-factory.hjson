@@ -1,0 +1,60 @@
+type: GenericCrafter
+name: Nitinol Factory
+description: Fuses titanium and nickel together with the help of cyanogen, producing more nitinol in the process. Still requires nitrogen and power.
+size: 4
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 100
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawWeave
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+  power: 7.5
+  liquids: {
+    liquids: [
+	nitrogen/0.2
+	cyanogen/0.1
+    ]
+  }
+  items: {
+    items: [
+titanium/4
+nickel/4
+    ]
+  }
+}
+requirements: [
+nitinol/100
+silicon/150
+cryo-compound/100
+titanium/200
+plastanium/60
+]
+category: crafting
+outputItem: nitinol/4
+planet: thanaras
+research: {
+  parent: plastanium-coarctater
+  objectives: [
+    {
+      type: SectorComplete
+      preset: vion-plateau
+    }
+  ]
+}
+researchCostMultiplier: 0.7

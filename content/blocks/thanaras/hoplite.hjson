@@ -1,0 +1,88 @@
+Type: PowerTurret
+Name: Hoplite
+health: 1900
+description: Charges up and fires a large lightning laser, heavily damaging enemies that it pierces through.
+size: 3
+shootEffect: sparkShoot
+shootSound: largeCannon
+targetAir: false
+range: 220
+reload: 100
+rotateSpeed: 2.5
+shootWarmupSpeed: 0.04
+minWarmup: 0.81
+shootY: 2
+inaccuracy: 0
+outlineColor: 101220
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+drawer: {
+type: DrawTurret
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 1
+         moveY: 0
+         moveRot: -30
+         progress: warmup
+          x: 7.5
+          y: -2
+    }
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+         moveY: 0
+         moveRot: -9
+         progress: recoil
+          x: 3.1
+          y: -1.5
+    }
+]
+}
+consumes: {
+  power: 9.5
+}
+shootType: {
+ type: LaserBulletType
+      damage: 150
+      length: 230
+sideAngle: 45
+   width: 8
+sideWidth: 6
+      colors: [9927c5, e845f0, fdd0ff]
+      lightColor: e845f066
+lightningSpacing: 22
+lightningDelay: 2
+lightningLength: 7
+lightningDamage: 13
+lightningColor: e845f0
+}
+requirements: [
+nickel/250
+titanium/150
+tungsten/100
+silicon/140
+]
+category: turret
+planet: thanaras
+research: {
+  parent: hastati
+  objectives: [
+    {
+      type: SectorComplete
+      preset: arche-ruin
+    }
+  ]
+}
+researchCostMultiplier: 0.15

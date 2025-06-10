@@ -1,0 +1,56 @@
+type: StackConveyor
+name: Plastanium Rail
+description: Transports items in large packages. Can be powered up to increase speed of transport.
+health: 200
+armor: 5
+itemCapacity: 12
+speed: 0.08
+recharge: 1
+conductivePower: true
+loadEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 1
+    sizeTo: 0
+    length: 8
+    baseLength: -8
+    lifetime: 40
+   interp: pow2In
+    colorFrom: addd6010
+    colorTo: addd60
+    cone: 360
+}
+unloadEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 0
+    sizeTo: 1
+   interp: pow10Out
+    length: 8
+    baseLength: 0
+    lifetime: 40
+    colorFrom: addd60
+    colorTo: addd6010
+    cone: 360
+
+}
+baseEfficiency: 1
+consumes: {
+power: 0.01
+}
+requirements: [
+nitinol/1
+plastanium/1
+tungsten/2
+]
+category: distribution
+research: {
+  parent: armored-rail
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+planet: thanaras

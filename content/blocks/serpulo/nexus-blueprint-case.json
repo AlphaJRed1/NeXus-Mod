@@ -1,0 +1,11 @@
+type: Wall
+name: Nexus Blueprint Vessel
+description: Indestructible. contains one Nexus Blueprint, which can be used to unlock more special and advanced content in the tech trees of any planet. These are hidden around sectors, sometimes in plain sight, sometimes inside walls. One thing is for sure, when you find it, deconstruct it to obtain the Nexus Blueprint... before the others do.
+size: 1
+buildVisibility: hidden
+health: 100000
+category: effect
+hidden: true
+requirements: [
+nexus-blueprint/2
+]

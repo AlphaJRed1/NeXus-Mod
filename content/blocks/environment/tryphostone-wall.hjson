@@ -1,0 +1,5 @@
+type: StaticWall
+name: Tryphostone Wall
+variants: 3
+hasColor: true
+mapColor: 36a386

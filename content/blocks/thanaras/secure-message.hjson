@@ -1,0 +1,22 @@
+type: MessageBlock
+name: Secure Message
+description: Stores messages in a secure, well armored block.
+maxTextLength: 300
+armor: 4
+health: 200
+requirements: [
+ tungsten/10
+silicon/10
+nickel/10
+]
+category: logic
+planet: thanaras
+research: {
+  parent: core-mors
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}

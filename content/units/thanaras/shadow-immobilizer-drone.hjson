@@ -1,0 +1,172 @@
+Name: S-Immobilizer Drone
+description: Gives nearby allies the Soul Powered status effect, which increases their damage and reload speed. Also fires splash damaging orbs that slowly speed up as they home in on their targets.
+type: flying
+flying: true
+health: 710
+armor: 3
+speed: 0.7
+rotateSpeed: 1.5
+drag: 0.01
+accel: 0.06
+outlineColor: 1c2125
+hitSize: 13
+engineSize: 0
+lowAltitude: false
+faceTarget: false
+immunities: [freezing, subzero-freezing]
+circleTarget: true
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 8
+phase: 30
+stroke: 2.3
+layerOffset: -0.0001
+color: 9451db
+          x: 0
+          y: -7
+    }
+  ]
+weapons: [
+ {
+  name: shadowski
+  inaccuracy: 360
+  shootSound: microBzz
+shootCone: 360
+  rotate: false
+shootY: 0
+  x: 0
+  y: 0
+  reload: 100
+shootEffect: none
+smokeEffect: none
+shoot: {
+shots: 3
+}
+  bullet: {
+speed: 1
+drag: -0.003
+lifetime: 250
+width: 10
+height: 10
+shrinkY: 0
+sprite: circle-bullet
+frontColor: b46dff
+backColor: 5830d9
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 8
+    baseLength: 0
+    lifetime: 50
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: -90
+}
+damage: 16
+splashDamage: 56
+splashDamageRadius: 35
+homingRange: 300
+homingPower: 0.01
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+sides: 4
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 40
+    strokeFrom: 2.2
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 2
+    sizeTo: 0
+    length: 45
+    baseLength: 0
+    lifetime: 50
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 3.2
+    sizeTo: 0
+    length: 40
+    baseLength: 2
+    lifetime: 60
+  interp: circleOut
+sizeInterp: pow2In
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+{
+type: WrapEffect
+name: dynamicSpikes
+lifetime: 30
+color: b46dff
+}
+]
+}
+  }
+ }
+]
+abilities: [
+  {
+    type: SuppressionFieldAbility
+orbRadius: 2
+color: 9451db
+particleColor: 9451db
+effectColor: 9451db65
+particleSize: 2.5
+     }
+  {
+    type: ForceFieldAbility
+    radius: 15
+    regen: 2.5
+    max: 200
+    cooldown: 330
+sides: 10
+  }
+{
+type: StatusFieldAbility
+reload: 120
+duration: 240
+range: 140
+effect: soul-powered
+activeEffect: {
+ type: ParticleEffect
+    particles: 10
+    baseLength: 145
+length: 5
+    lifetime: 20
+	interp: pow2In
+    colorFrom: b46dff
+    colorTo: 54007c
+    cone: 360
+line: true
+lenFrom: 2.2
+lenTo: 0
+strokeFrom: 2.2
+strokeTo: 0
+}
+}
+]

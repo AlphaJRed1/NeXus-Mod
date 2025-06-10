@@ -1,0 +1,8 @@
+type: material
+name: Gigantion Alloy
+description: An incredibly dense alloy with a powerful resistance capacity.
+hardness: 9
+cost: 7
+color: 353b5c
+hiddenOnPlanets: [serpulo, erekir]
+research: tungsten

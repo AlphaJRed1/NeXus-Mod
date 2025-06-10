@@ -1,0 +1,21 @@
+name: Secure Gate
+description: A well-armored, secure wall that opens for friendly units automatically.
+type: AutoDoor
+health: 2900
+size: 2
+requirements: [
+tungsten/24
+nitinol/6
+silicon/6
+]
+category: defense
+research: {
+  parent: secure-tungsten-wall
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+planet: thanaras

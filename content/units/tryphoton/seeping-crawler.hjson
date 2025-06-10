@@ -1,0 +1,91 @@
+Name: Seeping Crawler
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 104
+outlineColor: 071a20
+ legStraightness: 0.5
+            legLength: 8
+useUnitCap: false
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -1
+            legBaseOffset: 3
+            legMaxLength: 1
+            legMinLength: 0.5
+            legLengthScl: 0.96
+            legForwardScl: 1.2
+            legGroupSize: 3
+            rippleScale: 0.2
+
+            legMoveSpace: 1
+            legPhysicsLayer: false
+legCount: 6
+hitSize: 9
+armor: 0
+speed: 1.3
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+	length: 15
+    lifetime: 150
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+  {
+  name: seep-pow
+  inaccuracy: 0
+  shootSound: tryphoFire1
+  rotate: false
+  spacing: 0
+  top: false
+  x: 0
+  y: 0
+  reload: 45
+  bullet: {
+    damage: 14
+sprite: circle-orb
+shrinkY: 0
+    height: 8
+    width: 8
+    lifetime: 20
+    speed: 4
+trailInterval: 1
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+trailColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: sparkShoot
+   }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 100
+radScale: 1
+radAmountScale: 1
+  }
+]
+

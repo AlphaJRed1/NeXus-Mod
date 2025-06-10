@@ -1,0 +1,35 @@
+name: Quake Miner
+type: BurstDrill
+description: Builds up pressure with the quick evaporation of nitrogen gas, allowing it to mine items at a much faster pace. Can mine uranium.
+size: 4
+category: production
+tier: 12
+drillTime: 230
+invertedTime: 200
+arrows: 3
+itemCapacity: 40
+research: {
+  parent: tremor-miner
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+consumes: {
+power: 6.2
+liquids: {
+liquids: [
+nitrogen/0.15
+]
+}
+}
+requirements: [
+nitinol/100
+titanium/250
+tungsten/105
+silicon/90
+cryo-compound/40
+]
+planet: thanaras

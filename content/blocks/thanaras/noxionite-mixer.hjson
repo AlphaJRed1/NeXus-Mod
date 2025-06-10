@@ -1,0 +1,46 @@
+type: GenericCrafter
+name: Noxionite Mixer
+description: Combines tryphoton, sand, and nickel to form a noxious, toxic compound called noxionite. Requires power.
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 120
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+  power: 4.6
+  items: {
+    items: [
+	sand/4
+	nickel/4
+	tryphoton/3
+    ]
+  }
+}
+requirements: [
+silicon/80
+nickel/130
+titanium/90
+]
+category: crafting
+outputItem: noxionite/2
+planet: thanaras
+research: {
+  parent: silicon-forge
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCostMultiplier: 0.2

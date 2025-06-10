@@ -1,0 +1,343 @@
+type: ItemTurret
+Name: Spherule
+description: Charges up a large plasma core and smashes into it violently, firing out plasma orbs that home onto enemies. An advanced version of the Orb turret.
+size: 3
+health: 1800
+range: 300
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+targetGround: true
+targetAir: true
+reload: 60
+shootY: 0
+shake: 3
+hasItems: true
+shootWarmupSpeed: 0.04
+minWarmup: 0.9
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 13
+    strokeFrom: 5
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 20
+    lifetime: 80
+    colorFrom: ccffeb
+    colorTo: 38ffb010
+    cone: 40
+}
+]
+}
+
+smokeEffect: shootBigSmoke
+shootSound: microBass
+rotateSpeed: 3
+recoil: 0
+cooldownTime: 100
+outlineColor: 101220
+inaccuracy: 30
+shoot: {
+shots: 4
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -back
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: 4
+         moveRot: 0
+         progress: reload
+          x: 0
+          y: -4
+    }
+    {
+        suffix : -arm
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+         moveY: 0
+         moveRot: -30
+         progress: warmup
+          x: 5
+          y: 0.5
+    }
+]
+}
+{
+type: DrawPlasma
+plasma1: ccffeb
+plasma2: 38ffb0
+}
+]
+}
+ammoTypes: {
+uranium: {
+    damage: 98
+    speed: 6
+status: uranium-decay
+homingPower: 0.05
+statusDuration: 300
+    lifetime: 52
+shrinkY: 0
+    height: 12
+    width: 11.5
+frontColor: d9ff9e
+backColor: 95d928
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: d9ff9e
+ interp: circleOut
+    colorTo: 59c90a10
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 15
+    lifetime: 70
+    colorFrom: d9ff9e
+    colorTo: 59c90a20
+    cone: 360
+}
+]
+}
+despawnHit: true
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: dcff47
+ interp: pow5Out
+    colorTo: dcff4710
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 10
+    lifetime: 70
+    colorFrom: cbff78
+    colorTo: cbff7820
+    cone: -100
+}
+]
+}
+}
+  tryphoton: {
+    damage: 47
+    speed: 6
+    lifetime: 52
+status: photonized
+statusDuration: 240
+shrinkY: 0
+    height: 9
+    width: 9
+frontColor: ccffeb
+backColor: 38ffb0
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: circleOut
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 15
+    lifetime: 70
+    colorFrom: 38ffb0
+    colorTo: 38ffb020
+    cone: 360
+}
+]
+}
+despawnHit: true
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 10
+    lifetime: 70
+    colorFrom: ccffeb
+    colorTo: ccffeb20
+    cone: -100
+}
+]
+}
+homingPower: 0.05
+  }
+noxionite: {
+    damage: 83
+    speed: 6
+    lifetime: 52
+shrinkY: 0
+    height: 10.7
+    width: 10.7
+frontColor: c7e350
+backColor: aeaa0f
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: c7e350
+ interp: circleOut
+    colorTo: 9d990010
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 15
+    lifetime: 70
+    colorFrom: f0ff00
+    colorTo: 9d990020
+    cone: 360
+}
+]
+}
+despawnHit: true
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: c7e350
+ interp: pow5Out
+    colorTo: c7e35010
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 10
+    lifetime: 70
+    colorFrom: f0ff00
+    colorTo: f0ff0020
+    cone: -100
+}
+]
+}
+homingPower: 0.05
+status: noxious-burning
+statusDuration: 300
+  }
+
+  }
+requirements: [
+nickel/320
+tungsten/150
+titanium/250
+]
+category: turret
+research: {
+  parent: orb
+  objectives: [
+    {
+      type: SectorComplete
+      preset: arche-ruin
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.15

@@ -1,0 +1,58 @@
+type: ConsumeGenerator
+warmupSpeed: 0.001
+Name: Thanarian Nexus Message Decoder
+description: Decodes messages from an unknown wavelength only discoverable through the quantum power of monolite. Creates power as a by-product.
+details: The radio transmission seems to be much stronger here. Is this perhaps the source of the secret wavelength?
+powerProduction: 1
+size: 3
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+    {
+      type: DrawGlowRegion
+	suffix: -glowfirst
+      glowScale: 10
+      alpha: 1
+      color: 4dc1ff
+    }
+    {
+      type: DrawGlowRegion
+	suffix: -glow
+      glowScale: 20
+      alpha: 1
+      color: c3eaff
+    }
+    {
+      type: DrawGlowRegion
+	suffix: -rotator
+      glowScale: 5
+      alpha: 0.7
+	rotateSpeed: 3.5
+      color: 5aa0ff
+    }
+]
+}
+itemDuration: 300
+consumes: {
+items: {
+items: [
+monolithium/1
+]
+}
+}
+requirements: [
+monolithium/150
+silicon/100
+titanium/125
+uranium/125
+]
+category: effect
+planet: thanaras
+research: {
+  parent: core-mania
+}
+ambientSound: thanarasnexusmessage
+ambientSoundVolume: 5

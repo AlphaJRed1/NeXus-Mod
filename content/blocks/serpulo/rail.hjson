@@ -1,0 +1,110 @@
+Name: Rail
+scaledHealth: 160
+description: Charges up an artillery bomb, which sparks lightning bolts as it travels to its destination.
+type: ItemTurret
+size: 2
+range: 250
+reload: 70
+recoil: 2
+targetGround: true
+targetAir: false
+shootSound: artillery
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke2
+shootWarmupSpeed: 0.05
+minWarmup: 0.9
+drawer: {
+type: DrawTurret
+parts: [
+    {
+        type : ShapePart
+         mirror: true
+         under: true
+         moveX: 1
+         moveY: 10
+         moveRot: 90
+sides: 2
+stroke: 0
+strokeTo: 3
+radius: 5
+         progress: warmup
+color: 1eff91
+          x: 0
+          y: 0
+    }
+]
+}
+consumes: {
+  power: 2
+}
+ammoTypes: {
+  monolithium: {
+    type: ArtilleryBulletType
+    damage: 15
+    speed: 3
+    lifetime: 81.6
+    splashDamage: 40
+    splashDamageRadius: 15
+    height: 12
+    width: 13
+frontColor: 76ffbc
+backColor: 28b671
+trailColor: 1eff91
+	bulletInterval: 2
+intervalBullets: 2
+intervalSpread: 180
+intervalAngle: 0
+ intervalRandomSpread: 0
+     intervalBullet: {
+  type: LightningBulletType
+  damage: 7
+  lightningLength: 5
+   lightningColor: 00ff83
+}
+    hitEffect: {
+type: multiEffect
+effects: [
+flakExplosion, 
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: 56ffad
+ interp: pow5Out
+    colorTo: 008b47
+}
+{
+type: WaveEffect
+    lifetime: 50
+    rotation: 0
+    sizeFrom: 15
+    sizeTo: 15
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: 56ffad
+ interp: pow5Out
+    colorTo: 008b4750
+}
+]
+}
+  }
+}
+requirements: [
+  titanium/60
+  monolithium/35
+  silicon/40
+]
+category: turret
+research: {
+  parent: hail
+  objectives: [
+    {
+      type: OnSector
+      preset: reverent-junction
+    }
+  ]
+}

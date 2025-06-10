@@ -1,0 +1,80 @@
+Name: Budding Crawler
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 34
+outlineColor: 071a20
+useUnitCap: false
+            legLength: 6
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -0.5
+            legBaseOffset: 2
+            legMaxLength: 1
+            legMinLength: 0.2
+            legGroupSize: 2
+            rippleScale: 0.2
+
+            legMoveSpace: 2
+            legPhysicsLayer: false
+legCount: 5
+hitSize: 5
+armor: 0
+speed: 0.6
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+	length: 15
+    lifetime: 150
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+  {
+  name: bud
+  inaccuracy: 0
+alwaysShooting: true
+  shootSound: bud
+  rotate: false
+  spacing: 0
+  top: false
+  x: 0
+  y: 0
+  reload: 0
+shoot: {
+firstShotDelay: 1200
+}
+  bullet: {
+spawnUnit: shriek-crawler
+        killShooter: true
+lifetime: 1
+   }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 100
+radScale: 1
+radAmountScale: 1
+  }
+]
+

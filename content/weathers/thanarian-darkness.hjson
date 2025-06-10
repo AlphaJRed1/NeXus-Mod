@@ -1,0 +1,21 @@
+localizedName: Thanarian Darkness
+type: ParticleWeather
+planet: thanaras
+baseSpeed: 0.1
+color: 00000050
+density: 700
+useWindVector: true
+particleRegion: particle
+sizeMin: 35
+hidden: false
+sizeMax: 70
+minAlpha: 0.1
+maxAlpha: 0.2
+drawNoise: true
+noiseColor: 00000050
+noiseLayers: 3
+noiseScale: 1300
+noisePath: fog
+noiseLayerSclM: 0.5
+noiseLayerAlphaM: 0.1
+baseSpeed: 4

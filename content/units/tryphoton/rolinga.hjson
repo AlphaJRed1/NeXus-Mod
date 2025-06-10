@@ -1,0 +1,73 @@
+Name: Rolinga
+description: a
+type: flying
+flying: true
+useUnitCap: false
+health: 19956
+speed: 0.8
+rotateSpeed: 1.8
+drag: 0.015
+accel: 0.02
+hitSize: 40
+lowAltitude: true
+outlineColor: 071a20
+circleTarget: true
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 9
+    sizeFrom: 5
+    sizeTo: 0
+    baseLength: 20
+	length: 90
+    lifetime: 300
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+   {
+    name: rolingapow
+    x: 0
+    y: 0
+    rotate: false
+    recoil: 0
+continuous: true
+alwaysContinuous: true
+    bullet: {
+    type: ContinuousFlameBulletType
+damage: 27
+pierce: true
+length: 200
+width: 9
+flareColor: 5effea
+hitColor: 5effea
+flareWidth: 9
+flareLength: 18
+colors: [00e1c4, 5effea, d2fff9]
+lightColor: 5effea66
+    }
+ }
+
+]
+
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 40
+radScale: 1
+radAmountScale: 1
+  }
+]

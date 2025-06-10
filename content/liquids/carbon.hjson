@@ -1,0 +1,11 @@
+type: Liquid
+name: Methane
+description: A colorless, odorless gas used in power and item production.
+temperature: 0.5
+viscosity: 0.2
+flammability: 0.8
+color: b0ccce
+gasColor: b0ccce55
+gas: true
+research: nickel
+hiddenOnPlanets: [serpulo, erekir]

@@ -1,0 +1,23 @@
+ type: StatusEffect
+ name: uranium-decay
+localizedName: Uranium Decay
+       speedMultiplier: 0.65
+       reloadMultiplier: 0.75
+       show: true
+       damage: 0.33
+   color: ccdbb5
+       transitionDamage: 35
+       affinities: [burning, melting]
+       effectChance: 0.15
+       effect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 3.5
+    length: 25
+    baseLength: 3
+    lifetime: 60
+    colorFrom: cbff78
+    colorTo: b3c09f20
+    cone: 360
+    }

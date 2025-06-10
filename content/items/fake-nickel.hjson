@@ -1,0 +1,15 @@
+research: {
+parent: core-mors
+requiresUnlock: false
+}
+type: Block
+name: Nickel
+description: A silvery white metal known for its hardness, malleability, and ductility.
+hiddenOnPlanets: [serpulo, erekir, thanaras]
+buildVisibility: hidden
+planet: thanaras
+hidden: true
+requirements: [
+nickel/1
+]
+

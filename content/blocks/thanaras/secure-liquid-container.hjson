@@ -1,0 +1,15 @@
+type: LiquidRouter
+Name: Secure Liquid Container
+health: 300
+armor: 5
+size: 2
+description: Stores a good amount of liquid capacity, well armored and secure. Can dispense the liquid to adjacent pipes.
+liquidCapacity: 800
+requirements: [
+nitinol/15
+tungsten/25
+titanium/25
+]
+category: liquid
+planet: thanaras
+research: pipe-router

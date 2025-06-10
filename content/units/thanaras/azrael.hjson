@@ -1,0 +1,145 @@
+type: flying
+Name: Azrael
+description: Protector of Core: Mors.
+controller: BuilderAI
+defaultController: BuilderAI
+health: 120
+armor: 2
+speed: 2.5
+mineTier: 2
+mineSpeed: 5
+buildSpeed: 0.65
+engineOffset: 4
+engineSize: 0
+itemCapacity: 20
+rotateSpeed: 10
+hitSize: 9
+outlineColor: 1c2125
+drag: 0.05
+accel: 0.1
+flying: true
+isCounted: false
+lowAltitude: true
+isEnemy: false
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 5
+phase: 20
+stroke: 2
+layerOffset: -0.01
+color: ffd27e
+          x: 0
+          y: -4.2
+    }
+]
+weapons: [
+  {
+  name: azraelpower
+parts: [
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: ffd27e
+stroke: 1.5
+layerOffset: 0.001
+haloRotateSpeed: 2.5
+shapes: 2
+triLength: 0
+triLengthTo: 3.5
+haloRadius: 2.5
+tri: true
+radius: 2.5
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: 0.001
+         under: false
+       color: ffd27e
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 1.5
+        radius: 2.5
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+
+  inaccuracy: 0
+  shootSound: microZap
+  rotate: false
+mirror: false
+  spacing: 0
+  top: true
+  x: 0
+  y: 4
+shootY: 0
+  reload: 45
+warmupSpeed: 0.04
+minWarmup: 0.96
+  bullet: {
+ type: LaserBulletType
+      damage: 12
+      length: 110
+sideAngle: 0
+   width: 3
+sideWidth: 0
+      colors: [fcb26c, ffd27e, ffffff]
+      lightColor: ffd27e45
+collidesTeam: true
+healPercent: 2.5
+    lifetime: 15
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 15
+    sizeFrom: 0
+    sizeTo: 7
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: ffd27e
+    colorTo: fcb26c
+}
+{
+ type: ParticleEffect
+line: true
+    particles: 4
+    strokeFrom: 1.2
+    strokeTo: 0.2
+	lenFrom: 4
+lenTo: 0
+    length: 15
+    baseLength: 0
+    lifetime: 30
+  interp: pow2Out
+sizeInterp: linear
+    colorFrom: ffd27e
+    colorTo: fcb26c
+    cone: 30
+}
+]
+}
+hitEffect: hitLaserBlast
+hitColor: ffd27e
+pierceCap: 2
+buildingDamageMultiplier: 0.01
+   }
+  }
+]
+
+research: core-mors
+alreadyUnlocked: true

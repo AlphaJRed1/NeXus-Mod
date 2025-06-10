@@ -1,0 +1,6 @@
+type: TallBlock
+name: Titanar Extrusion
+variants: 2
+clipSize: 80
+shadowAlpha: 0.5
+shadowOffset: -1.5

@@ -1,0 +1,119 @@
+Name: Arietis
+description: aa
+type: flying
+flying: true
+health: 3700
+armor: 10
+envDisabled: 0
+speed: 1.5
+rotateSpeed: 3
+drag: 0.015
+accel: 0.04
+outlineColor: 2e2f34
+hitSize: 20
+engineSize: 5
+engineOffset: 15.5
+lowAltitude: true
+faceTarget: true
+weapons: [
+ {
+  name: arietis-point
+type: PointDefenseWeapon
+  rotate: true
+mirror: false
+  x: 0
+  y: -10
+  reload: 7
+top: true
+recoil: 0.8
+tarvelInterval: 6
+targetSwitchInterval: 10
+  bullet: {
+maxRange: 170
+shootEffect: sparkShoot
+hitEffect: pointHit
+maxRange: 150
+damage: 70
+  }
+ }
+ {
+  name: arietis-frontgun
+  rotate: false
+mirror: false
+shootY: 14
+  x: 0
+  y: 0
+  reload: 40
+top: false
+layerOffset: -0.01
+recoil: 1
+shoot: {
+type: ShootHelix
+}
+  bullet: {
+width: 8
+height: 13
+lifetime: 30
+speed: 5
+damage: 40
+shootEffect: sparkShoot
+smokeEffect: shootBigSmoke
+hitColor: d1efff
+backColor: d1efff
+trailColor: d1efff
+trailWidth: 1.5
+trailLength: 7
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+  }
+ }
+ {
+  name: arietis-gun
+  rotate: false
+mirror: true
+shootY: 12
+  x: 8.4
+  y: 0
+  reload: 55
+top: false
+layerOffset: -0.01
+recoil: 2.5
+shoot: {
+type: ShootHelix
+}
+  bullet: {
+shake: 1
+width: 10
+height: 14
+lifetime: 50
+speed: 4
+damage: 34
+splashDamage: 47
+splashDamageRadius: 23
+hitColor: d1efff
+backColor: d1efff
+trailColor: d1efff
+trailWidth: 2
+trailLength: 5
+trailEffect: missileTrail
+trailParam: 1.8
+trailInterval: 5
+hitEffect: {
+type: MultiEffect
+effects: [
+hitBulletColor,
+{
+type: WaveEffect
+colorFrom: d1efff
+colorTo: 97c4f7
+sizeTo: 36
+lifetime: 9
+strokeFrom: 3
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+  }
+ }
+]

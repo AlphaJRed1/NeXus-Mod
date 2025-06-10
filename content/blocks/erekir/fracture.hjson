@@ -1,0 +1,69 @@
+Name: Fracture
+description: Fires interwaving bullets at enemies that pierce and deal good damage.
+type: ItemTurret
+size: 4
+range: 250
+reload: 60
+recoil: 2.5
+shootCone: 15
+scaledHealth: 180
+rotateSpeed: 1.5
+shootSound: shootSnap
+shoot: {
+type: ShootHelix
+}
+shake: 1
+ammoPerShot: 2
+shootY: 0
+outlineColor: 2e2f34
+drawer: {
+type: DrawTurret
+basePrefix: reinforced-
+parts: [
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -2
+         progress: reload
+          x: 0
+          y: 0
+    }
+]
+}
+ammoTypes: {
+  beryllium: {
+width: 12
+hitSize: 7
+height: 20
+shootEffect: {
+type: MultiEffect
+effects: [shootBigColor, colorSparkBig]
+     }
+smokeEffect: shootBigSmoke
+damage: 69
+ammoMultiplier: 1
+pierce: true
+speed: 7.5
+lifetime: 34
+pierceCap: 2
+pierceBuilding: true
+hitColor: 92dd7e
+backColor: 92dd7e
+trailColor: 92dd7e
+frontColor: ffffff
+trailWidth: 2.1
+trailLength: 10
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+buildingDamageMultiplier: 0.3
+}
+}
+requirements: [
+beryllium/2
+]
+category: turret
+planet: erekir
+research: breach

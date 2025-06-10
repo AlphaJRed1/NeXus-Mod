@@ -1,0 +1,16 @@
+      captureWave: 31
+planet: thanaras
+sector: 24
+difficulty: 7
+research: {
+requiresUnlock: false
+  parent: infested-grounds
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+localizedName: Luminescent Tendrils
+description: Lengthy patches of tryphostone have stretched across this land not long ago. This opened pure tryphonic scars that threatened to overtake the region, if it weren't for a mysterious new growing mineral called vion, diving the land in two and preventing the two tendrils from connecting. Use your newly researched tech to conquer this sector and discover more about the inner workings of this planet.

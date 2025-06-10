@@ -1,0 +1,235 @@
+Name: Ion
+description: A strong hovering unit, equipped with large arm cannons, firing massive star orbs that fragment into multiple lightning missiles.
+type: hover
+hovering: true
+health: 16700
+armor: 11
+speed: 0.8
+rotateSpeed: 1.5
+drag: 0.05
+accel: 0.07
+hitSize: 25
+engineSize: 3
+outlineColor: 1c2125
+parts: [
+    {
+        type : HoverPart
+         mirror: true
+radius: 25
+phase: 30
+stroke: 4
+layerOffset: -0.001
+color: 69ffc4
+          x: 9
+          y: -1
+    }
+    {
+        suffix : -mini-wing
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+layerOffset: -0.0001
+         moveY: 0
+         moveRot: 200
+         progress: warmup
+          x: 10
+          y: -8
+    }
+    {
+        suffix : -wing
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+layerOffset: -0.0001
+         moveY: 0
+         moveRot: 130
+         progress: warmup
+          x: 11
+          y: -8
+    }
+]
+weapons: [
+   {
+  name: ion-gun
+  inaccuracy: 0
+shake: 4.5
+  shootSound: shootMicro1
+  rotate: false
+  spacing: 0
+  top: false
+shootY: 9
+layerOffset: -0.00001
+  x: 16
+  y: 0
+  reload: 80
+  recoil: 2.5
+shoot: {
+firstShotDelay: 30
+}
+  bullet: {
+    damage: 65
+splashDamage: 80
+splashDamageRadius: 30
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 8
+    baseLength: 2
+length: 35
+    lifetime: 80
+lenFrom: 6
+lenTo: 3
+strokeFrom: 2.5
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+    cone: 360
+interp: circleOut
+}
+{
+    type: ParticleEffect
+    particles: 6
+    baseLength: 0
+length: 30
+    lifetime: 60
+sizeFrom: 4.2
+sizeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+    cone: 360
+interp: pow2Out
+sizeInterp: pow5In
+}
+{
+type: WaveEffect
+sizeTo: 33
+strokeFrom: 5
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+interp: circleOut
+lifetime: 30
+}
+]
+}
+sprite: nexus-mod-star
+shrinkY: 0
+    height: 16
+    width: 16
+spin: 20
+    lifetime: 30
+    speed: 7
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+despawnEffect: none
+despawnHit: true
+shootEffect: sparkShoot
+smokeEffect: {
+type: WaveEffect
+sizeTo: 10
+strokeFrom: 6
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+interp: pow2Out
+lifetime: 50
+}
+hitShake: 2.5
+trailInterval: 2
+    trailEffect: {
+type: WaveEffect
+    lifetime: 45
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 6
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: circleOut
+    colorTo: ccffeb
+}
+fragBullets: 5
+fragRandomSpread: 150
+fragBullet: {
+type: MissileBulletType
+    damage: 10
+pierceCap: 3
+pierceBuilding: true
+splashDamage: 25
+splashDamageRadius: 12
+    height: 10
+    width: 10
+    lifetime: 25
+    speed: 6
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+trailColor: 38ffb0
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 4
+    baseLength: 2
+length: 15
+    lifetime: 60
+lenFrom: 4
+lenTo: 2
+strokeFrom: 2
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+    cone: 360
+interp: circleOut
+}
+{
+type: WaveEffect
+sizeTo: 15
+strokeFrom: 3
+strokeTo: 0
+    colorFrom: ccffeb
+    colorTo: 38ffb0
+interp: circleOut
+lifetime: 25
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+lightning: 2
+lightningLength: 8
+lightningDamage: 14
+lightningColor: ccffeb
+homingPower: 0.25
+}
+   chargeEffect: {
+type: multiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 1
+    sizeFrom: 10
+    sizeTo: 4
+    length: 0
+    baseLength: 0
+    lifetime: 30
+  interp: pow2In
+    colorFrom: 69ffc400
+    colorTo: 69ffc4
+    cone: 360
+}
+]
+    }
+   }
+  }
+]
+research: neutron
+researchCostMultiplier: 0.7

@@ -1,0 +1,48 @@
+Name: Eye Glide
+description: a
+type: flying
+useUnitCap: false
+flying: true
+health: 3143
+speed: 0.8
+rotateSpeed: 1.8
+drag: 0.02
+accel: 0.05
+hitSize: 24
+lowAltitude: true
+outlineColor: 071a20
+drawCell: false
+circleTarget: true
+weapons: [
+   {
+    name: spawns
+    x: 0
+    y: 0
+    rotate: false
+    recoil: 0
+alwaysShooting: true
+reload: 75
+shoot: {
+shots: 2
+}
+    bullet: {
+instantDisappear: true
+spawnUnit: karion-bug
+    }
+ }
+
+]
+
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 200
+radScale: 2.2
+radAmountScale: 2.2
+  }
+]

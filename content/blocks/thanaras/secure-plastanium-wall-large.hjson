@@ -1,0 +1,14 @@
+name: Large Secure Plastanium Wall
+description: A strong large secure wall that protects your buildings from enemies. Absorbs lasers.
+type: Wall
+health: 2500
+size: 2
+absorbLasers: true
+armor: 5
+requirements: [
+tungsten/12
+plastanium/24
+]
+category: defense
+planet: thanaras
+research: secure-plastanium-wall

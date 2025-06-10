@@ -1,0 +1,17 @@
+captureWave: 26
+planet: thanaras
+sector: 29
+difficulty: 6
+addStartingItems: false
+research: {
+requiresUnlock: false
+  parent: tryphoton-research-facility
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+localizedName: Infested Grounds
+description: With patches of sand craters spread out across a tryphoton-consumed landscape, this field full of pure tryphoton rock marks the beginning of an all out branch in all directions of discovery. Defend and capture this sector to unlock multiple new research branches and tech that will help you in your adventure. Beware though, the Korru won't let you get off that easily.

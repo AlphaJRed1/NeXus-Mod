@@ -1,0 +1,11 @@
+type: DuctBridge
+name: Overpass
+description: junction finallyaa
+requirements: [
+ nickel/2
+titanium/2
+]
+category: distribution
+researchCostMultiplier: 0.1
+planet: thanaras
+research: rail-junction

@@ -1,0 +1,74 @@
+Name: Diox
+description: A hovering unit that charges and fires powerful bullets.
+type: mech
+health: 673
+armor: 7
+speed: 0.7
+useUnitCap: false
+rotateSpeed: 3
+hitSize: 14
+outlineColor: 071a20
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 4
+    sizeTo: 0
+    baseLength: 5
+	length: 30
+    lifetime: 180
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+  {
+  name: diox-gun
+  inaccuracy: 0
+  shootSound: tryphoBow
+  rotate: false
+  spacing: 0
+  top: false
+  x: 8.3
+  y: 0
+  reload: 40
+  recoil: 2
+  bullet: {
+    damage: 77
+	pierceCap: 3
+pierceBuilding: true
+speed: 10
+lifetime: 5
+fragBullets: 2
+fragRandomSpread: 50
+fragBullet: {
+damage: 33
+	pierceCap: 3
+pierceBuilding: true
+speed: 10
+lifetime: 5
+
+}
+   }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 60
+radScale: 2
+radAmountScale: 2
+  }
+]

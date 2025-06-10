@@ -1,0 +1,37 @@
+name: Large Uranium Wall
+description: A large, moderately armored wall that explodes when destroyed, inflicting uranium decay to enemies in its blast radius.
+type: Wall
+health: 2500
+size: 2
+destroyEffect: {
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 9
+    sizeTo: 0
+    length: 70
+    baseLength: 5
+    lifetime: 60
+    colorFrom: 98fb98
+    colorTo: 90ee90
+    cone: 360
+interp: pow5Out
+    }
+baseExplosiveness: 2
+destroyBullet: {
+        type: BombBulletType
+    status: uranium-decay
+   statusDuration: 300
+    knockback: 4
+despawnEffect: smokeCloud
+        splashDamageRadius: 60
+     pierce: true
+        splashDamage: 200
+        instantDisappear: true
+        hittable: false
+        collidesAir: true
+}
+requirements: [
+  uranium/24
+]
+category: defense
+research: uranium-wall

@@ -1,0 +1,21 @@
+ type: StatusEffect
+       name: cruxian-virality
+localizedName: Cruxian Virality
+       speedMultiplier: 0.8
+       reloadMultiplier: 0.8
+	healthMultiplier: 0.8
+       effectChance: 0.1
+       effect: {
+    type: ParticleEffect
+sprite: shell
+region: shell
+    particles: 1
+sizeFrom: 3
+sizeTo: 0
+    length: 0
+    baseLength: 10
+    lifetime: 60
+    colorFrom: ff8d8d
+    colorTo: ff4545
+    cone: 360
+    }

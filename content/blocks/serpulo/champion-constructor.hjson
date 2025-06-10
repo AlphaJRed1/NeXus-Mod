@@ -1,0 +1,67 @@
+Name: Champion Constructor
+description: Creates Champions, units which are meant to be the middle ground between tier 4 and tier 5 units. They are either upgrades of certain units or have unique gimmicks that make them stand out from the crowd. Due to their lack of requiring multiple reconstructors, they require much more time and materials to create.
+type: UnitFactory
+health: 6700
+size: 7
+consumes: {
+  power: 20
+liquids: {
+liquids: [
+cryofluid/0.6
+]
+}
+}
+plans: [
+  {
+    unit: hatch
+    time: 9000
+    requirements: [
+      silicon/1000
+      titanium/1200
+      monolithium/1200
+	metaglass/750
+plastanium/750
+    ]
+  }
+  {
+    unit: state
+    time: 9300
+    requirements: [
+      silicon/1200
+      titanium/1000
+     surge-alloy/400
+plastanium/800
+phase-fabric/250
+    ]
+  }
+  {
+    unit: shallow
+    time: 8500
+    requirements: [
+silicon/1200
+lead/1400
+metaglass/800
+phase-fabric/300
+thorium/800
+    ]
+  }
+]
+requirements: [
+silicon/1000
+phase-fabric/300
+titanium/1500
+surge-alloy/550
+thorium/1000
+metaglass/750
+monolithium/1500
+]
+research: {
+  parent: tetrative-reconstructor
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reverent-junction
+    }
+  ]
+}
+category: units

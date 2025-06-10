@@ -1,0 +1,423 @@
+type: ItemTurret
+Name: Admonish
+description: Launches large amounts of artillery shells at enemies. Each type of ammo inflicts a different type of status effect.
+size: 3
+health: 2000
+range: 270
+targetGround: true
+targetAir: false
+reload: 90
+shootY: 9.7
+shake: 2
+hasItems: true
+shootWarmupSpeed: 0.04
+minWarmup: 0.6
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 7
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 2
+length: 15
+    lifetime: 80
+    colorFrom: ccffeb
+    colorTo: 38ffb010
+    cone: 40
+}
+]
+}
+
+smokeEffect: shootBigSmoke
+shootSound: microlowblast
+rotateSpeed: 3
+recoil: 2.5
+cooldownTime: 100
+outlineColor: 101220
+inaccuracy: 14
+velocityRnd: 0.15
+shoot: {
+shots: 6
+type: ShootAlternate
+barrels: 2
+spread: 10.2
+}
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+drawer: {
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -barrels
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: 4
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 1
+         moveY: 2
+         moveRot: -35
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -cover
+        type : RegionPart
+         mirror: false
+         under: false
+          x: 0
+          y: 0
+    }
+]
+}
+ammoTypes: {
+  tryphoton: {
+type: ArtilleryBulletType
+    damage: 15
+splashDamage: 42
+splashDamageRadius: 20
+    speed: 4
+    lifetime: 73
+hitSound: microBoom
+    height: 11
+    width: 11
+frontColor: ccffeb
+backColor: 38ffb0
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 25
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: circleOut
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 30
+    lifetime: 70
+    colorFrom: 38ffb0
+    colorTo: 38ffb020
+    cone: 360
+}
+]
+}
+despawnHit: true
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5.5
+    strokeFrom: 2
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 20
+    lifetime: 70
+    colorFrom: ccffeb
+    colorTo: ccffeb20
+    cone: -90
+}
+]
+}
+status: photonized
+statusDuration: 250
+  }
+ cryo-compound: {
+type: ArtilleryBulletType
+    damage: 20
+splashDamage: 38
+splashDamageRadius: 25
+    speed: 4
+    lifetime: 73
+hitSound: microBoom
+    height: 11
+    width: 11
+frontColor: d2f1ff
+backColor: 8aceea
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 25
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: c0ecff
+ interp: circleOut
+    colorTo: 8aceea10
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 30
+    lifetime: 70
+    colorFrom: d2f1ff
+    colorTo: 78d6ff20
+    cone: 360
+}
+]
+}
+despawnHit: true
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5.5
+    strokeFrom: 2
+    strokeTo: 1
+    colorFrom: c0ecff
+ interp: pow5Out
+    colorTo: c0ecff10
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 20
+    lifetime: 70
+    colorFrom: c0ecff
+    colorTo: 6bb9d920
+    cone: -90
+}
+]
+}
+status: freezing
+statusDuration: 250
+  }
+noxionite: {
+type: ArtilleryBulletType
+    damage: 27
+splashDamage: 61
+splashDamageRadius: 25
+    speed: 4
+    lifetime: 73
+hitSound: microBoom
+    height: 13
+    width: 12
+frontColor: c7e350
+backColor: aeaa0f
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 25
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: c7e350
+ interp: circleOut
+    colorTo: 9d990010
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 30
+    lifetime: 70
+    colorFrom: f0ff00
+    colorTo: 9d990020
+    cone: 360
+}
+]
+}
+despawnHit: true
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5.5
+    strokeFrom: 2
+    strokeTo: 1
+    colorFrom: c7e350
+ interp: pow5Out
+    colorTo: c7e35010
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 20
+    lifetime: 70
+    colorFrom: f0ff00
+    colorTo: f0ff0020
+    cone: -90
+}
+]
+}
+ status: noxious-burning
+statusDuration: 300
+  }
+uranium: {
+type: ArtilleryBulletType
+    damage: 34
+splashDamage: 78
+splashDamageRadius: 25
+    speed: 4
+    lifetime: 73
+hitSound: microBoom
+    height: 14
+    width: 13.5
+frontColor: d9ff9e
+backColor: 95d928
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 25
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: d9ff9e
+ interp: circleOut
+    colorTo: 59c90a10
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 30
+    lifetime: 70
+    colorFrom: d9ff9e
+    colorTo: 59c90a20
+    cone: 360
+}
+]
+}
+despawnHit: true
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5.5
+    strokeFrom: 2
+    strokeTo: 1
+    colorFrom: dcff47
+ interp: pow5Out
+    colorTo: dcff4710
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 20
+    lifetime: 70
+    colorFrom: cbff78
+    colorTo: cbff7820
+    cone: -90
+}
+]
+}
+ status: uranium-decay
+statusDuration: 300
+  }
+
+  }
+requirements: [
+nitinol/85
+silicon/120
+titanium/250
+]
+category: turret
+research: {
+  parent: spherule
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.7

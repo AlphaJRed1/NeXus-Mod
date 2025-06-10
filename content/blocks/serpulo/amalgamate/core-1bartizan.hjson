@@ -1,0 +1,16 @@
+Type: CoreBlock
+Name: Core: Bartizan
+description: The Beginning Core of the Amalgamate. Spawns in an Odium.
+health: 2000
+armor: 2
+itemCapacity: 1000
+size: 3
+category: effect
+unitType: odium
+unitCapModifier: 8
+requirements: [
+copper/600
+silicon/450
+admix/250
+]
+research: core-nucleus

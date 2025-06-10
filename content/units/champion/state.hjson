@@ -1,0 +1,229 @@
+Name: Sanction
+description: A giant flying unit, equipped with missile launchers, lightning cannons, and minigun mounts, supporting nearby units with status effects and a forcefield, as well as spawning in Novas.
+type: flying
+flying: true
+health: 15500
+armor: 9
+speed: 1.5
+rotateSpeed: 2.2
+drag: 0.03
+accel: 0.06
+hitSize: 20
+engineOffset: 25
+engineSize: 7
+lowAltitude: true
+circleTarget: false
+faceTarget: false
+itemCapacity: 250
+immunities: [wet, electrified, shocked]
+weapons: [
+ {
+  name: state-missile
+  inaccuracy: 15
+  x: 15
+  y: 6
+  rotate: false
+baseRotation: -75
+shootCone: 360
+  mirror: true
+  top: false
+layerOffset: -0.0001
+  reload: 65
+  recoil: 3
+shoot: {
+type: ShootAlternate
+shots: 8
+spread: 3
+barrels: 4
+}
+  shootSound: shootSmite
+    bullet: {
+      type: MissileBulletType
+      damage: 15
+      speed: 5
+      lifetime: 40
+      collidesTeam: true
+      healPercent: 1
+      splashDamage: 20
+      splashDamageRadius: 20
+      despawnEffect: hitLaser
+      smokeEffect: hitLaser
+      homingPower: 0.3
+      homingRange: 100
+      hitEffect: none
+      frontColor: ffffff
+      backColor: 98ffa9
+      trailColor: 98ffa9
+      lightColor: 84f591
+      weaveMag: 2
+      weaveScale: 6
+
+    }
+  }
+
+  {
+  name: state-gun
+  inaccuracy: 5
+  spacing: 0
+  x: 22
+  y: -15
+  rotate: true
+rotateSpeed: 5
+  mirror: true
+  top: true
+  reload: 10
+cooldownTime: 50
+  recoil: 2
+layerOffset: 0.0001
+parts: [
+    {
+        suffix : -barrels
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+         progress: reload
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 0
+         moveY: 0
+         moveRot: 15
+         progress: warmup
+          x: 3
+          y: 0
+    }
+]
+shoot: {
+type: ShootAlternate
+shots: 2
+spread: 5
+barrels: 2
+}
+  shootSound: lasershoot
+    bullet: {
+      damage: 55
+      speed: 6
+      lifetime: 30
+      collidesTeam: true
+      healPercent: 1.5
+      width: 7
+      height: 13
+  pierceCap: 2
+      despawnEffect: hitBulletColor
+      smokeEffect: hitLaser
+      homingPower: 0
+      hitEffect: hitBulletColor
+      frontColor: ffffff
+      backColor: 98ffa9
+      lightColor: 84f591
+trailIntervaL: 3
+trailEffect: hitLaser
+    }
+  }
+  {
+  name: state-lightning
+  top: true
+  inaccuracy: 4
+  shootSound: spark
+  rotate: true
+  rotateSpeed: 6
+  spacing: 0
+  x: 15
+  y: -1
+  reload: 20
+  recoil: 1
+  bullet: {
+  type: LightningBulletType
+  damage: 22
+  lightningLength: 16
+    collidesTeam: true
+    healPercent: 2
+   lightningColor: 84f591
+   }
+  }
+  {
+  name: state-lightning
+  top: true
+  inaccuracy: 4
+  shootSound: spark
+  rotate: true
+  rotateSpeed: 6
+  spacing: 0
+  x: 7
+  y: 15
+  reload: 20
+  recoil: 1
+  bullet: {
+  type: LightningBulletType
+  damage: 22
+  lightningLength: 16
+    collidesTeam: true
+    healPercent: 2
+   lightningColor: 84f591
+   }
+  }
+]
+abilities: [
+  {
+    type: MoveEffectAbility
+   effect: missileTrailShort
+   teamColor: true
+y: -23
+x: 22
+interval: 4
+  }
+  {
+    type: MoveEffectAbility
+   effect: missileTrailShort
+   teamColor: true
+y: -23
+x: -22
+interval: 4
+  }
+  {
+    type: MoveEffectAbility
+   effect: missileTrailShort
+   teamColor: true
+y: -23.5
+x: 14.5
+interval: 4
+  }
+  {
+    type: MoveEffectAbility
+   effect: missileTrailShort
+   teamColor: true
+y: -23.5
+x: -14.5
+interval: 4
+  }
+  {
+    type: ForceFieldAbility
+    radius: 100
+    regen: 3
+    max: 1100
+    cooldown: 900
+sides: 4
+  }
+  {
+    type: UnitSpawnAbility
+    spawnX: 0
+    spawnY: 0
+    unit: nova
+    spawnTime: 500
+  }
+{
+type: StatusFieldAbility
+effect: overdrive
+range: 100
+duration: 200
+reload: 400
+}
+]

@@ -1,0 +1,85 @@
+Type: ContinuousTurret
+Name: Diurnal
+health: 1830
+description: Targets and drags in flying enemies, slowing them down and damaging them slighty. Requires tryplasma and nitrogen to function.
+size: 3
+hasLiquids: true
+shootWarmupSpeed: 0.05
+minWarmup: 0.85
+outlineColor: 101220
+shootY: 2
+drawer: {
+type: DrawTurret
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -cover
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -3.32
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 0
+         moveY: 0
+         moveRot: -15
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+consumes: {
+  liquids: {
+liquids: [
+nitrogen/0.1
+tryplasma/0.2
+]
+}
+}
+aimChangeSpeed: 0.9
+rotateSpeed: 4
+shootCone: 200
+targetAir: true
+targetGround: false
+range: 300
+shootType: {
+type: PointLaserBulletType
+strokeFrom: 1.7
+strokeTo: 0.5
+pointyScaling: 1.1
+damage: 25
+knockback: -2
+status: freezing
+statusDuration: 200
+collidesGround: false
+color: d2f1ff
+hitColor: d2f1ff
+speed: 10
+}
+requirements: [
+nickel/320
+depleted-uranium/65
+nitinol/120
+]
+category: turret
+research: {
+  parent: hoplite
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.4

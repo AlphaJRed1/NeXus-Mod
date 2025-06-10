@@ -1,0 +1,31 @@
+Name: Drel
+description: a
+type: flying
+drawCell: false
+flying: true
+health: 31
+useUnitCap: false
+speed: 2.2
+rotateSpeed: 3
+drag: 0.05
+accel: 0.1
+hitSize: 6
+lowAltitude: true
+itemCapacity: 15
+mineTier: 3
+mineSpeed: 5
+outlineColor: 071a20
+drawMineBeam: false
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 40
+radScale: 1
+radAmountScale: 1
+  }
+]

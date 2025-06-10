@@ -1,0 +1,59 @@
+Type: PowerTurret
+Name: Chrome Regulator
+description: Heals surrounding buildings with regenerative bolt lasers.
+size: 2
+range: 100
+health: 560
+reload: 15
+shootSound: lasershoot
+targetHealing: true
+targetGround: false
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+basePrefix: mend-bolt-
+}
+{
+type: DrawPlasma
+plasma1: 84f491
+plasma2: 84f491
+plasmas: 1
+}
+{
+type: DrawPulseShape
+color: 84f491
+}
+]
+}
+targetAir: false
+playerControllable: false
+shootY: 0
+consumes: {
+  power: 2
+}
+shootType: {
+  type: PointLaserBulletType
+collidesTeam: true
+splashDamage: 0
+splashRadius: 30
+healPercent: 2
+range: 100
+color: 84f491
+}
+requirements: [
+nickel/30
+silicon/20
+titanium/25
+]
+category: effect
+planet: thanaras
+researchCostMultiplier: 0.2
+research: power-pod

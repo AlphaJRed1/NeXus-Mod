@@ -1,0 +1,24 @@
+type: Floor
+name: Seeping Tryphostone
+description: some sort of radioactive goo seeping through the cracks.
+variants: 3
+attributes: {
+radioactive: 0.3
+tryphoton: 0.15
+}
+updateEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 0
+    sizeTo: 3
+    baseLength: 10
+    lifetime: 60
+    colorFrom: 5effea
+    colorTo: 5effea20
+    cone: 360
+}
+emitLight: true
+lightRadius: 10
+lightColor: 5effea25
+blendGroup: tryphostone
+blendID: 17

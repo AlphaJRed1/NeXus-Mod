@@ -1,0 +1,13 @@
+name: Large Secure Tungsten Wall
+description: A large armored secure wall that protects your buildings from enemies.
+type: Wall
+health: 2950
+armor: 6
+size: 2
+requirements: [
+tungsten/24
+titanium/8
+]
+category: defense
+planet: thanaras
+research: secure-tungsten-wall

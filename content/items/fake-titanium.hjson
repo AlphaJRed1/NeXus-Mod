@@ -1,0 +1,15 @@
+research: {
+parent: core-mors
+requiresUnlock: false
+}
+type: Block
+name: Titanium
+description: Used in liquid transportation structures, drills and factories.
+hiddenOnPlanets: [serpulo, erekir, thanaras]
+buildVisibility: hidden
+planet: thanaras
+hidden: true
+requirements: [
+titanium/1
+]
+

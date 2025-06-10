@@ -1,0 +1,37 @@
+name: Tekton Drone Bay
+description: Manufactures a Tekton Drone which assists in construction and rebuilding destroyed structures. Requires power and a steady supply of nitrogen.
+type: DroneCenter
+health: 400
+armor: 5
+size: 3
+unitsSpawned: 1
+droneType: tekton
+status: none
+droneConstructTime: 2100
+droneRange: 100
+consumes: {
+power: 2.75
+liquids: {
+liquids: [
+nitrogen/0.2
+]
+}
+}
+requirements: [
+silicon/110
+tungsten/90
+nitinol/55
+cryo-compound/65
+]
+category: effect
+planet: thanaras
+research: {
+  parent: mend-bolt
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+researchCostMultiplier: 0.7

@@ -1,0 +1,50 @@
+Name: Micro Factory
+description: Constructs the Tier 1 Micro units.
+type: UnitFactory
+size: 3
+consumes: {
+  power: 4
+}
+plans: [
+  {
+    unit: proton
+    time: 1200
+    requirements: [
+	silicon/25
+	titanium/20
+    ]
+  }
+  {
+    unit: fission
+    time: 1600
+    requirements: [
+	silicon/20
+	tryphoton/25
+    ]
+  }
+  {
+    unit: atom
+    time: 1700
+    requirements: [
+	silicon/15
+	nickel/20
+	tryphoton/10
+    ]
+  }
+]
+requirements: [
+silicon/70
+titanium/100
+nickel/100
+]
+research: {
+  parent: core-mors
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+category: units
+researchCostMultiplier: 0.5

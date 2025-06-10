@@ -1,0 +1,5 @@
+type: Floor
+name: Thanarian Titanium Plate
+variants: 1
+blendGroup: thanarian-metal
+blendID: 19

@@ -1,0 +1,218 @@
+Name: Mirage
+description: Fires a salvo of heavy shadow shells at enemies, aswell as inflicting nearby enemies with soul drain and damaging close structures by rapidly ejecting shadow formula from its body, which cloaks it in a dark fog that unfortunately doesn't provide it with invisibility. Just like its previous generations, it is equipped with its own powerful forcefield.
+type: legs
+hitSize: 22
+hovering: true
+buildSpeed: 0.8
+allowLegStep: true
+visualElevation: 0.5
+immunities: [freezing, subzero-freezing]
+forceMultiTarget: true
+outlineColor: 1c2125
+stepShake: 1.5
+legCount: 6
+legBaseOffset: 9.5
+legExtension: -1.7
+legLengthScl: 0.96
+legLength: 15
+health: 4505
+armor: 10
+rotateSpeed: 2.2
+groundLayer: 72
+speed: 0.45
+weapons: [
+ {
+    name: mirage-gun
+    y: 0
+    x: 14
+    rotate: false
+    top: false
+    recoil: 2.5
+    reload: 70
+shootY: 4.5
+   shoot: {
+shots: 3
+shotDelay: 4
+}
+    shootSound: microSmall
+    bullet: {
+      speed: 6
+      lifetime: 40
+      damage: 25
+      splashDamage: 20
+      splashDamageRadius: 30
+      height: 20
+      width: 12
+   pierceCap: 2
+  pierceBuilding: true
+frontColor: b46dff
+backColor: 5830d9
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 8
+    baseLength: 0
+    lifetime: 50
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: -90
+}
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WrapEffect
+name: dynamicSpikes
+color: b46dff
+size: 30
+}
+{
+type: WaveEffect
+    lifetime: 40
+sides: 4
+    rotation: 0
+    sizeFrom: 4
+    sizeTo: 30
+    strokeFrom: 3.5
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 5617b0
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 5
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 35
+    baseLength: 0
+    lifetime: 60
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 3.5
+    sizeTo: 0
+    length: 30
+    baseLength: 2
+    lifetime: 70
+  interp: circleOut
+sizeInterp: pow2In
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+]
+}
+
+      }
+    }
+ {
+    name: mirage-aura
+    y: 0
+    x: 0
+    rotate: false
+shootCone: 360
+    recoil: 0
+    reload: 8
+  mirror: false
+  top: true
+    shootSound: lasershoot
+inaccuracy: 100
+shoot: {
+type: ShootSpread
+shots: 10
+spread: 36
+}
+    bullet: {
+smokeEffect: none
+shootEffect: {
+ type: ParticleEffect
+    particles: 1
+    sizeFrom: 10
+    sizeTo: 0
+    length: 5
+    baseLength: 30
+    lifetime: 60
+  interp: circleOut
+    colorFrom: 16071e
+    colorTo: 16071e
+    cone: 360
+sizeInterp: pow2In
+}
+damage: 16
+pierce: true
+pierceBuilding: true
+status: soul-drain
+statusDuration: 120
+width: 13
+height: 13
+speed: 10
+lifetime: 6
+frontColor: b46dff
+backColor: 16071e
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 3
+    sizeTo: 0
+    length: 10
+    baseLength: 0
+    lifetime: 40
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 16071e
+    cone: -100
+}
+despawnEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 3.3
+    sizeTo: 0
+    length: 15
+    baseLength: 0
+    lifetime: 40
+sizeInterp: linear
+  interp: pow5Out
+    colorFrom: b46dff
+    colorTo: 16071e
+    cone: 360
+}
+hitEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 3.3
+    sizeTo: 0
+    length: 15
+    baseLength: 0
+    lifetime: 40
+sizeInterp: linear
+  interp: pow5Out
+    colorFrom: b46dff
+    colorTo: 16071e
+    cone: 140
+}
+          }
+  }
+]
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 22
+    regen: 3.5
+    max: 350
+    cooldown: 400
+sides: 10
+  }
+]

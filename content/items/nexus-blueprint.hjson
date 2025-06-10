@@ -1,0 +1,6 @@
+type: material
+name: Nexus Blueprint
+description: The basis of the Nexus Research Tree. This enables you to research special content in any Tech Tree, if there are any. This is ONLY used for research purposes.
+hardness: 5
+cost: 5
+color: 827f9d

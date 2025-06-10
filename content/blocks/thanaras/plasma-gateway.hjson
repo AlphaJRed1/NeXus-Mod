@@ -1,0 +1,57 @@
+name: Plasma Gateway
+description: Creates a wormhole connecting to other Plasma Gateways, allowing items to be transported over long distances. Must be completely collinear to other Plasma Gateways in order to work.
+type: ItemBridge
+pulse: true
+itemCapacity: 50
+health: 330
+range: 400
+armor: 5
+size: 3
+bridgeWidth: 24
+arrowTimeScl: 4
+arrowSpacing: 9
+consumes: {
+power: 1.85
+liquids: {
+liquids: [
+tryplasma/0.1
+]
+}
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 10
+}
+{
+type: DrawPlasma
+plasma1: ccffeb
+plasma2: 38ffb0
+plasmas: 1
+}
+]
+}
+requirements: [
+nickel/200
+nitinol/105
+depleted-uranium/40
+silicon/105
+]
+category: distribution
+researchCostMultiplier: 0.6
+planet: thanaras
+research: {
+  parent: rail-overpass
+  objectives: [
+    {
+      type: SectorComplete
+      preset: vion-plateau
+    }
+  ]
+}

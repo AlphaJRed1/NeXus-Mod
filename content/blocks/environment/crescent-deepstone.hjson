@@ -1,0 +1,5 @@
+type: Floor
+name: Crescent Deepstone
+variants: 3
+blendGroup: deepstone
+blendID: 16

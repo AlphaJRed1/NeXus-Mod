@@ -1,0 +1,117 @@
+type: LiquidTurret
+Name: Shiver
+description: Strikes the ground, sending out vibrating shockwaves that inflict enemies with trauma. Requires methane and power to function. 
+size: 4
+health: 2200
+extinguish: false
+range: 230
+targetGround: true
+targetAir: true
+reload: 70
+shootWarmupSpeed: 0.05
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.2
+}
+minWarmup: 0.65
+shake: 3
+hasLiquids: true
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+shootSound: smashBig
+liquidCapacity: 50
+liquidConsumed: 0.3
+cooldownTime: 150
+recoil: 2
+shootY: 7
+recoilTime: 100
+outlineColor: 101220
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -arm1
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 2
+         moveY: 0
+         moveRot: -30
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -arm2
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 7
+         moveY: 4.5
+         moveRot: -45
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -pound
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: 5
+         moveRot: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+consumes: {
+power: 9.6
+}
+ammoTypes: {
+  carbon: {
+    speed: 5
+lifetime: 47
+hittable: false
+width: 0
+height: 0
+bulletInterval: 4
+pierce: true
+pierceBuilding: true
+intervalBullet: {
+damage: 5
+hitEffect: flakExplosion
+despawnHit: true
+hitSound: quakeSmall
+lifetime: 0
+instantDisappear: true
+splashDamage: 50
+splashDamageRadius: 35
+knockback: 4
+status: trauma
+statusDuration: 80
+}
+  }
+  }
+requirements: [
+nitinol/300
+silicon/450
+tungsten/550
+cryo-compound/200
+plastanium/150
+]
+category: turret
+research: punctual
+planet: thanaras
+researchCostMultiplier: 0.8

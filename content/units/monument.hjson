@@ -1,0 +1,96 @@
+type: mech
+Name: Monument
+description: Tier 2 Ground Unity Mech. Fires charged bullets at enemies, as well as plasma fire from its mounts that deal heavy damage at close range.
+speed: 0.8
+health: 1650
+armor: 8
+hitSize: 14
+rotateSpeed: 3.5
+forceMultiTarget: true
+weapons: [
+ {
+    name: monument-gun
+    x: 8
+    y: 0
+    rotate: false
+   top: false
+    reload: 55
+    recoil: 3.5
+    shootSound: artillery
+    bullet: {
+      damage: 52
+      lifetime: 40
+      speed: 5
+      width: 10
+      height: 14
+frontColor: dbf9ff
+backColor: 56c4ff
+hitColor: 56c4ff
+lightColor: 56c4ff
+      despawnEffect: hitBulletColor
+     hitEffect: hitBulletColor
+lightning: 2
+lightningLength: 7
+lightningDamage: 14
+lightningCone: 70
+lightningColor: 56c4ff
+    }
+ }
+ {
+    name: monument-mount
+    x: 4.8
+    y: -4.5
+    rotate: true
+rotateSpeed: 4
+   top: true
+    reload: 10
+    recoil: 1.8
+    bullet: {
+      damage: 20
+pierce: true
+pierceBuilding: true
+      lifetime: 7
+      speed: 8
+      width: 0
+      height: 0
+hitSize: 7
+keepVelocity: false
+hittable: false
+despawnEffect: none
+hitColor: 56c4ff
+hitEffect: hitBulletColor
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 6
+    baseLength: 1
+length: 65
+    lifetime: 30
+sizeFrom: 2.7
+    colorFrom: 56c4ff
+    colorTo: 325eb2
+    cone: 20
+interp: circleOut
+sizeInterp: linear
+}
+{
+ type: ParticleEffect
+    particles: 6
+    baseLength: 1
+length: 63
+    lifetime: 40
+sizeFrom: 2.7
+    colorFrom: dbf9ff
+    colorTo: 56c4ff
+    cone: 16
+interp: pow5Out
+sizeInterp: pow2In
+}
+]
+}
+    }
+ }
+]
+

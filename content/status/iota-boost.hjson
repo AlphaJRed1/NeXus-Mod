@@ -1,0 +1,24 @@
+ type: StatusEffect
+       name: iota-boost
+localizedName: Iota Boost
+       speedMultiplier: 1.25
+	damageMultiplier: 1.2
+	damage: -0.25
+   color: baf6cc
+       effectChance: 0.1
+       effect: {
+ type: ParticleEffect
+    particles: 3
+    baseLength: 2
+length: 20
+    lifetime: 35
+	interp: circleOut
+    colorFrom: baf6cc
+    colorTo: 5dce7f05
+    cone: 360
+line: true
+lenFrom: 2
+lenTo: 4
+strokeFrom: 2
+strokeTo: 0
+}

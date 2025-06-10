@@ -1,0 +1,7 @@
+type: material
+name: iron
+description: In the works (will probably delete)
+hardness: 2
+cost: 2
+color: c2c9d9
+hidden: true

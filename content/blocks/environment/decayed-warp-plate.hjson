@@ -1,0 +1,5 @@
+type: Floor
+name: Decayed Warp Plate
+variants: 3
+blendGroup: decayed-stone
+blendID: 15

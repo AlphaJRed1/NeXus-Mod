@@ -1,0 +1,20 @@
+      captureWave: 41
+planet: thanaras
+sector: 26
+difficulty: 9
+research: {
+requiresUnlock: false
+  parent: green-valley
+  objectives: [
+    {
+      type: SectorComplete
+      preset: green-valley
+    }
+    {
+      type: SectorComplete
+      preset: frost-mounds
+    }
+  ]
+}
+localizedName: Miscellaneon
+description: You may have noticed units that aren't part of the micro family tree appearing throughout different sectors to aid in your demise. These units are much more powerful than the micro units, both in shape and form, with each family having their own unique set of abilities. This sector contains all 3 biomes that depict each of the Mega units, as they're called: the vion quartz representing the flaming and quick Vion family; the frozen ice sheets being the environment in which the Shadow family thrives; and the decaying and toxic stones where the Nuclear family originates from. Capture this sector in the face of this mega onslaught and move on with your conquest.

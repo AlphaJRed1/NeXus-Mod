@@ -1,0 +1,6 @@
+type: OreBlock
+itemDrop: uranium
+variants: 3
+lightColor: cbff78
+emitLight: true
+lightRadius: 10

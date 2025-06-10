@@ -1,0 +1,240 @@
+Name: Eidolon
+description: pending :p
+type: legs
+hitSize: 38
+hovering: true
+buildSpeed: 1
+allowLegStep: true
+visualElevation: 0.75
+immunities: [freezing, subzero-freezing]
+forceMultiTarget: true
+outlineColor: 1c2125
+stepShake: 2.8
+legCount: 4
+legBaseOffset: 14
+legExtension: -10
+legLengthScl: 0.96
+legLength: 22
+health: 22300
+            legMinLength: 0.4
+            rippleScale: 0.2
+
+            legMoveSpace: 2
+armor: 18
+rotateSpeed: 1.5
+speed: 0.35
+weapons: [
+ {
+    name: eidolon-gun
+parts: [
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 1.1
+         moveY: 0.1
+         moveRot: -10
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+    y: -4.7
+    x: 14
+    rotate: true
+shootWarmupSpeed: 0.04
+minWarmup: 0.7
+rotateSpeed: 1.8
+    top: true
+    recoil: 2.8
+    reload: 110
+shootY: 2
+    shootSound: tryphoHorn
+    bullet: {
+hitSound: microBoom
+      speed: 5
+      lifetime: 60
+      damage: 47
+      splashDamage: 137
+      splashDamageRadius: 55
+      height: 19
+      width: 19
+sprite: large-bomb
+spin: 10
+shrinkY: 0
+homingPower: 0.1
+homingRange: 200
+frontColor: b46dff
+backColor: 5830d9
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 2.7
+    sizeTo: 0
+    length: 10
+    baseLength: 2
+    lifetime: 70
+  interp: pow2Out
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: -130
+sizeInterp: pow2In
+}
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+sides: 4
+    rotation: 0
+    sizeFrom: 4
+    sizeTo: 60
+    strokeFrom: 5
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 5617b0
+interp: circleOut
+}
+{
+type: WaveEffect
+    lifetime: 70
+sides: 8
+    rotation: 0
+    sizeFrom: 5
+    sizeTo: 60
+    strokeFrom: 3.5
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: b46dff
+interp: pow2Out
+}
+{
+ type: ParticleEffect
+    particles: 10
+    sizeFrom: 4
+    sizeTo: 0
+    length: 50
+    baseLength: 7
+    lifetime: 90
+  interp: circleOut
+sizeInterp: pow2In
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 8
+    sizeFrom: 3.5
+    sizeTo: 0
+    length: 60
+    baseLength: 10
+    lifetime: 50
+  interp: circleOut
+sizeInterp: linear
+    colorFrom: 7b53ff
+    colorTo: 8000ff
+    cone: 360
+}
+]
+}
+fragBullets: 4
+fragRandomSpread: 0
+fragSpread: 90
+fragBullet: {
+type: ArtilleryBulletType
+speed: 1.5
+drag: -0.005
+lifetime: 100
+width: 12
+height: 12
+shrinkY: 0
+sprite: large-bomb
+spin: 5
+frontColor: b46dff
+backColor: 5830d9
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 2.6
+    sizeTo: 0
+    length: 8
+    baseLength: 0
+    lifetime: 50
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: -90
+}
+damage: 20
+splashDamage: 60
+splashDamageRadius: 30
+homingRange: 300
+homingPower: 0.03
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+sides: 8
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 34
+    strokeFrom: 2.2
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 2
+    sizeTo: 0
+    length: 40
+    baseLength: 0
+    lifetime: 50
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 3.2
+    sizeTo: 0
+    length: 35
+    baseLength: 2
+    lifetime: 60
+  interp: circleOut
+sizeInterp: pow2In
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+]
+}
+}
+      }
+    }
+]
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 29
+    regen: 4.5
+    max: 600
+    cooldown: 500
+sides: 10
+  }
+]

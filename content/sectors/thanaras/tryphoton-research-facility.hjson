@@ -1,0 +1,16 @@
+      captureWave: 26
+planet: thanaras
+sector: 14
+difficulty: 5
+research: {
+requiresUnlock: false
+  parent: arche-ruin
+  objectives: [
+    {
+      type: SectorComplete
+      preset: arche-ruin
+    }
+  ]
+}
+localizedName: Tryphoton Research Facility
+description: Here lies the remains of countless derelict tech that has been left to rot over decades, most of which have been destroyed. This sector also introduces tungsten and multiple other structures that you will need to survive. Capture this sector to unlock new ways to use this mysterious tryphoton resource.

@@ -1,0 +1,7 @@
+type: material
+name: Monolite
+description: A strange metal containing some kind of quantum power, allowing for more advanced tech and creations.
+details: No one knows where this mysterious mineral came from. All we know is that it showed up one day on all the planets in this solar system, sudden and without warning.
+hardness: 8
+cost: 5
+color: 61a2df

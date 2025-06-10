@@ -1,0 +1,20 @@
+captureWave: 30
+planet: serpulo
+sector: 235
+difficulty: 7
+research: {
+requiresUnlock: false
+  parent: reverent-junction
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reverent-junction
+    }
+    {
+      type: SectorComplete
+      preset: shoal-depth
+    }
+  ]
+}
+localizedName: Reconcite
+description: This sector seems to hold the key to the discovery of more research, as well as more tech on monolite. Capture it, and beware as rumors of another Champion are said to be arriving.

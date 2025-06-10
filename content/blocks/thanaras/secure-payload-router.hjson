@@ -1,0 +1,14 @@
+name: Secure Payload Router
+description: A secure and armored router that distributes payloads into adjacent blocks.
+type: PayloadRouter
+health: 400
+armor: 5
+size: 3
+underBullets: true
+category: units
+research: secure-payload-conveyor
+planet: thanaras
+requirements: [
+tungsten/15
+nickel/20
+]

@@ -1,0 +1,10 @@
+type: Junction
+name: Rail Junction
+description: junction finally
+requirements: [
+ nickel/3
+]
+category: distribution
+researchCostMultiplier: 0.1
+planet: thanaras
+research: stack-rail

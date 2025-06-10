@@ -1,0 +1,12 @@
+type: Floor
+name: Toxic Deepstone
+description: uranium essence has infected these deepstones turning them to deadly hostile floor plates.
+lightColor: cbff7840
+emitLight: true
+lightRadius: 26
+variants: 3
+attributes: {
+  radioactive: 0.5
+}
+status: uranium-decay
+statusDuration: 50

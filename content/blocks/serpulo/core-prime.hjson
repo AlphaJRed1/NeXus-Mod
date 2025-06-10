@@ -1,0 +1,27 @@
+Type: CoreBlock
+Name: Core: Prime
+description: The advanced upgrade of the Nucleus Core, can store an incredulous amount of items. Protected by the Delta Core Unit.
+health: 12000
+itemCapacity: 20000
+size: 6
+category: effect
+unitType: delta
+unitCapModifier: 32
+requirements: [
+  copper/12000
+  lead/12000
+  silicon/10000
+  thorium/8000
+  monolithium/10000
+  titanium/10000
+	surge-alloy/5000
+]
+research: {
+  parent: core-nucleus
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reverent-junction
+    }
+  ]
+}

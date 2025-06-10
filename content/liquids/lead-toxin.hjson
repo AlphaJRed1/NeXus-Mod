@@ -1,0 +1,8 @@
+type: Liquid
+name: Lead Toxin
+description: in the workks
+temperature: 0.5
+viscosity: 0.2
+color: b6624b
+gasColor: b6624b55
+gas: true

@@ -1,0 +1,16 @@
+captureWave: 45
+planet: serpulo
+sector: 183
+difficulty: 7
+research: {
+requiresUnlock: false
+  parent: reverent-junction
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reverent-junction
+    }
+  ]
+}
+localizedName: Shoal Depth
+description: Another sector has been found harboring the strange new resource, however intel has been discovered on a new weapon the Crux have been working on that has been identified as Champions. One of these Champions are suspected to arrive on this sector any wave now, so get ready.

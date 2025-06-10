@@ -1,0 +1,44 @@
+type: flying
+controller: MissileAI
+flying: true
+speed: 3
+hitSize: 8
+lifetime: 200
+hidden: true
+engineSize: 3
+engineOffset: 3
+rotateSpeed: 3
+missileAccelTime: 60
+lowAltitude: true
+fogRadius: 9
+health: 130
+armor: 2
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+weapons: [
+    {
+        shootCone: 360
+          mirror: true
+	alternate: false
+          reload: 13
+	shoot: {
+shots: 2
+shotDelay: 5
+}
+          x: 3
+          y: 0
+          bullet: {
+   damage: 15
+lifetime: 10
+speed: 7
+width: 9
+height: 12
+pierceCap: 2
+pierceBuilding: true
+       }
+}
+]

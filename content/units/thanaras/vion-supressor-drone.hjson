@@ -1,0 +1,136 @@
+Name: V-Supressor Drone
+description: A legged vion drone that fires homing plasma missiles at enemies. Immune to all slowing effects as well as possessing an arc shield.
+type: legs
+hitSize: 14
+hovering: true
+allowLegStep: true
+visualElevation: 1
+legCount: 4
+            legLength: 9.6
+            legExtension: -1.5
+            legBaseOffset: 5.6
+health: 715
+stepShake: 0
+armor: 3
+speed: 1.2
+outlineColor: 1c2125
+immunities: [freezing, subzero-freezing]
+groundLayer: 70
+weapons: [
+ {
+    name: vion-supressor-drone-gun
+parts: [
+    {
+        type : FlarePart
+         mirror: false
+under: false
+radius: 0
+radiusTo: 7
+stroke: 2
+rotation: 45
+progress: warmup
+color1: ffb6f0
+color2: ff63e0
+followRotation: true
+layerOffset: 0.0001
+flareColor: ffb6f0
+          x: 0
+          y: 7
+    }
+  ]
+    y: 0
+    x: 4.6
+    rotate: false
+inaccuracy: 25
+shoot: {
+shots: 2
+}
+    recoil: 2
+  top: false
+    reload: 45
+    shootSound: microBit
+shootY: 7
+shootEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 1.5
+    sizeTo: 0
+    length: 10
+    baseLength: 0
+    lifetime: 80
+  interp: circleOut
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: 50
+}
+    bullet: {
+    damage: 28
+frontColor: ff63e0
+backColor: dd1499
+trailInterval: 2
+homingPower: 0.05
+homingRange: 120
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 1.5
+    sizeTo: 0
+    length: 5
+    baseLength: 0
+    lifetime: 60
+  interp: circleOut
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: -45
+
+}
+hitEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 1.8
+    sizeTo: 0
+    length: 9
+    baseLength: 2
+    lifetime: 80
+  interp: pow10Out
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: 100
+}
+despawnEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 1.8
+    sizeTo: 0
+    length: 9
+    baseLength: 2
+    lifetime: 80
+  interp: pow10Out
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: 360
+}
+    width: 7
+    height: 13
+    lifetime: 100
+speed: 2
+    }
+  }
+]
+abilities: [
+  {
+    type: ShieldArcAbility
+whenShooting: true
+    max: 450
+regen: 0.25
+    cooldown: 360
+    radius: 9
+region: nexus-mod-vion-supressor-drone-shield
+	x: 0
+    y: 0
+    angle: 90
+angleOffset: 0
+    width: 3.5
+color: ff63e0
+  }
+]

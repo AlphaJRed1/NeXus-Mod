@@ -1,0 +1,80 @@
+Name: Asteron
+description: a
+type: flying
+flying: true
+useUnitCap: false
+health: 343
+speed: 0.9
+rotateSpeed: 3
+drag: 0.1
+accel: 0.2
+hitSize: 11
+lowAltitude: true
+outlineColor: 071a20
+circleTarget: true
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 13
+    sizeFrom: 4
+    sizeTo: 0
+    baseLength: 5
+	length: 30
+    lifetime: 180
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+   {
+    name: asteron-pow
+    x: 0
+    y: 0
+    rotate: false
+shootCone: 360
+reload: 155
+    recoil: 0
+shootSound: tryphoPower
+shoot: {
+type: ShootSpread
+shots: 8
+shotDelay: 8
+spread: 22.5
+}
+    bullet: {
+lifetime: 20
+speed: 8
+damage: 46
+pierceCap: 2
+pierceBuilding: true
+    height: 13
+    width: 7
+trailInterval: 1
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+trailColor: 38ffb0
+    }
+ }
+
+]
+
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 60
+radScale: 1
+radAmountScale: 1
+  }
+]

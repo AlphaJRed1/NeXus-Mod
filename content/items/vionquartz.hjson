@@ -1,0 +1,12 @@
+type: material
+name: Tryphoton
+description: A powerful, energy-ridden quartz that can be used in unit creation, power, and ammo. Highly explosive.
+hardness: 5
+cost: 5
+radioactivity: 1.2
+explosiveness: 2.5
+frames: 10
+frameTime: 5
+color: c745b7
+hiddenOnPlanets: [serpulo, erekir]
+research: tryplasma

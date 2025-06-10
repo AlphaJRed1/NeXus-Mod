@@ -1,0 +1,134 @@
+type: tank
+Name: Panzoe
+description: Fires missiles at enemies. They knockback enemies and stun them for a while. Multiple Acacias can render one huge enemy useless.
+speed: 0.55
+health: 975
+armor: 11
+itemCapacity: 0
+rotateSpeed: 2.2
+squareShape: true
+faceTarget: false
+outlineColor: 071a20
+hitSize: 18
+treadPullOffset: 3
+omniMovement: false
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 15
+    sizeFrom: 4.5
+    sizeTo: 0
+    baseLength: 10
+	length: 40
+    lifetime: 220
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+ {
+    name: panzoe-cannon
+    x: 0
+   layerOffset: 0.01
+    y: 0
+parts: [
+    {
+        suffix : -glow
+        type : RegionPart
+         mirror: false
+         under: false
+         heatProgress: warmup
+          x: 0
+          y: 0
+heatColor: ccffeb
+    }
+]
+   mirror: false
+    reload: 80
+   rotate: true
+   rotateSpeed: 3
+    recoil: 2.2
+    shootSound: tryphoPow
+    bullet: {
+lifetime: 35
+speed: 6
+width: 9
+height: 13
+damage: 56
+splashDamage: 32
+splashDamageRadius: 20
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+sprite: circle-bullet
+trailInterval: 1
+    trailEffect: {
+type: WaveEffect
+    lifetime: 50
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+
+intervalBullets: 2
+bulletInterval: 3
+intervalBullet: {
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: WaveEffect
+    lifetime: 80
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 2.5
+    strokeFrom: 1.5
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+speed: 1
+lifetime: 60
+damage: 7
+splashDamage: 19
+splashDamageRadius: 10
+homingPower: 0.06
+homingRange: 150
+}
+    }
+ }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 140
+radScale: 1.4
+radAmountScale: 1.4
+  }
+]
+
+

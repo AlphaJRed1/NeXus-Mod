@@ -1,0 +1,20 @@
+      captureWave: 0
+planet: thanaras
+sector: 21
+difficulty: 0
+research: {
+  parent: zeus-domain
+requiresUnlock: false
+  objectives: [
+    {
+      type: SectorComplete
+      preset: zeus-domain
+    }
+    {
+      type: SectorComplete
+      preset: desperation-canyon
+    }
+  ]
+}
+localizedName: Xechas
+description: By some miracle of whatever mindustrian forces are out there, this small patch of land remained unaffected by the harsh conditions that destroyed and shaped Thanaras' landscape. It gives you a glimpse into what Thanaras once was; a planet full of alien life that makes no sense whatsoever, yet beautiful in its own way. With titanium-infused soils and yellow kitri plant life, this small isolated sector remains disconnected from the outside, seemingly through the power of the large derelict structure located at its core, now spent and rotting away into the flora it desperately protected.

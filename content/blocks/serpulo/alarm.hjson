@@ -1,0 +1,66 @@
+type: PowerTurret
+Name: Alarm
+description: Sounds an alarm whenever enemies have spawned in, pointing to the enemy closest to it.
+size: 2
+scaledHealth: 100
+range: 50000
+targetGround: true
+targetAir: true
+recoil: 0
+rotateSpeed: 10
+shootCone: 10
+playerControllable: false
+predictTarget: false
+shootSound: alarm
+soundPitchMin: 1
+soundPitchMax: 1
+inaccuracy: 0
+cooldownTime: 100
+reload: 150
+shootY: 2
+    shootEffect: none
+    smokeEffect: none
+consumes: {
+power: 0.65
+}
+shootType: {
+pierce: true
+pierceBuilding: true
+damage: 0
+speed: 10
+lifetime: 500
+width: 1
+height: 1
+hitEffect: none
+despawnEffect: none
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 5.4
+    sizeTo: 0
+    baseLength: 0
+length: 0
+    lifetime: 40
+    colorFrom: f3e979
+    colorTo: d99f6b
+    cone: 0
+offset: -90
+region: nexus-mod-shield-dart-back
+}
+}
+requirements: [
+copper/40
+silicon/15
+graphite/15
+]
+category: effect
+planet: serpulo
+research: {
+  parent: mend-projector
+  objectives: [
+  ]
+}
+

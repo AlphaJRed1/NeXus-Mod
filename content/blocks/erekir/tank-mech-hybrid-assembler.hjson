@@ -1,0 +1,40 @@
+type: UnitAssembler
+Name: Tank-Mech Hybrid Assembler
+description: Combines the Tank and Mech families to create Hexahedron.
+size: 5
+dronesCreated: 4
+regionSuffix: -dark
+areaSize: 7
+droneType: hybrid-tank-assembler
+consumes: {
+power: 4
+liquids: {
+liquids: [
+neoplasm/0.1
+nitrogen/0.2
+]
+}
+}
+plans: [
+  {
+    unit: hexahedron
+    time: 2800
+    requirements: [
+	locus/2
+	merui/4
+	stell/2
+    ]
+  }
+]
+requirements: [
+thorium/300
+tungsten/250
+beryllium/450
+silicon/500
+graphite/250
+]
+research: tank-refabricator
+researchCostMultiplier: 0.5
+category: units
+planet: erekir
+

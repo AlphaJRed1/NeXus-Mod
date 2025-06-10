@@ -1,0 +1,6 @@
+type: Floor
+name: Cavernous Deepstone
+variants: 3
+            dragMultiplier: 0.6
+ speedMultiplier: 0.5
+            albedo: 0.6

@@ -1,0 +1,87 @@
+type: flying
+Name: Delta
+description: Protector of the Prime Core. Equipped with guns that rapidly fire bullets and lightning cannons that burst out bolts of lightning at the enemy.
+controller: BuilderAI
+defaultController: BuilderAI
+health: 350
+speed: 3.75
+armor: 2
+mineTier: 3
+mineSpeed: 9
+buildSpeed: 12.5
+engineOffset: 8
+engineSize: 5
+itemCapacity: 100
+rotateSpeed: 21
+hitSize: 13
+drag: 0.05
+accel: 0.11
+flying: true
+isCounted: false
+isEnemy: false
+weapons: [
+  {
+  name: delta-gun
+  inaccuracy: 3
+ejectEffect: casing1
+  x: -5.5
+top: false
+layerOffset: -0.0001
+  y: 2
+  reload: 15
+rotate: false
+   shoot: {
+shots: 2
+shotDelay: 3
+spread: 2
+}
+  bullet: {
+    damage: 11
+    length: 17
+    speed: 3.5
+    lifetime: 70
+    height: 11
+    width: 7
+buildingDamageMultiplier: 0.02
+homingPower: 0.05
+  }
+  }
+ {
+  name: delta-lightning
+  inaccuracy: 15
+ejectEffect: casing1
+  x: -7
+top: false
+  y: 0
+  reload: 55
+shootSound: spark
+rotate: true
+rotateSpeed: 6
+   shoot: {
+shots: 5
+shotDelay: 2
+spread: 2
+}
+  bullet: {
+  type: LightningBulletType
+  damage: 9
+  lightningLength: 10
+buildingDamageMultiplier: 0.02
+lightningColor: ffd27e
+  }
+  }
+
+]
+abilities: [
+  {
+    type: ShieldArcAbility
+    max: 105
+regen: 0.5
+region: nexus-mod-delta-shield
+    cooldown: 195
+    radius: 19.4
+    y: -11
+    angle: 75
+    width: 6.5
+  }
+]

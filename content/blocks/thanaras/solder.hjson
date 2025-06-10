@@ -1,0 +1,136 @@
+type: ItemTurret
+Name: Solder
+description: Fires rounds of piercing shrapnel at nearby enemies. Uses methane to propel the shrapnel further.
+size: 3
+scaledHealth: 250
+range: 80
+targetGround: true
+targetAir: true
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+reload: 25
+hasItems: true
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+shootSound:shotgun
+cooldownTime: 50
+recoil: 3
+recoilTime: 40
+outlineColor: 101220
+shoot: {
+type: ShootAlternate
+barrels: 2
+spread: 4.5
+shots: 2
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+}
+]
+}
+consumes: {
+liquid: {
+liquid: carbon
+amount: 0.2
+optional: false
+}
+}
+ammoTypes: {
+  uranium: {
+   lifetime: 10
+speed: 8
+sprite: nexus-mod-dart
+damage: 40
+bulletInterval: 2
+intervalBullets: 1
+intervalRandomSpread: 0
+frontColor: d9ff9e
+backColor: 95d928
+intervalSpread: 0
+intervalAngle: 0
+intervalBullet: {
+type: ShrapnelBulletType
+      damage: 71
+      length: 35
+   width: 12
+ toColor: d9ff9e
+}
+trailInterval: 2
+pierce: true
+pierceBuilding: true
+trailEffect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 3.6
+    sizeTo: 0
+    baseLength: 5
+length: 25
+    lifetime: 70
+    colorFrom: d9ff9e
+    colorTo: d9ff9e20
+    cone: -150
+}
+  }
+  titanium: {
+   lifetime: 10
+speed: 8
+sprite: nexus-mod-dart
+damage: 15
+bulletInterval: 2
+intervalBullets: 1
+intervalRandomSpread: 0
+intervalSpread: 0
+intervalAngle: 0
+frontColor: 8aa3f4
+backColor: 8aa3f4
+intervalBullet: {
+type: ShrapnelBulletType
+      damage: 42
+      length: 35
+   width: 10
+ toColor: 8aa3f4
+}
+trailInterval: 2
+pierce: true
+pierceBuilding: true
+trailEffect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 25
+    lifetime: 70
+    colorFrom: 8aa3f4
+    colorTo: 8aa3f420
+    cone: -150
+}
+  }
+  }
+requirements: [
+titanium/325
+silicon/175
+tungsten/100
+depleted-uranium/55
+]
+category: turret
+research: {
+  parent: punctual
+  objectives: [
+    {
+      type: SectorComplete
+      preset: vion-plateau
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.6

@@ -1,0 +1,115 @@
+Type: PowerTurret
+Name: Peltast
+health: 4500
+description: Blasts enemies with a supercharged piercing dart that releases electric sparks as it travels.
+size: 4
+shootEffect: sparkShoot
+shootSound: microfire
+targetAir: true
+range: 350
+reload: 160
+rotateSpeed: 1.7
+shootWarmupSpeed: 0.04
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.2
+}
+minWarmup: 0.9
+shootY: 4
+inaccuracy: 0
+outlineColor: 101220
+drawer: {
+type: DrawTurret
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 2
+         moveY: 1
+         moveRot: -15
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -barrel
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -3.5
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+}
+consumes: {
+  power: 15
+}
+shootType: {
+      damage: 125
+     lifetime: 35
+speed: 10
+width: 13
+height: 15
+shrinkY: 0
+pierce: true
+pierceBuilding: true
+trailRotation: true
+trailInterval: 1
+hitSound: microHit
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 8
+    sizeTo: 0
+    baseLength: 0
+length: 0
+    lifetime: 70
+    colorFrom: e845f0
+    colorTo: 9927c5
+    cone: 0
+offset: -90
+region: nexus-mod-shield-dart-back
+
+}
+homingPower: 0.02
+sprite: nexus-mod-shield-dart
+frontColor: e845f0
+backColor: 9927c5
+bulletInterval: 1
+intervalBullets: 2
+intervalRandomSpread: 35
+intervalBullet: {
+type: LightningBulletType
+lightningLength: 11
+damage: 28
+lightningColor: e845f0
+}
+}
+requirements: [
+nitinol/400
+tungsten/450
+silicon/470
+cryo-compound/175
+plastanium/175
+]
+category: turret
+planet: thanaras
+research: {
+  parent: hoplite
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+researchCostMultiplier: 0.8

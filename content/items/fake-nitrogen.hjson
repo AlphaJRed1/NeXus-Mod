@@ -1,0 +1,10 @@
+research: {
+parent: carbon
+}
+type: UnlockableContent
+name: Nitrogen
+description: Used in resource extraction, gas creation and unit production. Inert.
+buildVisibility: hidden
+hiddenOnPlanets: [serpulo, erekir, thanaras]
+hidden: true
+

@@ -1,0 +1,274 @@
+type: ItemTurret
+Name: Continuity
+description: Why so serious?
+sandboxOnly: true
+size: 6
+scaledHealth: 180
+range: 450
+targetGround: true
+targetAir: true
+heatColor: ffffff
+ammoPerShot: 3
+hidden: true
+shootSound: continuityboom
+reload: 160
+recoil: 4
+recoilTime: 250
+cooldownTime: 250
+ammoTypes: {
+  phase-fabric: {
+    pierceBuilding: true
+    damage: 705
+    knockback: 4
+    speed: 10
+    pierce: true
+    lifetime: 45
+    ammoMultiplier: 2
+    sprite:  nexus-mod-powerslash
+    height: 60
+    width: 60
+    shootEffect: shootBig
+    smokeEffect: {
+    type: multiEffect
+    effects: [
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 7
+    sizeTo: 0
+    length: 70
+    baseLength: 0
+    lifetime: 40
+    colorFrom: ff7272
+    colorTo: e70000
+interp: circleOut
+sizeInterp: pow5In
+    cone: 15
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 7
+    sizeTo: 0
+    length: 60
+    baseLength: 0
+    lifetime: 45
+    colorFrom: ffdea1
+    colorTo: ffb120
+interp: circleOut
+sizeInterp: pow5In
+    cone: 20
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 7
+    sizeTo: 0
+    length: 50
+    baseLength: 0
+    lifetime: 50
+    colorFrom: 80ffa8
+    colorTo: 00e749
+interp: circleOut
+sizeInterp: pow5In
+    cone: 25
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 7
+    sizeTo: 0
+    length: 40
+    baseLength: 0
+    lifetime: 55
+    colorFrom: 92a7ff
+    colorTo: 002cea
+interp: circleOut
+sizeInterp: pow5In
+    cone: 30
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 7
+    sizeTo: 0
+    length: 30
+    baseLength: 0
+    lifetime: 60
+    colorFrom: c095fb
+    colorTo: 690ce8
+interp: circleOut
+sizeInterp: pow5In
+    cone: 35
+    }
+    ]
+    }
+trailInterval: 1
+    trailEffect: {
+    type: multiEffect
+    effects: [
+        {
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 5
+    sizeTo: 0
+    length: 30
+    baseLength: 6
+    lifetime: 40
+    colorFrom: ff7272
+    colorTo: e70000
+interp: circleOut
+sizeInterp: pow5In
+    cone: -120
+    }
+        {
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 5
+    sizeTo: 0
+    length: 25
+    baseLength: 5
+    lifetime: 45
+    colorFrom: ffdea1
+    colorTo: ffb120
+interp: circleOut
+sizeInterp: pow5In
+    cone: -110
+    }
+        {
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 5
+    sizeTo: 0
+    length: 20
+    baseLength: 4
+    lifetime: 50
+    colorFrom: 80ffa8
+    colorTo: 00e749
+interp: circleOut
+sizeInterp: pow5In
+    cone: -100
+    }
+        {
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 5
+    sizeTo: 0
+    length: 15
+    baseLength: 3
+    lifetime: 55
+    colorFrom: 92a7ff
+    colorTo: 002cea
+interp: circleOut
+sizeInterp: pow5In
+    cone: -90
+    }
+        {
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 5
+    sizeTo: 0
+    length: 10
+    baseLength: 2
+    lifetime: 60
+    colorFrom: c095fb
+    colorTo: 690ce8
+interp: circleOut
+sizeInterp: pow5In
+    cone: -80
+    }
+    ]
+    }
+    hitEffect: {
+    type: multiEffect
+    effects: [
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 8
+    sizeTo: 0
+    length: 40
+    baseLength: 0
+    lifetime: 40
+    colorFrom: ff7272
+    colorTo: e70000
+interp: circleOut
+sizeInterp: pow5In
+    cone: 360
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 8
+    sizeTo: 0
+    length: 35
+    baseLength: 0
+    lifetime: 45
+    colorFrom: ffdea1
+    colorTo: ffb120
+interp: circleOut
+sizeInterp: pow5In
+    cone: 360
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 8
+    sizeTo: 0
+    length: 30
+    baseLength: 0
+    lifetime: 50
+    colorFrom: 80ffa8
+    colorTo: 00e749
+interp: circleOut
+sizeInterp: pow5In
+    cone: 360
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 8
+    sizeTo: 0
+    length: 25
+    baseLength: 0
+    lifetime: 55
+    colorFrom: 92a7ff
+    colorTo: 002cea
+interp: circleOut
+sizeInterp: pow5In
+    cone: 360
+    }
+        {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 8
+    sizeTo: 0
+    length: 20
+    baseLength: 0
+    lifetime: 60
+    colorFrom: c095fb
+    colorTo: 690ce8
+interp: circleOut
+sizeInterp: pow5In
+    cone: 360
+    }
+    ]
+    }
+	despawnHit: true
+    despawnEffect: none
+    shrinkX: 0.8
+    shrinkY: 0
+  }
+}
+requirements: [
+phase-fabric/2000
+monolithium/5500
+silicon/6500
+duplexon/1500
+thorium/7500
+surge-alloy/2000
+metaglass/5000
+]
+category: turret
+ambientSound: ambientcontinuity
+ambientSoundVolume: 1

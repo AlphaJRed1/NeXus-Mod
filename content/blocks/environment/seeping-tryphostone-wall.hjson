@@ -1,0 +1,6 @@
+type: StaticWall
+name: Seeping Tryphostone Wall
+variants: 3
+emitLight: true
+lightRadius: 10
+lightColor: 5effea30

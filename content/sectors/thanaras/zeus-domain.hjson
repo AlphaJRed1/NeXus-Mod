@@ -1,0 +1,16 @@
+captureWave: 51
+planet: thanaras
+sector: 20
+difficulty: 10
+research: {
+requiresUnlock: false
+  parent: river-of-floe
+  objectives: [
+    {
+      type: SectorComplete
+      preset: river-of-floe
+    }
+  ]
+}
+localizedName: Zeus' Domain
+description: The name of this sector, called Zeus' Domain, may be in relation to the fact that the final wave will be... a shocking experience, to say the least. Mutliple biomes fused into one; tryphostone, titanar, nitrogenous ice, decayed stone, all present. Utilizing the resources scattered in all directions, defeat the onrush of waves and prove yourself ruler of this domain.

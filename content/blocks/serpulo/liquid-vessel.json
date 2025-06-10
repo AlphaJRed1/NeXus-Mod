@@ -1,0 +1,22 @@
+type: LiquidRouter
+name: Liquid Vessel
+description: A liquid container capable of holding much more liquid than a liquid tank.
+size: 4
+scaledHealth: 100
+liquidCapacity: 5000
+research: {
+  parent: liquid-tank
+  objectives: [
+    {
+      type: OnSector
+      preset: reverent-junction
+    }
+  ]
+}
+category: liquid
+requirements: [
+titanium/150
+metaglass/250
+monolithium/250
+silicon/100
+]

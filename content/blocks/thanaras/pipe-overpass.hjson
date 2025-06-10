@@ -1,0 +1,12 @@
+type: DirectionLiquidBridge
+name: Pipe Overpass
+description: Transports liquids over blocks, connecting to other pipe overpasses that are in its current direction.
+liquidCapacity: 6
+requirements: [
+nitinol/1
+nickel/1
+titanium/1
+]
+category: liquid
+planet: thanaras
+research: pipe-router

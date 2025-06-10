@@ -1,0 +1,22 @@
+name: Secure Payload Conveyor
+description: A secure and armored conveyor that moves large payloads, such as units from factories.
+type: PayloadConveyor
+health: 400
+armor: 5
+size: 3
+underBullets: true
+category: units
+research: {
+parent: armored-rail
+objectives: [micro-factory,
+{
+type: SectorComplete
+preset: infested-grounds
+}
+]
+}
+requirements: [
+tungsten/10
+nickel/10
+]
+planet: thanaras

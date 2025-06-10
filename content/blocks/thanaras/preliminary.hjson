@@ -1,0 +1,244 @@
+type: LiquidTurret
+Name: Preliminary
+description: Fires piercing liquid comets at enemies, inflicting status effects and damaging them from long range.
+size: 4
+health: 4750
+range: 500
+targetGround: true
+targetAir: true
+reload: 30
+shootWarmupSpeed: 0.05
+extinguish: false
+minWarmup: 0.8
+shake: 1
+hasItems: true
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+shootSound: microWoop
+cooldownTime: 90
+recoil: 2
+shootY: 7
+recoilTime: 70
+outlineColor: 101220
+liquidCapacity: 50
+liquidConsumed: 0.25
+shoot: {
+type: ShootAlternate
+barrels: 2
+spread: 10
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+       {
+        suffix : -front1
+        type : RegionPart
+         mirror: true
+         under: true
+top: false
+         moveX: 0
+         moveY: 0
+         moveRot: -60
+         progress: warmup
+          x: 0
+          y: 0
+    }
+       {
+        suffix : -front2
+        type : RegionPart
+         mirror: true
+         under: true
+top: false
+         moveX: 0
+         moveY: 0
+         moveRot: -45
+         progress: warmup
+          x: 0
+          y: 0
+    }
+       {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: true
+top: false
+         moveX: 4
+         moveY: 2
+         moveRot: -30
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+ammoTypes: {
+  cyanogen: {
+    damage: 32
+splashDamage: 78
+splashDamageRadius: 25
+    speed: 10
+    lifetime: 50
+sprite: circle-bullet
+    height: 13
+    width: 13
+pierceCap: 6
+frontColor: 00000000
+backColor: 00000000
+hitColor: 00000000
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+type: multiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 5
+useRotation: true
+    sizeFrom: 2.5
+    sizeTo: 0
+    baseLength: 10
+length: 30
+    lifetime: 50
+    colorFrom: 8deebb
+    colorTo: 5ec1bf
+    cone: -45
+interp: circleOut
+useRotation: true
+}
+{
+ type: ParticleEffect
+    particles: 3
+useRotation: true
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 1
+length: 9
+    lifetime: 90
+interp: pow10Out
+sizeInterp: pow2In
+    colorFrom: 8deebb
+    colorTo: 5ec1bf
+    cone: 360
+}
+]
+}
+status: noxious-burning
+statusDuration: 400
+homingPower: 0.07
+homingRange: 300
+}
+  tryplasma: {
+    damage: 18
+splashDamage: 37
+splashDamageRadius: 20
+    speed: 10
+    lifetime: 50
+sprite: circle-bullet
+    height: 13
+    width: 13
+pierceCap: 4
+frontColor: 00000000
+backColor: 00000000
+hitColor: 00000000
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+type: multiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 5
+useRotation: true
+    sizeFrom: 2.5
+    sizeTo: 0
+    baseLength: 10
+length: 30
+    lifetime: 50
+    colorFrom: cbeae9
+    colorTo: 7c9d9c
+    cone: -45
+interp: circleOut
+useRotation: true
+}
+{
+ type: ParticleEffect
+    particles: 3
+useRotation: true
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 1
+length: 9
+    lifetime: 90
+interp: pow10Out
+sizeInterp: pow2In
+    colorFrom: cbeae9
+    colorTo: 7c9d9c
+    cone: 360
+}
+]
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    colorFrom: cbeae9
+    colorTo: 7c9d9c
+sizeTo: 24
+lifetime: 20
+}
+{
+ type: ParticleEffect
+    particles: 6
+useRotation: true
+    sizeFrom: 3.5
+    sizeTo: 0
+    baseLength: 1
+length: 20
+    lifetime: 100
+interp: circleOut
+sizeInterp: pow5In
+    colorFrom: cbeae9
+    colorTo: 7c9d9c
+    cone: 360
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+status: photonized
+statusDuration: 400
+homingPower: 0.07
+homingRange: 300
+}
+  }
+requirements: [
+silicon/450
+tungsten/500
+cryo-compound/200
+plastanium/165
+depleted-uranium/150
+]
+category: turret
+research: {
+  parent: shiver
+  objectives: [
+    {
+      type: SectorComplete
+      preset: green-valley
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.8

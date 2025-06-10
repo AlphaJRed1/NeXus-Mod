@@ -1,0 +1,13 @@
+name: Katavite Wall
+description: asdasdasdsa
+type: Wall
+health: 500
+armor:3
+size: 1
+variants: 3
+requirements: [
+tryphoton/1
+]
+category: defense
+planet: thanaras
+buildVisibility: hidden

@@ -1,0 +1,5 @@
+type: Floor
+name: Thanarian Symbol Plate
+variants: 3
+blendGroup: thanarian-metal
+blendID: 19

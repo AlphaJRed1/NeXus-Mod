@@ -1,0 +1,6 @@
+type: TallBlock
+name: Shiny Titan Crystal
+variants: 3
+clipSize: 140
+shadowAlpha: 0.5
+shadowOffset: -3

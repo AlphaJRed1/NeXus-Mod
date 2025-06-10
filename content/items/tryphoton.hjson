@@ -1,0 +1,12 @@
+type: material
+name: Tryphoton
+description: An organic material with rock-like properties, somewhat radioactive.
+hardness: 1
+cost: 1
+radioactivity: 0.7
+flammability: 0.2
+frames: 5
+frameTime: 12
+color: 5effea
+hiddenOnPlanets: [serpulo, erekir]
+research: nickel

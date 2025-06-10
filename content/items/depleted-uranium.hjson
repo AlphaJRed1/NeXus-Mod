@@ -1,0 +1,8 @@
+type: material
+name: Depleted Uranium
+description: Byproduct of using uranium in nuclear reactors. Used in radiation shielding and weaponry.
+hardness: 10
+cost: 7
+color: 445e3b
+hiddenOnPlanets: [serpulo, erekir]
+research: uranium

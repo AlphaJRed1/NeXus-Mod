@@ -1,0 +1,28 @@
+Type: CoreBlock
+Name: Core: Mania
+description: The tier 3 core of Thanaras. Incredibly well protected, storing a massive amount of resources, governed by Womp
+health: 7100
+armor: 10
+itemCapacity: 10000
+size: 5
+category: effect
+unitType: marzanna
+unitCapModifier: 24
+requirements: [
+nickel/7500
+titanium/7500
+nitinol/3500
+silicon/5000
+tungsten/5000
+]
+planet: thanaras
+research: {
+  parent: core-achlys
+  objectives: [
+    {
+      type: SectorComplete
+      preset: green-valley
+    }
+  ]
+}
+researchCostMultiplier: 0.35

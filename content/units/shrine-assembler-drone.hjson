@@ -1,0 +1,17 @@
+type: flying
+controller: AssemblerAI
+speed: 3
+hitSize: 6
+hidden: true
+engineSize: 3.5
+engineOffset: 3
+rotateSpeed: 2.5
+accel: 0.5
+drag: 0.02
+lowAltitude: true
+health: 15
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+flying: true
+targetable: false

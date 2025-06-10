@@ -1,0 +1,21 @@
+name: Secure Tungsten Wall
+description: An armored secure wall that protects your buildings from enemies.
+type: Wall
+health: 750
+armor: 6
+size: 1
+requirements: [
+tungsten/6
+titanium/2
+]
+category: defense
+planet: thanaras
+research: {
+  parent: secure-titanium-wall
+  objectives: [
+    {
+      type: SectorComplete
+      preset: arche-ruin
+    }
+  ]
+}

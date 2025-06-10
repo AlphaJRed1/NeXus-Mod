@@ -1,0 +1,103 @@
+Name: Qinja
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 17456
+outlineColor: 071a20
+            legLength: 30
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -3
+            legBaseOffset: 15
+            legMaxLength: 1
+useUnitCap: false
+            legMinLength: 0.4
+            legGroupSize: 2
+            rippleScale: 0.2
+
+            legMoveSpace: 3
+            legPhysicsLayer: false
+rotateSpeed: 1.6
+legCount: 7
+hitSize: 32
+armor: 0
+speed: 0.45
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 9
+    sizeFrom: 6
+    sizeTo: 0
+    baseLength: 10
+	length: 30
+    lifetime: 270
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+ {
+  name: qinja-pow
+  inaccuracy: 0
+  x: 1
+  y: 5
+  rotate: false
+baseRotation: -90
+shootCone: 360
+  mirror: true
+  top: false
+  reload: 60
+  recoil: 0
+alternate: false
+shoot: {
+type: ShootAlternate
+shots: 4
+spread: 3
+barrels: 4
+shotDelay: 15
+}
+  shootSound: tryphoPow
+    bullet: {
+      damage: 45
+      speed: 4
+      lifetime: 70
+      splashDamage: 79
+      splashDamageRadius: 25
+      homingPower: 0.25
+hitSound: microBoom
+      homingRange: 300
+      hitEffect: none
+trailInterval: 1
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+trailColor: 38ffb0
+fragBullets: 1
+fragBullet: {
+spawnUnit: budding-crawler
+}
+    }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 250
+radScale: 2.8
+radAmountScale: 2.8
+  }
+]
+

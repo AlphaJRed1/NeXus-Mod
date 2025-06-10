@@ -1,0 +1,24 @@
+name: Secure Container
+description: Stores a large amount of items, heavily protected and armored. Can be connected to the Core to increase it's storage amount, which is required to get enough resources to upgrade to the next Core Tier.
+type: StorageBlock
+health: 1500
+armor: 8
+itemCapacity: 1500
+size: 3
+requirements: [
+tungsten/125
+nitinol/100
+titanium/240
+]
+category: effect
+research: {
+  parent: secure-container
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.4

@@ -1,0 +1,185 @@
+Type: ItemTurret
+Name: Nebula
+scaledHealth: 165
+description: Charges up and fires a large, powerful star orb at enemies. Requires power and duplexon for ammo.
+size: 4
+smokeEffect: smokeCloud
+shootSound: nebula
+range: 320
+shootY: 7
+rotateSpeed: 2
+hasItems: true
+itemCapacity: 40
+reload: 235
+recoil: 4
+shootWarmupSpeed: 0.035
+minWarmup: 0.96
+ammoPerShot: 5
+cooldownTime: 250
+shake: 5
+drawer: {
+type: DrawTurret
+parts: [
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: true
+         moveRot: -45
+	moveX: 1
+         progress: warmup
+          x: 10
+          y: -2
+         PartMove: [
+           PartProgress: recoil
+         moveRot: -10
+            ]
+    }
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: true
+         moveRot: -30
+         progress: warmup
+moveX: 1
+          x: 8
+          y: 1
+         PartMove: [
+           PartProgress: recoil
+         moveRot: -10
+            ]
+    }
+]
+}
+consumes: {
+  power: 10.3
+}
+ammoTypes: {
+  duplexon: {
+      type: MissileBulletType
+bulletInterval: 3
+intervalBullets: 2
+intervalSpread: 180
+shootEffect: greenBomb
+intervalAngle: 0
+ intervalRandomSpread: 15
+     intervalBullet: {
+         damage: 5
+         speed: 2
+         lifetime: 45
+         splashDamage: 20
+         splashDamageRadius: 10
+         despawnEffect: hitLaser
+         hitEffect: hitLaser
+         frontColor: ffffff
+         backColor: 98ffa9
+         trailColor: 98ffa9
+         lightColor: 84f591
+         weaveMag: 1
+         weaveScale: 2
+	homingPower: 0.1
+         width: 8
+         height: 8
+  shrinkY: 0
+         status: freezing
+         statusDuration: 50
+          sprite: nexus-mod-star
+}
+      damage: 68
+      speed: 5
+      lifetime: 60
+      shake: 4
+      splashDamage: 280
+      splashDamageRadius: 50
+      despawnEffect: greenBomb
+   hitEffect: greenBomb
+      knockback: 3
+      frontColor: ffffff
+      backColor: 98ffa9
+      trailColor: 98ffa9
+      lightColor: 84f591
+ trailInterval: 4
+trailParam: 6
+trailLength: 20
+trailWidth: 4
+      weaveMag: 3
+      homingRange: 0
+      homingPower: 0
+      weaveScale: 3
+      width: 30
+      height: 30
+   spin: 4
+      status: freezing
+      statusDuration: 320
+      sprite: nexus-mod-star
+      fragBullets: 6
+      fragBullet: {
+      type: MissileBulletType
+       damage: 50
+	homingPower: 0.1
+       speed: 5
+       lifetime: 60
+     drag: 0.03
+       shake: 2
+   spin: 2
+       splashDamage: 75
+       splashDamageRadius: 30
+       despawnEffect: greenBomb
+       hitEffect: greenBomb
+       knockback: 1.5
+       frontColor: ffffff
+       backColor: 98ffa9
+       trailColor: 98ffa9
+       lightColor: 84f591
+       weaveMag: 1
+       weaveScale: 2
+       width: 17
+       height: 17
+       status: freezing
+       statusDuration: 200
+       sprite: nexus-mod-star
+       fragBullets: 3
+       fragBullet: {
+         damage: 5
+         speed: 4
+   drag: 0.13
+         lifetime: 30
+         splashDamage: 25
+         splashDamageRadius: 10
+         despawnEffect: hitLaser
+         hitEffect: hitLaser
+         frontColor: ffffff
+         backColor: 98ffa9
+         trailColor: 98ffa9
+         lightColor: 84f591
+         weaveMag: 1
+         weaveScale: 2
+         width: 10
+         height: 10
+	homingPower: 0.2
+  shrinkY: 0
+         status: freezing
+         statusDuration: 100
+          sprite: nexus-mod-star
+       }
+    }
+}
+ }
+requirements: [
+  metaglass/475
+  monolithium/600
+  plastanium/550
+  duplexon/150
+	titanium/950
+]
+category: turret
+research: {
+  parent: foreshadow
+  objectives: [rail,
+    {
+      type: SectorComplete
+      preset: viridescent-plain
+    }
+  ]
+}

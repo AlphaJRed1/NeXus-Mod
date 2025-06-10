@@ -1,0 +1,12 @@
+type: DirectionalUnloader
+name: Rail Unloader
+description: sadsad
+allowCoreUnload: true
+requirements: [
+nitinol/5
+silicon/10
+tungsten/10
+]
+category: distribution
+planet: thanaras
+research: secure-container

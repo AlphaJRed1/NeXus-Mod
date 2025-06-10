@@ -1,0 +1,19 @@
+ type: StatusEffect
+ name: nuclear-healing
+localizedName: Nuclear Healing
+       show: true
+       damage: -3
+   color: 9eff5a
+       effectChance: 0.15
+       effect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 3.5
+    length: 25
+    baseLength: 3
+    lifetime: 35
+    colorFrom: 9eff5a
+    colorTo: 9eff5a05
+    cone: 360
+    }

@@ -1,0 +1,26 @@
+Type: PowerNode
+Name: Power Queller
+description: Distributes power to nearby structures. Has the ability to store some power for later use as well.
+size: 2
+laserRange: 10
+maxNodes: 10
+hasPower: true
+laserColor1: fcc7ff
+laserColor2: e845f0
+solid: true
+emptyLightColor: f8c266
+fullLightColor: fb9567
+powerCapacity: 166.7
+outputsPower: true
+consumesPower: true
+consumes: {
+  powerBuffered: 10000
+}
+requirements: [
+nickel/40
+silicon/25
+titanium/20
+]
+category: power
+research: power-pod
+planet: thanaras

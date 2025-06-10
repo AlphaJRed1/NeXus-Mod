@@ -1,0 +1,33 @@
+name: Monolite Extractor
+description: Capable of mining monolite ore from the ground. Requires water.
+type: Drill
+size: 3
+tier: 8
+drillTime: 270
+rotateSpeed: 4
+itemCapacity: 15
+blockedItems: [copper, lead, coal, sand, thorium, titanium]
+consumes: {
+  power: 1.8
+  liquids: {
+liquids: [
+water/0.2
+]
+  }
+}
+requirements: [
+silicon/50
+titanium/80
+metaglass/50
+graphite/50
+]
+category: production
+research: {
+  parent: laser-drill
+  objectives: [
+    {
+      type: OnSector
+      preset: reverent-junction
+    }
+  ]
+}

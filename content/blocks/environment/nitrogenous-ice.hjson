@@ -1,0 +1,9 @@
+type: Floor
+name: Nitrogenous Ice
+variants: 3
+attributes: {
+  nitrogenous: 0.2
+}
+            dragMultiplier: 0.35
+            speedMultiplier: 0.8
+            albedo: 0.65

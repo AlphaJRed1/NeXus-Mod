@@ -1,0 +1,132 @@
+type: GenericCrafter
+name: Vion Crystallizer
+description: Crystallizes silicon and titanium to create vion quartz. Uses the inter-quantum power of tryplasma and an intense amount of power to energize the fusion.
+details: Using this crystallizer comes with a great risk. The amount of power held by these quartz crystals is unmatched. Beware of the consequences.
+size: 4
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 150
+updateEffect: {
+ type: ParticleEffect
+    particles: 4
+line: true
+strokeFrom: 1
+strokeTo: 0
+lenFrom: 1
+lenTo: 4
+    length: 5
+    baseLength: 2
+    lifetime: 120
+  interp: pow5Out
+sizeInterp: linear
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: 360
+}
+craftEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 15
+    sizeFrom: 1
+    sizeTo: 0
+    length: 16
+    baseLength: 2
+    lifetime: 120
+  interp: pow10Out
+sizeInterp: pow5In
+    colorFrom: ffaddf
+    colorTo: ffb6f0
+    cone: 360
+sprite: nexus-wave-star
+}
+{
+type: WaveEffect
+    lifetime: 140
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 30
+    strokeFrom: 8
+    strokeTo: 0
+    colorFrom: ffb6f070
+    colorTo: dd149915
+interp: pow2Out
+}
+{
+type: WaveEffect
+    lifetime: 10
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 25
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: ffb6f0
+    colorTo: dd1499
+interp: linear
+}
+]
+}
+
+shake: 3
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidRegion
+drawLiquid: tryplasma
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 10
+}
+{
+type: DrawDefault
+}
+{
+type: DrawWarmupRegion
+color: ffaddf40
+}
+{
+type: DrawCrucibleFlame
+flameColor: dd149980
+midColor: ffaddf
+flameRad: 5
+circleSpace: 4
+alpha: 0.3
+rotateScl: 2.5
+particleSize: 3
+}
+]
+}
+consumes: {
+  power: 4.2
+  liquids: {
+    liquids: [
+	tryplasma/0.2
+    ]
+  }
+  items: {
+    items: [
+	silicon/2
+	titanium/3
+    ]
+  }
+}
+requirements: [
+nitinol/100
+silicon/150
+plastanium/65
+nickel/230
+]
+category: crafting
+outputItem: vionquartz/2
+planet: thanaras
+research: tryphoton-press
+researchCostMultiplier: 1.3

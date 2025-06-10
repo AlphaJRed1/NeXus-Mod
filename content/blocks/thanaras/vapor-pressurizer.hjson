@@ -1,0 +1,125 @@
+Name: Vaporization Chamber
+description: Rapidly vaporizes nitrogen, releasing huge amounts of steam and pressure that quicky turn turbines, which generates power.
+type: ConsumeGenerator
+hidden: true
+size: 4
+hasItems: false
+hasLiquids: true
+hasPower: true
+liquidCapacity: 30
+itemDuration: 3
+powerProduction: 20.3
+generateEffect: {
+type: RadialEffect
+effect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 7
+    baseLength: 3
+length: 60
+    lifetime: 50
+    colorFrom: f8f4ff
+    colorTo: f8f4ff05
+    cone: 40
+interp: circleOut
+sizeInterp: pow5In
+}
+amount: 8
+rotationSpacing: 45
+lengthOffset: 4
+}
+consumeEffect: {
+type: RadialEffect
+effect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 7
+    baseLength: 3
+length: 60
+    lifetime: 50
+    colorFrom: f8f4ff
+    colorTo: f8f4ff05
+    cone: 40
+interp: circleOut
+sizeInterp: pow5In
+}
+amount: 8
+rotationSpacing: 45
+lengthOffset: 4
+}
+updateEffectChance: 0.5
+updateEffect: {
+type: RadialEffect
+effect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 7
+    baseLength: 3
+length: 60
+    lifetime: 50
+    colorFrom: f8f4ff
+    colorTo: f8f4ff05
+    cone: 40
+interp: circleOut
+sizeInterp: pow5In
+}
+amount: 8
+rotationSpacing: 45
+lengthOffset: 4
+}
+
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: nitrogen
+}
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 15
+}
+{
+type: DrawRegion
+suffix: -top
+}
+]
+}
+consumes: {
+liquids: {
+liquids: [
+       nitrogen/0.4
+    ]
+}
+}
+requirements: [
+nitinol/160
+tungsten/400
+silicon/400
+nickel/350
+]
+category: power
+research: {
+  parent: annexion-generator
+  objectives: [
+    {
+      type: SectorComplete
+      preset: frost-mounds
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.6
+ambientSound: steam
+ambientSoundVolume: 0.2

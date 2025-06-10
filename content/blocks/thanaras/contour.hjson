@@ -1,0 +1,201 @@
+type: LiquidTurret
+Name: Contour
+description: pending-unfinished
+size: 3
+scaledHealth: 245
+range: 175
+targetGround: true
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.18
+}
+targetAir: true
+reload: 50
+shake: 1.5
+hasLiquids: true
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 45
+sides: 4
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 15
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: pow2Out
+}
+{
+ type: ParticleEffect
+    particles: 5
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 30
+    baseLength: 1
+    lifetime: 60
+  interp: circleOut
+    colorFrom: b46dff
+sizeInterp: linear
+    colorTo: 5617b0
+    cone: 35
+}
+]
+}
+smokeEffect: shootBigSmoke
+shootSound:shootMicro1
+recoil: 2.3
+outlineColor: 101220
+shoot: {
+type: ShootAlternate
+barrels: 2
+spread: 7.5
+}
+recoils: 2
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -back
+        type : RegionPart
+         mirror: false
+         under: true
+top: false
+         moveX: 0
+         moveY: -1.5
+         moveRot: 0
+	interp: pow10In
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -barrel-l
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+	recoilIndex: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -barrel-r
+        type : RegionPart
+         mirror: false
+         under: true
+top: false
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+	recoilIndex: 1
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+ammoTypes: {
+  shadow-formula: {
+    damage: 25
+splashDamage: 18
+splashDamageRadius: 40
+    speed: 5
+    lifetime: 35
+    height: 13
+    width: 13
+spin: 6
+frontColor: b46dff
+backColor: 16071e
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 10
+    baseLength: 0
+    lifetime: 40
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 16071e
+    cone: -100
+}
+hitSound: microBoom
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+sides: 4
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 43
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 8
+    sizeFrom: 4
+    sizeTo: 0
+    length: 43
+    baseLength: 3
+    lifetime: 75
+  interp: circleOut
+    colorFrom: b46dff
+sizeInterp: pow2Out
+    colorTo: 16071e
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 10
+    sizeFrom: 5
+    sizeTo: 0
+    length: 30
+    baseLength: 5
+    lifetime: 100
+  interp: pow2Out
+    colorFrom: b46dff
+sizeInterp: linear
+    colorTo: 5617b0
+    cone: 360
+}
+]
+
+}
+despawnEffect: none
+despawnHit: true
+status: soul-drain
+statusDuration: 180
+  }
+  }
+requirements: [
+cryo-compound/125
+silicon/150
+nitinol/80
+]
+category: turret
+research: turf
+planet: thanaras
+researchCostMultiplier: 1

@@ -1,0 +1,37 @@
+type: Reconstructor
+Name: Nano Reconstructor
+description: Upgrades Tier 1 Micro units into their tier 2 forms.
+size: 3
+constructTime: 1800
+consumes: {
+  power: 3.5
+    items: {
+      items: [
+	nitinol/15
+	silicon/40
+	titanium/40
+      ]
+    }
+}
+upgrades: [
+  [proton, electron]
+  [fission, division]
+  [atom, molecule]
+]
+requirements: [
+silicon/100
+nitinol/50
+titanium/120
+]
+category: units
+research: {
+  parent: micro-factory
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+researchCostMultiplier: 0.5
+

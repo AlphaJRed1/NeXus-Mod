@@ -1,0 +1,41 @@
+type: ItemTurret
+Name: Filth
+description: Fires rapid bullets in bursts.
+size: 1
+health: 250
+range: 70
+targetGround: true
+targetAir: true
+reload: 30
+    drawer: {
+type: DrawTurret
+basePrefix: admix-
+}
+shoot: {
+type: ShootAlternate
+shots: 2
+barrels: 2
+spread: 3
+}
+velocityRnd: 0.05
+    shootEffect: pulverizeSmall
+    smokeEffect: conveyorPoof
+
+ammoTypes: {
+  lead: {
+    damage: 3
+	splashDamage: 10
+	splashDamageRadius: 10
+    speed: 7.2
+    lifetime: 10
+    ammoMultiplier: 2
+  height: 10
+   width: 9
+  }
+}
+requirements: [
+  lead/30
+admix/10
+]
+category: turret
+research: duo

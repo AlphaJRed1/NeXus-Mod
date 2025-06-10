@@ -1,0 +1,6 @@
+type: TallBlock
+name: Huge Nitrogen Crystal
+variants: 2
+clipSize: 350
+shadowAlpha: 0.5
+shadowOffset: -3

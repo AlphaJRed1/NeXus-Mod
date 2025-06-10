@@ -1,0 +1,121 @@
+Name: Shade
+description: Slowly trudges along terrain, firing homing star orbs that deal splash damage to a wide area. Equipped with a small forcefield that protects itself from oncoming attacks.
+type: legs
+hitSize: 11
+hovering: true
+allowLegStep: true
+shadowElevation: 0.2
+groundLayer: 70
+mineTier: 2
+mineSpeed: 5
+legCount: 2
+health: 380
+stepShake: 0
+armor: 3
+speed: 0.5
+outlineColor: 1c2125
+immunities: [freezing, subzero-freezing]
+weapons: [
+ {
+    name: shade-gun
+    y: -3
+    x: 5
+    rotate: true
+    recoil: 2
+  top: true
+    reload: 50
+    shootSound: lasershoot
+    bullet: {
+shootEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 1.5
+    sizeTo: 0
+    length: 10
+    baseLength: 0
+    lifetime: 35
+  interp: circleOut
+sizeInterp: pow2In
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 70
+}
+      sprite: large-bomb
+      speed: 3
+      lifetime: 75
+      damage: 6
+      splashDamage: 35
+      splashDamageRadius: 45
+      height: 11
+      width: 11
+      homingPower: 0.1
+homingRange: 200
+frontColor: b46dff
+backColor: 5830d9
+trailInterval: 2
+trailEffect: {
+ type: ParticleEffect
+    particles: 2
+    sizeFrom: 1.5
+    sizeTo: 0
+    length: 5
+    baseLength: 0
+    lifetime: 60
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: -80
+}
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+sides: 4
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 48
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 2
+    sizeTo: 0
+    length: 45
+    baseLength: 0
+    lifetime: 60
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+sizeInterp: linear
+}
+{
+type: WrapEffect
+name: dynamicSpikes
+color: 5830d9
+}
+]
+}
+
+    }
+  }
+]
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 12
+    regen: 2
+    max: 200
+    cooldown: 400
+sides: 10
+  }
+]

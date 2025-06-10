@@ -1,0 +1,44 @@
+type: LiquidTurret
+Name: Degrade
+description: Shoots out a cloud of cosmic rust that affects enemies in its path.
+size: 1
+health: 200
+range: 80
+targetGround: true
+targetAir: true
+reload: 100
+    drawer: {
+type: DrawTurret
+basePrefix: admix-
+}
+velocityRnd: 0.05
+    shootEffect: pulverizeSmall
+    smokeEffect: ventSteam
+ammoTypes: {
+  cosmic-rust: {
+damage: 5
+   splashDamage: 5
+    splashDamageRadius: 15
+    speed: 2.1
+   despawnEffect: none
+    lifetime: 40
+    height: 10
+    width: 10
+    frontColor: b6624b
+    backColor: b6624b50
+trailEffect: smokeCloud
+trailInterval: 3
+pierce: true
+pierceBuilding: true
+    buildingDamageMultiplier: 0.01
+status: cosmic-rusted
+statusDuration: 200
+  }
+}
+requirements: [
+copper/20
+  metaglass/15
+admix/10
+]
+category: turret
+research: duo

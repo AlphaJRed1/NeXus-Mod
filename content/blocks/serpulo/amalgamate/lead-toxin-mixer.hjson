@@ -1,0 +1,38 @@
+type: GenericCrafter
+name: Lead Toxin Mixer
+description: Combines the essence of obamium and titanium with water to create armafluid.
+size: 2
+hasLiquids: true
+hasItems: true
+craftTime: 100
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidTile
+drawLiquid: lead-toxin
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+]
+}
+consumes: {
+  items: {
+    items: [
+      lead/3
+      coal/2
+    ]
+  }
+}
+requirements: [
+lead/145
+admix/20
+  metaglass/30
+]
+category: crafting
+outputLiquid: lead-toxin/0.2

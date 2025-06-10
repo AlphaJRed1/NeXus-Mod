@@ -1,0 +1,51 @@
+type: AttributeCrafter
+Name: Slag Extractor
+description: Extracts slag from underneath the ground.
+size: 3
+updateEffect: ventSteam
+craftTime: 120
+baseEfficiency: 1
+hasLiquids: true
+attribute: heat
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidTile
+drawLiquid: slag
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 8
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+{
+type: DrawLiquidRegion
+drawLiquid: slag
+}
+]
+}
+
+consumes: {
+  power: 3.6
+}  
+requirements: [
+metaglass/50
+silicon/75
+copper/100
+thorium/70
+]
+category: production
+research: {
+  parent: water-extractor
+  objectives: [
+  ]
+}
+outputLiquid: slag/0.1

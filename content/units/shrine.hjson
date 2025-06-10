@@ -1,0 +1,53 @@
+type: mech
+Name: Shrine
+description: Tier 1 Ground Unity Mech. Fires a salvo of flak bullets at enemies. Also equipped with 2 mini mounts that fire regular shells for added supression.
+speed: 0.8
+health: 550
+armor: 4
+hitSize: 11
+forceMultiTarget: true
+weapons: [
+ {
+    name: shrine-gun
+    x: 6
+    y: 0
+    rotate: false
+   top: false
+    reload: 30
+    shoot: {
+	shots: 2
+	shotDelay: 5
+	}
+    recoil: 3
+    shootSound: artillery
+    bullet: {
+      damage: 25
+      splashDamage: 15
+      splashDamageRadius: 15
+      lifetime: 30
+      speed: 5
+      width: 9
+      height: 12
+      despawnEffect: flakExplosion
+     hitEffect: flakExplosion
+    }
+ }
+ {
+    name: shrine-mount
+    x: 4.86
+    y: -3
+    rotate: true
+rotateSpeed: 4
+   top: true
+    reload: 13
+    recoil: 1.5
+    bullet: {
+      damage: 11
+      lifetime: 60
+      speed: 2.5
+      width: 6
+      height: 10
+    }
+ }
+]
+

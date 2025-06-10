@@ -1,0 +1,97 @@
+Name: Puncture
+description: Fires homing spikes that pierce multiple enemies.
+type: ItemTurret
+scaledHealth: 150
+size: 3
+rotateSpeed: 3
+reload: 150
+recoil: 3
+shootSound: puncture
+range: 260
+shootWarmupSpeed: 0.07
+minWarmup: 0.9
+drawer: {
+type: DrawTurret
+parts: [
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 2
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+
+ammoTypes: {
+  pyratite: {
+    type: MissileBulletType
+    damage: 100
+    pierceBuilding: true
+    lifetime: 80
+    drag: -0.03
+      pierceCap: 10
+    homingPower: 0.2
+    homingRange: 200
+    sprite: nexus-mod-dart
+    width: 10
+    height: 17
+    frontColor: cedb84
+    backColor: ffffff
+    trailColor: cedb84
+    status: burning
+    statusDuration: 200
+  }
+  surge-alloy: {
+    type: MissileBulletType
+    damage: 150
+    lifetime: 80
+    drag: -0.03
+    pierceBuilding: true
+      pierceCap: 10
+    homingPower: 0.3
+    homingRange: 200
+    sprite: nexus-mod-dart
+    width: 11
+    height: 20
+    lightning: 3
+    lightningDamage: 15
+    lightningLength: 6
+    status: shocked
+    statusDuration: 200
+     }
+  uranium: {
+    type: MissileBulletType
+    damage: 110
+    lifetime: 80
+    drag: -0.03
+    pierceBuilding: true
+      pierceCap: 10
+    homingPower: 0.2
+    homingRange: 200
+    sprite: nexus-mod-dart
+    width: 10
+    height: 20
+    status: uranium-decay
+    statusDuration: 250
+     }
+  }
+category: turret
+requirements: [
+  lead/300
+  titanium/200
+  silicon/175
+  phase-fabric/45
+]
+research: {
+  parent: lancer
+  objectives: [
+    {
+      type: OnSector
+      preset: perilous-stream
+    }
+  ]
+}

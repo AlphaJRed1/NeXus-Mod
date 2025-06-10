@@ -1,0 +1,62 @@
+type: ItemTurret
+Name: Oscillator
+description: Creates a shockwave that debuffs and knocks back enemies. Requires coal and power.
+size: 3
+health: 2000
+range: 200
+targetGround: true
+targetAir: true
+recoil: 0
+rotateSpeed: 0
+shake: 8
+shootCone: 360
+shootSound: explosionbig
+inaccuracy: 0
+cooldown: 0.007
+reload: 200
+shootY: 0
+    shootEffect: generatespark
+    smokeEffect: flakExplosion
+consumes: {
+power: 2.4
+}
+ammoTypes: {
+  coal: {
+    damage: 1
+    splashDamage: 70
+    splashDamageRadius: 200
+    speed: 0
+    lifetime: 1
+    height: 18
+	knockback: 8
+ status: {
+       name: trauma
+       speedMultiplier: 0.7
+       reloadMultiplier: 0.7
+	armorMultiplier: 0
+	healthMultiplier: 0.7
+   color: ccdbb5
+       effectChance: 0.05
+       effect: fuelburn
+}
+statusDuration: 150
+    width: 18
+    despawnEffect: spawnShockwave
+hitEffect: spawnShockwave
+  }
+}
+requirements: [
+  copper/450
+  monolithium/150
+  silicon/150
+]
+category: effect
+research: {
+  parent: wreathe
+  objectives: [
+    {
+      type: OnSector
+      preset: reverent-junction
+    }
+  ]
+}

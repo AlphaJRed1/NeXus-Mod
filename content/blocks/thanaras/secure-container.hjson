@@ -1,0 +1,23 @@
+name: Secure Container
+description: Stores a good amount of items, well protected and armored. Can be connected to the Core to increase it's storage amount, which is required to get enough resources to upgrade to the next Core Tier.
+type: StorageBlock
+health: 500
+armor: 5
+itemCapacity: 500
+size: 2
+requirements: [
+titanium/90
+tungsten/40
+]
+category: effect
+research: {
+  parent: rail-junction
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.2

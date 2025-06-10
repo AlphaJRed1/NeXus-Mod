@@ -1,0 +1,174 @@
+Name: Specter
+description: fire
+type: legs
+hitSize: 20
+hovering: true
+forceMultiTarget: true
+allowLegStep: true
+visualElevation: 0.2
+immunities: [freezing, subzero-freezing]
+legCount: 4
+legLength: 11
+legBaseOffset: 5
+legExtension:-1.3
+stepShake: 0
+health: 880
+armor: 6
+faceTarget: true
+outlineColor: 1c2125
+groundLayer: 70
+speed: 0.45
+weapons: [
+ {
+    name: specter-gun
+    y: -3.5
+    x: 5
+    rotate: true
+    recoil: 2
+    reload: 35
+  top: true
+    shootSound: lasershoot
+    bullet: {
+      sprite: large-bomb
+      speed: 4
+      lifetime: 65
+      damage: 8
+      splashDamage: 40
+      splashDamageRadius: 40
+frontColor: b46dff
+backColor: 5830d9
+trailInterval: 2
+trailEffect: {
+ type: ParticleEffect
+    particles: 2
+    sizeFrom: 1.8
+    sizeTo: 0
+    length: 5
+    baseLength: 0
+    lifetime: 60
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: -80
+}
+      height: 12
+      width: 12
+      homingPower: 0.1
+homingRange: 200
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+sides: 4
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 42
+    strokeFrom: 2.2
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 7
+    sizeFrom: 2.6
+    sizeTo: 0
+    length: 40
+    baseLength: 0
+    lifetime: 60
+  interp: circleOut
+    colorFrom: b46dff
+sizeInterp: pow2In
+    colorTo: 5617b0
+    cone: 360
+}
+{
+type: WrapEffect
+name: dynamicSpikes
+color: 5830d9
+}
+]
+}
+      }
+    }
+ {
+    name: specter-laser
+    y: 4
+    x: 7.3
+    rotate: false
+    recoil: 0
+    reload: 3
+alternate: false
+shoot: {
+shots: 2
+alternate: false
+}
+    shootSound: lasershoot
+    bullet: {
+speed: 10
+lifetime: 7
+      damage: 14
+pierce: true
+pierceBuilding: true
+frontColor: 5830d9
+backColor: 5617b0
+status: soul-drain
+statusDuration: 60
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    length: 8
+    baseLength: 0
+    lifetime: 40
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: -100
+}
+hitEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 2
+    sizeTo: 0
+    length: 15
+    baseLength: 0
+    lifetime: 40
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 140
+}
+despawnEffect: {
+ type: ParticleEffect
+    particles: 4
+    sizeFrom: 2
+    sizeTo: 0
+    length: 15
+    baseLength: 0
+    lifetime: 40
+  interp: circleOut
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 360
+}
+    }
+  }
+]
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 16
+    regen: 3
+    max: 250
+    cooldown: 400
+sides: 10
+  }
+]

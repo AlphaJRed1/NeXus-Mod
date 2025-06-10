@@ -1,0 +1,5 @@
+type: Floor
+name: Titanar Crater
+variants: 3
+blendGroup: titanstone
+blendID: 18

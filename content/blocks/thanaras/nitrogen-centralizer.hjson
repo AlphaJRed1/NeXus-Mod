@@ -1,0 +1,60 @@
+type: GenericCrafter
+name: Atmospheric Centralizer
+description: Concentrates the atmosphere into nitrogen and methane gas, each dispensing on either side of the structure.
+size: 3
+hasLiquids: true
+rotate: true
+invertFlip: true
+regionRotated1: 3
+hasItems: true
+craftTime: 120
+liquidOutputDirections: [1, 3]
+liquidCapacity: 40
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: nitrogen
+}
+{
+type: DrawLiquidTile
+drawLiquid: carbon
+}
+{
+type: DrawRegion
+}
+{
+type: DrawLiquidOutputs
+}
+]
+}
+consumes: {
+power: 4.5
+}
+requirements: [
+tungsten/50
+nickel/100
+titanium/100
+silicon/70
+]
+category: crafting
+outputLiquids: [
+nitrogen/0.25
+carbon/0.4
+]
+planet: thanaras
+research: {
+  parent: carbon-concentrator
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCostMultiplier: 0.1

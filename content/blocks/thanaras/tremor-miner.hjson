@@ -1,0 +1,37 @@
+name: Tremor Miner
+type: BurstDrill
+description: Has faster mining speed than a Profuse Drill. Can mine
+size: 3
+category: production
+tier: 6
+drillTIme: 320
+invertedTime: 300
+arrows: 2
+itemCapacity: 20
+research: impact-miner
+liquidBoostIntensity: 1.5
+consumes: {
+power: 3.2
+liquid: {
+liquid: nitrogen
+boost: true
+optional: true
+amount: 0.1
+}
+}
+requirements: [
+nickel/105
+titanium/105
+silicon/50
+]
+planet: thanaras
+research: {
+  parent: impact-miner
+  objectives: [
+    {
+      type: SectorComplete
+      preset: arche-ruin
+    }
+  ]
+}
+researchCostMultiplier: 0.1

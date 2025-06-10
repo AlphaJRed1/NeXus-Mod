@@ -1,0 +1,51 @@
+type: StackConveyor
+name: Armored Rail
+description: Transports items in small packages. Much faster than a Stack Rail and well armored.
+health: 150
+armor: 5
+itemCapacity: 4
+speed: 0.08
+recharge: 2
+loadEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 1
+    sizeTo: 0
+    length: 6
+    baseLength: -6
+    lifetime: 20
+   interp: pow2In
+    colorFrom: 78787810
+    colorTo: 787878
+    cone: 360
+}
+unloadEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 0
+    sizeTo: 1
+   interp: pow10Out
+    length: 6
+    baseLength: 0
+    lifetime: 20
+    colorFrom: 787878
+    colorTo: 78787810
+    cone: 360
+
+}
+requirements: [
+ nickel/2
+titanium/1
+tungsten/1
+]
+category: distribution
+research: {
+  parent: stack-rail
+  objectives: [
+    {
+      type: SectorComplete
+      preset: arche-ruin
+    }
+  ]
+}
+planet: thanaras

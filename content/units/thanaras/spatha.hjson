@@ -1,0 +1,215 @@
+type: mech
+Name: Spatha
+speed: 0.7
+description: Armed with two deadly razor claws that eject powerful piercing shells, which release a barrage of artillery bombs as it slashes through the air. Has a much more powerful self-regeneration ability than its previous counterparts.
+health: 5050
+armor: 16
+hitSize: 21
+outlineColor: 1c2125
+immunities: [uranium-decay]
+weapons: [
+ {
+    name: spatha-blade
+    x: 12
+    y: 0
+    rotate: true
+shootSound: microPowerSlash
+    rotateSpeed: 3.5
+    reload: 45
+rotationLimit: 20
+shootCone: 50
+ top: false
+    recoil: -9
+    bullet: {
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+  type: ParticleEffect
+line: true
+    particles: 6
+    baseLength: 4
+length: -45
+    lifetime: 25
+lenFrom: 7
+lenTo: 0
+strokeFrom: 2.2
+strokeTo: 0
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: -35
+interp: circleOut
+sizeInterp: linear
+}
+{
+  type: ParticleEffect
+    particles: 5
+    baseLength: 5
+length: -30
+    lifetime: 45
+sizeFrom: 3.2
+sizeTo: 0
+colorFrom: beddb550
+colorTo: 4a694050
+    cone: -60
+interp: pow5Out
+sizeInterp: pow2In
+}
+]
+}
+smokeEffect: none
+    damage: 295
+  recoil: -3.5
+      buildingDamageMultiplier: 1.2
+status: uranium-decay
+statusDuration: 250
+    pierceCap: 4
+pierceBuilding: true
+    width: 15
+    height: 20
+sprite: nexus-mod-powerslash
+frontColor:
+backColor:
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+line: true
+    particles: 3
+    baseLength: 0
+length: -20
+    lifetime: 25
+lenFrom: 5
+lenTo: 0
+strokeFrom: 2
+strokeTo: 1
+    colorFrom: dbffa1
+    colorTo: 9dff00
+interp: circleOut
+cone: -60
+}
+{
+    type: ParticleEffect
+line: false
+    particles: 1
+    baseLength: 0
+length: 0
+    lifetime: 50
+sizeFrom: 6.2
+sizeTo: 0
+useRotation: true
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: 0
+offset: -90
+interp: circleOut
+useRotation: true
+sizeInterp: pow2In
+region: nexus-mod-powerslash
+}
+]
+}
+    lifetime: 7
+speed: 12
+bulletInterval: 1
+intervalBullets: 2
+intervalRandomSpread: 50
+despawnEffect: none
+despawnHit: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 6
+    baseLength: 0
+length: 30
+    lifetime: 40
+lenFrom: 5
+lenTo: 1
+strokeFrom: 2.2
+strokeTo: 0
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: 80
+interp: circleOut
+}
+{
+type: WaveEffect
+colorFrom: 9dff00
+colorTo: 9dff00
+sizeTo: 25
+lifetime: 25
+interp: pow5Out
+}
+]
+}
+intervalBullet: {
+type: ArtilleryBulletType
+    damage: 12
+status: uranium-decay
+statusDuration: 60
+splashDamage: 35
+splashDamageRadius: 20
+    frontColor: dbffa1
+    backColor: 9dff00
+trailColor: 9dff00
+    width: 10
+    height: 11
+    lifetime: 40
+speed: 4
+despawnEffect: none
+despawnHit: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+colorFrom: beddb550
+colorTo: 4a694050
+sizeFrom: 3.4
+sizeTo: 0
+length: 23
+lifetime: 45
+particles: 4
+interp: pow10Out
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+colorFrom: dbffa1
+colorTo: 9dff00
+sizeFrom: 2.5
+sizeTo: 0
+length: 20
+lifetime: 30
+particles: 4
+interp: circleOut
+sizeInterp: linear
+}
+{
+type: WaveEffect
+colorFrom: 9dff00
+colorTo: 9dff00
+sizeTo: 23
+lifetime: 30
+interp: pow5Out
+}
+]
+}
+}
+    }
+  }
+]
+abilities: [
+{
+type: RegenAbility
+amount: 6
+}
+]
+
+

@@ -1,0 +1,33 @@
+Type: Battery
+Name: Power Vessel
+description: Stores a large amount of power. Heavily armored and well protected.
+size: 4
+health: 2100
+armor: 8
+hasPower: true
+emptyLightColor: f8c266
+fullLightColor: fb9567
+powerCapacity: 200
+outputsPower: true
+consumesPower: true
+consumes: {
+  powerBuffered: 120000
+}
+requirements: [
+nitinol/120
+silicon/200
+tungsten/200
+nickel/250
+]
+category: power
+research: {
+  parent: large-power-pod
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.6

@@ -1,0 +1,235 @@
+type: ItemTurret
+Name: Dunamis
+description: pending. work in progress.
+size: 3
+scaledHealth: 240
+range: 230
+targetGround: true
+targetAir: true
+reload: 15
+shootY: 1
+hasItems: true
+shootWarmupSpeed: 0.045
+minWarmup: 0.95
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.15
+}
+shootSound: microZappers
+recoil: 1.2
+recoilTime: 80
+cooldownTime: 80
+outlineColor: 101220
+inaccuracy: 5
+shoot: {
+type: ShootAlternate
+barrels: 2
+spread: 3
+}
+recoils: 2
+consumes: {
+power: 2
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -bfin2-l
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -1
+         moveRot: 2
+	recoilIndex: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -bfin2-r
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -1
+         moveRot: -2
+	recoilIndex: 1
+         progress: recoil
+          x: 0
+          y: 0
+    }
+   {
+        suffix : -arm
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: -0.4
+         moveY: 0
+         moveRot: -20
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -bfin1-l
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2
+         moveRot: 5
+	recoilIndex: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -bfin1-r
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2
+         moveRot: -5
+	recoilIndex: 1
+         progress: recoil
+          x: 0
+          y: 0
+    }
+   {
+        suffix : -cover
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -3
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+{
+type: DrawCrucibleFlame
+flameColor: dd149980
+midColor: ffaddf
+flameRad: 3.5
+circleSpace: 3
+alpha: 0.7
+rotateScl: 10
+particleSize: 4
+}
+]
+}
+ammoTypes: {
+  vionquartz: {
+ammoMultiplier: 5
+    damage: 37
+    speed: 15
+    lifetime: 16
+shrinkY: 0
+    height: 15
+    width: 9
+frontColor: ffaddf
+backColor: dd1499
+hitColor: dd1499
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+sprite: nexus-mod-dart
+trailInterval: 1
+    trailEffect: {
+ type: ParticleEffect
+    particles: 3
+sizeFrom: 2
+sizeTo: 1.5
+    length: 2
+    baseLength: 2
+    lifetime: 45
+  interp: pow5Out
+sizeInterp: linear
+    colorFrom: ffb6f0
+    colorTo: dd149905
+    cone: -40
+}
+fragBullets: 1
+fragBullet: {
+speed: 0
+width: 0.1
+height: 0.1
+lifetime: 30
+intervalBullets: 1
+bulletInterval: 5
+intervalBullet: {
+speed: 0
+type: BombBulletType
+instantDisappear: true
+width: 0.1
+height: 0.1
+splashDamage: 10
+splashDamageRadius: 20
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 8
+    sizeFrom: 1.2
+    sizeTo: 0
+    length: 6
+    baseLength: 10
+    lifetime: 120
+  interp: circleOut
+sizeInterp: pow2In
+    colorFrom: ffaddf
+    colorTo: ffb6f0
+    cone: 360
+sprite: shell
+}
+{
+type: WaveEffect
+    lifetime: 10
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 23
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: ffb6f0
+    colorTo: dd1499
+interp: linear
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+hitSound: microBoom
+}
+damage: 1
+hitEffect: none
+despawnEffect: none
+hittable: false
+absorbable: false
+pierce: true
+pierceBuilding: true
+}
+  }
+  }
+requirements: [
+plastanium/85
+tungsten/150
+silicon/150
+]
+category: turret
+research: hoplite
+researchCostMultiplier: 1.1
+planet: thanaras

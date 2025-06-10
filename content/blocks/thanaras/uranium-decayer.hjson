@@ -1,0 +1,41 @@
+type: GenericCrafter
+name: Uranium Decayer
+description: Decays uranium into depleted uranium. Takes some time to manufacture.
+size: 3
+hasPower: true
+hasItems: true
+craftTime: 200
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+power: 1.2
+  items: {
+    items: [
+	uranium/1
+    ]
+  }
+}
+requirements: [
+tungsten/85
+cryo-compound/105
+nitinol/70
+titanium/250
+]
+category: crafting
+outputItem: depleted-uranium/1
+planet: thanaras
+research: {
+  parent: plastanium-coarctater
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}

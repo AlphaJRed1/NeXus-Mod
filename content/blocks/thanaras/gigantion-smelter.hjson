@@ -1,0 +1,47 @@
+type: GenericCrafter
+name: Gigantion Smelter
+description: Smelts titanium and tungsten together to form gigantion alloy. Requires cyanogen and power to function.
+hidden: true
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 120
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawFlame
+}
+]
+}
+consumes: {
+  power: 5.65
+  liquids: {
+    liquids: [
+	cyanogen/0.1
+    ]
+  }
+  items: {
+    items: [
+	titanium/3
+	tungsten/2
+    ]
+  }
+}
+requirements: [
+titanium/240
+tungsten/100
+silicon/110
+nitinol/90
+]
+category: crafting
+outputItem: gigantion-alloy/1
+planet: thanaras
+research: nitinol-smelter
+researchCostMultiplier: 0.6

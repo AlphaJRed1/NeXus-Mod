@@ -1,0 +1,10 @@
+type: SeaBush
+name: Kitri Flower
+lobesMin: 3
+lobesMax: 5
+magMin: 3
+magMax: 8
+origin: 0.15
+spread: 30
+sclMin: 60
+sclMax: 100

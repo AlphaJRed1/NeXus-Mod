@@ -1,0 +1,82 @@
+type: GenericCrafter
+name: Neoplasm Mixer
+description: Combines arkycite, water, and thorium to create neoplasm.
+details: THE TRUE NEO
+size: 3
+hasLiquids: true
+hasItems: true
+craftTime: 60
+liquidCapacity: 150
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidRegion
+drawLiquid: arkycite
+suffix: -liquid2
+}
+{
+type: DrawLiquidRegion
+drawLiquid: neoplasm
+suffix: -liquid
+}
+{
+type: DrawCells
+color: c33e2b
+particleColorFrom: e8803f
+particleColorTo: 8c1225
+particles: 20
+range: 4
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 4
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+{
+type: DrawGlowRegion
+suffix: -glow
+color: 70170b
+alpha: 0.7
+}
+]
+}
+craftEffect: {
+type: RadialEffect
+amount: 4
+rotationSpacing: 90
+lengthOffset: 5
+effect: neoplasiaSmoke
+}
+consumes: {
+power: 1.5
+liquids: {
+liquids: [
+water/0.1
+arkycite/0.8
+]
+}
+items: {
+items: [
+thorium/2
+]
+}
+}
+requirements: [
+thorium/90
+oxide/90
+silicon/100
+beryllium/120
+]
+category: crafting
+outputLiquid: neoplasm/0.2
+planet: erekir
+researchCostMultiplier: 0.5
+research: cyanogen-synthesizer

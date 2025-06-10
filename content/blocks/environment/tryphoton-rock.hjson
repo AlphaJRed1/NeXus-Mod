@@ -1,0 +1,25 @@
+type: Floor
+name: Tryphoton Rock
+description: An incredibly radioactive material encased into rock. It... appears to be some sort of organic blood. Are you seeing this commander?
+variants: 3
+attributes: {
+radioactive: 1
+tryphoton: 0.6
+}
+updateEffect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 4
+    baseLength: 10
+    lifetime: 80
+    colorFrom: 5effea
+    colorTo: 5effea20
+    cone: 360
+}
+updateEffectChance: 0.1
+status: photonized
+emitLight: true
+statusDuration: 100
+lightRadius: 17
+lightColor: 5effea75

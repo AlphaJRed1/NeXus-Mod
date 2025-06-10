@@ -1,0 +1,363 @@
+Name: Scintilla
+description: Equipped with a strong forcefield and a halo that fires lightning bolts. Occasionally gives units an Iota Boost Effect.
+type: flying
+flying: true
+health: 30050
+armor: 22
+speed: 0.7
+rotateSpeed: 0.8
+drag: 0.01
+accel: 0.02
+outlineColor: 1c2125
+forceMultiTarget: true
+hitSize: 45
+engineSize: 0
+lowAltitude: false
+faceTarget: true
+circleTarget: true
+itemCapacity: 200
+parts: [
+    {
+        type : HoverPart
+         mirror: true
+radius: 15
+phase: 25
+stroke: 5
+layerOffset: -0.0001
+color: baf6cc
+          x: 17
+          y: -30
+    }
+ {
+        type : HaloPart
+         mirror: false
+progress: life
+color: baf6cc
+stroke: 5
+layerOffset: 0.0001
+haloRotateSpeed: 3.5
+shapes: 6
+triLength: 5
+triLengthTo: 5
+haloRadius: 16
+tri: true
+radius: 4
+haloRotation: 45
+shapeRotation: 180
+          x: 0
+          y: 6
+    }
+ {
+        type : ShapePart
+         mirror: false
+         under: false
+layerOffset: 0.0001
+       color: baf6cc
+         circle: true
+        hollow: true
+       stroke: 3
+      strokeTo: 3
+        radius: 15
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: life
+          x: 0
+          y: 6
+    }
+
+    {
+        type : HoverPart
+         mirror: true
+radius: 12
+phase: 25
+stroke: 5
+layerOffset: -0.0001
+color: baf6cc
+          x: 35
+          y: -16
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: baf6cc
+         side: 4
+layerOffset: 0.0001
+        hollow: true
+       stroke: 2
+      strokeTo: 2
+        radius: 20
+         progress: life
+          x: 0
+          y: 6
+rotateSpeed: 5
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: baf6cc
+         circle: true
+        hollow: true
+       stroke: 3
+      strokeTo: 3
+        radius: 55
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: life
+          x: 0
+          y: 0
+    }
+ {
+        type : HaloPart
+         mirror: false
+progress: life
+color: baf6cc
+stroke: 5
+layerOffset: 0.0001
+haloRotateSpeed: -4
+shapes: 10
+triLength: 7
+triLengthTo: 7
+haloRadius: 55
+tri: true
+radius: 10
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+ {
+        type : HaloPart
+         mirror: false
+progress: life
+color: baf6cc
+stroke: 5
+layerOffset: 0.0001
+haloRotateSpeed: -4
+shapes: 10
+triLength: 4
+triLengthTo: 4
+haloRadius: 55
+tri: true
+radius: 20
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+]
+weapons: [
+ {
+  name: scintillablast
+  inaccuracy: 0
+  shootSound: nebula
+  rotate: false
+shootCone: 360
+  x: 0
+  y: -2
+  reload: 100
+shake: 6
+shootEffect: none
+smokeEffect: none
+shoot: {
+shots: 5
+type: ShootSpread
+spread: 30
+}
+  bullet: {
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 6
+    baseLength: 2
+length: 30
+    lifetime: 60
+lenFrom: 4
+lenTo: 3
+strokeFrom: 3
+strokeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+    cone: 360
+interp: circleOut
+}
+{
+    type: ParticleEffect
+    particles: 5
+    baseLength: 5
+length: 26
+    lifetime: 80
+    sizeFrom: 2.2
+    sizeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+    cone: 360
+interp: circleOut
+sizeInterp: pow2In
+}
+{
+type: WaveEffect
+sizeTo: 23
+strokeFrom: 2.4
+strokeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+interp: circleOut
+}
+]
+}
+despawnHit: true
+despawnEffect: none
+ damage: 85
+splashDamage: 35
+splashDamageRadius: 20
+     lifetime: 45
+speed: 8
+width: 17
+height: 20
+shrinkY: 0
+pierceCap: 5
+pierceBuilding: true
+trailRotation: true
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 10
+    sizeTo: 0
+    baseLength: 0
+length: 0
+    lifetime: 70
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+offset: -90
+    cone: 0
+region: nexus-mod-shield-dart-back
+
+}
+homingPower: 0.04
+homingRange: 300
+sprite: nexus-mod-shield-dart
+frontColor: baf6cc
+backColor: 5dce7f
+  }
+ }
+{
+  name: scintillablastmini
+  shootSound: miniMicro
+  rotate: false
+shootCone: 360
+  x: 0
+  y: -2
+  reload: 15
+shake: 1
+shootEffect: none
+smokeEffect: none
+inaccuracy: 120
+shoot: {
+shots: 4
+shotDelay: 5
+}
+  bullet: {
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 4
+    baseLength: 2
+length: 15
+    lifetime: 40
+lenFrom: 2
+lenTo: 1
+strokeFrom: 1.5
+strokeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+    cone: 360
+interp: circleOut
+}
+{
+type: WaveEffect
+sizeTo: 15
+strokeFrom: 1.5
+strokeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+interp: circleOut
+}
+]
+}
+despawnHit: true
+despawnEffect: none
+ damage: 38
+     lifetime: 50
+speed: 6
+width: 10
+height: 11
+shrinkY: 0
+trailRotation: true
+trailInterval: 2
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 6
+    sizeTo: 0
+    baseLength: 0
+length: 0
+    lifetime: 70
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+offset: -90
+    cone: 0
+region: nexus-mod-shield-dart-back
+
+}
+homingPower: 0.04
+homingRange: 300
+sprite: nexus-mod-shield-dart
+frontColor: baf6cc
+backColor: 5dce7f
+  }
+ }
+
+]
+abilities: [
+  {
+    type: RepairFieldAbility
+    amount: 105
+    reload: 45
+    range: 140
+activeEffect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 6
+    baseLength: 30
+length: 150
+    lifetime: 80
+    colorFrom: baf6cc
+    colorTo: 5dce7f05
+    cone: 360
+}
+}
+  {
+    type: ForceFieldAbility
+    radius: 140
+    regen: 4
+    max: 2000
+    cooldown: 650
+sides: 10
+  }
+]
+research: vestige
+researchCostMultiplier: 0.7

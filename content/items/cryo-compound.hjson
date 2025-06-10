@@ -1,0 +1,8 @@
+type: material
+name: Cryo Compound
+description: A coolant compound used as a substitute for cryofluid in building units and structures.
+hardness: 2
+cost: 3
+color: 87ceeb
+hiddenOnPlanets: [serpulo, erekir]
+research: titanium

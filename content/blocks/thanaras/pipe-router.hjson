@@ -1,0 +1,11 @@
+type: LiquidRouter
+name: Pipe Router
+description: Distributes liquids to nearby structures or pipes.
+liquidCapacity: 6
+requirements: [
+nitinol/1
+titanium/1
+]
+category: liquid
+planet: thanaras
+research: pipe-junction

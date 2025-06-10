@@ -1,0 +1,23 @@
+Type: CoreBlock
+Name: Core: Mors
+description: The tier 1 core of Thanaras. Well protected, governed by Azrael. Once destroyed, the sector is lost.
+health: 2500
+itemCapacity: 1500
+size: 3
+category: effect
+unitType: azrael
+unitCapModifier: 8
+squareSprite: false
+alwaysUnlocked: true
+isFirstTier: true
+requirements: [
+nickel/1100
+titanium/1000
+]
+planet: thanaras
+research: {
+planet: thanaras
+name: Thanaras
+requiresUnlock: false
+root: true
+}

@@ -1,0 +1,20 @@
+ type: StatusEffect
+       name: subzero-freezing
+localizedName: Subzero Freezing
+       speedMultiplier: 0.5
+       reloadMultiplier: 0.5
+	healthMultiplier: 0.75
+   color: ccdbb5
+       effectChance: 0.1
+       effect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 1
+    sizeTo: 4
+    baseLength: 2
+length: 10
+    lifetime: 60
+    colorFrom: 555c9420
+    colorTo: 8492ba05
+    cone: 360
+}

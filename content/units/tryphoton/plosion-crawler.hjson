@@ -1,0 +1,85 @@
+Name: Plosion Crawler
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 188
+outlineColor: 071a20
+ legStraightness: 0.5
+            legLength: 9.5
+useUnitCap: false
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -1
+            legBaseOffset: 3.3
+            legMaxLength: 1
+            legMinLength: 0.5
+            legLengthScl: 0.96
+            legForwardScl: 1.2
+            legGroupSize: 3
+            rippleScale: 0.2
+
+            legMoveSpace: 1
+            legPhysicsLayer: false
+legCount: 6
+hitSize: 11
+armor: 0
+speed: 1.1
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 9
+    sizeFrom: 4.2
+    sizeTo: 0
+    baseLength: 10
+	length: 25
+    lifetime: 280
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+  {
+  name: boom
+  inaccuracy: 0
+  shootSound: microBoom
+  rotate: false
+shootCone: 360
+  x: 0
+  y: 0
+  reload: 1
+  bullet: {
+type: BombBulletType
+speed: 30
+lifetime: 1
+shootOnDeath: true
+instantDisappear: true
+killShooter: true
+damage: 4
+splashDamage: 150
+buildingDamageMultiplier: 1.2
+splashDamageRadius: 55
+   }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 160
+radScale: 1.3
+radAmountScale: 1.3
+  }
+]
+

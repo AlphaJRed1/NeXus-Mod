@@ -1,0 +1,47 @@
+type: Reconstructor
+Name: Femto Reconstructor
+description: Upgrades tier 3 Micro units into their tier 4 forms.
+size: 7
+constructTime: 9000
+consumes: {
+  power: 9.6
+    items: {
+      items: [
+	tungsten/500
+	silicon/450
+	nitinol/450
+	plastanium/200
+	titanium/500
+      ]
+    }
+liquids: {
+liquids: [
+nitrogen/0.6
+]
+}
+}
+upgrades: [
+  [neutron, ion]
+  [rupture, rift]
+  [iota, vestige]
+]
+requirements: [
+silicon/550
+tungsten/675
+nitinol/500
+plastanium/300
+titanium/770
+cryo-compound/450
+]
+category: units
+research: {
+  parent: pico-reconstructor
+  objectives: [
+    {
+      type: SectorComplete
+      preset: frost-mounds
+    }
+  ]
+}
+researchCostMultiplier: 0.6
+

@@ -1,0 +1,16 @@
+captureWave: 35
+planet: serpulo
+sector: 99
+difficulty: 9
+research: {
+requiresUnlock: false
+  parent: shoal-depth
+  objectives: [
+    {
+      type: SectorComplete
+      preset: shoal-depth
+    }
+  ]
+}
+localizedName: Perilous Stream
+description: This sector, although unharming at first, is a cascade of aggression and shock. Intel suggests that the Crux have adopted a new strategy of making you feel comfortable with the first few waves before bringing everything out on your vulnerable defense. Be alert, and take refuge as not one, but TWO copies of a Champion have been spotted waiting for the right moment to strike.

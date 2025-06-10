@@ -1,0 +1,39 @@
+type: UnitAssembler
+Name: Monument Assembler
+description: Combines all Serpulo tier 2 ground units into the Monument.
+size: 3
+dronesCreated: 4
+droneConstructTime: 200
+droneType: shrine-assembler-drone
+areaSize: 5
+consumes: {
+power: 2
+}
+plans: [
+  {
+    unit: monument
+    time: 3500
+    requirements: [
+	mace/1
+	atrax/1
+	pulsar/1
+    ]
+  }
+]
+requirements: [
+monolithium/65
+lead/95
+titanium/75
+silicon/75
+]
+research: {
+parent: shrine-assembler
+objectives: [multiplicative-reconstructor, shrine-assembler
+{
+type: SectorComplete
+preset: reverent-junction
+}
+]
+}
+category: units
+

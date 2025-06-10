@@ -1,0 +1,41 @@
+Name: Spark Generator
+description: Burns methane to generate power.
+type: ConsumeGenerator
+size: 1
+hasItems: true
+hasLiquids: true
+hasPower: true
+liquidCapacity: 25
+itemDuration: 60
+powerProduction: 1
+generateEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawWarmupRegion
+}
+{
+type: DrawLiquidRegion
+drawLiquid: carbon
+}
+]
+}
+consumes: {
+liquids: {
+liquids: [
+       carbon/0.1
+    ]
+}
+}
+requirements: [
+nickel/18
+titanium/12
+]
+category: power
+researchCostMultiplier: 0.1
+research: silicon-forge
+planet: thanaras

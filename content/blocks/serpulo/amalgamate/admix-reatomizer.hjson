@@ -1,0 +1,36 @@
+type: GenericCrafter
+name: Admix Reatomizer
+description: Forges copper and silicon together to form Admix. Requires coal.
+size: 2
+hasItems: true
+craftTime: 160
+itemCapacity: 20
+updateEffect: heatReactorSmoke
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawFlame
+color: ffef99
+}
+]
+}
+consumes: {
+  items: {
+    items: [
+copper/5
+silicon/1
+coal/1
+    ]
+  }
+}
+requirements: [
+copper/50
+silicon/15
+]
+category: crafting
+research: silicon-smelter
+outputItem: admix/2

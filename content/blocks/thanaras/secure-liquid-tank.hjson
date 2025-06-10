@@ -1,0 +1,24 @@
+type: LiquidRouter
+Name: Secure Liquid Tank
+health: 1000
+armor: 8
+size: 3
+description: Stores a large amount of liquid capacity, heavily armored and secure. Can dispense the liquid to adjacent pipes.
+liquidCapacity: 2500
+requirements: [
+nitinol/50
+tungsten/90
+titanium/90
+silicon/35
+]
+category: liquid
+planet: thanaras
+research: {
+  parent: secure-liquid-container
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+type: Liquid
+name: Shadow Formula
+description: ??? revealed in later update
+viscosity: 0.2
+temperature: -1.5
+heatCapacity: 0.8
+gas: true
+color: 9451db
+gasColor: 9451db
+research: nitrogen
+hiddenOnPlanets: [serpulo, erekir]
+effect: soul-drain
+statusDuration: 300

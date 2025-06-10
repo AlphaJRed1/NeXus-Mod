@@ -1,0 +1,93 @@
+Name: Division
+description: Fires a dart that fragments into 2 piercing lasers.
+type: mech
+health: 680
+armor: 4
+speed: 1
+rotateSpeed: 3
+hitSize: 10
+immunities: [photonized]
+outlineColor: 1c2125
+parts: [
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: -2
+         moveY: -2
+         moveRot: -4
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+
+weapons: [
+  {
+  name: divisionpow
+  inaccuracy: 0
+  shootSound: microRail
+  rotate: false
+shootY: 1
+  x: 0
+  y: 0
+  reload: 65
+shootEffect: none
+smokeEffect: none
+chargeSound: microCharge
+shoot: {
+firstShotDelay: 30
+}
+  bullet: {
+   chargeEffect: {
+      type: WaveEffect
+      lifetime: 30
+      sizeFrom: 10
+      sizeTo: 3
+      strokeFrom: 0
+      strokeTo: 3
+interp: pow5In
+      colorFrom: 9dffde90
+      colorTo: 9dffde
+        }
+   lifetime: 20
+speed: 7
+sprite: nexus-mod-dart
+trailInterval: 1
+    trailEffect: {
+type: WaveEffect
+    lifetime: 25
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 2
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: 9dffde
+ interp: pow5Out
+    colorTo: 9dffde10
+}
+damage: 12
+splashDamage: 20
+splashDamageRadius: 15
+  fragBullets: 2
+fragRandomSpread: 0
+fragAngle: 17.5
+fragSpread: 35
+fragOffsetMin: 0
+FragOffsetMax: 0
+fragBullet: {
+ type: LaserBulletType
+      damage: 24
+      length: 50
+sideAngle: 45
+   width: 4
+sideWidth: 4
+      colors: [0bb6ae, 47f0cb, 9dffde5]
+      lightColor: 9dffde66
+  }
+ }
+}
+]
+research: fission
+researchCostMultiplier: 0.7

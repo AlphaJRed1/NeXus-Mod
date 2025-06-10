@@ -1,0 +1,7 @@
+type: Floor
+name: Fine Deepstone
+description: dont stand on it too long.
+variants: 3
+speedMultiplier: 0.8
+itemDrop: sand
+playerUnmineable: true

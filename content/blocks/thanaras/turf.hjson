@@ -1,0 +1,108 @@
+type: ItemTurret
+Name: Turf
+description: Blasts enemies in it's range with splash damaging shrapnel.
+size: 2
+scaledHealth: 230
+range: 150
+targetGround: true
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+targetAir: true
+reload: 10
+hasItems: true
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+shootSound:shootTrot
+cooldownTime: 50
+recoil: 2
+recoilTime: 40
+outlineColor: 101220
+shoot: {
+type: ShootAlternate
+barrels: 2
+spread: 4
+}
+recoils: 2
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -barrel-l
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+	recoilIndex: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -barrel-r
+        type : RegionPart
+         mirror: false
+         under: true
+top: false
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+	recoilIndex: 1
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+ammoTypes: {
+  nickel: {
+    damage: 2
+splashDamage: 15
+splashDamageRadius: 15
+    speed: 7
+    lifetime: 21.5
+    height: 8
+    width: 6
+frontColor: d7e0f4
+backColor: 8e94b6
+hitColor: d7e0f4
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+  }
+  silicon: {
+    damage: 7
+splashDamage: 20
+splashDamageRadius: 15
+    speed: 7
+    lifetime: 21.5
+homingPower: 0.08
+homingRange: 150
+    height: 8
+    width: 6
+frontColor: 9ea1ab
+backColor: 65657c
+hitColor: 9ea1ab
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+  }
+  }
+requirements: [
+nickel/70
+silicon/15
+]
+category: turret
+research: orb
+planet: thanaras
+researchCostMultiplier: 0.2

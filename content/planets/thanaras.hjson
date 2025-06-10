@@ -1,0 +1,154 @@
+localizedName: Thanaras
+description: A dark, isolated planet that happened to fly by the Serpulo Erekir Solar System a few centuries ago and got into orbit around their sun. There was a struggle between factions as they tried to conquer the planet despite its hostile nature and... seemingly alive celestial body, yet it appears something seems to have been reawakened in the presence of warmth... something sinister that the Korru, the Green faction that currently occupies Thanaras, is obliviously unaware of.
+alwaysUnlocked: true
+launchMusic: thanarasLand
+mesh: [
+  {
+    //deepstone
+    type: NoiseMesh
+    planet: thanaras
+    divisions: 5
+    radius: 1.076 //size
+    seed: 35
+    color1: 424242
+    color2: 333333
+    octaves: 4 //size of hexagons
+    persistence: 0.9 //ig the waviness?
+mag: 0.72
+thresh: 0.6
+scl: 2
+  }
+  {
+    //titanar
+    type: NoiseMesh
+    planet: thanaras
+    divisions: 5
+    seed: 54
+    radius: 1.051
+    color1: 5a4789
+    color2: 392a67
+    octaves: 4
+    persistence: 0.9
+    scl: 1
+thresh: 0.6
+mag: 0.8
+  }
+ {
+    //toxicdeep
+    type: NoiseMesh
+    planet: thanaras
+    divisions: 5
+    seed: 104
+    radius: 0.86
+    color1: 576540
+    color2: 465136
+    octaves: 4
+    persistence: 0.6
+scl: 1.5
+thresh: 0.48
+mag: 2.65
+  }
+{
+    //tryphoton
+    type: NoiseMesh
+    planet: thanaras
+    seed: 80
+    divisions: 5
+    color1: 21876c
+    color2: 135a4a
+    radius: 1
+    octaves: 4
+    persistence: 1
+    scale: 0.75
+    mag: 1.3
+thresh: 0.6
+  }
+  {
+    //vion
+    type: NoiseMesh
+    planet: thanaras
+    divisions: 5
+    seed: 34
+    radius: 0.92
+    color1: 9c367e
+    color2: 7e2660
+    octaves: 9
+    persistence: 0.6
+mag: 2.1
+thresh: 0.45
+  }
+
+ ]
+cloudMesh: [
+ {
+   type: HexSkyMesh
+   planet: thanaras
+   speed: 0.9
+   radius: 0.2
+   divisions: 5
+   color: dff2ff50
+   octaves: 6
+   persistence: 0.3
+   scl: 1
+   thresh: 0.6
+  }
+ {
+   type: HexSkyMesh
+   planet: thanaras
+   speed: 0.9
+   radius: 0.22
+   divisions: 5
+   color: e9daff30
+   octaves: 6
+   persistence: 0.5
+   thresh: 0.4
+  }
+]
+generator: {
+  octaves: 3
+  persistence: 0.52
+  scale: 22
+  mag: 0.721
+  thresh: 1.152
+  min: 100
+  max: 100
+  radMin: 220
+  radMax: 600
+  iceChance: 0.51
+  carbonChance: 0.32
+  berylChance: 0
+  ferricChance: 0.26
+}
+orbitRadius: 100
+sectorSize: 2
+allowLaunchSchematics: true
+allowLaunchToNumbered: false
+allowLaunchLoadout: false
+allowSectorInvasion: false
+startSector: 13
+orbitSpacing: 1
+radius: 1.1
+minZoom: 1
+drawOrbit: true
+atmosphereRadIn: 0.1
+atmosphereRadOut: 0.3
+accessible: true
+updateLighting: false
+sectorSeed: 14513
+bloom: false
+visible: true
+ landCloudColor: e9daff
+atmosphereColor: 25276160
+iconColor: 9c367e
+hasAtmosphere: true
+allowWaveSimulation: true
+clearSectorOnLose: true
+allowWaves: true
+prebuildBase: true
+defaultCore: core-mors
+parent: sun
+solarSystem: sun
+launchCandidates: []
+itemWhitelist: [nickel, titanium, silicon, tryphoton, noxionite, nitinol, cryo-compound, plastanium, uranium, depleted-uranium, sand, tungsten, vionquartz]
+waveTeam: green
+tidalLock: true

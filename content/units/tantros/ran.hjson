@@ -1,0 +1,376 @@
+type: flying
+Name: Ran
+description: ?????????????????????????
+health: 20205
+speed: 4
+armor: 25
+engineOffset: 0
+engineSize: 0
+itemCapacity: 0
+rotateSpeed: 0.5
+hitSize: 20
+drag: 0.01
+accel: 0.01
+flying: true
+circleTarget: true
+drawCell: false
+outlineColor: 3eddff
+healColor: b2f8ff
+parts: [
+    {
+        suffix : -glow
+        type : RegionPart
+         mirror: false
+         under: false
+         progress: life
+          x: 0
+layerOffset: 0.01
+          y: 0
+	heatColor: 3eddff
+heatProgress: warmup
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: b2f8ff
+         sides: 4
+layerOffset: 0.0001
+        hollow: true
+       stroke: 3
+      strokeTo: 3
+        radius: 20
+         progress: life
+          x: 0
+          y: 0
+rotateSpeed: 5
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: b2f8ff
+         sides: 4
+layerOffset: 0.0001
+        hollow: true
+       stroke: 1.5
+      strokeTo: 4
+        radius: 45
+         progress: warmup
+          x: 0
+          y: -7
+rotateSpeed: 15
+    }
+ {
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: 3eddff
+stroke: 5
+layerOffset: 0.0001
+haloRotateSpeed: 10
+shapes: 8
+triLength: 2
+triLengthTo: 10
+haloRadius: 25
+tri: true
+radius: 6
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+]
+weapons: [
+{
+  name: spawnIn
+  shootSound: ranSpawn
+  rotate: false
+shake: 30
+shakeTime: 400
+  mirror: false
+  top: false
+  x: 0
+  y: 0
+shootCone: 360
+  reload: 900000
+alwaysShooting: true
+  bullet: {
+ shootEffect: {
+    type: multiEffect
+    effects: [
+        {
+    type: ParticleEffect
+    particles: 40
+    sizeFrom: 12
+    sizeTo: 0
+    length: 200
+    baseLength: 20
+    lifetime: 480
+    colorFrom: b2f8ff
+    colorTo: 3eddff
+interp: circleOut
+sizeInterp: pow10In
+    cone: 360
+    }
+    {
+    type: WaveEffect
+    lifetime: 400
+    sizeFrom: 0
+    sizeTo: 250
+    strokeFrom: 20
+    strokeTo: 0
+    colorFrom: b2f8ff
+    colorTo: 3eddff
+interp: pow2Out
+          }
+      ]
+    }
+
+smokeEffect: none
+despawnEffect: none
+hitEffect: none
+instantDisappear: true
+   }
+ } 
+{
+  name: hulkSMASH
+  inaccuracy: 360
+  shootSound: microBoom
+  rotate: false
+shake: 3
+  mirror: false
+  top: false
+  x: 0
+  y: 0
+shootCone: 360
+  reload: 5
+  recoil: 0
+minShootVelocity: 3
+alwaysShooting: true
+  bullet: {
+shootEffect: none
+smokeEffect: none
+despawnEffect: none
+hitEffect: none
+type: BombBulletType
+instantDisappear: true
+splashDamage: 100
+splashDamageRadius: 50
+   }
+ } 
+
+ {
+  name: isweariftheresmore
+  inaccuracy: 360
+  shootSound: microBzz
+  rotate: true
+  mirror: false
+  top: false
+  rotateSpeed: 10
+shoot: {
+shots: 4
+shotDelay: 5
+}
+  spacing: 0
+  x: 0
+  y: 0
+shootCone: 360
+  reload: 25
+  recoil: 2
+  bullet: {
+    damage: 65
+    trailWidth: 2
+    trailLength: 20
+    pierceCap: 4
+    height: 25
+    width: 15
+    lifetime: 50
+    speed: 6
+    knockback: 0.2
+frontColor: b2f8ff
+backColor: 3eddff
+trailColor: 3eddff
+    hitEffect: flakExplosionBig
+    despawnEffect: flakExplosionBig
+   }
+ } 
+  {
+  name: anotheronebruh
+    top: false
+    mirror: false
+  inaccuracy: 360
+shootCone: 360
+    x: 0
+    y: 0
+    rotateSpeed: 10
+    reload: 10
+    recoil: 1.5
+    shootSound: laser
+    shake: 0
+    bullet: {
+      type: LaserBulletType
+      damage: 60
+      collidesTeam: false
+      length: 300
+      colors: [3eddff, b2f8ff, ffffff]
+      lightColor: b2f8ff
+   }
+  }
+  {
+  name: hahaagianlel
+  inaccuracy: 360
+  shootSound: microBzz
+  rotate: true
+  mirror: false
+  rotateSpeed: 10
+shootCone: 360
+ shoot: {
+shots: 2
+}
+  spacing: 0
+  x: 0
+  y: 0
+  reload: 15
+  recoil: 2
+  bullet: {
+    type: MissileBulletType
+    trailWidth: 4
+    trailLength: 15
+    spin: 3
+    shrinkY: 0
+    damage: 43
+    splashDamage: 80
+    splashDamageRadius: 25
+    speed: 4
+    lifetime: 80
+    sprite: large-bomb
+    height: 18
+    width: 18
+    shootEffect: shootLiquid
+    smokeEffect: shootBigSmoke
+frontColor: b2f8ff
+backColor: 3eddff
+trailColor: 3eddff
+    despawnEffect: {
+    type: multiEffect
+    lifetime: 50
+    effects: [
+        {
+    type: ParticleEffect
+    particles: 10
+    sizeFrom: 4
+    sizeTo: 0
+    length: 40
+    baseLength: 0
+    lifetime: 50
+    colorFrom: b2f8ff
+    colorTo: 3eddff
+interp: circleOut
+sizeInterp: pow2In
+    cone: 360
+    }
+    {
+    type: WaveEffect
+    lifetime: 15
+    rotation: 1
+    sides: 0
+    sizeFrom: 0
+    sizeTo: 26
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: b2f8ff
+    colorTo: 3eddff
+          }
+      ]
+    }
+    hitEffect: {
+    type: multiEffect
+    lifetime: 50
+    effects: [
+        {
+    type: ParticleEffect
+    particles: 10
+    sizeFrom: 4
+    sizeTo: 0
+    length: 40
+    baseLength: 0
+    lifetime: 50
+    colorFrom: b2f8ff
+    colorTo: 3eddff
+interp: circleOut
+sizeInterp: pow2In
+    cone: 45
+    }
+    {
+    type: WaveEffect
+    lifetime: 15
+    rotation: 1
+    sides: 0
+    sizeFrom: 0
+    sizeTo: 26
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: b2f8ff
+    colorTo: 3eddff
+          }
+      ]
+    }
+   }
+ } 
+  {
+  name: hahaproteusgobrr
+  inaccuracy: 360
+  shootSound: shootPop
+  rotate: true
+  mirror: false
+  top: false
+shootCone: 360
+  spacing: 0
+  x: 0
+  y: 0
+  reload: 2
+  recoil: 1.5
+  bullet: {
+    type: MissileBulletType
+    damage: 23
+    splashDamage: 72
+    height: 14
+    width: 12
+    lifetime: 60
+    speed: 5
+frontColor: b2f8ff
+backColor: 3eddff
+trailColor: 3eddff
+   }
+  }
+]
+abilities: [
+{
+type: MoveEffectAbility
+teamColor: false
+   effect: {
+    type: ParticleEffect
+    particles: 4
+    baseLength: 15
+length: -5
+    lifetime: 60
+region: shell
+sprite: shell
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: b2f8ff
+    colorTo: 3eddff
+    cone: 360
+interp: circleOut
+sizeInterp: pow5In
+}
+y: 0
+x: 0
+interval: 3
+}
+{
+type: RegenAbility
+amount: 10
+}
+]

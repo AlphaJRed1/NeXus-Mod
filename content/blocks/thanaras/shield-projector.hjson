@@ -1,0 +1,33 @@
+type: ForceProjector
+Name: Shield Projector
+localizedName: Shield Projector
+description: Protects structures in its proximity by generating a quadrant force field. Requires power.
+radius: 150
+sides: 4
+size: 3
+shieldHealth: 1000
+phaseUseTime: 300
+phaseRadiusBoost: 50
+phaseShieldBoost: 500
+shieldRotation: 45
+consumes: {
+power: 4.2
+}
+requirements: [
+nickel/150
+tungsten/85
+cryo-compound/50
+silicon/85
+]
+category: effect
+planet: thanaras
+research: {
+  parent: mend-bolt
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+researchCostMultiplier: 0.5

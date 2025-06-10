@@ -1,0 +1,79 @@
+Name: Eruption
+description: bom
+type: legs
+hovering: true
+allowLegStep: true
+health: 110
+legCount: 6
+hitSize: 10
+armor: 0
+speed: 0.9
+ legStraightness: 0.3
+            legLength: 9
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -2
+            legBaseOffset: 4
+            legMaxLength: 1
+            legMinLength: 0.4
+            legLengthScl: 0.96
+            legForwardScl: 1.1
+            legGroupSize: 3
+            rippleScale: 0.2
+            legMoveSpace: 1
+            legPhysicsLayer: false
+weapons: [
+ {
+    name: eruptionista
+    y: 0
+    x: 0
+    rotate: false
+    shootY: 5
+    reload: 3
+    shootSound: flame
+    bullet: {
+    shootEffect: shootLiquid
+    smokeEffect: {
+    type: multiEffect
+    lifetime: 80
+    effects: [
+{
+   interp: circleOut
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 4
+    sizeTo: 0
+    length: 70
+    baseLength: 0
+    lifetime: 120
+    colorFrom: f77d2c
+    colorTo: 724b31
+    cone: 15
+}
+{
+   interp: pow10Out
+    type: ParticleEffect
+    particles: 10
+    sizeFrom: 5
+    sizeTo: 3
+    length: 65
+    baseLength: 0
+    lifetime: 55
+    colorFrom: f77d2c
+    colorTo: f77d2c00
+    cone: 25
+}
+]
+}
+lifetime: 5
+despawnEffect: none
+pierce: true
+pierceBuilding: true
+height: 0.1
+speed: 10
+    status: burning
+    damage: 17
+    statusDuration: 250
+    }
+  }
+]

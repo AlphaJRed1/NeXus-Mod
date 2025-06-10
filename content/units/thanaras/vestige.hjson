@@ -1,0 +1,263 @@
+Name: Vestige
+description: Fires heavy piercing darts and heals nearby allies with it's regen projectors. Equipped with an arc shield for protection.
+type: flying
+flying: true
+health: 16200
+armor: 12
+speed: 1
+rotateSpeed: 1.3
+drag: 0.02
+accel: 0.04
+outlineColor: 1c2125
+hitSize: 35
+engineSize: 0
+lowAltitude: false
+faceTarget: true
+circleTarget: false
+itemCapacity: 120
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 12.5
+phase: 20
+stroke: 4.5
+layerOffset: -0.0001
+color: baf6cc
+          x: 0
+          y: -21
+    }
+    {
+        type : HoverPart
+         mirror: true
+radius: 10
+phase: 20
+stroke: 4.5
+layerOffset: -0.0001
+color: baf6cc
+          x: 21.1
+          y: -20
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: baf6cc
+         circle: true
+        hollow: true
+       stroke: 2.5
+      strokeTo: 2.5
+        radius: 36
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: life
+          x: 0
+          y: 0
+    }
+ {
+        type : HaloPart
+         mirror: false
+progress: life
+color: baf6cc
+stroke: 5
+layerOffset: 0.0001
+haloRotateSpeed: -2.7
+shapes: 8
+triLength: 4
+triLengthTo: 4
+haloRadius: 36
+tri: true
+radius: 15
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+]
+weapons: [
+  {
+  name: micro-heal
+  type: RepairBeamWeapon
+  rotate: true
+top: true
+  mirror: true
+  x: 14
+beamWidth: 0.7
+repairSpeed: 1.2
+  y: 7.5
+    bullet: {
+maxRange: 120
+    }
+ } 
+  {
+  name: micro-heal
+  type: RepairBeamWeapon
+  rotate: true
+top: true
+  mirror: true
+  x: 16
+beamWidth: 0.7
+repairSpeed: 1.2
+  y: -2.5
+    bullet: {
+maxRange: 120
+    }
+ } 
+  {
+  name: micro-heal
+  type: RepairBeamWeapon
+  rotate: true
+  mirror: true
+top: true
+  x: 16
+beamWidth: 0.7
+repairSpeed: 1.2
+  y: -10
+    bullet: {
+maxRange: 120
+    }
+ } 
+ {
+  name: vestigeblast
+  inaccuracy: 0
+parts: [
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: false
+         under: false
+layerOffset: -0.0001
+         moveX: 2
+         moveY: 0
+         moveRot: -38
+         progress: warmup
+          x: 3
+          y: 4
+    }
+]
+  shootSound: shootMicro1
+  rotate: false
+  x: 15
+  y: -10
+  reload: 70
+shake: 2
+shootEffect: {
+    type: ParticleEffect
+    particles: 6
+    baseLength: 2
+length: 28
+    lifetime: 80
+    sizeFrom: 2
+    sizeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+    cone: 60
+interp: circleOut
+sizeInterp: pow2In
+}
+smokeEffect: none
+shoot: {
+shots: 2
+shotDelay: 4
+}
+  bullet: {
+ damage: 76
+splashDamage: 20
+splashDamageRadius: 15
+     lifetime: 40
+speed: 8
+width: 10
+height: 13
+shrinkY: 0
+pierceCap: 3
+pierceBuilding: true
+trailRotation: true
+trailInterval: 1
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 5
+    baseLength: 2
+length: 25
+    lifetime: 40
+lenFrom: 2.5
+lenTo: 1
+strokeFrom: 1.8
+strokeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+    cone: 360
+interp: circleOut
+}
+{
+    type: ParticleEffect
+    particles: 4
+    baseLength: 5
+length: 30
+    lifetime: 60
+    sizeFrom: 1.6
+    sizeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+    cone: 360
+interp: circleOut
+sizeInterp: pow2In
+}
+{
+type: WaveEffect
+sizeTo: 18
+strokeFrom: 2
+strokeTo: 0
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+interp: circleOut
+}
+]
+}
+despawnHit: true
+despawnEffect: none
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 8
+    sizeTo: 0
+    baseLength: 0
+length: 0
+    lifetime: 70
+    colorFrom: baf6cc
+    colorTo: 5dce7f
+offset: -90
+    cone: 0
+region: nexus-mod-shield-dart-back
+
+}
+homingPower: 0.02
+sprite: nexus-mod-shield-dart
+frontColor: baf6cc
+backColor: 5dce7f
+  }
+ }
+]
+abilities: [
+  {
+    type: ShieldArcAbility
+whenShooting: false
+    max: 550
+regen: 0.3
+    cooldown: 400
+region: nexus-mod-vestige-shield
+    radius: 31
+	x: 0
+    y: 0
+    angle: 90
+angleOffset: 0
+    width: 9
+  }
+]
+research: iota
+researchCostMultiplier: 0.7

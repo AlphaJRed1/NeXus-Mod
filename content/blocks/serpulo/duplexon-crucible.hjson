@@ -1,0 +1,65 @@
+type: GenericCrafter
+name: Duplexon
+description: Forges duplexon from titanium and monolite. requires cryofluid as coolant.
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 200
+craftEffect: flakExplosion
+updateEffect: steam
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid
+drawLiquid: water
+}
+{
+type: DrawPistons
+}
+{
+type: DrawArcSmelt
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+]
+}
+consumes: {
+  power: 3.8
+	items: {
+	items: [
+	titanium/3
+	monolithium/3
+	]
+ }
+  liquids: {
+    liquids: [
+	cryofluid/0.1
+    ]
+  }
+}
+requirements: [
+silicon/80
+titanium/125
+metaglass/80
+thorium/60
+monolithium/80
+]
+category: production
+outputItem: duplexon/1
+research: {
+  parent: cryofluid-mixer
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reverent-junction
+    }
+  ]
+}

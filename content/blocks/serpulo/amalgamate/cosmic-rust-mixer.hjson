@@ -1,0 +1,42 @@
+type: GenericCrafter
+name: Cosmic Rust Mixer
+description: rust
+size: 2
+hasLiquids: true
+hasItems: true
+craftTime: 60
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidTile
+drawLiquid: cosmic-rust
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+]
+}
+consumes: {
+  items: {
+    items: [
+	admix/1
+    ]
+  }
+liquids: {
+liquids: [
+	lead-toxin/0.1
+]
+}
+}
+requirements: [
+copper/40
+silicon/20
+metaglass/10
+]
+category: crafting
+outputLiquid: cosmic-rust/0.1

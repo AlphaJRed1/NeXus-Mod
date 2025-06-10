@@ -1,0 +1,39 @@
+type: UnitAssembler
+Name: Mech-Ship Hybrid Assembler
+description: Combines the Mech and Ship families to create Arietis.
+size: 5
+dronesCreated: 4
+regionSuffix: -dark
+areaSize: 7
+droneType: hybrid-mech-assembler
+consumes: {
+power: 4
+liquids: {
+liquids: [
+neoplasm/0.1
+cyanogen/0.1
+]
+}
+}
+plans: [
+  {
+    unit: arietis
+    time: 3200
+    requirements: [
+	cleroi/2
+	avert/2
+    ]
+  }
+]
+requirements: [
+thorium/400
+oxide/250
+tungsten/300
+silicon/500
+graphite/350
+]
+research: mech-refabricator
+researchCostMultiplier: 0.5
+category: units
+planet: erekir
+

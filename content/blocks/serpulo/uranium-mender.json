@@ -1,0 +1,32 @@
+type: MendProjector
+name: Uranium Mender
+description: An advanced version of the Mend Projector. Rapidly heals all structures in its proximity. Requires uranium and power.
+size: 3
+reload: 60
+range: 180
+healPercent: 5
+useTime: 180
+consumes: {
+  power: 4.5
+  items: {
+    items: [
+	uranium/1
+    ]
+  }
+}
+category: effect
+requirements: [
+uranium/50
+lead/200
+silicon/100
+phase-fabric/25
+]
+research: {
+  parent: mend-projector
+  objectives: [
+    {
+      type: OnSector
+      preset: viridescent-plain
+    }
+  ]
+}

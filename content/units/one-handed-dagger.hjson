@@ -1,0 +1,26 @@
+Name: One handed Dagger
+description: A dagger created solely for the purpose of the 100 daggers vs 1 reign challenge. My arm... my arm is gone...
+type: mech
+health: 150
+speed: 0.5
+hitSize: 8
+weapons: [
+  {
+  name: large-weapon
+  inaccuracy: 0
+  top: false
+  x: 4
+  y: 2
+  reload: 26
+ ejectEffect: casing1
+mirror: false
+  bullet: {
+width: 7
+height: 9
+damage: 9
+speed: 2.5
+lifetime: 60
+      }
+  }
+]
+research: dagger

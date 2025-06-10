@@ -1,0 +1,34 @@
+type: ShockMine
+name: Toxin Mine
+description: Explodes when enemies walk on top of it, inflicting uranium decay which slowly burns them down.
+size: 1
+tendrils: 0
+bullet: {
+ type: BombBulletType
+status: uranium-decay
+   statusDuration: 400
+    knockback: 2
+despawnEffect: smokeCloud
+        splashDamageRadius: 30
+     pierce: true
+        splashDamage: 20
+        instantDisappear: true
+        hittable: false
+        collidesAir: true
+
+}
+category: effect
+research: {
+  parent: shock-mine
+  objectives: [
+    {
+      type: OnSector
+      preset: viridescent-plain
+    }
+  ]
+}
+requirements: [
+uranium/5
+silicon/15
+graphite/10
+]

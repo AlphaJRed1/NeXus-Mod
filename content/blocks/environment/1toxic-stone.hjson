@@ -1,0 +1,9 @@
+type: Floor
+name: Toxic Stone
+description: uranium essence has infected these rocks turning them to deadly hostile floor plates.
+variants: 3
+attributes: {
+  radioactive: 0.5
+}
+status: uranium-decay
+statusDuration: 30

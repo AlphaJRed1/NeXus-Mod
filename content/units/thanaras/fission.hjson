@@ -1,0 +1,70 @@
+Name: Fission
+description: Damages nearby structures by charging up and releasing lightning bolts from its body.
+type: mech
+health: 120
+armor: 2
+speed: 1.1
+rotateSpeed: 4
+faceTarget: false
+hitSize: 8
+immunities: [photonized]
+outlineColor: 1c2125
+weapons: [
+  {
+  name: fission-boom
+  inaccuracy: 0
+  shootSound: microBoom
+  rotate: false
+ shootCone: 360
+shootY: 0
+  x: 0
+  y: 0
+  reload: 70
+shake: 2
+shootEffect: none
+smokeEffect: none
+maxRange: 70
+range: 35
+shoot: {
+shots: 3
+firstShotDelay: 30
+shotDelay: 5
+}
+  bullet: {
+   lifetime: 1
+maxRange: 70
+range: 35
+speed: 0
+   chargeEffect: {
+      type: WaveEffect
+      lifetime: 30
+      sizeFrom: 20
+      sizeTo: 3
+      strokeFrom: 0
+      strokeTo: 5
+interp: pow5In
+      colorFrom: 9dffde90
+      colorTo: 9dffde
+        }
+   despawnEffect: {
+      type: WaveEffect
+      lifetime: 30
+      sizeFrom: 3
+      sizeTo: 30
+      strokeFrom: 5
+      strokeTo: 1
+interp: circleOut
+      colorFrom: 9dffde
+      colorTo: 9dffde90
+        }
+hitEffect: none
+   instantDisappear: true
+lightning: 3
+   lightningColor: e0ffff
+   lightningDamage: 25
+   lightningLength: 11
+  }
+ }
+]
+research: micro-factory
+researchCostMultiplier: 0.7

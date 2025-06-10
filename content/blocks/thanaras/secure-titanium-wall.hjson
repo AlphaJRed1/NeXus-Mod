@@ -1,0 +1,13 @@
+name: Secure Titanium Wall
+description: A strong secure wall that protects your buildings from enemies.
+type: Wall
+health: 450
+size: 1
+requirements: [
+titanium/6
+nickel/2
+]
+category: defense
+planet: thanaras
+research: orb
+researchCostMultiplier: 0.3

@@ -1,0 +1,145 @@
+type: flying
+Name: Hel
+description: Protector of Core: Achlys.
+controller: BuilderAI
+defaultController: BuilderAI
+health: 160
+armor: 4
+speed: 2.75
+mineTier: 2
+mineSpeed: 6.5
+buildSpeed: 0.9
+lowAltitude: true
+engineOffset: 4
+engineSize: 0
+itemCapacity: 45
+rotateSpeed: 15
+hitSize: 10
+outlineColor: 1c2125
+drag: 0.05
+accel: 0.15
+flying: true
+isCounted: false
+isEnemy: false
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 6
+phase: 20
+stroke: 2
+layerOffset: -0.01
+color: ffd27e
+          x: 0
+          y: -4.65
+    }
+]
+weapons: [
+ {
+  name: helpower
+parts: [
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: ffd27e
+stroke: 1.7
+layerOffset: 0.001
+haloRotateSpeed: 3
+shapes: 3
+triLength: 0
+triLengthTo: 3.5
+haloRadius: 2.8
+tri: true
+radius: 2.8
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: 0.001
+         under: false
+       color: ffd27e
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 1.7
+        radius: 2.8
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+
+  inaccuracy: 0
+  shootSound: microZap
+  rotate: false
+mirror: false
+  spacing: 0
+  top: true
+  x: 0
+  y: 5.5
+shootY: 0
+  reload: 40
+warmupSpeed: 0.04
+minWarmup: 0.96
+  bullet: {
+ type: LaserBulletType
+      damage: 19
+      length: 120
+sideAngle: 0
+   width: 4
+sideWidth: 0
+      colors: [fcb26c, ffd27e, ffffff]
+      lightColor: ffd27e45
+collidesTeam: true
+healPercent: 3
+    lifetime: 15
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 15
+    sizeFrom: 0
+    sizeTo: 11
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: ffd27e
+    colorTo: fcb26c
+}
+{
+ type: ParticleEffect
+line: true
+    particles: 4
+    strokeFrom: 1.2
+    strokeTo: 0.2
+	lenFrom: 4
+lenTo: 0
+    length: 20
+    baseLength: 0
+    lifetime: 30
+  interp: pow2Out
+sizeInterp: linear
+    colorFrom: ffd27e
+    colorTo: fcb26c
+    cone: 30
+}
+]
+}
+hitEffect: hitLaserBlast
+hitColor: ffd27e
+pierceCap: 3
+buildingDamageMultiplier: 0.01
+   }
+  }
+]
+
+research: core-achlys
+alreadyUnlocked: true

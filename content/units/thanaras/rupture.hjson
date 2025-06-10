@@ -1,0 +1,101 @@
+Name: Rupture
+description: Blasts enemies with shrapnel bursts and mini lasers on it's mounts.
+type: mech
+health: 2350
+armor: 6
+forceMultiTarget: true
+speed: 1.1
+rotateSpeed: 2.5
+hitSize: 14
+immunities: [photonized]
+outlineColor: 1c2125
+weapons: [
+  {
+  name: rupture-gun
+  inaccuracy: 0
+  shootSound: largeCannon
+  rotate: false
+shootY: 8
+  x: 7
+  y: 0
+  reload: 90
+layerOffset: -0.0001
+shootEffect: none
+smokeEffect: none
+  bullet: {
+   lifetime: 13
+speed: 6
+sprite: nexus-mod-dart
+damage: 24
+splashDamage: 30
+splashDamageRadius: 15
+bulletInterval: 4
+intervalBullets: 2
+intervalRandomSpread: 0
+intervalSpread: 40
+intervalAngle: 0
+intervalBullet: {
+type: ShrapnelBulletType
+      damage: 30
+      length: 30
+   width: 12
+ toColor: 9dffde
+}
+trailInterval: 2
+pierceCap: 2
+pierceBuilding: true
+trailEffect: {
+    type: ParticleEffect
+    particles: 4
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 25
+    lifetime: 70
+    colorFrom: 9dffde
+    colorTo: 47f0cb20
+    cone: -150
+}
+  fragBullets: 2
+fragRandomSpread: 0
+fragAngle: 20
+fragSpread: 40
+fragOffsetMin: 0
+FragOffsetMax: 0
+fragBullet: {
+ type: ShrapnelBulletType
+      damage: 30
+      length: 40
+   width: 12
+ toColor: 9dffde
+  }
+ }
+}
+ {
+  name: rupture-mount
+  inaccuracy: 0
+  shootSound: microZap
+  rotate: true
+  spacing: 0
+  top: true
+  x: 3.5
+rotateSpeed: 3.3
+  y: -5
+  reload: 15
+  recoil: 1.5
+  bullet: {
+   type: LaserBulletType
+      damage: 13
+pierceCap: 2
+      length: 90
+sideAngle: 45
+   width: 2
+sideWidth: 5
+colors: [0bb6ae, 47f0cb, 9dffde5]
+      lightColor: 9dffde66
+   }
+  }
+
+]
+research: division
+researchCostMultiplier: 0.7

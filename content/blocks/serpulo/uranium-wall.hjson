@@ -1,0 +1,45 @@
+name: Uranium Wall
+description: A moderately armored wall that explodes when destroyed, inflicting uranium decay to enemies in its blast radius.
+type: Wall
+health: 700
+size: 1
+destroyEffect: {
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 7
+    sizeTo: 0
+    length: 50
+    baseLength: 2
+    lifetime: 60
+    colorFrom: 98fb98
+    colorTo: 90ee90
+    cone: 360
+interp: pow5Out
+    }
+baseExplosiveness: 2
+destroyBullet: {
+        type: BombBulletType
+status: uranium-decay
+   statusDuration: 225
+    knockback: 2
+despawnEffect: smokeCloud
+        splashDamageRadius: 40
+     pierce: true
+        splashDamage: 95
+        instantDisappear: true
+        hittable: false
+        collidesAir: true
+}
+requirements: [
+  uranium/6
+]
+category: defense
+research: {
+  parent: thorium-wall
+  objectives: [
+    {
+      type: OnSector
+      preset: viridescent-plain
+    }
+  ]
+}

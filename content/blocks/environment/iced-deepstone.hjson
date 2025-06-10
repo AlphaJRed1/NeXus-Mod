@@ -1,0 +1,10 @@
+type: Floor
+name: Iced Deepstone
+variants: 3
+attributes: {
+  nitrogenous: 0.1
+}
+            dragMultiplier: 0.6
+            albedo: 0.6
+blendGroup: deepstone
+blendID: 16

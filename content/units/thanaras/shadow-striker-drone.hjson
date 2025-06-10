@@ -1,0 +1,175 @@
+Name: S-Striker Drone
+description: A hovering unit that charges and fires powerful bullets.
+type: hover
+hovering: true
+health: 775
+armor: 3
+speed: 0.9
+rotateSpeed: 2
+drag: 0.02
+accel: 0.06
+hitSize: 13
+engineSize: 0
+outlineColor: 1c2125
+immunities: [freezing, subzero-freezing]
+parts: [
+ {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+         moveY: 0
+         moveRot: -45
+         progress: warmup
+          x: 7.7
+          y: -3
+    }
+
+    {
+        type : HoverPart
+         mirror: false
+radius: 14
+phase: 35
+stroke: 2.5
+layerOffset: -0.001
+color: 9451db
+          x: 0
+          y: -0
+    }
+    {
+        type : HoverPart
+         mirror: true
+radius: 7
+phase: 30
+stroke: 2.5
+layerOffset: -0.001
+color: 9451db
+          x: 5
+          y: -5
+    }
+  ]
+weapons: [
+  {
+  name: shadow-striker-drone-gun
+  inaccuracy: 0
+  shootSound: microWhoop
+  rotate: false
+shake: 2
+mirror: false
+  spacing: 0
+  top: true
+  x: 0
+  y: 0
+  reload: 100
+recoil: 3.5
+shootY: 7
+  bullet: {
+ type: RailBulletType
+    damage: 127
+  recoil: 0.25
+    pierceCap: 4
+pierceBuilding: true
+    length: 220
+    width: 7
+    height: 6
+    lifetime: 25
+    pointEffectSpace: 10
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 20
+sides: 4
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 20
+    strokeFrom: 3.5
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 5
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 30
+    baseLength: 3
+    lifetime: 35
+  interp: circleOut
+    colorFrom: b46dff
+sizeInterp: linear
+    colorTo: 5617b0
+    cone: 30
+}
+]
+}
+pierceEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+sides: 4
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 22
+    strokeFrom: 2.6
+    strokeTo: 0
+    colorFrom: b46dff
+    colorTo: 27133c
+interp: circleOut
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 2.2
+    sizeTo: 0
+    length: 22
+    baseLength: 2
+    lifetime: 50
+  interp: circleOut
+    colorFrom: b46dff
+sizeInterp: pow2In
+    colorTo: 5617b0
+    cone: 55
+}
+]
+
+}
+pointEffect: {
+    type: ParticleEffect
+    particles: 1
+    baseLength: 0
+length: 0
+    lifetime: 40
+sizeFrom: 3.6
+sizeTo: 0
+useRotation: true
+    colorFrom: b46dff
+    colorTo: 5617b0
+    cone: 0
+offset: -90
+interp: circleOut
+useRotation: true
+sizeInterp: pow2In
+region: nexus-mod-powerslash
+}
+
+   pierceDamageFactor: 0.2
+   }
+  }
+]
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 14
+    regen: 3
+    max: 170
+    cooldown: 300
+sides: 10
+  }
+]

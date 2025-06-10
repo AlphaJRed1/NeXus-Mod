@@ -1,0 +1,16 @@
+captureWave: 35
+planet: serpulo
+sector: 202
+difficulty: 8
+research: {
+requiresUnlock: false
+  parent: reconcite
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reconcite
+    }
+  ]
+}
+localizedName: Viridescent Plain
+description: Amidst the mass extinction caused by the spore breakout, a piece of land known as the Viridescent Plain has managed to sustain life, a wide array of greenery populating its surface. Perhaps it was the workings of a new resource located here that the grass was able to survive and grow, but you better have your head up because the Crux have sent yet another Champion to take you down.

@@ -1,0 +1,247 @@
+Name: Rift
+description: Charges up a powerful lightning laser that fragments into smaller lasers when
+type: mech
+health: 15500
+armor: 14
+speed: 0.7
+rotateSpeed: 2
+forceMultiTarget: true
+hitSize: 20
+immunities: [photonized]
+outlineColor: 1c2125
+parts: [
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: -0.5
+         moveY: -1
+         moveRot: 30
+         progress: warmup
+          x: -9.7
+          y: -1.7
+    }
+    {
+        suffix : -fin-case
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: -3.5
+         moveY: -3
+         moveRot: 80
+         progress: warmup
+          x: -14.4
+          y: 1.9
+    }
+]
+
+weapons: [
+{
+  name: rift-mount
+rotateSpeed: 3.5
+  inaccuracy: 0
+  shootSound: microRail
+layerOffset: 0.0001
+  rotate: true
+top: true
+shootY: 3
+  x: 11
+  y: -9
+  reload: 90
+shootEffect: none
+smokeEffect: none
+shoot: {
+type: ShootSpread
+shots: 5
+spread: 3
+}
+  bullet: {
+   lifetime: 40
+speed: 5
+sprite: nexus-mod-dart
+damage: 16
+width: 6
+height: 9
+trailInterval: 2
+trailEffect: {
+    type: ParticleEffect
+line: true
+    particles: 2
+    baseLength: 2
+length: 5
+    lifetime: 40
+lenFrom: 1.5
+lenTo: 1
+strokeFrom: 1
+strokeTo: 0
+    colorFrom: 9dffde
+    colorTo: 47f0cb20
+    cone: 360
+useRotation: true
+}
+lightning: 1
+homingPower: 0.02
+homingRange: 200
+lightningLength: 8
+frontColor: b3eeee
+backColor: 47f0cb
+lightningColor: 9dffde
+lightningDamage: 18
+  }
+}
+  {
+  name: rift-blast
+  inaccuracy: 0
+  shootSound: nebula
+chargeSound: microCharge2
+  rotate: false
+mirror: false
+shootY: 3
+  x: 0
+  y: 0
+  reload: 120
+shootEffect: none
+smokeEffect: none
+shake: 5
+parts: [
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+         moveY: 0
+         moveRot: -30
+         progress: recoil
+          x: -15
+          y: -4.2
+    }
+]
+shoot: {
+firstShotDelay: 60
+}
+  bullet: {
+   chargeEffect: {
+type: MultiEffect
+effects: [
+{
+      type: WaveEffect
+      lifetime: 60
+      sizeFrom: 20
+      sizeTo: 5
+      strokeFrom: 0
+      strokeTo: 5
+interp: pow5In
+      colorFrom: 9dffde90
+      colorTo: 9dffde
+}
+{
+ type: ParticleEffect
+    particles: 10
+    sizeFrom: 0
+    sizeTo: 5
+    baseLength: 40
+length: -40
+    lifetime: 60
+    colorFrom: 47f0cb20
+    colorTo: 9dffde
+interp: pow5In
+sizeInterp: linear
+    cone: 360
+}
+]
+        }
+recoil: 1.3
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+      type: WaveEffect
+      lifetime: 40
+      sizeFrom: 5
+      sizeTo: 30
+      strokeFrom: 5
+      strokeTo: 0
+interp: pow10Out
+      colorFrom: 9dffde
+      colorTo: 0bb6ae
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 8
+    baseLength: 2
+length: 50
+    lifetime: 70
+lenFrom: 3
+lenTo: 6
+strokeFrom: 2.5
+strokeTo: 0
+interp: circleOut
+    colorFrom: 9dffde
+    colorTo: 47f0cb60
+    cone: 70
+}
+{
+ type: ParticleEffect
+    particles: 10
+    sizeFrom: 3
+    sizeTo: 6
+    baseLength: 5
+length: 60
+    lifetime: 90
+    colorFrom: b3eeee85
+    colorTo: 364f4f05
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 8
+    sizeFrom: 4
+    sizeTo: 0
+    baseLength: 30
+length: 20
+    lifetime: 90
+    colorFrom: 9dffde
+    colorTo: 47f0cb20
+    cone: 360
+}
+]
+}
+lifetime: 1
+ type: LaserBulletType
+      damage: 140
+      length: 220
+pierceCap: 6
+pierceBuilding: true
+sideAngle: 45
+   width: 1
+sideWidth: 7
+      colors: [0bb6ae, 47f0cb, 9dffde5]
+      lightColor: 9dffde66
+lightningSpacing: 13
+lightningDelay: 0
+lightningLength: 7
+lightningDamage: 70
+lightningColor: 47f0cb
+fragBullets: 5
+fragVelocityMin: 0.7
+fragRandomSpread: 80
+fragLifeMin: 0.7
+fragBullet: {
+   lifetime: 60
+ type: LaserBulletType
+      damage: 35
+      length: 65
+sideAngle: 45
+   width: 5
+sideWidth: 6
+      colors: [0bb6ae, 47f0cb, 9dffde5]
+      lightColor: 9dffde66
+}
+ }
+}
+]
+research: rupture
+researchCostMultiplier: 0.7

@@ -1,0 +1,20 @@
+      captureWave: 46
+planet: thanaras
+sector: 28
+difficulty: 9
+research: {
+  parent: frost-mounds
+requiresUnlock: false
+  objectives: [
+    {
+      type: SectorComplete
+      preset: frost-mounds
+    }
+    {
+      type: SectorComplete
+      preset: miscellaneon
+    }
+  ]
+}
+localizedName: River of Floe
+description: Despite the harsh and cold conditions of this sector, the tryphoton has somehow found a way to survive, spreading even here in the freezing climate. The nitrogenous ice, however, has managed to flow through the organic rock and create a frozen river, filled with more of these frost mounds all over the place. Unfortunately, the tryphoton has been able to consume these mounds and warp them into their own radioactive blobs, which creates a winding maze full of obstacles you need to traverse. Capture this sector by using the environment to your advantage and beware the final wave.

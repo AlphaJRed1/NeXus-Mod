@@ -1,0 +1,204 @@
+type: flying
+Name: Paradigm
+description: Fires vion plasma shells that explode into perpendicular plasma flames. Also has an automatic flame mount that targets nearby enemies.
+health: 4670
+flying: true
+speed: 1.35
+armor: 12
+forceMultiTarget: true
+rotateSpeed: 2.5
+hitSize: 22
+accel: 0.1
+drag: 0.08
+faceTarget: true
+lowAltitude: true
+outlineColor: 1c2125
+parts: [
+    {
+        type : HoverPart
+         mirror: true
+radius: 10
+phase: 25
+stroke: 2.5
+layerOffset: -0.0001
+color: ec49cb
+          x: 6
+          y: -14
+    }
+    {
+        type : FlarePart
+         mirror: false
+under: false
+radius: 15
+radiusTo: 15
+stroke: 4
+rotation: 45
+progress: life
+color1: ffb6f0
+color2: ff63e0
+followRotation: true
+layerOffset: 0.0001
+spin: 3
+rotateSpeed: 3
+flareColor: ffb6f0
+          x: 0
+          y: -6
+    }
+    {
+        type : HoverPart
+         mirror: false
+radius: 13
+phase: 30
+stroke: 3
+layerOffset: -0.0001
+color: ec49cb
+          x: 0
+          y: -16
+    }
+  ]
+weapons: [
+  {
+  name: paradigm-gun
+  shootSound: plasmaboom
+  rotate: false
+  mirror: true
+  x: 11.7
+  y: -5
+  reload: 60
+  recoil: 2
+  bullet: {
+   damage: 30
+    splashDamage: 57
+    splashDamageRadius: 30
+      sprite: circle-bullet
+      shrinkY: 0
+    lifetime: 25
+    height: 12
+    width: 7
+spin: 8
+    speed: 6
+fragBullets: 4
+fragRandomSpread: 0
+frontColor: ff63e0
+backColor: dd1499
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 50
+    baseLength: 3
+    lifetime: 70
+  interp: pow5Out
+sizeInterp: pow2In
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: -70
+}
+{
+type: WaveEffect
+    lifetime: 60
+    rotation: 0
+    sizeFrom: 45
+    sizeTo: 55
+    strokeFrom: 0
+    strokeTo: 6
+    colorFrom: ffb6f0
+    colorTo: dd149905
+interp: pow2In
+}
+{
+type: WaveEffect
+    lifetime: 20
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 30
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: ffb6f0
+    colorTo: dd1499
+interp: circleOut
+}
+]
+}
+trailInterval: 2
+trailEffect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 2.5
+    sizeTo: 0
+    length: 10
+    baseLength: 4
+    lifetime: 45
+  interp: pow5Out
+sizeInterp: pow2In
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: -70
+
+}
+fragSpread: 90
+fragBullet: {
+    type: ContinuousFlameBulletType
+damage: 11
+pierceCap: 2
+length: 65
+spin: 8
+lifetime: 60
+flareColor: ff63e0
+hitColor: ff63e0
+flareWidth: 5
+flareLength: 15
+colors: [dd1499, ff63e0, ffb6f0]
+lightColor: ff63e066
+}
+   }
+ } 
+ {
+    name: paradigm-auto
+    x: 0
+    y: -6
+    rotate: true
+    rotateSpeed: 10
+    recoil: 0
+continuous: true
+alwaysContinuous: true
+shootY: 0
+                        controllable: false
+                        autoTarget: true
+    bullet: {
+    type: ContinuousFlameBulletType
+damage: 12
+pierceCap: 4
+length: 100
+flareColor: ff63e0
+hitColor: ff63e0
+flareWidth: 7
+flareLength: 12
+colors: [dd1499, ff63e0, ffb6f0]
+lightColor: ff63e066
+    }
+ }
+]
+abilities: [
+  {
+    type: ShieldArcAbility
+whenShooting: true
+    max: 600
+regen: 0.4
+    cooldown: 330
+    radius: 21.7
+region: nexus-mod-paradigm-shield
+	x: 0
+    y: 0
+    angle: 90
+angleOffset: 0
+    width: 4
+color: ff63e0
+  }
+]

@@ -1,0 +1,8 @@
+type: material
+name: Nickel
+description: A silvery white metal known for its hardness, malleability, and ductility.
+hardness: 2
+cost: 2
+color: c2c9d9
+hiddenOnPlanets: [serpulo, erekir]
+research: core-mors

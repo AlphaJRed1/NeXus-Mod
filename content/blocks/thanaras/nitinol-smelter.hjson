@@ -1,0 +1,57 @@
+type: GenericCrafter
+name: Nitinol Smelter
+description: Fuses titanium and nickel together, weaving them into strong threads called nitinol. Requires nitrogen and power.
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 60
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawWeave
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+  power: 3.2
+  liquids: {
+    liquids: [
+	nitrogen/0.05
+    ]
+  }
+  items: {
+    items: [
+titanium/1
+nickel/1
+    ]
+  }
+}
+requirements: [
+nickel/100
+titanium/165
+silicon/70
+]
+category: crafting
+outputItem: nitinol/1
+planet: thanaras
+research: {
+  parent: nitrogen-centralizer
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCostMultiplier: 0.15

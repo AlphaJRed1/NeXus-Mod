@@ -1,0 +1,74 @@
+type: GenericCrafter
+name: Serpulo Core Driller
+description: Drills to the very core of Serpulo and extracts serpullium. Requires massive amounts of power and slag.
+size: 5
+hasPower: true
+scaledHealth: 100
+hasItems: true
+hasLiquids: true
+craftTime: 600
+updateEffect: {
+type: multiEffect
+effects: [massiveExplosion, ventSteam, smokeCloud]
+}
+craftEffect: {
+type: multiEffect
+effects: [upgradeCore, mineImpactWave]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidTile
+drawLiquid: slag
+}
+{
+type: DrawRegion
+suffix: -rotator2
+rotateSpeed: -20
+}
+{
+type: DrawRegion
+suffix: -rotator1
+rotateSpeed: 20
+}
+{
+type: DrawArcSmelt
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+{
+type: DrawWarmupRegion
+color: 7affd050
+}
+]
+}
+consumes: {
+  power: 11.7
+  liquids: {
+    liquids: [
+	slag/1
+    ]
+  }
+}
+requirements: [
+silicon/250
+surge-alloy/150
+duplexon/125
+titanium/650
+copper/950
+metaglass/250
+thorium/300
+]
+category: production
+outputItem: serpullium/1
+research: {
+  parent: surge-smelter
+  objectives: [
+  ]
+}

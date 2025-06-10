@@ -1,0 +1,47 @@
+name: Impact Miner
+type: BurstDrill
+description: A basic drill that builds up pressure, mining items in batches.
+size: 2
+shake: 2
+category: production
+tier: 3
+drillTime: 400
+invertedTime: 360
+updateEffect: pulverizeSmall
+drillEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 1.2
+    strokeTo: 0
+    colorFrom: c3c3c3
+    colorTo: c3c3c3
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 4
+    baseLength: 2
+length: 20
+    lifetime: 70
+interp: circleOut
+    colorFrom: 92959d
+    colorTo: 4e525c05
+    cone: 360
+}
+]
+}
+arrows: 0
+itemCapacity: 12
+researchCostMultiplier: 0.1
+research: core-mors
+planet: thanaras
+requirements: [
+nickel/15
+]

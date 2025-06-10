@@ -1,0 +1,35 @@
+name: Volantic Drill
+description: A gigantic drill capable of mining any ore at an insane pace. Requires cryofluid and power to function.
+type: Drill
+size: 5
+tier: 20
+drawRim: true
+drillTime: 40
+rotateSpeed: 10
+itemCapacity: 30
+warmupSpeed: 0.005
+consumes: {
+  power: 8.6
+  liquids: {
+liquids: [
+cryofluid/0.4
+]
+  }
+}
+requirements: [
+  silicon/450
+  monolithium/500
+	copper/750
+surge-alloy/100
+thorium/500
+]
+category: production
+research: {
+  parent: airblast-drill
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reconcite
+    }
+  ]
+}

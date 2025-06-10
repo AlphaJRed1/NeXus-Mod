@@ -1,0 +1,16 @@
+      captureWave: 41
+planet: thanaras
+sector: 4
+difficulty: 9
+research: {
+requiresUnlock: false
+  parent: vion-plateau
+  objectives: [
+    {
+      type: SectorComplete
+      preset: vion-plateau
+    }
+  ]
+}
+localizedName: Green Valley
+description: This sector, full of decaying rocks and stones, is littered with a plentiful amount of radioactive uranium. The conditions on here may not be ideal, and the intricate siege of units that are sent wave after wave will be hard to hold back. Despite this, use the resources at your disposal to capture this sector and continue with your conquest.

@@ -1,0 +1,26 @@
+Type: PowerNode
+Name: Armored Power Pod
+description: An armored powerline that distributes power to structures in its range.
+size: 2
+health: 300
+armor: 5
+laserRange: 14
+maxNodes: 15
+laserColor1: fcc7ff
+laserColor2: e845f0
+requirements: [
+nitinol/15
+tungsten/10
+silicon/10
+]
+category: power
+planet: thanaras
+research: {
+  parent: power-pod
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}

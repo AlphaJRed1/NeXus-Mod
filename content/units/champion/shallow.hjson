@@ -1,0 +1,108 @@
+Name: Shallow
+description: Capable of flying at low depth, undetectable by anti-air craft but seen by ground turrets. Fires flak at enemies, along with darts that pierce through defenses.
+type: flying
+health: 9500
+ useEngineElevation: false
+hovering: true
+armor: 18
+speed: 2
+rotateSpeed: 2.5
+drag: 0.04
+accel: 0.1
+hitSize: 24
+engineOffset: 23
+engineSize: 8
+lowAltitude: true
+circleTarget: false
+lightRadius: 160
+weapons: [
+  {
+  name: shallow-gun
+  inaccuracy: 25
+  shootSound: shoot
+  rotate: true
+  rotateSpeed: 4
+shoot: {
+  shots: 2
+  shotDelay: 5
+}
+  spacing: 0
+  x: 11
+  y: 5
+   top: true
+  reload: 15
+  recoil: 2
+  bullet: {
+    damage: 14
+   splashDamage: 45
+   splashDamageRadius: 20
+    width: 9
+    height: 13
+    lifetime: 25
+    speed: 5
+    hitEffect: flakExplosion
+    despawnEffect: flakExplosion
+   }
+  }
+  {
+  name: shallow-cannon
+  inaccuracy: 20
+  shootSound: puncture
+  rotate: false
+shoot: {
+  shots: 2
+}
+  spacing: 0
+  x: 18
+  y: -13
+   top: true
+  reload: 45
+  recoil: 3
+  bullet: {
+type: MissileBulletType
+weaveMag: 4
+weaveScale: 6
+    damage: 110
+pierce: true
+pierceBuilding: true
+    width: 7
+    height: 7
+sprite: nexus-mod-dart
+    lifetime: 50
+    speed: 4
+homingPower: 0.3
+    hitEffect: generatespark
+    despawnEffect: generatespark
+  trailEffect:  generatespark
+   }
+  }
+]
+engines: [
+  {
+    x: -16
+    y: -24
+    radius: 7
+  }
+  {
+    x: 16
+    y: -24
+    radius: 7
+  }
+ ]
+abilities: [
+  {
+    type: MoveEffectAbility
+   effect: smokeCloud
+y: -24
+x: 16
+interval: 4
+  }
+  {
+    type: MoveEffectAbility
+   effect: smokeCloud
+y: -24
+x: -16
+interval: 4
+  }
+]
+

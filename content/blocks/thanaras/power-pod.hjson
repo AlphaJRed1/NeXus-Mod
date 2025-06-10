@@ -1,0 +1,15 @@
+Type: PowerNode
+Name: Power Pod
+description: Distributes power to nearby structures.
+size: 1
+laserRange: 8
+maxNodes: 6
+laserColor1: fcc7ff
+laserColor2: e845f0
+requirements: [
+nickel/4
+]
+category: power
+planet: thanaras
+research: carbon-generator
+researchCostMultiplier: 0.05

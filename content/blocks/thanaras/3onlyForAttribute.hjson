@@ -1,0 +1,4 @@
+type: ThermalGenerator
+attribute: nitrogenous
+hidden: true
+buildVisibility: hidden

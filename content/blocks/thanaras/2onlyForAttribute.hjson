@@ -1,0 +1,4 @@
+type: ThermalGenerator
+attribute: tryphoton
+hidden: true
+buildVisibility: hidden

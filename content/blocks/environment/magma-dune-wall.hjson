@@ -1,0 +1,5 @@
+type: StaticWall
+name: Magma Dune Wall
+description: magma has managed to seep into here forming cracks and releasing light.
+emitLight: false
+variants: 3

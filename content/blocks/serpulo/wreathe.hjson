@@ -1,0 +1,122 @@
+type: ItemTurret
+Name: Wreathe
+description: Takes time to charge. When fully charged, unleashes a storm of bullets on enemies.
+size: 3
+scaledHealth: 130
+range: 170
+targetGround: true
+targetAir: true
+reload: 3
+shootY: 6
+alternate: false
+itemCapacity: 30
+hasItems: true
+shootWarmupSpeed: 0.0315
+warmupMaintainTime: 60
+minWarmup: 0.98
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+ammoUseEffect: casing3
+shootSound:shootSmite
+recoil: 4
+recoilTime: 70
+cooldownTime: 200
+inaccuracy: 3
+shake: 2.5
+drawer: {
+type: DrawTurret
+parts: [
+    {
+        suffix : -barrel
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: true
+         moveX: 0
+         moveY: -1
+         moveRot: 30
+         progress: warmup
+          x: 7
+          y: -1.5
+    }
+]
+}
+ammoTypes: {
+  copper: {
+    damage: 20
+    speed: 8
+    lifetime: 20
+    ammoMultiplier: 4
+    height: 15
+    width: 8
+  knockback: 1
+    trailWidth: 2
+ammoMultiplier: 5
+    trailLength: 15
+trailInterval: 2
+    trailEffect: {
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: fffabc
+ interp: pow5Out
+    colorTo: fff24d
+}
+  }
+  thorium: {
+    damage: 42
+    speed: 8
+    lifetime: 20
+pierceCap: 2
+    ammoMultiplier: 4
+    height: 17
+    width: 10
+  knockback: 3
+    trailWidth: 3
+ammoMultiplier: 5
+    trailLength: 17
+trailInterval: 2
+    trailEffect: {
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 5
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: fffabc
+ interp: pow5Out
+    colorTo: fff24d
+}
+  }
+  }
+requirements: [
+  copper/215
+  monolithium/120
+  titanium/80
+]
+category: turret
+research: {
+  parent: salvo
+  objectives: [
+    {
+      type: OnSector
+      preset: reverent-junction
+    }
+  ]
+}

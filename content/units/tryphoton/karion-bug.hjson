@@ -1,0 +1,35 @@
+Name: Karion Bug
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 39
+outlineColor: 071a20
+            legLength: 5
+legBaseOffset: 4
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -0.5
+useUnitCap: false
+drawCell: false
+accel: 0.1
+drag: 0.03
+legCount: 4
+hitSize: 5
+flying: true
+armor: 0
+speed: 1
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 30
+radScale: 1
+radAmountScale: 1
+  }
+]
+

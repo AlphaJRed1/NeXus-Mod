@@ -1,0 +1,37 @@
+Name: Annexion Generator
+description: Generates a good amount of power at peak efficiency. Requires a positive power input to begin building up efficiency. May take some time to reach its peak.
+type: ImpactReactor
+size: 2
+hasLiquids: true
+powerProduction: 5.3
+plasma1: becbd6
+plasma2: 727d9c
+explosionDamage: 130
+itemDuration: 60
+warmupSpeed: 0.0005
+consumes: {
+power: 0
+  liquid: {
+    liquid: carbon
+    amount: 0.25
+  }
+}
+requirements: [
+nickel/50
+silicon/25
+tungsten/25
+]
+category: power
+ambientSound: pulse
+ambientSoundVolume: 0.2
+research: {
+  parent: carbon-generator
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.5

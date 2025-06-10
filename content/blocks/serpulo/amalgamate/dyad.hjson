@@ -1,0 +1,49 @@
+type: ItemTurret
+Name: Dyad
+description: Fires rapid bullets in bursts.
+size: 2
+health: 550
+range: 100
+targetGround: true
+targetAir: true
+reload: 60
+shootY: 5
+    drawer: {
+type: DrawTurret
+basePrefix: admix-
+}
+shoot: {
+shots: 10
+shotDelay: 5
+}
+xRand: 3
+alternate: true
+velocityRnd: 0.1
+    shootEffect: pulverizeSmall
+    smokeEffect: conveyorPoof
+inaccuracy: 10
+ammoTypes: {
+  admix: {
+    damage: 24
+    speed: 5
+    lifetime: 25
+    ammoMultiplier: 4
+homingPower: 0.1
+  height: 11
+   width: 8
+  }
+  copper: {
+    damage: 12
+    speed: 5
+    lifetime: 25
+  height: 10
+   width: 8
+    ammoMultiplier: 5
+  }
+}
+requirements: [
+  copper/105
+admix/20
+]
+category: turret
+research: duo

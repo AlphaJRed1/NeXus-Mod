@@ -1,0 +1,55 @@
+Name: Defensive End
+description: A defensive unit that has 2 healing lasers and a mini force field.
+type: legs
+hovering: false
+allowLegStep: true
+visualElevation: 0.1
+controller: RepairAI
+defaultController: RepairAI
+groundLayer: 50
+health: 75
+hitSize: 15
+speed: 1
+lightRadius: 125
+legLength: 15
+legBaseOffset: -2
+legExtension: -2
+maxStretch: 1
+isEnemy: false
+weapons: [
+ {
+    name: defensive-end-gun
+    x: 6
+    y: 2
+    rotate: false
+   top: false
+    recoil: 1.5
+  type: RepairBeamWeapon
+ widthSinMag: 0.11
+reload: 20
+ beamWidth: 0.6
+repairSpeed: 3.1
+shootCone: 40
+ aimDst: 0
+repairSpeed: 1
+                targetUnits: false
+                targetBuildings: true
+                autoTarget: false
+                controllable: true
+                laserColor: ffd3c5
+                healColor: ffd3c5
+     fractionRepairSpeed: 0.03
+    bullet: {
+maxRange: 65
+    }
+ }
+]
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 16
+    regen: 1.5
+    max: 30
+    cooldown: 60
+  }
+]

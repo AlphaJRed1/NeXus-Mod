@@ -1,0 +1,17 @@
+type: AttributeCrafter
+Name: Tryphoton Cultivator
+description: Extracts tryphoton from underneath the surface. Must be placed on tryphoton-active floors.
+size: 2
+hasItems: true
+craftEffect: generatespark
+baseEfficiency: 0
+attribute: tryphoton
+craftTime: 75
+variants: 2
+requirements: [
+tryphoton/3
+]
+category: production
+outputItem: tryphoton/1
+buildVisibility: hidden
+planet: thanaras

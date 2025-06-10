@@ -1,0 +1,105 @@
+Name: Pancake
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 12888
+outlineColor: 071a20
+            legLength: 23
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -2
+            legBaseOffset: 12
+            legMaxLength: 1
+useUnitCap: false
+            legMinLength: 0.4
+            rippleScale: 0.2
+
+            legMoveSpace: 2
+            legPhysicsLayer: false
+rotateSpeed: 1.9
+legCount: 6
+hitSize: 26
+armor: 0
+speed: 0.65
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 8
+    sizeFrom: 5
+    sizeTo: 0
+    baseLength: 10
+	length: 25
+    lifetime: 250
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+ {
+  name: pancake-blast
+  inaccuracy: 0
+  x: 0
+  y: -4
+  rotate: false
+shootCone: 360
+  mirror: false
+  top: false
+  reload: 170
+  recoil: 0
+  shootSound: tryphoRam
+    bullet: {
+type: BombBulletType
+      damage: 1
+      speed: 130
+instantDisappear: true
+      lifetime: 1
+      splashDamage: 250
+      splashDamageRadius: 130
+hitSound: microBoom
+    }
+  }
+ {
+  name: pancake-blast-mini
+  inaccuracy: 0
+  x: 0
+  y: -4
+  rotate: false
+shootCone: 360
+  mirror: false
+  top: false
+  reload: 35
+  recoil: 0
+  shootSound: microBoom
+    bullet: {
+type: BombBulletType
+      damage: 1
+      speed: 130
+instantDisappear: true
+      lifetime: 1
+      splashDamage: 35
+      splashDamageRadius: 130
+    }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 200
+radScale: 2.5
+radAmountScale: 2.5
+  }
+]
+

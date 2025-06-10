@@ -1,0 +1,19 @@
+name: Titanium Payload Conveyor
+description: An advanced Payload Conveyor, much larger and able to move bigger payloads.
+type: PayloadConveyor
+size: 5
+moveTime: 35
+underBullets: true
+category: units
+planet: serpulo
+research: {
+  parent: payload-router
+  objectives: [
+  ]
+}
+payloadLimit: 20
+requirements: [
+titanium/60
+silicon/90
+lead/105
+]

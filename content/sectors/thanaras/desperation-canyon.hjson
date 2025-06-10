@@ -1,0 +1,16 @@
+      captureWave: 51
+planet: thanaras
+sector: 19
+difficulty: 10
+research: {
+  parent: miscellaneon
+requiresUnlock: false
+  objectives: [
+    {
+      type: SectorComplete
+      preset: miscellaneon
+    }
+  ]
+}
+localizedName: Desperation Canyon
+description: In the face of a large canyon stretching across the vion plains, the Korru have switched to a mostly all-out air assault, allowing them to fly over the canyon with ease. Fortunately, preparing this air siege takes some time, giving you a few minutes to prepare for the assault. A warning before you head in, though, and do not take this lightly. Once the attack begins, the wave intervals get so short that waves will be sent despite enemies still being present on the map. Capture the sector and keep your will to fight. This canyon is called Desperation for a reason.

@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: Glaze
+description: An advanced version of the Kiln. Uses pyratite, lead and sand to manufacture huge amounts of metaglass.
+size: 3
+hasPower: true
+hasItems: true
+craftTime: 100
+itemCapacity: 30
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawSpikes
+color: ffef99
+}
+{
+type: DrawFlame
+color: ffef99
+}
+]
+}
+updateEffect: plasticburn
+craftEffect: smeltsmoke
+consumes: {
+  power: 2.4
+  items: {
+    items: [
+      lead/3
+      sand/5
+      pyratite/1
+    ]
+  }
+}
+requirements: [
+lead/150
+silicon/50
+metaglass/100
+plastanium/30
+]
+category: crafting
+planet: serpulo
+research: {
+  parent: kiln
+  objectives: [
+  ]
+}
+outputItem: metaglass/10

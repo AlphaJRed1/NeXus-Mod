@@ -1,0 +1,220 @@
+Name: Neutron
+description: A strong hovering unit that fires a salvo of heavy star orbs at enemies. Also equipped with phase orbs on it's shoulders that occasionally fire homing missiles.
+type: hover
+hovering: true
+health: 2500
+armor: 7
+speed: 0.8
+forceMultiTarget: true
+rotateSpeed: 2.5
+drag: 0.05
+accel: 0.07
+hitSize: 13
+engineSize: 3
+outlineColor: 1c2125
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 10
+phase: 25
+stroke: 3
+layerOffset: -0.001
+color: 69ffc4
+          x: 0
+          y: -2
+    }
+    {
+        suffix : -wing
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+layerOffset: -0.0001
+         moveY: 0
+         moveRot: 140
+         progress: warmup
+          x: 5.5
+          y: -3
+    }
+    {
+        type : HoverPart
+         mirror: true
+radius: 5
+phase: 30
+stroke: 2
+layerOffset: 0.00001
+color: 69ffc4
+          x: 7
+          y: -5
+    }
+]
+weapons: [
+ {
+  name: neutron-phase
+  inaccuracy: 45
+  shootSound: miniMicro
+  rotate: true
+rotateSpeed: 10
+  top: false
+shootY: 0
+  x: 7
+  y: -5
+  reload: 60
+  recoil: 0
+shoot: {
+shots: 3
+}
+  bullet: {
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 3
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+    damage: 12
+    height: 7
+    width: 7
+    lifetime: 40
+homingPower: 0.06
+    speed: 4
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: sparkShoot
+    }
+  }
+
+  {
+  name: neutron-gun
+  inaccuracy: 0
+  shootSound: microWoop
+  rotate: false
+shootY: 7
+  spacing: 0
+  top: false
+layerOffset: -0.00001
+  x: 11
+  y: 0
+  reload: 45
+  recoil: 3
+shoot: {
+firstShotDelay: 20
+shots: 2
+shotDelay: 5
+}
+  bullet: {
+    damage: 55
+sprite: nexus-mod-star
+shrinkY: 0
+    height: 10
+    width: 10
+spin: 20
+    lifetime: 30
+    speed: 6
+frontColor: ccffeb
+backColor: 38ffb0
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 15
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: circleOut
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 20
+    lifetime: 60
+    colorFrom: 38ffb0
+    colorTo: 38ffb020
+    cone: -100
+}
+]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 15
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: circleOut
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 20
+    lifetime: 60
+    colorFrom: 38ffb0
+    colorTo: 38ffb020
+    cone: 360
+}
+]
+}
+shootEffect: sparkShoot
+   chargeEffect: {
+type: multiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 20
+    rotation: 0
+    sizeFrom: 10
+    sizeTo: 0
+    strokeFrom: 0
+    strokeTo: 3
+    colorFrom: 38ffb0
+ interp: circleOut
+    colorTo: 69ffc4
+}
+{
+    type: ParticleEffect
+    particles: 1
+    sizeFrom: 7
+    sizeTo: 3
+    length: 0
+    baseLength: 0
+    lifetime: 20
+  interp: pow2In
+    colorFrom: 69ffc400
+    colorTo: 69ffc4
+    cone: 360
+}
+]
+    }
+   }
+  }
+]
+research: electron
+researchCostMultiplier: 0.7

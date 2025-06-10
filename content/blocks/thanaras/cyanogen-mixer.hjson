@@ -1,0 +1,53 @@
+type: GenericCrafter
+name: Cyanogen Mixer
+description: Merges methane and nitrogen together, outputting cyanogen. Requires power and tryplasma as a stabilizer.
+size: 3
+hasLiquids: true
+hasItems: false
+craftTime: 60
+liquidCapcity: 30
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: cyanogen
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+power: 2
+liquids: {
+liquids: [
+carbon/0.2
+nitrogen/0.1
+tryplasma/0.1
+]
+}
+}
+requirements: [
+nitinol/90
+cryo-compound/90
+silicon/115
+titanium/150
+]
+category: crafting
+outputLiquid: cyanogen/0.1
+planet: thanaras
+research: {
+  parent: tryphoton-press
+  objectives: [
+    {
+      type: SectorComplete
+      preset: vion-plateau
+    }
+  ]
+}
+researchCostMultiplier: 0.8

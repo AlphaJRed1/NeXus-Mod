@@ -1,0 +1,36 @@
+type: OverdriveProjector
+name: Korru Sthenos
+description: A large statue created by the Korru that, when powered and filled with tryplasma, is able to invigorate all structures on the map by 50%.
+details: Further research on this strange structure shows that there was more to this than just a Thanarian super driver. A strange intricacy of internal workings were found that did not match up to any Thanarian structures, paired with its use of tryplasma, shows evidence that this Korru Sthenos was, in fact, alien technology reverse engineered, hypothetically from an inter-dimensional race that may have been on the brink of war.
+liquidCapacity: 60
+allowDerelictRepair: false
+placeSound: sthenosplace
+forceTeam: green
+size: 7
+health: 10000
+armor: 15
+reload: 300
+range: 9000
+consumes: {
+power: 16.7
+liquids: {
+liquids: [
+tryplasma/0.4
+]
+}
+}
+hasBoost: false
+speedBoost: 1.5
+baseColor: 8dffb1
+requirements: [
+nickel/2000
+titanium/2000
+tungsten/2000
+silicon/2000
+nitinol/1500
+cryo-compound/1500
+plastanium/1000
+depleted-uranium/1000
+]
+category: effect
+planet: thanaras

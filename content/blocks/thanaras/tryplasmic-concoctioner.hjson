@@ -1,0 +1,58 @@
+type: GenericCrafter
+name: Tryplasmic Concoctioner
+description: Imitates the same power and radioactivity of tryphoton using uranium to create tryplasma. Requires methane to function.
+size: 3
+hasLiquids: true
+hasItems: true
+craftTime: 120
+liquidCapacity: 120
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawPlasma
+plasmas: 3
+plasma1: ccffeb
+plasma2: 38ffb0
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+]
+}
+consumes: {
+power: 2.5
+items: {
+items: [
+uranium/3
+]
+}
+liquids: {
+liquids: [
+carbon/0.3
+]
+}
+}
+requirements: [
+nitinol/90
+silicon/120
+cryo-compound/110
+plastanium/50
+]
+category: crafting
+outputLiquid: tryplasma/0.15
+planet: thanaras
+research: {
+  parent: tryphoton-press
+  objectives: [
+    {
+      type: OnSector
+      preset: vion-plateau
+    }
+  ]
+}
+researchCostMultiplier: 0.5

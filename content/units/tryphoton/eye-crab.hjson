@@ -1,0 +1,74 @@
+Name: Eye Crab
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+useUnitCap: false
+allowLegStep: true
+health: 50
+outlineColor: 071a20
+            legLength: 8
+            lockLegBase: true
+            legContinuousMove: true
+legCount: 6
+hitSize: 5
+armor: 0
+speed: 1
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+	length: 15
+    lifetime: 150
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+   {
+    name: eyespear
+    x: 0
+    y: 0
+    rotate: false
+    recoil: 0
+continuous: true
+alwaysContinuous: true
+    bullet: {
+    type: ContinuousFlameBulletType
+damage: 15
+pierce: true
+length: 70
+width: 3
+flareColor: 5effea
+hitColor: 5effea
+flareWidth: 4
+flareLength: 6
+colors: [00e1c4, 5effea, d2fff9]
+lightColor: 5effea66
+    }
+ }
+
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 100
+radScale: 1
+radAmountScale: 1
+  }
+]
+

@@ -1,0 +1,88 @@
+Name: Proton
+description: A hover mech that fires star orbs at enemies.
+type: hover
+hovering: true
+health: 200
+armor: 1
+speed: 0.9
+rotateSpeed: 4
+drag: 0.05
+accel: 0.1
+hitSize: 8
+engineSize: 3
+lightRadius: 130
+outlineColor: 1c2125
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 8
+phase: 20
+stroke: 2
+layerOffset: -0.001
+color: 69ffc4
+          x: 0
+          y: -1
+    }
+    {
+        suffix : -wing
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 0
+layerOffset: -0.0001
+         moveY: 0
+         moveRot: 130
+         progress: warmup
+          x: 3
+          y: -1
+    }
+]
+weapons: [
+  {
+  name: proton-gun
+  inaccuracy: 0
+  shootSound: microSmall
+  rotate: false
+  spacing: 0
+  top: false
+  x: 5
+  y: 0
+  reload: 30
+  recoil: 2
+shoot: {
+firstShotDelay: 10
+}
+  bullet: {
+    damage: 12
+sprite: nexus-mod-star
+shrinkY: 0
+spin: 15
+    height: 6
+    width: 6
+    lifetime: 20
+    speed: 5
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: sparkShoot
+   chargeEffect: {
+    type: ParticleEffect
+    particles: 1
+    sizeFrom: 3
+    sizeTo: 0
+    length: 0
+    baseLength: 0
+    lifetime: 10
+  interp: pow2In
+    colorFrom: 69ffc400
+    colorTo: 69ffc4
+    cone: 360
+    }
+   }
+  }
+]
+research: micro-factory
+researchCostMultiplier: 0.7

@@ -1,0 +1,55 @@
+Name: Confliction Generator
+description: Generates a large amount of power. Utilizes the temperature difference between noxionite and nitrogen.
+type: ConsumeGenerator
+size: 3
+hasItems: true
+hasLiquids: true
+hasPower: true
+liquidCapacity: 30
+itemDuration: 300
+powerProduction: 31.5
+generateEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawWarmupRegion
+}
+{
+type: DrawLiquidRegion
+drawLiquid: nitrogen
+}
+]
+}
+consumes: {
+  liquid: {
+    liquid: nitrogen
+    amount: 0.1
+  }
+  items: {
+    items: [
+      noxionite/1
+    ]
+  }
+}
+requirements: [
+silicon/75
+nitinol/65
+nickel/75
+titanium/75
+]
+category: power
+research: {
+  parent: carbon-generator
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.4

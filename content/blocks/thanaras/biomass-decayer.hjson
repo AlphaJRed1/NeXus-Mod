@@ -1,0 +1,57 @@
+type: GenericCrafter
+name: Biomass Decayer
+description: Cultivates and decays tryphoton, collecting the nitrogen released from the decaying process. Requires power and methane.
+size: 3
+hasLiquids: true
+hasItems: true
+craftTime: 180
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: carbon
+}
+{
+type: DrawLiquidTile
+drawLiquid: nitrogen
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+power: 1.7
+items: {
+items: [
+tryphoton/2
+]
+}
+liquids: {
+liquids: [
+carbon/0.15
+]
+}
+}
+requirements: [
+nickel/135
+titanium/80
+silicon/50
+]
+category: crafting
+outputLiquid: nitrogen/0.15
+planet: thanaras
+research: {
+  parent: tryphoton-press
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}

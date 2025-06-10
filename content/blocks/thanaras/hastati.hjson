@@ -1,0 +1,50 @@
+Type: PowerTurret
+Name: Hastati
+scaledHealth: 250
+description: Fires rapid bursts of thin powerful light rays at enemies.
+size: 2
+shootEffect: sparkShoot
+shootSound: blaster
+targetAir: false
+range: 160
+reload: 70
+inaccuracy: 0
+outlineColor: 101220
+drawer: {
+type: DrawTurret
+basePrefix: depleted-
+}
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
+consumes: {
+  power: 5.5
+}
+shoot: {
+shots: 5
+shotDelay: 2
+}
+shootType: {
+ type: LaserBulletType
+      damage: 15
+      length: 165
+sideAngle: 45
+   width: 2
+sideWidth: 4
+      colors: [9927c5, e845f0, fdd0ff]
+      lightColor: e845f066
+
+
+}
+requirements: [
+nickel/90
+titanium/65
+silicon/40
+]
+researchCostMultiplier: 0.2
+category: turret
+planet: thanaras
+research: orb

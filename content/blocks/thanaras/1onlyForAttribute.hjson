@@ -1,0 +1,4 @@
+type: ThermalGenerator
+attribute: radioactive
+hidden: true
+buildVisibility: hidden

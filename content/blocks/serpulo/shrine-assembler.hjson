@@ -1,0 +1,38 @@
+type: UnitAssembler
+Name: Shrine Assembler
+description: Combines all Serpulo tier 1 ground units into the Shrine.
+size: 3
+dronesCreated: 4
+droneConstructTime: 200
+droneType: shrine-assembler-drone
+areaSize: 5
+consumes: {
+power: 1.5
+}
+plans: [
+  {
+    unit: shrine
+    time: 2000
+    requirements: [
+	dagger/1
+	crawler/1
+	nova/1
+    ]
+  }
+]
+requirements: [
+monolithium/30
+lead/65
+silicon/40
+]
+research: {
+  parent: additive-reconstructor
+  objectives: [
+    {
+      type: OnSector
+      preset: reverent-junction
+    }
+  ]
+}
+category: units
+

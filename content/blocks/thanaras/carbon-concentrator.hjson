@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: Methane Concentrator
+description: Slowly concentrates methane in the atmosphere into a gas that can be transported.
+size: 2
+hasLiquids: true
+hasItems: true
+craftTime: 30
+craftEffect: {
+type: RadialEffect
+effect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 4
+    sizeTo: 0.2
+    baseLength: 20
+length: -20
+    lifetime: 60
+    colorFrom: becbd605
+    colorTo: becbd670
+    cone: 80
+}
+amount: 4
+rotationSpacing: 90
+lengthOffset: 2.2
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: carbon
+}
+{
+type: DrawDefault
+}
+]
+}
+requirements: [
+nickel/25
+titanium/5
+]
+category: production
+outputLiquid: carbon/0.1
+researchCostMultiplier: 0.05
+planet: thanaras
+research: silicon-forge

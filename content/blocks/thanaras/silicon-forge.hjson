@@ -1,0 +1,43 @@
+type: GenericCrafter
+name: Silicon Forge
+description: Refines sand using methane and power to craft silicon.
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 120
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawFlame
+}
+]
+}
+consumes: {
+  power: 3
+  liquids: {
+    liquids: [
+	carbon/0.2
+    ]
+  }
+  items: {
+    items: [
+	sand/4
+    ]
+  }
+}
+requirements: [
+nickel/110
+titanium/100
+]
+category: crafting
+outputItem: silicon/2
+planet: thanaras
+research: core-mors
+researchCostMultiplier: 0.05

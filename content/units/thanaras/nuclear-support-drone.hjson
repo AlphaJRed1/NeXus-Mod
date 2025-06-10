@@ -1,0 +1,122 @@
+Name: N-Support Drone
+description: Inflicts nearby allies with the Nuclear Healing status effect, which gives them rapid self-regeneration. Equipped with a small cannon mount on its back but has a weaker regeneration ability than its Nuclear counterparts.
+type: hover
+hovering: true
+health: 830
+armor: 5
+speed: 0.9
+rotateSpeed: 3
+drag: 0.05
+accel: 0.1
+hitSize: 13
+engineSize: 0
+outlineColor: 1c2125
+omniMovement: false
+immunities: [uranium-decay]
+parts: [
+    {
+        type : HoverPart
+         mirror: true
+radius: 8
+phase: 30
+stroke: 2
+layerOffset: -0.001
+color: dbffa1
+          x: 5
+          y: -6
+    }
+    {
+        type : HoverPart
+         mirror: true
+radius: 8
+phase: 30
+stroke: 2
+layerOffset: -0.001
+color: dbffa1
+          x: 5
+          y: 5
+    }
+  ]
+weapons: [
+  {
+  name: nuclear-support-drone-cannon
+  inaccuracy: 0
+  shootSound: shootPop
+  rotate: true
+rotateSpeed: 4
+mirror: false
+  spacing: 0
+  top: true
+  x: 0
+  y: -7
+  reload: 35
+shootY: 6
+  bullet: {
+damage: 16
+splashDamage: 45
+splashDamageRadius: 25
+speed: 5
+lifetime:  25
+ frontColor: dbffa1
+    backColor: 9dff00
+trailColor: 9dff00
+trailInterval: 2
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+colorFrom: dbffa1
+colorTo: 9dff00
+sizeFrom: 2
+sizeTo: 0
+length: 25
+lifetime: 50
+particles: 5
+interp: circleOut
+sizeInterp: linear
+}
+{
+type: WaveEffect
+colorFrom: 9dff00
+colorTo: 9dff00
+sizeTo: 25
+lifetime: 25
+interp: pow5Out
+}
+]
+}
+   }
+  }
+]
+abilities: [
+  {
+    type: StatusFieldAbility
+    reload: 60
+    range: 130
+duration: 200
+effect: nuclear-healing
+activeEffect: {
+ type: ParticleEffect
+    particles: 10
+    baseLength: 10
+length: 130
+    lifetime: 30
+	interp: circleOut
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: 360
+line: true
+lenFrom: 3
+lenTo: 0
+strokeFrom: 1.5
+strokeTo: 1.5
+}
+  }
+{
+type: RegenAbility
+amount: 1
+}
+]

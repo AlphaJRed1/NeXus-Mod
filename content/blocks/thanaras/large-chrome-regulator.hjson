@@ -1,0 +1,64 @@
+Type: ContinuousLiquidTurret
+Name: Large Chrome Regulator
+description: Heals surrounding structures with a powerful regeneration laser. Require tryplasma and power.
+size: 3
+range: 200
+health: 1300
+reload: 15
+rotateSpeed: 30
+shootSound: lasershoot
+targetHealing: true
+targetGround: false
+liquidConsumed: 0.1
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+basePrefix: mend-bolt-
+}
+{
+type: DrawPulseShape
+color: 84f491
+}
+]
+}
+targetAir: false
+playerControllable: false
+shootY: 0
+consumes: {
+  power: 5.5
+}
+ammoTypes: {
+tryplasma: {
+  type: ContinuousFlameBulletType
+collidesTeam: true
+damage: 1
+healPercent: 3
+length: 230
+flareColor: 84f491
+hitColor: 84f491
+flareWidth: 5
+flareLength: 30
+colors: [26c554, 84f491, d8ffdc]
+lightColor: 84f49166
+}
+}
+requirements: [
+silicon/110
+nitinol/70
+tungsten/90
+titanium/70
+]
+category: effect
+planet: thanaras
+research: {
+  parent: mend-bolt
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCostMultiplier: 0.5

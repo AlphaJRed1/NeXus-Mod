@@ -1,0 +1,38 @@
+ type: StatusEffect
+       name: noxious-burning
+localizedName: Noxious Burning
+	armorMultiplier: 0.5
+	healthMultiplier: 0.8
+damage: 0.2
+   color: f0ff00
+       effectChance: 0.3
+       effect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 2.6
+    sizeTo: 0
+    baseLength: 4
+length: 10
+    lifetime: 30
+region: nexus-mod-firespark
+    colorFrom: f0ff00
+    colorTo: 9d990045
+    cone: 360
+}
+{
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 0
+    sizeTo: 4
+    baseLength: 7
+length: 14
+    lifetime: 80
+    colorFrom: 877f78
+    colorTo: 45443905
+    cone: 360
+}
+]
+}

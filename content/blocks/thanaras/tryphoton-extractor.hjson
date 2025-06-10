@@ -1,0 +1,23 @@
+type: AttributeCrafter
+Name: Tryphoton Extractor
+description: Extracts tryphoton from underneath the surface. Must be placed on tryphoton-active floors.
+size: 2
+hasItems: true
+craftEffect: generatespark
+baseEfficiency: 0
+maxBoost: 2
+attribute: tryphoton
+craftTime: 100
+consumes: {
+  power: 0.9
+}  
+requirements: [
+nickel/15
+titanium/25
+]
+category: production
+research: carbon-concentrator
+outputItem: tryphoton/1
+researchCostMultiplier: 0.05
+planet: thanaras
+research: impact-miner

@@ -1,0 +1,96 @@
+Name: Molecule
+description: Protects allies with double 360 arc shields. Has a much more powerful healing aura than its tier 1 form.
+type: flying
+flying: true
+health: 625
+armor: 2
+speed: 2.2
+rotateSpeed: 4
+drag: 0.04
+accel: 0.1
+outlineColor: 1c2125
+hitSize: 9
+engineSize: 0
+lowAltitude: false
+circleTarget: false
+controller: DefenderAI
+defaultController: DefenderAI
+itemCapacity: 20
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 7
+phase: 17.5
+stroke: 3
+layerOffset: -0.0001
+color: baf6cc
+          x: 0
+          y: -4.5
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: baf6cc
+         circle: true
+        hollow: true
+       stroke: 2.5
+      strokeTo: 2.5
+        radius: 12
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: life
+          x: 0
+          y: 0
+    }
+]
+abilities: [
+  {
+    type: RepairFieldAbility
+    amount: 22
+    reload: 30
+    range: 70
+activeEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 0
+    sizeTo: 6
+    baseLength: 5
+length: 75
+    lifetime: 50
+    colorFrom: baf6cc
+    colorTo: 5dce7f05
+    cone: 360
+}
+  }
+  {
+    type: ShieldArcAbility
+whenShooting: false
+    max: 300
+regen: 0.2
+    cooldown: 250
+    radius: 65
+	x: 0
+    y: 0
+    angle: 360
+angleOffset: 0
+    width: 8
+  }
+  {
+    type: ShieldArcAbility
+whenShooting: false
+    max: 200
+regen: 0.2
+    cooldown: 250
+    radius: 40
+	x: 0
+    y: 0
+    angle: 360
+angleOffset: 0
+    width: 7
+  }
+]
+research: atom
+researchCostMultiplier: 0.7

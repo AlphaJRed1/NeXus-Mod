@@ -1,0 +1,82 @@
+type: PowerTurret
+Name: Large Secure Uranium Wall
+description: Inflicts uranium poisoning on nearby enemies. Requires power.
+size: 2
+health: 3100
+armor: 8
+range: 75
+targetGround: true
+targetAir: true
+recoil: 0
+rotateSpeed: 0
+shootCone: 360
+shootSound: none
+inaccuracy: 0
+reload: 30
+shootY: 0
+    shootEffect: none
+    smokeEffect: none
+consumes: {
+power: 1.5
+}
+conductivePower: true
+shootType: {
+    damage: 1
+    splashDamage: 1
+    splashDamageRadius: 75
+    speed: 0
+    lifetime: 1
+    height: 1
+    width: 1
+despawnHit: true
+hitEffect: none
+status: uranium-decay
+statusDuration: 75
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+colorFrom: beddb550
+colorTo: 4a694050
+sizeFrom: 2.8
+sizeTo: 0
+length: 80
+lifetime: 50
+particles: 6
+interp: pow10Out
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+colorFrom: dbffa1
+colorTo: 9dff00
+sizeFrom: 2
+sizeTo: 0
+length: 75
+lifetime: 30
+particles: 6
+interp: circleOut
+sizeInterp: linear
+}
+{
+type: WaveEffect
+colorFrom: 9dff00
+colorTo: 9dff00
+sizeTo: 78
+lifetime: 20
+interp: pow5Out
+}
+]
+
+}
+}
+requirements: [
+tungsten/16
+depleted-uranium/24
+nitinol/6
+]
+category: defense
+planet: thanaras
+research: secure-uranium-wall

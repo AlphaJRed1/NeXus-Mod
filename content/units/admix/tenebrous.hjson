@@ -1,0 +1,42 @@
+Name: Tenebrous
+description: Drops fragmenting bombs and fires rail beams.
+type: flying
+flying: true
+health: 80
+armor: 1
+speed: 1.6
+rotateSpeed: 3.5
+drag: 0.06
+accel: 0.1
+hitSize: 10
+engineOffset: 3
+engineSize: 0
+circleTarget: false
+rotateShooting: false
+abilities: [
+  {
+    type: MoveEffectAbility
+   effect: smokeCloud
+   teamColor: true
+y: -2
+x: 0
+interval: 3
+  }
+  {
+    type: MoveLightningAbility
+    damage: 0
+    length: 0
+    minSpeed: 0.1
+    maxSpeed: 1
+    offset: 0
+chance: 1
+bullet: {
+lifetime: 0
+damage: 1
+splashDamage: 10
+splashDamageRadius: 15
+status: unmoving
+statusDuration: 10
+  }
+}
+]

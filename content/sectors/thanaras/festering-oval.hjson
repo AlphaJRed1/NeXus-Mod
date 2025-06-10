@@ -1,0 +1,16 @@
+Name: Festering Oval
+planet: thanaras
+sector: 30
+difficulty: 4
+research: {
+  parent: infested-grounds
+requiresUnlock: false
+  objectives: [biomass-decayer, nano-reconstructor,
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+localizedName: Festering Oval
+description: The Korru have set up an enemy outpost on this tryphostone infested sector, where they were able to utilize tryphoton to create new compounds and tech discoveries. Capture this enemy base by using the tryphoton to your advantage and your newly unlocked unit factories and destroy the enemy core.

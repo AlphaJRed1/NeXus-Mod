@@ -1,0 +1,20 @@
+type: Conduit
+name: Pipe
+description: Transports liquids, connecting to other pipes.
+liquidCapacity: 6
+liquidPressure: 7
+requirements: [
+nitinol/1
+]
+category: liquid
+planet: thanaras
+research: {
+  parent: core-mors
+  objectives: [
+    {
+      type: SectorComplete
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCostMultiplier: 0.1

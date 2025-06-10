@@ -1,0 +1,61 @@
+type: legs
+flying: true
+Name: Odium
+description: Protector of the Bartizan Core. 
+controller: BuilderAI
+defaultController: BuilderAI
+health: 75
+speed: 3
+mineTier: 3
+mineSpeed: 5
+buildSpeed: 0.6
+engineOffset: 7
+engineSize: 0
+itemCapacity: 20
+lockLegBase: true
+rotateSpeed: 5
+hitSize: 10
+legs: 6
+drag: 0.02
+accel: 0.05
+isCounted: false
+weapons: [
+  {
+  name: odiumgoboomboom
+  inaccuracy: 0
+  shootSound: shootSmite
+  x: 0
+top: false
+  y: 3
+  reload: 65
+  bullet: {
+    damage: 5
+   splashDamage: 2
+    splashDamageRadius: 10
+    speed: 2
+   despawnEffect: none
+    lifetime: 40
+    height: 10
+    width: 10
+    frontColor: b6624b
+    backColor: b6624b50
+trailEffect: ventSteam
+trailInterval: 3
+pierce: true
+pierceBuilding: true
+    buildingDamageMultiplier: 0.01
+status: cosmic-rusted
+statusDuration: 80
+  }
+  }
+]
+abilities: [
+  {
+    type: MoveEffectAbility
+   effect: smokeCloud
+   teamColor: true
+y: -3
+x: 0
+interval: 3
+  }
+]

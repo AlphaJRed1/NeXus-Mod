@@ -1,0 +1,11 @@
+type: LiquidJunction
+name: Pipe Junction
+description: Creates a junction between two pipes, allowing their respective liquids to cross paths.
+liquidCapacity: 6
+requirements: [
+nitinol/1
+nickel/1
+]
+category: liquid
+planet: thanaras
+research: express-pipe

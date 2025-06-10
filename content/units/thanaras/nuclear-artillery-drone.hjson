@@ -1,0 +1,98 @@
+Name: N-Artillery Drone
+description: Launches an artillery barrage at enemies from long distances. Equipped with self-regeneration.
+type: legs
+hitSize: 11
+hovering: true
+allowLegStep: true
+visualElevation: 0.4
+legCount: 6
+            legLength: 13
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -1.5
+            legBaseOffset: 4
+            legLengthScl: 0.96
+            legGroupSize: 2
+health: 900
+stepShake: 0
+armor: 5
+speed: 0.5
+outlineColor: 1c2125
+immunities: [uranium-decay]
+groundLayer: 70
+weapons: [
+ {
+    name: nuclear-artillery-drone-gun
+    y: 0
+    x: 4
+    rotate: false
+    recoil: 2
+  top: false
+    reload: 70
+    shootSound: microSmall
+inaccuracy: 10
+velocityRnd: 0.1
+shoot: {
+shots: 3
+}
+    bullet: {
+type: ArtilleryBulletType
+    damage: 14
+splashDamage: 18
+splashDamageRadius: 25
+    frontColor: dbffa1
+    backColor: 9dff00
+trailColor: 9dff00
+    width: 10
+    height: 11
+    lifetime: 40
+speed: 5
+despawnHit: true
+despawnEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+colorFrom: beddb550
+colorTo: 4a694050
+sizeFrom: 3
+sizeTo: 0
+length: 29
+lifetime: 60
+particles: 6
+interp: pow10Out
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+colorFrom: dbffa1
+colorTo: 9dff00
+sizeFrom: 2
+sizeTo: 0
+length: 22
+lifetime: 40
+particles: 5
+interp: circleOut
+sizeInterp: linear
+}
+{
+type: WaveEffect
+colorFrom: 9dff00
+colorTo: 9dff00
+sizeTo: 28
+lifetime: 20
+interp: pow5Out
+}
+]
+}
+
+    }
+  }
+]
+abilities: [
+{
+type: RegenAbility
+amount: 3
+}
+]

@@ -1,0 +1,10 @@
+type: Liquid
+name: Tryplasma
+description: Radioactive juices extracted from tryphoton. Holds some sort of inter-dimensional power when utilized correctly. Can be used as coolant for turrets.
+temperature: 0.5
+viscosity: 0.5
+color: 5effb8
+research: tryphoton
+hiddenOnPlanets: [serpulo, erekir]
+effect: photonized
+statusDuration: 150

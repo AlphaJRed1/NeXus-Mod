@@ -1,0 +1,20 @@
+ type: StatusEffect
+name: photonized
+localizedName: Photonized
+       show: true
+       damage: 0.05
+   color: ccdbb5
+       transitionDamage: 20
+       effectChance: 0.1
+       effect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 6
+    lifetime: 80
+length: 4
+    colorFrom: 5effea
+    colorTo: 5effea10
+    cone: 360
+    }

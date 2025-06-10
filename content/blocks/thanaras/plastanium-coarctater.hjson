@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: Plastanium Coarctater
+description: Synthesizes plastanium using titanium and a large amount of carbon. Requires power.
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 120
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+  power: 4.2
+  liquids: {
+    liquids: [
+	carbon/1
+    ]
+  }
+  items: {
+    items: [
+titanium/2
+    ]
+  }
+}
+requirements: [
+nitinol/95
+cryo-compound/95
+silicon/120
+titanium/150
+]
+category: crafting
+outputItem: plastanium/2
+planet: thanaras
+research: {
+  parent: nitinol-smelter
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+researchCostMultiplier: 0.6

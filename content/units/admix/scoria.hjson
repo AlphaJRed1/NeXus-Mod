@@ -1,0 +1,44 @@
+Name: Scoria
+description: bom
+type: legs
+hovering: true
+allowLegStep: true
+health: 90
+legCount: 2
+hitSize: 9
+armor: 0
+speed: 1.2
+ legStraightness: 0.3
+            legLength: 12
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -2
+            legBaseOffset: 2
+            legMaxLength: 1
+            legMinLength: 0.2
+            legLengthScl: 0.96
+            legForwardScl: 1.1
+            rippleScale: 0.2
+            legMoveSpace: 3
+            legPhysicsLayer: false
+weapons: [
+ {
+    name: scoriasap
+    y: 0
+    x: 4
+	mirror: true
+    rotate: false
+    reload: 20
+    shootSound: sap
+    bullet: {
+type: SapBulletType
+      damage: 4
+      length: 70
+      sapStrength: 0.3
+      color: ffad51
+      lightColor: ffad51
+      hitEffect: hitLiquid
+
+    }
+  }
+]

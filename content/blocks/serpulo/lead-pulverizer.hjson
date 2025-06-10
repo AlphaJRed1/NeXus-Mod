@@ -1,0 +1,42 @@
+type: GenericCrafter
+name: Lead Pulverizer
+description: Pulverizes lead into sand. Takes much longer to craft than a regular pulverizer.
+size: 1
+hasPower: true
+hasItems: true
+craftTime: 120
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawFlame
+color: ffef99
+}
+]
+}
+consumes: {
+  power: 0.9
+  items: {
+    items: [
+lead/1
+    ]
+  }
+}
+requirements: [
+lead/25
+copper/25
+graphite/10
+]
+category: crafting
+outputItem: sand/1
+planet: serpulo
+research: {
+  parent: pulverizer
+  objectives: [
+  ]
+}

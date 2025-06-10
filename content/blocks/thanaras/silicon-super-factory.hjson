@@ -1,0 +1,59 @@
+type: GenericCrafter
+name: Silicon Super Factory
+description: An advanced version of the Silicon Factory, utilizing the power of noxionite to quickly forge stacks of silicon.
+size: 4
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 90
+itemCapacity: 30
+updateEffect: generatespark
+craftEffect: generatespark
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidRegion
+drawLiquid: carbon
+}
+{
+type: DrawFlame
+}
+]
+}
+consumes: {
+  power: 7.2
+  liquids: {
+    liquids: [
+	carbon/0.5
+    ]
+  }
+  items: {
+    items: [
+	sand/10
+	noxionite/2
+    ]
+  }
+}
+requirements: [
+nitinol/200
+plastanium/75
+tungsten/200
+silicon/150
+]
+category: crafting
+outputItem: silicon/6
+planet: thanaras
+research: {
+  parent: plastanium-coarctater
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+researchCostMultiplier: 0.7

@@ -1,0 +1,91 @@
+Name: Atom
+description: A flying support unit that has a healing aura, rapidly regenerating nearby allies and destroying nearby bullets.
+type: flying
+flying: true
+health: 100
+armor: 0
+speed: 2
+rotateSpeed: 4
+drag: 0.04
+accel: 0.1
+outlineColor: 1c2125
+hitSize: 7
+engineSize: 0
+lowAltitude: false
+circleTarget: false
+controller: DefenderAI
+defaultController: DefenderAI
+itemCapacity: 5
+
+weapons: [
+  {
+  name: atomshield
+type: PointDefenseWeapon
+  inaccuracy: 0
+  shootSound: shootPop
+  spacing: 0
+  x: 0
+  y: 0
+shootY: 0
+  reload: 10
+targetInterval: 9
+                targetSwitchInterval: 12
+  bullet: {
+maxRange: 70
+    damage: 10
+hitEffect: pointHit
+   }
+  }
+]
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 6
+phase: 20
+stroke: 3
+layerOffset: -0.0001
+color: baf6cc
+          x: 0
+          y: -3
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: baf6cc
+         circle: true
+        hollow: true
+       stroke: 2
+      strokeTo: 2
+        radius: 9
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: life
+          x: 0
+          y: 0
+    }
+]
+abilities: [
+  {
+    type: RepairFieldAbility
+    amount: 10
+    reload: 20
+    range: 60
+activeEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 0
+    sizeTo: 5
+    baseLength: 5
+length: 60
+    lifetime: 50
+    colorFrom: baf6cc
+    colorTo: 5dce7f05
+    cone: 360
+}
+  }
+]
+research: micro-factory
+researchCostMultiplier: 0.7

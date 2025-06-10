@@ -1,0 +1,269 @@
+type: ItemTurret
+Name: Reprimand
+description: Rapidly fires large shrapnel shells at enemies, dealing a good amount of splash damage to clumped up units.
+size: 4
+health: 4670
+range: 300
+targetGround: true
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.2
+}
+targetAir: true
+reload: 5
+shootWarmupSpeed: 0.05
+minWarmup: 0.5
+shake: 2
+hasItems: true
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+shootSound: shootTrot
+cooldownTime: 90
+recoil: 3
+shootY: 10.2
+recoilTime: 55
+outlineColor: 101220
+shoot: {
+type: ShootAlternate
+barrels: 2
+spread: 6.5
+}
+recoils: 2
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -barrel-l
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -2.3
+         moveRot: 0
+	recoilIndex: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -barrel-r
+        type : RegionPart
+         mirror: false
+         under: true
+top: false
+         moveX: 0
+         moveY: -2.3
+         moveRot: 0
+	recoilIndex: 1
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -click-r
+        type : RegionPart
+         mirror: false
+         under: true
+top: false
+         moveX: 0
+         moveY: -1
+         moveRot: -5
+	recoilIndex: 1
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -click-l
+        type : RegionPart
+         mirror: false
+         under: true
+top: false
+         moveX: 0
+         moveY: -1
+         moveRot: 5
+	recoilIndex: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -side
+        type : RegionPart
+         mirror: true
+         under: true
+top: false
+         moveX: 4
+         moveY: 2
+         moveRot: -30
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+ammoTypes: {
+  silicon: {
+    damage: 30
+splashDamage: 48
+splashDamageRadius: 20
+    speed: 8
+    lifetime: 39
+    height: 13
+    width: 10
+frontColor: 9ea1ab
+backColor: 65657c
+hitColor: 9ea1ab
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+trailInterval: 1
+homingPower: 0.08
+homingRange: 150
+trailRotation: true
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 2.5
+    sizeTo: 0
+    baseLength: 0
+length: 5
+    lifetime: 50
+    colorFrom: 9ea1ab
+    colorTo: 65657c
+    cone: -15
+offset: -90
+region: nexus-mod-shield-dart-back
+}
+}
+  nickel: {
+    damage: 15
+splashDamage: 37
+splashDamageRadius: 20
+    speed: 8
+    lifetime: 39
+    height: 13
+    width: 10
+frontColor: d7e0f4
+backColor: 8e94b6
+hitColor: d7e0f4
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 2.5
+    sizeTo: 0
+    baseLength: 0
+length: 5
+    lifetime: 50
+    colorFrom: d7e0f4
+    colorTo: 8e94b6
+    cone: -15
+offset: -90
+region: nexus-mod-shield-dart-back
+
+}
+}
+  tungsten: {
+    damage: 35
+splashDamage: 65
+splashDamageRadius: 20
+    speed: 8
+    lifetime: 39
+pierceCap: 2
+knockback: 2
+    height: 14
+    width: 12
+frontColor: b3c3db
+backColor: 5d6b90
+hitColor: b3c3db
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 2.5
+    sizeTo: 0
+    baseLength: 0
+length: 5
+    lifetime: 50
+    colorFrom: b3c3db
+    colorTo: 5d6b90
+    cone: -15
+offset: -90
+region: nexus-mod-shield-dart-back
+
+}
+  }
+ depleted-uranium: {
+    damage: 55
+reloadMultiplier: 0.85
+splashDamage: 98
+splashDamageRadius: 27
+    speed: 8
+    lifetime: 39
+pierceCap: 2
+knockback: 3.5
+    height: 15
+    width: 13.5
+frontColor: fff56d
+backColor: 88a135
+hitColor: fff56d
+hitEffect: hitBulletColor
+status: uranium-decay
+statusDuration: 200
+despawnEffect: hitBulletColor
+trailRotation: true
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 2.5
+    sizeTo: 0
+    baseLength: 0
+length: 5
+    lifetime: 50
+    colorFrom: fff56d
+    colorTo: 88a135
+    cone: -15
+offset: -90
+region: nexus-mod-shield-dart-back
+}
+  }
+  }
+requirements: [
+nickel/950
+silicon/500
+tungsten/550
+cryo-compound/150
+plastanium/220
+]
+category: turret
+research: {
+  parent: punctual
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.5

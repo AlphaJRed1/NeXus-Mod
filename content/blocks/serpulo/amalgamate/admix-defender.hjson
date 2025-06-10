@@ -1,0 +1,27 @@
+name: Admix Defensive Mech Pad
+description: Spawns in a defender unit that heals damaged buildings.
+type: DroneCenter
+health: 450
+armor: 2
+size: 2
+unitsSpawned: 1
+droneType: defensive-end
+status: none
+itemCapacity: 50
+droneConstructTime: 700
+droneRange: 100
+consumes: {
+items: {
+items: [
+admix/30
+silicon/25
+coal/10
+]
+}
+}
+requirements: [
+admix/25
+silicon/45
+copper/50
+]
+category: defense

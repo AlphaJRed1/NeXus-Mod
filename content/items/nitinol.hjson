@@ -1,0 +1,8 @@
+type: material
+name: Nitinol
+description: An alloy forged from nickel and titanium. Has superelastic properties and a unique shape memory.
+hardness: 4
+cost: 4
+color: a1daff
+hiddenOnPlanets: [serpulo, erekir]
+research: titanium

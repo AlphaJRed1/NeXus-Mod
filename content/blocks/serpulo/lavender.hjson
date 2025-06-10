@@ -1,0 +1,52 @@
+Type: PowerTurret
+Name: Lavender
+scaledHealth: 160
+description: Rapidly fires sapping lasers at enemies, which can also heal itself.
+size: 4
+recoilTime: 20
+shootEffect: shootLiquid
+range: 200
+reload: 4
+recoil: 3
+recoilTime: 30
+shootSound: sap
+shootY: 9
+cooldownTime: 100
+inaccuracy: 8
+shoot: {
+type: ShootAlternate
+shots: 5
+barrels: 5
+spread: 4
+shotDelay: 2
+}
+consumes: {
+  power: 13.85
+}
+shootType: {
+      type: SapBulletType
+      damage: 15
+      knockback: 0.4
+      length: 200
+      sapStrength: 0.8
+      color: e845f0
+      lightColor: e845f0
+      hitEffect: hitLiquid
+}
+requirements: [
+  phase-fabric/125
+  duplexon/100
+  titanium/475
+   silicon/400
+lead/520
+]
+category: turret
+research: {
+  parent: meltdown
+  objectives: [
+    {
+      type: SectorComplete
+      preset: reverent-junction
+    }
+  ]
+}

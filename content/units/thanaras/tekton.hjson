@@ -1,0 +1,85 @@
+type: tether
+Name: Tekton
+description: Assists in the construction and rebuilding of structures.
+controller: BuilderAI
+defaultController: BuilderAI
+health: 265
+armor: 3
+speed: 3
+mineTier: 3
+mineSpeed: 6.5
+buildSpeed: 0.5
+engineOffset: 4
+engineSize: 0
+itemCapacity: 30
+rotateSpeed: 7.5
+hitSize: 11
+outlineColor: 1c2125
+drag: 0.03
+accel: 0.2
+flying: true
+isCounted: false
+isEnemy: false
+drawBuildBeam: false
+weapons: [
+{
+type: BuildWeapon
+rotate: true
+rotateSpeed: 7
+x: 5.3
+y: 5.3
+mirror: true
+shootY: 0
+}
+{
+type: BuildWeapon
+rotate: true
+rotateSpeed: 7
+x: 5.3
+y: -5.3
+mirror: true
+shootY: 0
+}
+]
+parts: [
+    {
+        type : FlarePart
+         mirror: false
+under: true
+layerOffset: -0.0001
+radius: 15
+radiusTo: 15
+stroke: 5
+rotation: 45
+progress: life
+color1: a3c0ff
+color2: 4e53c5
+followRotation: true
+          x: 0
+          y: 0
+    }
+    {
+        type : HoverPart
+         mirror: true
+under: false
+radius: 3.5
+phase: 40
+stroke: 2
+color: 8ca9e8
+          x: 5.3
+          y: 5.3
+    }
+    {
+        type : HoverPart
+         mirror: true
+under: false
+radius: 3.5
+phase: 40
+stroke: 2
+color: 8ca9e8
+          x: 5
+          y: -5
+    }
+]
+research: tekton-drone-bay
+alreadyUnlocked: true

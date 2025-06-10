@@ -1,0 +1,489 @@
+type: ItemTurret
+Name: Objurgate
+description: Blasts enemies with powerful status inflicting orbs that fragment into smaller, piercing orbs.
+size: 5
+health: 6800
+range: 370
+targetGround: true
+targetAir: true
+reload: 15
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.3
+}
+shootY: 13.6
+shake: 3
+hasItems: true
+shootWarmupSpeed: 0.04
+minWarmup: 0.6
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 10
+    strokeFrom: 5
+    strokeTo: 0
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 40
+    lifetime: 60
+    colorFrom: ccffeb
+    colorTo: 38ffb010
+    cone: 40
+}
+]
+}
+
+smokeEffect: shootBigSmoke
+shootSound: microBass
+rotateSpeed: 3.5
+recoil: 3.5
+cooldownTime: 120
+outlineColor: 101220
+inaccuracy: 15
+recoils: 4
+shoot: {
+type: ShootAlternate
+barrels: 4
+spread: 5
+}
+drawer: {
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+ {
+        suffix : -barrel-l
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2.5
+	recoilIndex: 0
+         progress: recoil
+          x: -5
+          y: -3
+    }
+    {
+        suffix : -barrel-l
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2.5
+	recoilIndex: 1
+         progress: recoil
+          x: 2
+          y: 0
+    }
+    {
+        suffix : -barrel-r
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2.5
+	recoilIndex: 2
+         progress: recoil
+          x: -2
+          y: 0
+    }
+    {
+        suffix : -barrel-r
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2.5
+	recoilIndex: 3
+         progress: recoil
+          x: 5
+          y: -3
+    }
+    {
+        suffix : -skull
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: 0
+         progress: warmup
+heatProgress: warmup
+heatColor: 2ffff6
+          x: 0
+          y: -4
+    }
+    {
+        suffix : -sideback
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 7
+         moveY: -4
+         moveRot: -25
+         progress: warmup
+          x: -0.08
+          y: 0
+    }
+    {
+        suffix : -sidefront
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 10
+         moveY: -2
+         moveRot: -5
+         progress: warmup
+          x: -0.08
+          y: 0
+    }
+   
+    {
+        suffix : -ex1
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 8
+         moveY: 1
+         moveRot: 5
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -ex2
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 4
+         moveY: -2
+         moveRot: 12
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -cover
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 7
+         moveY: -2
+         moveRot: -30
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -case
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: 11
+         progress: warmup
+          x: 0
+          y: 0
+    }
+ {
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: 2ffff6
+stroke: 3.5
+layerOffset: 0.0001
+haloRotateSpeed: 5
+shapes: 8
+triLength: 0
+triLengthTo: 8
+haloRadius: 15
+tri: true
+radius: 5
+haloRotation: 0
+shapeRotation: 0
+          x: 0
+          y: -4
+    }
+ {
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: 2ffff6
+stroke: 3.5
+layerOffset: 0.0001
+haloRotateSpeed: 5
+shapes: 8
+triLength: 0
+triLengthTo: 3
+haloRadius: 13
+tri: true
+radius: 5
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: -4
+    }
+]
+}
+ammoTypes: {
+ uranium: {
+    damage: 100
+	splashDamage: 128
+splashDamageRadius: 25
+reloadMultiplier: 0.75
+    speed: 8
+status: uranium-decay
+statusDuration: 500
+    lifetime: 47.5
+shrinkY: 0
+    height: 13.5
+    width: 13.5
+frontColor: d9ff9e
+backColor: 95d928
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: d9ff9e
+ interp: circleOut
+    colorTo: 95d92810
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 15
+    lifetime: 70
+    colorFrom: 95d928
+    colorTo: 95d92820
+    cone: 360
+}
+]
+}
+despawnHit: true
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: d9ff9e
+ interp: pow5Out
+    colorTo: d9ff9e10
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 10
+    lifetime: 70
+    colorFrom: d9ff9e
+    colorTo: d9ff9e20
+    cone: -100
+}
+]
+}
+homingPower: 0.05
+fragBullets: 4
+fragVelocityMin: 1
+fragBullet: {
+ damage: 30
+    speed: 6
+    lifetime: 25
+shrinkY: 0
+    height: 7
+    width: 7
+frontColor: d9ff9e
+backColor: 95d928
+hitColor: 95d928
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+sprite: circle-bullet
+trailInterval: 2
+status: uranium-decay
+statusDuration: 250
+    trailEffect: {
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: d9ff9e
+ interp: pow5Out
+    colorTo: d9ff9e10
+}
+homingPower: 0.1
+pierce: true
+pierceBuilding: true
+homingRange: 200
+
+}
+  }
+
+  tryphoton: {
+    damage: 48
+	splashDamage: 55
+splashDamageRadius: 20
+status: photonized
+statusDuration: 400
+    speed: 8
+    lifetime: 47.5
+shrinkY: 0
+    height: 11
+    width: 11
+frontColor: ccffeb
+backColor: 38ffb0
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 5
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: circleOut
+    colorTo: 38ffb010
+}
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 15
+    lifetime: 70
+    colorFrom: 38ffb0
+    colorTo: 38ffb020
+    cone: 360
+}
+]
+}
+despawnHit: true
+sprite: circle-bullet
+trailInterval: 2
+    trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+{
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 2
+length: 10
+    lifetime: 70
+    colorFrom: ccffeb
+    colorTo: ccffeb20
+    cone: -100
+}
+]
+}
+homingPower: 0.05
+fragBullets: 4
+fragVelocityMin: 1
+fragBullet: {
+ damage: 30
+    speed: 6
+    lifetime: 25
+shrinkY: 0
+    height: 7
+    width: 7
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+sprite: circle-bullet
+status: photonized
+statusDuration: 200
+trailInterval: 2
+    trailEffect: {
+type: WaveEffect
+    lifetime: 30
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 4
+    strokeFrom: 3
+    strokeTo: 1
+    colorFrom: ccffeb
+ interp: pow5Out
+    colorTo: ccffeb10
+}
+homingPower: 0.1
+pierce: true
+pierceBuilding: true
+homingRange: 200
+
+}
+  }
+  }
+requirements: [
+nickel/1200
+tungsten/900
+titanium/1200
+plastanium/600
+depleted-uranium/400
+cryo-compound/550
+]
+category: turret
+research: {
+  parent: spherule
+  objectives: [
+    {
+      type: SectorComplete
+      preset: green-valley
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.7

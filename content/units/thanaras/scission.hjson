@@ -1,0 +1,202 @@
+Name: Scission
+description: asdsadasdasdas
+type: mech
+health: 28500
+armor: 22
+speed: 0.8
+rotateSpeed: 1.3
+hitSize: 38
+forceMultiTarget: true
+immunities: [photonized]
+outlineColor: 1c2125
+weapons: [
+ {
+  name: micro-mount
+  inaccuracy: 0
+  shootSound: blaster
+  rotate: true
+  spacing: 0
+  top: true
+  x: 5
+rotateSpeed: 3.3
+  y: 13.5
+  reload: 10
+  recoil: 1.5
+  bullet: {
+   type: LaserBulletType
+      damage: 16
+pierceCap: 2
+      length: 90
+sideAngle: 45
+   width: 2
+sideWidth: 5
+colors: [0bb6ae, 47f0cb, 9dffde5]
+      lightColor: 9dffde66
+   }
+  }
+{
+  name: micro-mount
+  inaccuracy: 0
+  shootSound: blaster
+  rotate: true
+  spacing: 0
+  top: true
+  x: 9
+rotateSpeed: 3.3
+  y: 11.5
+  reload: 10
+  recoil: 1.5
+  bullet: {
+   type: LaserBulletType
+      damage: 16
+pierceCap: 2
+      length: 90
+sideAngle: 45
+   width: 2
+sideWidth: 5
+colors: [0bb6ae, 47f0cb, 9dffde5]
+      lightColor: 9dffde66
+   }
+  }
+
+{
+  name: scission-mount
+  inaccuracy: 0
+rotateSpeed: 2
+  shootSound: microSmall
+layerOffset: 0.0001
+  rotate: true
+top: true
+shootY: 3
+  x: 12
+  y: -10
+  reload: 60
+shoot: {
+shots: 3
+type: ShootSpread
+spread: 20
+}
+shootEffect: none
+smokeEffect: none
+  bullet: {
+   lifetime: 23
+speed: 6
+sprite: nexus-mod-dart
+damage: 24
+splashDamage: 30
+splashDamageRadius: 15
+bulletInterval: 4
+intervalBullets: 2
+intervalRandomSpread: 0
+intervalSpread: 40
+intervalAngle: 0
+intervalBullet: {
+type: ShrapnelBulletType
+      damage: 30
+      length: 30
+   width: 12
+ toColor: 9dffde
+}
+trailInterval: 2
+pierceCap: 3
+pierceBuilding: true
+trailEffect: {
+    type: ParticleEffect
+    particles: 4
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 25
+    lifetime: 70
+    colorFrom: 9dffde
+    colorTo: 47f0cb20
+    cone: -150
+}
+  fragBullets: 1
+fragRandomSpread: 0
+fragAngle: 0
+fragSpread: 0
+fragOffsetMin: 0
+FragOffsetMax: 0
+homingPower: 0.05
+homingRange: 200
+fragBullet: {
+ type: ShrapnelBulletType
+      damage: 51
+      length: 40
+   width: 12
+ toColor: 9dffde
+  }
+ }
+}
+  {
+  name: scission-gun
+  inaccuracy: 35
+  shootSound: microZap
+shake: 3
+  rotate: false
+under: true
+top: false
+mirror: true
+shootY: 12
+  x: 15.5
+recoil: 4.5
+  y: 0
+  reload: 150
+shootEffect: none
+smokeEffect: none
+parts: [
+    {
+        suffix : -cover
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: 0
+	moveRot: -60
+         progress: warmup
+          x: 4.6
+          y: -2
+    }
+    {
+        suffix : -barrel
+layerOffset: -0.0001
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: 10
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+chargeSound: microCharge2
+shoot: {
+firstShotDelay: 80
+shots: 25
+shotDelay: 2
+}
+  bullet: {
+recoil: 0.1
+   chargeEffect: {
+      type: WaveEffect
+      lifetime: 80
+      sizeFrom: 25
+      sizeTo: 5
+      strokeFrom: 0
+      strokeTo: 6
+interp: pow5In
+      colorFrom: 9dffde90
+      colorTo: 9dffde
+        }
+   lifetime: 50
+  type: LightningBulletType
+  damage: 40
+  lightningLength: 32
+   lightningColor: 9dffde
+ }
+}
+]
+research: rift
+researchCostMultiplier: 0.7

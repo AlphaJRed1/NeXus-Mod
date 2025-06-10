@@ -1,0 +1,6 @@
+type: TallBlock
+name: Vion Crystal Mass
+variants: 2
+clipSize: 128
+shadowAlpha: 0.5
+shadowOffset: -2.5

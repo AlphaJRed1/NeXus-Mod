@@ -1,0 +1,128 @@
+Name: Iota
+description: Equipped with a strong forcefield and a halo that fires lightning bolts. Occasionally gives units an Iota Boost Effect.
+type: flying
+flying: true
+health: 2450
+armor: 6
+speed: 2.1
+rotateSpeed: 3
+drag: 0.03
+accel: 0.06
+outlineColor: 1c2125
+hitSize: 15
+engineSize: 0
+lowAltitude: false
+faceTarget: false
+circleTarget: true
+itemCapacity: 50
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 9
+phase: 15
+stroke: 3.5
+layerOffset: -0.0001
+color: baf6cc
+          x: 0
+          y: -7
+    }
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: baf6cc
+         circle: true
+        hollow: true
+       stroke: 2.5
+      strokeTo: 2.5
+        radius: 20
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: life
+          x: 0
+          y: 0
+    }
+{
+        type : HaloPart
+         mirror: false
+progress: life
+color: baf6cc
+stroke: 4
+layerOffset: 0.0001
+haloRotateSpeed: -4
+shapes: 5
+triLength: 5
+triLengthTo: 5
+haloRadius: 20
+tri: true
+radius: 10
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+
+]
+weapons: [
+ {
+  name: iota-charge
+  inaccuracy: 40
+  shootSound: microZap
+  rotate: true
+rotateSpeed: 30
+shootY: 20
+  x: 0
+  y: 0
+  reload: 60
+shake: 2
+shootEffect: none
+smokeEffect: none
+shoot: {
+shots: 4
+shotDelay: 10
+}
+  bullet: {
+  type: LightningBulletType
+  damage: 13
+  lightningLength: 17
+    collidesTeam: true
+    healPercent: 4
+   lightningColor: baf6cc
+  }
+ }
+
+]
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 100
+    regen: 2
+    max: 450
+    cooldown: 300
+sides: 10
+  }
+  {
+    type: StatusFieldAbility
+    reload: 100
+    range: 100
+duration: 200
+effect: iota-boost
+activeEffect: {
+    type: ParticleEffect
+    particles: 10
+    sizeFrom: 0
+    sizeTo: 7
+    baseLength: 10
+length: 110
+    lifetime: 70
+	interp: circleOut
+    colorFrom: baf6cc
+    colorTo: 5dce7f05
+    cone: 360
+}
+  }
+]
+research: molecule
+researchCostMultiplier: 0.7

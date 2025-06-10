@@ -1,0 +1,12 @@
+type: Floor
+name: Exposed Tryphoton Stone
+variants: 3
+attributes: {
+radioactive: 0.6
+tryphoton: 0.35
+}
+lightRadius: 17
+emitLight: true
+lightColor: 5effea50
+blendGroup: tryphostone
+blendID: 17

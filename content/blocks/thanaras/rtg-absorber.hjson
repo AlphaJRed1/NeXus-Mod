@@ -1,0 +1,28 @@
+Name: RTG Absorber
+type: ThermalGenerator
+description: Absorbs the radiation from radioactive floor tiles, converting it into power.
+size: 2
+powerProduction: 2.2
+generateEffect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 0
+    sizeTo: 3
+    baseLength: 7
+length: 10
+    lifetime: 80
+    colorFrom: e845f0
+    colorTo: e845f020
+    cone: 360
+}
+updateEffect: generatespark
+attribute: radioactive
+researchCostMultiplier: 0.1
+requirements: [
+nickel/55
+silicon/40
+titanium/60
+]
+category: power
+planet: thanaras
+research: power-pod

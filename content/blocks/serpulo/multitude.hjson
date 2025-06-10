@@ -1,0 +1,101 @@
+Name: Multitude
+description: Fires homing missiles at enemies in large bursts. Requires power to function.
+type: ItemTurret
+size: 5
+scaledHealth: 160
+rotateSpeed: 1.5
+reload: 80
+cooldownTime: 300
+shootSound: mediumCannon
+recoil: 2
+range: 305
+shootY: 11
+shootWarmupSpeed: 0.07
+minWarmup: 0.9
+velocityRnd: 0.15
+shoot: {
+type: ShootAlternate
+shots: 12
+barrels: 4
+spread: 7
+shotDelay: 2
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+parts: [
+    {
+        suffix : -front
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -8
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -fin
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 4
+         moveY: -3
+         moveRot: -30
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+{
+type: DrawPlasma
+}
+]
+}
+consumes: {
+power: 10.5
+}
+ammoTypes: {
+  pyratite: {
+    type: MissileBulletType
+    damage: 27
+    lifetime: 44
+    splashDamage: 57
+    splashDamageRadius: 30
+    width: 14
+    speed: 7
+    height: 14
+    frontColor: ffaf44
+    backColor: ff9200
+    trailColor: ff9200
+    status: burning
+weaveMag: 5
+weaveScl: 5
+    statusDuration: 300
+despawnEffect: flakExplosion
+hitEffect: flakExplosion
+  }
+}
+category: turret
+requirements: [
+graphite/1100
+titanium/1100
+silicon/750
+plastanium/650
+surge-alloy/650
+thorium/750
+]
+research: {
+  parent: swarmer
+  objectives: [foreshadow,
+    {
+      type: OnSector
+      preset: shoal-depth
+    }
+  ]
+}

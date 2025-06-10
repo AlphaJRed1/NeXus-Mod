@@ -1,0 +1,8 @@
+type: material
+name: Uranium
+description: A radioactive metal known for its role in nuclear power generation.
+hardness: 12
+cost: 7
+color: cbff78
+hiddenOnPlanets: [erekir]
+research: tryphoton

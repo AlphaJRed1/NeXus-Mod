@@ -1,0 +1,23 @@
+ type: StatusEffect
+       name: soul-powered
+localizedName: Soul Powered
+	damageMultiplier: 1.35
+color: 9a53ff
+reloadMultiplier: 1.35
+       effectChance: 0.2
+       effect: {
+ type: ParticleEffect
+    particles: 2
+    baseLength: 5
+length: 0
+    lifetime: 35
+	interp: circleOut
+    colorFrom: 9a53ff
+    colorTo: 54007c
+    cone: 360
+line: true
+lenFrom: 3
+lenTo: 0
+strokeFrom: 3
+strokeTo: 0
+}

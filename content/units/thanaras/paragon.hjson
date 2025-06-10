@@ -1,0 +1,69 @@
+Name: Paragon
+description: A hovering unit that burns nearby enemies by rapid firing plasma flames.
+type: hover
+hovering: true
+health: 410
+armor: 3
+speed: 1.5
+rotateSpeed: 3
+drag: 0.05
+accel: 0.2
+hitSize: 12
+engineSize: 0
+outlineColor: 1c2125
+parts: [
+    {
+        type : HoverPart
+         mirror: false
+radius: 10
+phase: 16
+stroke: 2
+layerOffset: -0.001
+color: ec49cb
+          x: 0
+          y: -6
+    }
+    {
+        type : HoverPart
+         mirror: true
+radius: 10
+phase: 16
+stroke: 2
+layerOffset: -0.001
+color: ec49cb
+          x: 5.5
+          y: 1.8
+    }
+  ]
+weapons: [
+  {
+  name: paragoner
+  inaccuracy: 20
+  shootSound: shootPop
+  rotate: false
+mirror: false
+  spacing: 0
+  top: false
+  x: 0
+  y: 0
+  reload: 20
+shootY: 6
+shoot: {
+shots: 3
+shotDelay: 5
+}
+  bullet: {
+    type: ContinuousFlameBulletType
+damage: 15
+pierceCap: 1
+length: 80
+flareColor: ff63e0
+hitColor: ff63e0
+flareWidth: 5
+flareLength: 15
+colors: [dd1499, ff63e0, ffb6f0]
+lightColor: ff63e066
+
+   }
+  }
+]

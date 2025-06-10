@@ -1,0 +1,8 @@
+ type: StatusEffect
+       name: soul-drain
+localizedName: Soul Drain
+       speedMultiplier: 0.3
+       reloadMultiplier: 0.3
+   color: ccdbb5
+       effectChance: 0.1
+       effect: pulverize

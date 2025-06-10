@@ -1,0 +1,43 @@
+Type: PowerTurret
+Name: Vertex
+scaledHealth: 150
+description: Zaps enemies with a single-target bolt that sparks lightning in all directions.
+size: 2
+shootEffect: lightningShoot
+shootSound: spark
+targetAir: false
+range: 135
+reload: 55
+inaccuracy: 0
+consumes: {
+  power: 6
+}
+shootType: {
+  type: PointBulletType
+  damage: 5
+lightning: 5
+  lightningLength: 10
+lightningDamage: 12
+lightningColor: 94deff
+speed: 135
+trailEffect: hitLancer
+despawnEffect: hitLancer
+trailSpacing: 10
+
+}
+requirements: [
+  lead/60
+copper/60
+ monolithium/55
+  titanium/55
+]
+category: turret
+research: {
+  parent: arc
+  objectives: [
+    {
+      type: OnSector
+      preset: reverent-junction
+    }
+  ]
+}

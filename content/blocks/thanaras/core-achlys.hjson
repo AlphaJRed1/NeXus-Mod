@@ -1,0 +1,27 @@
+Type: CoreBlock
+Name: Core: Achlys
+description: The tier 2 core of Thanaras. Much more armored than the Mors Core and stores more resources, governed by Hel.
+health: 4200
+armor: 5
+itemCapacity: 4500
+size: 4
+category: effect
+unitType: hel
+unitCapModifier: 16
+requirements: [
+nickel/2500
+titanium/2500
+silicon/2000
+tungsten/1500
+]
+planet: thanaras
+research: {
+  parent: core-mors
+  objectives: [
+    {
+      type: SectorComplete
+      preset: infested-grounds
+    }
+  ]
+}
+researchCostMultiplier: 0.2
