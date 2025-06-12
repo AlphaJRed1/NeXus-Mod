@@ -15,7 +15,7 @@ consumes: {
 power: 16.7
 liquids: {
 liquids: [
-tryplasma/0.4
+tryplasma/1
 ]
 }
 }

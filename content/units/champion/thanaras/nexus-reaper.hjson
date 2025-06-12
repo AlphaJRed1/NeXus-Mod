@@ -1,0 +1,306 @@
+type: hover
+Name: NeXus Reaper
+description: The Thanarian Champion. pending.
+hovering: true
+speed: 0.3
+health: 33300
+armor: 25
+itemCapacity: 280
+rotateSpeed: 1.2
+hitSize: 30
+buildSpeed: 3.5
+mineSpeed: 8
+forceMultiTarget: true
+mineTier: 10
+immunities: [freezing, burning, noxious-burning, uranium-decay, subzero-freezing, soul-drain]
+weapons: [
+ {
+  name: reaperpower
+parts: [
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: ffd27e
+stroke: 1.5
+layerOffset: 0.001
+haloRotateSpeed: 3
+shapes: 4
+triLength: 0
+triLengthTo: 4
+haloRadius: 3
+tri: true
+radius: 3
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: 0.001
+         under: false
+       color: ffd27e
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 1.5
+        radius: 3
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+
+  inaccuracy: 0
+  shootSound: microZap
+  rotate: true
+rotateSpeed: 4
+mirror: true
+  spacing: 0
+  top: true
+  x: 11
+  y: 14
+shootY: 0
+  reload: 25
+warmupSpeed: 0.04
+minWarmup: 0.9
+  bullet: {
+ type: LaserBulletType
+      damage: 20
+      length: 180
+sideAngle: 0
+   width: 4
+sideWidth: 0
+      colors: [fcb26c, ffd27e, ffffff]
+      lightColor: ffd27e45
+collidesTeam: true
+healPercent: 4
+    lifetime: 15
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 15
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: ffd27e
+    colorTo: fcb26c
+}
+{
+ type: ParticleEffect
+line: true
+    particles: 4
+    strokeFrom: 1.2
+    strokeTo: 0.2
+	lenFrom: 4
+lenTo: 0
+    length: 25
+    baseLength: 0
+    lifetime: 30
+  interp: pow2Out
+sizeInterp: linear
+    colorFrom: ffd27e
+    colorTo: fcb26c
+    cone: 30
+}
+]
+}
+hitEffect: hitLaserBlast
+hitColor: ffd27e
+pierceCap: 4
+   }
+  }
+ {
+  name: reaperpower
+parts: [
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: ffd27e
+stroke: 1.5
+layerOffset: 0.001
+haloRotateSpeed: 3
+shapes: 4
+triLength: 0
+triLengthTo: 4
+haloRadius: 3
+tri: true
+radius: 3
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: 0.001
+         under: false
+       color: ffd27e
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 1.5
+        radius: 3
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+
+  inaccuracy: 0
+  shootSound: microZap
+  rotate: true
+rotateSpeed: 4
+mirror: true
+  spacing: 0
+  top: true
+  x: 5
+  y: 16
+shootY: 0
+  reload: 30
+warmupSpeed: 0.04
+minWarmup: 0.9
+  bullet: {
+ type: LaserBulletType
+      damage: 20
+      length: 180
+sideAngle: 0
+   width: 4
+sideWidth: 0
+      colors: [fcb26c, ffd27e, ffffff]
+      lightColor: ffd27e45
+collidesTeam: true
+healPercent: 4
+    lifetime: 15
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 15
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: ffd27e
+    colorTo: fcb26c
+}
+{
+ type: ParticleEffect
+line: true
+    particles: 4
+    strokeFrom: 1.2
+    strokeTo: 0.2
+	lenFrom: 4
+lenTo: 0
+    length: 25
+    baseLength: 0
+    lifetime: 30
+  interp: pow2Out
+sizeInterp: linear
+    colorFrom: ffd27e
+    colorTo: fcb26c
+    cone: 30
+}
+]
+}
+hitEffect: hitLaserBlast
+hitColor: ffd27e
+pierceCap: 4
+   }
+  }
+ {
+  name: nexus-reaper-cannon
+  x: 22
+top: false
+  y: 0
+  reload: 65
+warmupSpeed: 0.035
+minWarmup: 0.9
+shootY: 14
+rotate: false
+layerOffset: -0.0001
+shoot: {
+type: ShootAlternate
+barrels: 3
+spread: 1.1
+shots: 4
+shotDelay: 3
+}
+shootSound: microBlast
+shake: 3.5
+  bullet: {
+ type: LaserBulletType
+      damage: 170
+      length: 300
+sideAngle: 0
+   width: 11
+sideWidth: 0
+      colors: [fcb26c, ffd27e, ffffff]
+      lightColor: ffd27e45
+collidesTeam: true
+healPercent: 2.5
+    lifetime: 20
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 20
+    sizeFrom: 0
+    sizeTo: 22
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: ffd27e
+    colorTo: fcb26c
+}
+{
+ type: ParticleEffect
+line: true
+    particles: 6
+    strokeFrom: 1.8
+    strokeTo: 0.2
+	lenFrom: 7
+lenTo: 0
+    length: 33
+    baseLength: 0
+    lifetime: 50
+  interp: pow2Out
+sizeInterp: linear
+    colorFrom: ffd27e
+    colorTo: fcb26c
+    cone: 30
+}
+]
+}
+hitEffect: hitLaserBlast
+hitColor: ffd27e
+pierceCap: 6
+    }
+}
+]
+abilities: [
+  {
+    type: StatusFieldAbility
+    reload: 600
+    range: 300
+    effect: invincible
+	duration: 200
+  }
+]
+
+
+

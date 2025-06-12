@@ -1,0 +1,16 @@
+ type: StatusEffect
+       name: deactivated
+localizedName: Deactivated
+armorMultiplier: 0
+healthMultiplier: 0
+damage: 0
+       effectChance: 0.5
+       effect: {
+    type: WaveEffect
+sizeFrom: 0
+sizeTo: 15
+strokeFrom: 2.5
+strokeTo: 0
+colorFrom: fff34d
+colorTo: fff34d05
+}

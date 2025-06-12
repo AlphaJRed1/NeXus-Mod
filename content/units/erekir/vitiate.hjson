@@ -1,0 +1,120 @@
+Name: Vitiate
+description: pending
+type: hover
+hovering: true
+envDisabled: 0
+health: 3350
+armor: 12
+speed: 0.9
+rotateSpeed: 3
+omniMovement: false
+drag: 0.05
+accel: 0.1
+hitSize: 25
+engineOffset: 11
+engineSize: 5
+outlineColor: 2e2f34
+shadowElevation: 0.1
+useEngineElevation: false
+parts: [
+    {
+        type : HoverPart
+         mirror: true
+radius: 10
+rotation: 45
+phase: 100
+stroke: 2.7
+layerOffset: -0.001
+color: ffd37f
+          x: 7
+          y: 9
+    }
+    {
+        type : HoverPart
+         mirror: true
+radius: 10
+rotation: 45
+phase: 100
+stroke: 2.7
+layerOffset: -0.001
+color: ffd37f
+          x: 7
+          y: -9
+    }
+]
+weapons: [
+ {
+  name: vitiate-cannon
+layerOffset: 0.0001
+reload: 70
+shootY: 13
+recoil: 1.3
+rotate: true
+rotateSpeed: 1.5
+mirror: false
+shootCone: 15
+x: 0
+y: -3
+heatColor: f9350f
+cooldownTime: 90
+shootSound: bolt
+shoot: {
+shots: 8
+shotDelay: 4
+type: ShootAlternate
+barrels: 4
+spread: 3
+}
+  bullet: {
+type: LaserBulletType
+length: 180
+damage: 45
+hitColor: feb380
+hitEffect: hitBulletColor
+endEffect: hitBulletColor
+pierce: true
+pierceCap: 2
+pierceBuilding: true
+width: 7
+sideLength: 14
+sideWidth: 0.6
+smokeEffect: colorSpark
+colors: [feb380,feb380,ffffff]
+      }
+  }
+
+  {
+  name: vitiate-mount
+  inaccuracy: 0
+shootCone: 360
+mirror: true
+shootSound: shootSnap
+  x: 9
+  y: -1
+  reload: 20
+baseRotation: -35
+top: true
+  bullet: {
+homingPower: 0.19
+homingDelay: 4
+width: 9
+height: 13
+speed: 6
+damage: 25
+lifetime: 30
+shootEffect: sparkShoot
+smokeEffect: shootBigSmoke
+hitColor: feb380
+backColor: feb380
+trailColor: feb380
+frontColor: ffffff
+trailWidth: 1.5
+trailLength: 6
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+      }
+  }
+]
+planet: erekir
+research: core-bastion
+researchCostMultiplier: 0

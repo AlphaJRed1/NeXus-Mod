@@ -1,0 +1,131 @@
+type: LiquidTurret
+Name: Thanarian Aircraft Disabler
+description: pending
+size: 5
+scaledHealth: 120
+range: 400
+targetGround: false
+targetAir: true
+recoil: 0
+rotateSpeed: 0
+shootCone: 360
+shootSound: microBoom
+hasLiquids: true
+extinguish: false
+inaccuracy: 0
+cooldown: 0.007
+reload: 60
+shake: 10
+shootY: 0
+minWarmup: 0.95
+shootWarmupSpeed: 0.05
+liquidCapacity: 50
+liquidConsumed: 0.5
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 20
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 380
+    strokeFrom: 5
+    strokeTo: 0
+    colorFrom: fff34d80
+ interp: circleOut
+    colorTo: fff34d45
+}
+{
+type: WaveEffect
+    lifetime: 40
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 400
+    strokeFrom: 10
+    strokeTo: 0
+    colorFrom: fff34d80
+ interp: circleOut
+    colorTo: fff34d45
+}
+{
+type: WaveEffect
+    lifetime: 60
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 420
+    strokeFrom: 15
+    strokeTo: 0
+    colorFrom: fff34d80
+ interp: circleOut
+    colorTo: fff34d45
+}
+{
+type: WaveEffect
+    lifetime: 80
+    rotation: 0
+    sizeFrom: 2
+    sizeTo: 420
+    strokeFrom: 0
+    strokeTo: 10
+    colorFrom: fff34d50
+ interp: circleOut
+    colorTo: fff34d05
+}
+]
+}
+
+    smokeEffect: none
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+}
+{
+type: DrawCrucibleFlame
+flameColor: fff34d50
+midColor: fffab6
+flameRad: 20
+circleSpace: 15
+alpha: 0.5
+rotateScl: 10
+particleSize: 6
+}
+{
+type: DrawPulseShape
+color: fff34d50
+}
+]
+}
+consumes: {
+power: 13.5
+}
+ammoTypes: {
+  tryplasma: {
+    damage: 1
+    splashDamage: 2
+    splashDamageRadius: 400
+    speed: 0
+    lifetime: 1
+    height: 0
+	knockback: 0
+ status: deactivated
+statusDuration: 500
+collidesGround: false
+collidesBuilding: false
+    width: 0
+    despawnEffect: none
+hitEffect: none
+  }
+}
+requirements: [
+depleted-uranium/500
+tungsten/1500
+nitinol/735
+titanium/2000
+cryo-compound/555
+]
+category: turret
+planet: thanaras
+researchCostMultiplier: 2

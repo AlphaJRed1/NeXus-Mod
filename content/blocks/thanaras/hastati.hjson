@@ -29,7 +29,8 @@ shotDelay: 2
 }
 shootType: {
  type: LaserBulletType
-      damage: 15
+      damage: 22
+collidesAir: false
       length: 165
 sideAngle: 45
    width: 2

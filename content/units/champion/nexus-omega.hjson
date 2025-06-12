@@ -1,0 +1,147 @@
+type: mech
+Name: NeXus Omega
+description: The Serpullion Core Champion. Has a couple of frontal mount guns that fire rounds of bullets at enemies. Equipped with two powerful cannons that blast omega shells, bullets that fragment into artillery, missile, laser, and lightning types resepctively. One final addition is the powerful NeXus Ring surrounding its coreal cells, which   gives itself and nearby units temporary invincibility, aswell as lightning strikes at random directions.
+speed: 0.3
+health: 30000
+armor: 20
+itemCapacity: 300
+rotateSpeed: 1.5
+hitSize: 30
+buildSpeed: 3
+mineSpeed: 10
+mineTier: 10
+mechStepParticles: true
+stepShake: 1
+drownTimeMultiplier: 6.5
+mechFrontSway: 2
+mechSideSway: 0.6
+immunities: [burning, freezing, wet, melting, tarred, electrified, shocked, blasted]
+weapons: [
+ {
+  name: nexus-omega-mount
+ejectEffect: casing1
+  x: 7
+top: true
+  y: 15.5
+  reload: 7
+rotate: false
+  bullet: {
+    damage: 11
+    length: 17
+    speed: 4
+    lifetime: 75
+    height: 11
+    width: 7
+homingPower: 0.05
+homingDelay: 2
+  }
+}
+ {
+  name: nexus-omega-mount
+ejectEffect: casing1
+  x: 13
+top: true
+  y: 13.5
+  reload: 6
+rotate: false
+  bullet: {
+    damage: 11
+    length: 17
+    speed: 4
+    lifetime: 75
+    height: 11
+    width: 7
+homingPower: 0.05
+homingDelay: 2
+  }
+}
+ {
+  name: nexus-omega-cannon
+  x: 22
+top: false
+  y: 0
+  reload: 45
+shootY: 14
+rotate: false
+shoot: {
+shots: 3
+shotDelay: 2
+type: ShootAlternate
+barrels: 3
+spread: 3
+}
+shootSound: largeCannon
+  bullet: {
+    damage: 75
+splashDamage: 40
+splashDamageRadius: 30
+    speed: 8
+    lifetime: 38
+    height: 20
+    width: 13
+hitEffect: massiveExplosion
+despawnEffect: massiveExplosion
+fragBullets: 3
+fragRandomSpread: 80
+fragLifeMin: 0.75
+fragBullet: {
+type: ArtilleryBulletType
+speed: 5
+lifetime: 30
+damage: 15
+splashDamage: 40
+splashDamage: 25
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+width: 19
+height: 15
+fragBullets: 2
+fragRandomSpread: 90
+fragBullet: {
+type: MissileBulletType
+speed: 5
+lifetime: 30
+width: 12
+height: 16
+damage: 27
+splashDamage: 25
+splashDamageRadius: 25
+despawnEffect: blastExplosion
+hitEffect: blastExplosion
+fragBullets: 1
+fragRandomSpread: 0
+fragBullet: {
+type: LaserBulletType
+length: 100
+damage: 37
+fragBullets: 2
+fragRandomSpread: 70
+colors: [ffd27e, ffedcb, ffffff]
+hitColor: ffedcb
+hitEffect: colorSpark
+fragBullet: {
+type: LightningBulletType
+length: 12
+damage: 20
+lightningColor: ffd27e
+hitColor: ffedcb
+hitEffect: colorSpark
+}
+}
+}
+}
+  }
+}
+]
+abilities: [
+  {
+    type: StatusFieldAbility
+    reload: 600
+    range: 300
+    effect: invincible
+	duration: 200
+  }
+]
+
+
+
