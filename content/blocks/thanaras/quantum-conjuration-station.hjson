@@ -1,0 +1,60 @@
+type: Separator
+name: Quantum Conjuration Station
+description: pending
+size: 5
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 30
+craftTime: 1
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawLiquidRegion
+drawLiquid: tryplasma
+}
+{
+type: DrawDefault
+}
+{
+type: DrawCrucibleFlame
+flameColor: 5effea50
+midColor: b4fff5
+flameRad: 5
+circleSpace: 5
+alpha: 0.3
+rotateScl: 5
+particleSize: 5
+}
+]
+}
+consumes: {
+  power: 7.5
+  liquids: {
+    liquids: [
+	tryplasma/0.4
+    ]
+  }
+items: {
+items: [
+tryphoton/1
+]
+}
+}
+requirements: [
+silicon/400
+nitinol/400
+tungsten/500
+nickel/750
+depleted-uranium/105
+]
+category: crafting
+results: [
+nickel/2
+titanium/2
+tungsten/1
+sand/2
+uranium/1
+]
+planet: thanaras

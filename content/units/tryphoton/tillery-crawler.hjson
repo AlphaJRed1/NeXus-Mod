@@ -1,0 +1,193 @@
+Name: Tillery Crawler
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 2674
+outlineColor: 071a20
+ legStraightness: 0.5
+            legLength: 19
+useUnitCap: false
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -1.5
+            legBaseOffset: 9
+            legGroupSize: 3
+            rippleScale: 0.6
+
+            legMoveSpace: 3
+            legPhysicsLayer: false
+legCount: 4
+hitSize: 21
+armor: 0
+speed: 1
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 7
+    sizeFrom: 4.5
+    sizeTo: 0
+    baseLength: 5
+	length: 32
+    lifetime: 220
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+rotateSpeed: 2
+parts: [
+{
+type: RegionPart
+suffix: -wing
+mirror: true
+under: true
+moveX: 14
+progress: warmup
+x: 0
+y: -2
+}
+]
+weapons: [
+  {
+  name: tillery-crawler-cannon
+  inaccuracy: 11
+  shootSound: largeCannon
+rotateSpeed: 1.5
+  rotate: true
+mirror: false
+rotationLimit: 30
+  spacing: 0
+  top: true
+  x: 0
+  y: -3.5
+  reload: 70
+recoil: 2.5
+shootY: 8
+velocityRnd: 0.1
+shake: 2.5
+shoot: {
+shots: 3
+}
+
+  bullet: {
+type: ArtilleryBulletType
+    damage: 28
+splashDamage: 61
+splashDamageRadius: 25
+sprite: circle-bullet
+    height: 12
+    width: 11
+    lifetime: 50
+    speed: 5
+trailInterval: 1
+trailRotation: true
+frontColor: ccffeb
+homingRange: 100
+backColor: 38ffb0
+hitColor: 38ffb0
+trailColor: 38ffb0
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 8
+    baseLength: 4
+sprite: nexus-mod-tryphostar
+region: nexus-mod-tryphostar
+length: 20
+    lifetime: 40
+sizeFrom: 4
+sizeTo: 0
+    colorFrom: 9dffde
+    colorTo: 47f0cb50
+    cone: 360
+interp: circleOut
+sizeInterp: pow2In
+}
+{
+    type: ParticleEffect
+    particles: 7
+    baseLength: 0
+length: 20
+    lifetime: 100
+sizeFrom: 4
+sizeTo: 0
+    colorFrom: a5fff7
+    colorTo: 0097ae05
+    cone: 360
+interp: pow5Out
+sizeInterp: pow5In
+}
+{
+type: WaveEffect
+sizeFrom: 1
+sizeTo: 28
+strokeFrom: 2.5
+lifetime: 15
+    colorFrom: 9dffde
+    colorTo: 47f0cb50
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+shootEffect: sparkShoot
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 3
+    baseLength: 2
+length: -20
+    lifetime: 30
+sizeFrom: 2
+sizeTo: 0
+sprite: nexus-mod-tryphostar
+region: nexus-mod-tryphostar
+    colorFrom: 9dffde
+    colorTo: 47f0cb10
+    cone: -30
+}
+{
+    type: ParticleEffect
+    particles: 3
+    baseLength: 2
+length: -30
+    lifetime: 70
+sizeFrom: 2
+sizeTo: 5
+    colorFrom: a5fff7
+    colorTo: 0097ae05
+    cone: -50
+interp: pow5Out
+sizeInterp: pow5In
+}
+]
+}
+
+   }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 160
+radScale: 1.8
+radAmountScale: 1.8
+  }
+]
+

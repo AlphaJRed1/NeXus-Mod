@@ -1,0 +1,46 @@
+Name: T.O.S. Reactor
+description: The Tryplasmic Oscillation System Reactor unstablizes tryplasma, generating a large amount of power. Requires cyanogen as coolant.
+type: ConsumeGenerator
+size: 5
+hasItems: false
+hasLiquids: true
+hasPower: true
+liquidCapacity: 50
+itemDuration: 120
+powerProduction: 85
+generateEffect: {
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: tryplasma
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+liquids: {
+liquids: [
+       cyanogen/0.2
+	tryplasma/0.3
+    ]
+}
+}
+requirements: [
+titanium/600
+silicon/400
+nitinol/400
+cryo-compound/200
+depleted-uranium/100
+]
+category: power
+researchCostMultiplier: 0.6
+planet: thanaras

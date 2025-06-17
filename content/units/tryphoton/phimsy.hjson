@@ -1,0 +1,73 @@
+Name: Phimsy
+description: a
+type: flying
+flying: true
+useUnitCap: false
+health: 444
+speed: 2.5
+rotateSpeed: 1.5
+drag: 0.02
+accel: 0.05
+hitSize: 10
+lowAltitude: true
+outlineColor: 071a20
+circleTarget: true
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 10
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+	length: 23
+    lifetime: 190
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+weapons: [
+   {
+    name: phimsygun
+    x: 0
+    y: 0
+    rotate: false
+    recoil: 0
+continuous: true
+alwaysContinuous: true
+    bullet: {
+    type: ContinuousFlameBulletType
+damage: 12
+pierce: true
+length: 70
+width: 3
+flareColor: 5effea
+hitColor: 5effea
+flareWidth: 4
+flareLength: 6
+colors: [00e1c4, 5effea, d2fff9]
+lightColor: 5effea66
+    }
+ }
+
+]
+
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 90
+radScale: 1.5
+radAmountScale: 1.5
+  }
+]

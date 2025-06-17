@@ -1,0 +1,135 @@
+Name: Owpio
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 2224
+outlineColor: 071a20
+ legStraightness: 0.4
+            legLength: 15
+useUnitCap: false
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -1
+            legBaseOffset: 4
+            rippleScale: 0.4
+
+            legMoveSpace: 2
+            legPhysicsLayer: false
+legCount: 4
+hitSize: 17
+armor: 16
+speed: 0.4
+rotateSpeed: 1
+omniMovement: false
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3.5
+    sizeTo: 0
+    baseLength: 5
+	length: 22
+    lifetime: 180
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+parts: [
+    {
+        suffix : -shell
+        type : RegionPart
+         mirror: false
+         under: false
+layerOffset: 0.001
+          x: 0
+          y: 0
+    }
+]
+
+weapons: [
+  {
+  name: owpio-blast
+  inaccuracy: 0
+  shootSound: tryphoPow
+  rotate: false
+shootCone: 360
+layerOffset: 0.002
+  spacing: 0
+  top: false
+  x: 0
+  y: 0
+  reload: 150
+heatProgress: warmup
+minWarmup: 0.9
+shootWarmupSpeed: 0.04
+shoot: {
+shots: 8
+shotDelay: 12
+type: ShootSpread
+spread: 30
+}
+  bullet: {
+spawnUnit: owpio-missile
+   }
+  }
+  {
+  name: owpio-head
+  rotate: true
+  spacing: 0
+  top: false
+  x: 0
+  y: 12
+reload: 9999
+bullet: {
+shootEffect: none
+smokeEffect: none
+instantDisappear: none
+despawnEffect: none
+hitEffect: none
+}
+rotationLimit: 60
+rotateSpeed: 1.5
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 130
+radScale: 1
+radAmountScale: 1
+  }
+  {
+    type: ForceFieldAbility
+    radius: 25
+    regen: 5
+    max: 800
+    cooldown: 600
+sides: 10
+  }
+{
+type: SpawnDeathAbility
+unit: diox
+amount: 2
+spread: 8
+}
+{
+type: SpawnDeathAbility
+unit: budding-crawler
+amount: 3
+spread: 10
+randAmount: 2
+}
+]

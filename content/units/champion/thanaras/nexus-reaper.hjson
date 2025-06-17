@@ -11,8 +11,34 @@ hitSize: 30
 buildSpeed: 3.5
 mineSpeed: 8
 forceMultiTarget: true
+outlineColor: 1c2125
 mineTier: 10
 immunities: [freezing, burning, noxious-burning, uranium-decay, subzero-freezing, soul-drain]
+parts: [
+    {
+        type : HoverPart
+         mirror: true
+radius: 22
+phase: 60
+stroke: 3
+layerOffset: -0.001
+color: ffd27e
+          x: 12
+          y: -5
+    }
+    {
+        type : HoverPart
+         mirror: false
+radius: 30
+phase: 70
+stroke: 3.5
+layerOffset: -0.001
+color: ffd27e
+          x: 0
+          y: 0
+    }
+]
+
 weapons: [
  {
   name: reaperpower

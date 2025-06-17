@@ -1,0 +1,9 @@
+type: DuctRouter
+name: Rail Router
+description: Evenly distributes items in three directions.
+requirements: [
+nickel/4
+]
+category: distribution
+planet: thanaras
+research: rail-junction

@@ -62,7 +62,10 @@ buildingDamageMultiplier: 0.3
 }
 }
 requirements: [
-beryllium/2
+beryllium/400
+silicon/300
+graphite/250
+thorium/300
 ]
 category: turret
 planet: erekir

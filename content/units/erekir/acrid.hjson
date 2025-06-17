@@ -1,0 +1,302 @@
+type: tank
+Name: Acrid
+description: pending
+speed: 0.5
+health: 27500
+envDisabled: 0
+armor: 26
+crushDamage: 6
+itemCapacity: 0
+rotateSpeed: 0.7
+squareShape: true
+faceTarget: false
+outlineColor: 2e2f34
+hitSize: 52
+treadPullOffset: 1
+omniMovement: false
+treadRects: [
+{
+x: 17
+y: 50
+width: 10
+height: 10
+}
+]
+weapons: [
+ {
+    name: acrid-cannon
+    x: 0
+   layerOffset: 0.1
+    y: -5
+parts: [
+    {
+        suffix : -blade2
+        type : RegionPart
+         mirror: true
+         under: true
+	moveX: 4
+	moveRot: -40
+         moveY: -1
+         progress: warmup
+          x: 1
+          y: 14
+    }
+    {
+        suffix : -thorn
+        type : RegionPart
+         mirror: false
+         under: true
+         moveY: -2.5
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -blade1
+        type : RegionPart
+         mirror: false
+         under: true
+         moveY: 9
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+   mirror: false
+shootY: 22.5
+    reload: 135
+recoilTime: 150
+shake: 5.5
+   rotate: true
+   rotateSpeed: 0.7
+recoil: 5.5
+    shootSound: acridpow
+shadow: 50
+shootWarmupSpeed: 0.06
+cooldownTime: 125
+minWarmup: 0.85
+    bullet: {
+type: ArtilleryBulletType
+    damage: 90
+splashDamage: 190
+splashDamageRadius: 40
+    height: 25
+    width: 20
+    lifetime: 55
+    speed: 5
+trailWidth: 4
+trailLength: 18
+trailInterval: 1
+trailRotation: true
+frontColor: f0ffec
+backColor: 97ff7c
+hitColor: 97ff7c
+trailColor: 97ff7c
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 20
+    baseLength: 5
+length: 45
+    lifetime: 150
+sizeFrom: 6
+sizeTo: 0
+    colorFrom: d9ffce
+    colorTo: 61db4170
+    cone: 360
+interp: pow10Out
+sizeInterp: pow10In
+}
+{
+    type: ParticleEffect
+    particles: 15
+    baseLength: 5
+length: 30
+    lifetime: 100
+sizeFrom: 4
+sizeTo: 0
+    colorFrom: f0ffec
+    colorTo: 97ff7c
+    cone: 360
+interp: pow5Out
+sizeInterp: pow5In
+}
+{
+type: WaveEffect
+sizeFrom: 2
+sizeTo: 43
+strokeFrom: 4
+lifetime: 60
+interp: pow2Out
+    colorFrom: f0ffec
+    colorTo: 97ff7c
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 8
+    baseLength: 3
+length: 30
+    lifetime: 60
+sizeFrom: 3
+sizeTo: 0
+    colorFrom: d9ffce
+    colorTo: 61db4170
+    cone: 45
+interp: circleOut
+sizeInterp: pow2In
+}
+{
+type: WaveEffect
+sizeFrom: 2
+sizeTo: 20
+strokeFrom: 3
+lifetime: 15
+    colorFrom: f0ffec
+    colorTo: 97ff7c
+}
+]
+}
+smokeEffect: none
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 4
+    baseLength: 3
+length: -20
+    lifetime: 50
+sizeFrom: 3
+sizeTo: 0
+    colorFrom: f0ffec
+    colorTo: 97ff7c
+    cone: -30
+}
+{
+    type: ParticleEffect
+    particles: 4
+    baseLength: 3
+length: -35
+    lifetime: 80
+sizeFrom: 2
+sizeTo: 6
+    colorFrom: d9ffce
+    colorTo: 61db4105
+    cone: -50
+interp: pow5Out
+sizeInterp: linear
+}
+]
+}
+
+      }
+ }
+ {
+    name: acrid-blaster
+    x: 0
+   layerOffset: 0.09
+    y: -5
+recoils: 2
+parts: [
+    {
+        suffix : -barrel-l
+        type : RegionPart
+         mirror: false
+         under: false
+         moveY: -5
+recoilIndex: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -barrel-r
+        type : RegionPart
+         mirror: false
+         under: false
+         moveY: -5
+recoilIndex: 1
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+   mirror: false
+shootY: 12
+    reload: 45
+recoilTime: 60
+shake: 2
+   rotate: true
+   rotateSpeed: 0.7
+recoil: 0
+    shootSound: shootSnap
+shadow: 50
+cooldownTime: 40
+shoot: {
+type: ShootAlternate
+barrels: 2
+spread: 29
+}
+    bullet: {
+    damage: 90
+pierce: true
+pierceBuilding: true
+pierceArmor: true
+pierceCap: 3
+    height: 22
+    width: 14
+    lifetime: 39.2857
+    speed: 7
+trailWidth: 2.2
+trailLength: 15
+frontColor: f0ffec
+backColor: 97ff7c
+hitColor: 97ff7c
+trailColor: 97ff7c
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 5
+    baseLength: 2
+length: 20
+    lifetime: 35
+sizeFrom: 2.5
+sizeTo: 0
+    colorFrom: d9ffce
+    colorTo: 61db4170
+    cone: 45
+interp: circleOut
+sizeInterp: pow2In
+}
+{
+type: WaveEffect
+sizeFrom: 1
+sizeTo: 15
+strokeFrom: 2
+lifetime: 15
+    colorFrom: f0ffec
+    colorTo: 97ff7c
+}
+]
+}
+smokeEffect: sparkShoot
+
+      }
+ }
+]
+
+planet: erekir
+

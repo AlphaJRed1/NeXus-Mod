@@ -1,0 +1,226 @@
+Name: Sera
+description: Fires artilliery and sap lasers.
+type: legs
+hovering: true
+allowLegStep: true
+health: 27630
+outlineColor: 071a20
+            legLength: 100
+            lockLegBase: true
+            legContinuousMove: true
+            legExtension: -5
+            legBaseOffset: 7
+            legMaxLength: 1
+useUnitCap: false
+            legMinLength: 0.15
+            legGroupSize: 3
+            rippleScale: 0.5
+
+            legMoveSpace: 5
+            legPhysicsLayer: false
+rotateSpeed: 0.9
+legCount: 11
+hitSize: 40
+armor: 0
+speed: 0.23
+drawCell: true
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+createScorch: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 11
+    sizeFrom: 7.7
+    sizeTo: 0
+    baseLength: 10
+	length: 40
+    lifetime: 330
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+parts: [
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: 5effea
+stroke: 2.5
+layerOffset: -0.0001
+haloRotateSpeed: 3
+shapes: 10
+triLength: 0
+triLengthTo: 6
+haloRadius: 25
+tri: true
+radius: 2.5
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: 5effea
+stroke: 2.5
+layerOffset: -0.0001
+haloRotateSpeed: -3
+shapes: 6
+triLength: 0
+triLengthTo: 8
+haloRadius: 20
+tri: true
+radius: 2.5
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: 5effea
+stroke: 2.5
+layerOffset: -0.0001
+haloRotateSpeed: 4.5
+shapes: 8
+triLength: 0
+triLengthTo: 5
+haloRadius: 12
+tri: true
+radius: 2.5
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: -0.0001
+         under: true
+       color: 5effea
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 2.7
+        radius: 25
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: -0.0001
+         under: true
+       color: 5effea
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 2.7
+        radius: 20
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+ {
+        type : ShapePart
+         mirror: false
+layerOffset: -0.0001
+         under: true
+       color: 5effea
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 2.7
+        radius: 12
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+
+
+]
+
+
+weapons: [
+ {
+  name: seraboom
+  inaccuracy: 0
+  x: 0
+  y: 0
+  rotate: false
+  mirror: false
+  top: false
+  reload: 170
+  recoil: 0
+alternate: false
+  shootSound: tryphoPow
+    bullet: {
+damage: 50
+speed: 2.5
+lifetime: 150
+homingRange: 300
+homingPower: 0.04
+homingDelay: 10
+pierce: true
+absorbable: true
+reflectable: true
+pierceBuilding: true
+bulletInterval: 5
+intervalBullets: 1
+intervalBullet: {
+type: BombBulletType
+instantDisappear: true
+splashDamage: 222
+splashDamageRadius: 50
+hitSound: microBoom
+fragBullets: 3
+fragBullet: {
+sprite: nexus-mod-tryphostar
+damage: 20
+splashDamage: 50
+splashDamageRadius: 30
+weaveMag: 1
+weaveScl: 1
+homingDelay: 10
+homingPower: 0.03
+homingRange: 200
+speed: 1
+lifetime: 150
+}
+}
+    }
+  }
+]
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 500
+radScale: 3.5
+radAmountScale: 3.5
+  }
+]
+

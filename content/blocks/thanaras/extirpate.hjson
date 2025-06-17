@@ -1,0 +1,338 @@
+type: LiquidTurret
+Name: Extirpate
+description: pending
+size: 5
+health: 6500
+range: 700
+targetGround: true
+targetAir: true
+reload: 260
+shootWarmupSpeed: 0.02
+extinguish: false
+minWarmup: 0.9
+shake: 7
+hasItems: true
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+shootSound: microDevastate
+cooldownTime: 300
+recoil: 4
+shootY: 10
+recoilTime: 300
+outlineColor: 101220
+liquidCapacity: 100
+liquidConsumed: 0.6
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+       {
+        suffix : -frontarm
+        type : RegionPart
+         mirror: true
+         under: false
+top: false
+         moveX: 0.9
+         moveY: -2.7
+         moveRot: -15
+         progress: warmup
+          x: 0
+          y: 0
+    }
+       {
+        suffix : -arm
+        type : RegionPart
+         mirror: true
+         under: false
+top: false
+         moveX: 0
+         moveY: 0
+         moveRot: -30
+         progress: warmup
+          x: 0
+          y: 0
+    }
+       {
+        suffix : -cover
+        type : RegionPart
+         mirror: false
+         under: false
+          x: 0
+          y: 0
+    }
+       {
+        suffix : -back
+        type : RegionPart
+         mirror: true
+         under: false
+top: false
+         moveX: 3
+         moveY: -3
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+ammoTypes: {
+  cyanogen: {
+speed: 15
+lifetime: 47
+pierceArmor: true
+frontColor: b0ffd6
+backColor: 4fffc9
+width: 18
+height: 28
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 9
+    sizeTo: 0
+    baseLength: 0
+length: 0
+    lifetime: 70
+    colorFrom: 4fffc9
+    colorTo: 3cf0f0
+    cone: 0
+offset: -90
+region: nexus-mod-powerslash
+}
+{
+type: ParticleEffect
+particles: 5
+sizeFrom: 6
+sizeTo: 0
+interp: pow5Out
+sizeInterp: pow5In
+lifetime: 120
+length: 20
+baseLength: 4
+    colorFrom: 4fffc950
+    colorTo: 3cf0f020
+cone: -120
+}
+]
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    colorFrom: 4fffc9
+    colorTo: 3cf0f070
+sizeFrom: 3
+sizeTo: 45
+strokeFrom: 4.5
+strokeTo: 0
+lifetime: 15
+}
+{
+type: WaveEffect
+    colorFrom: 4fffc9
+    colorTo: 3cf0f050
+interp: circleOut
+sizeFrom: 2
+sizeTo: 43
+strokeFrom: 5
+strokeTo: 0
+lifetime: 100
+}
+{
+type: ParticleEffect
+particles: 15
+sizeFrom: 10
+sizeTo: 0
+interp: pow10Out
+sizeInterp: pow10In
+lifetime: 280
+length: 36
+baseLength: 9
+    colorFrom: 4fffc9
+    colorTo: 3cf0f045
+}
+{
+type: ParticleEffect
+particles: 9
+sizeFrom: 8
+sizeTo: 0
+interp: circleOut
+sizeInterp: pow2In
+lifetime: 100
+length: 25
+baseLength: 5
+    colorFrom: ffffff
+    colorTo: 4fffc9
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+status: cyanized
+statusDuration: 300
+damage: 88
+splashDamage: 100
+splashDamageRadius: 40
+sprite: nexus-mod-powerslash
+fragBullets: 1
+fragRandomSpread: 0
+fragVelocityMin: 1
+hitSound: microHit
+fragBullet: {
+type: BombBulletType
+lifetime: 100
+hittable: false
+absorbable: false
+reflectable: false
+collides: false
+width: 0.1
+height: 0.1
+intervalBullets: 1
+bulletInterval: 10
+intervalRandomSpread: 0
+intervalBullet: {
+hitSound: railgun
+width: 0.1
+height: 0.1
+homingPower: 999
+homingRange: 150
+despawnEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    colorFrom: 4fffc9
+    colorTo: 3cf0f070
+sizeFrom: 1
+sizeTo: 20
+strokeFrom: 4
+strokeTo: 0
+lifetime: 10
+}
+{
+type: ParticleEffect
+particles: 6
+sizeFrom: 3.5
+sizeTo: 0
+interp: pow5Out
+sizeInterp: linear
+lifetime: 70
+length: 33
+baseLength: 2
+    colorFrom: 4fffc9
+    colorTo: 3cf0f045
+cone: 50
+}
+]
+}
+hitEffect: none
+speed: 0.2
+lifetime: 2
+fragBullets: 1
+fragRandomSpread: 10
+fragVelocityMin: 1
+fragBullet: {
+pierceArmor: true
+speed: 8
+lifetime: 19
+pierce: true
+pierceCap: 6
+pierceBuilding: true
+width: 15
+height: 20
+damage: 80
+frontColor: b0ffd6
+backColor: 4fffc9
+splashDamage: 70
+sprite: nexus-mod-shield-dart
+splashDamageRadius: 25
+status: cyanized
+statusDuration: 200
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    colorFrom: 4fffc9
+    colorTo: 3cf0f070
+sizeFrom: 1
+sizeTo: 28
+strokeFrom: 3
+strokeTo: 0
+lifetime: 10
+}
+{
+type: ParticleEffect
+particles: 8
+sizeFrom: 4.5
+sizeTo: 0
+interp: pow10Out
+sizeInterp: pow10In
+lifetime: 80
+length: 20
+baseLength: 5
+    colorFrom: 4fffc9
+    colorTo: 3cf0f045
+}
+{
+type: ParticleEffect
+particles: 5
+sizeFrom: 2
+sizeTo: 0
+interp: circleOut
+sizeInterp: pow2In
+lifetime: 30
+length: 15
+baseLength: 3
+    colorFrom: ffffff
+    colorTo: 4fffc9
+}
+]
+}
+despawnEffect: none
+trailRotation: true
+trailInterval: 1
+hitSound: microBoom
+trailEffect: {
+ type: ParticleEffect
+    particles: 1
+useRotation: true
+    sizeFrom: 9
+    sizeTo: 0
+    baseLength: 0
+length: 0
+    lifetime: 70
+    colorFrom: 4fffc9
+    colorTo: 3cf0f0
+    cone: 0
+offset: -90
+region: nexus-mod-shield-dart-back
+}
+}
+}
+}
+   }
+    }
+requirements: [
+silicon/1000
+tungsten/1000
+cryo-compound/450
+plastanium/700
+depleted-uranium/450
+nitinol/450
+]
+category: turret
+planet: thanaras
+researchCostMultiplier: 0.9

@@ -83,6 +83,7 @@ useRotation: true
 lightning: 1
 homingPower: 0.02
 homingRange: 200
+homingDelay: 8
 lightningLength: 8
 frontColor: b3eeee
 backColor: 47f0cb

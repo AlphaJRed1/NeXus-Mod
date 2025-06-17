@@ -1,0 +1,21 @@
+ type: StatusEffect
+name: cyanized
+localizedName: Cyanized
+       show: true
+       damage: 0.2
+       transitionDamage: 40
+	speedMultiplier: 0.7
+	healthMultiplier: 0.7
+       effectChance: 0.25
+       effect: {
+    type: ParticleEffect
+    particles: 2
+    sizeFrom: 2
+    sizeTo: 0
+    baseLength: 6
+    lifetime: 80
+length: 4
+    colorFrom: 5effea
+    colorTo: 5effea10
+    cone: 360
+    }

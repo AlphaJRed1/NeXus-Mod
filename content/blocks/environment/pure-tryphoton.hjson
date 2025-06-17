@@ -1,0 +1,39 @@
+type: Floor
+name: Pure Tryphoton
+attributes: {
+radioactive: 1.45
+tryphoton: 1
+}
+updateEffect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 0
+    sizeTo: 4.5
+    baseLength: 10
+    lifetime: 110
+    colorFrom: 5effea
+    colorTo: 5effea05
+    cone: 360
+}
+updateEffectChance: 0.1
+drownTime: 250
+status: cyanized
+emitLight: true
+cacheLayer: cryofluid
+statusDuration: 220
+variants: 1
+lightRadius: 20
+lightColor: 5effea
+speedMutliplier: 0.6
+drownUpdateEffect: {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 5
+strokeFrom: 1
+strokeTo: 3
+lifetime: 50
+    colorFrom: 5effea
+    colorTo: 5effea05
+}
+liquidDrop: tryplasma
+isLiquid: true

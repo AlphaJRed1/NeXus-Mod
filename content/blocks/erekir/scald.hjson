@@ -1,0 +1,148 @@
+type: LiquidTurret
+Name: Scald
+description: pending
+size: 3
+scaledHealth: 180
+range: 150
+targetGround: true
+targetAir: true
+reload: 8
+shootWarmupSpeed: 0.05
+extinguish: false
+minWarmup: 0.7
+shootEffect: {
+particles: 5
+type: ParticleEffect
+interp: circleOut
+sizeInterp: pow5In
+colorFrom: ffcd66
+colorTo: ee923c
+length: 15
+sizeFrom: 2.5
+sizeTo: 0
+cone: 45
+}
+smokeEffect: shootBigSmoke
+shootSound: roast
+cooldownTime: 100
+recoil: 0
+outlineColor: 101220
+liquidCapacity: 50
+shootY: 7.5
+statLiquidConsumed: 0.2
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+       {
+        suffix : -coat
+        type : RegionPart
+         mirror: false
+         under: false
+         moveX: 0
+         moveY: -2
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+       {
+        suffix : -barrel
+        type : RegionPart
+         mirror: false
+         under: true
+         moveX: 0
+         moveY: -1.6
+         moveRot: 0
+         progress: recoil
+          x: 0
+          y: 0
+    }
+]
+}
+]
+}
+shoot: {
+
+}
+ammoTypes: {
+ slag: {
+type: ArtilleryBulletType
+damage: 15
+splashDamage: 40
+splashDamageRadius: 25
+collidesAir: true
+lifetime: 45
+speed: 3.34
+frontColor: ffffa3
+backColor: ffcd66
+trailColor: ffcd66
+trailLength: 10
+trailWidth: 2.2
+width: 10
+height: 12
+makeFire: true
+incendAmount: 2
+puddles: 2
+puddleAmount: 6
+puddleLiquid: slag
+despawnHit: none
+despawnEffect: none
+trailRotation: true
+trailInterval: 2
+hitShake: 0
+trailEffect: {
+type: ParticleEffect
+particles: 2
+interp: pow2Out
+sizeInterp: pow5In
+colorFrom: ffffa3
+colorTo: ee923c
+baseLength: 2
+length: -20
+sizeFrom: 2
+sizeTo: 0
+cone: -50
+}
+hitSound: microBoom
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 7
+interp: circleOut
+sizeInterp: pow5In
+colorFrom: ffcd66
+colorTo: ee923c
+length: 25
+sizeFrom: 3
+sizeTo: 0
+cone: 360
+}
+{
+type: WaveEffect
+sizeTo: 28
+strokeFrom: 2.5
+lifetime: 10
+colorFrom: ffffa3
+colorTo: ffcd66
+}
+]
+}
+status: melting
+statusDuration: 360
+}
+  }
+requirements: [
+tungsten/200
+oxide/150
+graphite/250
+]
+category: turret
+research: sublimate
+planet: erekir

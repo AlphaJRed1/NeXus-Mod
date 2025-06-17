@@ -1,0 +1,101 @@
+type: missile
+controller: MissileAI
+flying: true
+speed: 4.5
+missileAccelTime: 25
+hitSize: 8
+lifetime: 100
+hidden: true
+engineSize: 0
+engineOffset: 0
+rotateSpeed: 3.5
+lowAltitude: true
+drawCell: false
+health: 90
+armor: 10
+allowedInPayloads: false
+outlineColor: 071a20
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+deathSound: microBoom
+trailLength: 20
+trailColor: ff5454
+trailWidth: 1.2
+engineColor: ff5454
+deathExplosionEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+colorFrom: 5effea
+colorTo: 5effea30
+sizeTo: 28
+lifetime: 15
+strokeFrom: 3.3
+}
+{
+    type: ParticleEffect
+    particles: 9
+    baseLength: 2
+length: 25
+    lifetime: 120
+    sizeFrom: 3.2
+    sizeTo: 0
+    colorFrom: 5effea
+    colorTo: 5effea20
+    cone: 360
+interp: circleOut
+sizeInterp: pow5In
+}
+]
+}
+weapons: [
+    {
+        shootCone: 360
+          mirror: true
+	alternate: false
+          x: 0
+          y: 0
+shootOnDeath: true
+shake: 2
+          bullet: {
+killShooter: true
+shootEffect: none
+smokeEffect: none
+type: BombBulletType
+instantDisappear: true
+despawnEffect: none
+hitEffect: none
+splashDamage: 195
+splashDamageRadius: 25
+status: photonized
+statusDuration: 360
+       }
+}
+]
+abilities: [
+{
+type: MoveEffectAbility
+teamColor: false
+   effect: {
+    type: ParticleEffect
+    particles: 3
+    baseLength: 1
+length: 5
+    lifetime: 60
+    sizeFrom: 3
+    sizeTo: 0
+    colorFrom: 5effea
+    colorTo: 5effea20
+    cone: 360
+interp: circleOut
+sizeInterp: pow5In
+}
+y: 0
+x: 0
+interval: 2
+}
+]

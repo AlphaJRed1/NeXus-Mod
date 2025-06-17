@@ -85,6 +85,7 @@ type: WaveEffect
     width: 7
     lifetime: 40
 homingPower: 0.06
+homingDelay: 7
     speed: 4
 frontColor: ccffeb
 backColor: 38ffb0

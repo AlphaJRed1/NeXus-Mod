@@ -131,7 +131,7 @@ sizeInterp: pow2In
 }
 ]
 }
-status: noxious-burning
+status: cyanized
 statusDuration: 400
 homingPower: 0.07
 homingRange: 300

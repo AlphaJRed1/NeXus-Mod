@@ -1,0 +1,351 @@
+Name: Infinitesim
+description: pending
+type: mech
+health: 32200
+armor: 25
+speed: 0.4
+rotateSpeed: 1.5
+forceMultiTarget: true
+hitSize: 40
+immunities: [photonized, cyanized]
+outlineColor: 1c2125
+parts: [
+    {
+        suffix : -top2
+        type : RegionPart
+	under: false
+	mirror: false
+	x: 0
+	y: 0 
+	layerOffset: 0.002
+outline: false
+    }
+    {
+        suffix : -top1
+        type : RegionPart
+	under: false
+	mirror: false
+	x: 0
+	y: 0
+	layerOffset: 0.003
+outline: false
+    }
+]
+
+weapons: [
+{
+  name: infinitesimblast
+parts: [
+    {
+        type : ShapePart
+         mirror: false
+         under: false
+       color: 9dffde
+         circle: true
+        hollow: true
+       stroke: 0
+      strokeTo: 1.1
+        radius: 5
+         moveX: 0
+         moveY: 0
+         moveRot: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+{
+        type : HaloPart
+         mirror: false
+progress: warmup
+color: 9dffde
+stroke: 2
+layerOffset: 0.0001
+haloRotateSpeed: 4
+shapes: 6
+triLength: 0
+triLengthTo: 4
+haloRadius: 5
+tri: true
+radius: 2
+haloRotation: 45
+shapeRotation: 0
+          x: 0
+          y: 0
+    }
+]
+minWarmup: 0.9
+shootWarmupSpeed: 0.05
+baseRotation: -42
+  inaccuracy: 0
+  shootSound: microRail
+layerOffset: 0.0001
+  rotate: false
+recoil: 2
+top: false
+shootY: 6
+  x: 10
+  y: 1
+  reload: 90
+shootCone: 360
+shoot: {
+type: ShootAlternate
+shots: 2
+barrels: 2
+spread: 11
+}
+  bullet: {
+   lifetime: 40
+speed: 6
+sprite: nexus-mod-dart
+damage: 67
+splashDamage: 30
+splashDamageRadius: 20
+width: 10
+height: 16
+trailInterval: 1
+trailRotation: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 8
+    baseLength: 4
+length: 20
+    lifetime: 40
+lenFrom: 6
+lenTo: 3
+strokeFrom: 2.2
+strokeTo: 0
+    colorFrom: 9dffde
+    colorTo: 47f0cb50
+    cone: 360
+interp: circleOut
+sizeInterp: pow2In
+}
+{
+    type: ParticleEffect
+    particles: 7
+    baseLength: 0
+length: 20
+    lifetime: 100
+sizeFrom: 4
+sizeTo: 0
+    colorFrom: a5fff7
+    colorTo: 0097ae05
+    cone: 360
+interp: pow5Out
+sizeInterp: pow5In
+}
+{
+type: WaveEffect
+sizeFrom: 1
+sizeTo: 23
+strokeFrom: 2.5
+lifetime: 15
+    colorFrom: 9dffde
+    colorTo: 47f0cb50
+}
+]
+}
+despawnEffect: none
+despawnHit: true
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 3
+    baseLength: 2
+length: -20
+    lifetime: 30
+lenFrom: 4
+lenTo: 2
+strokeFrom: 2
+strokeTo: 0
+    colorFrom: 9dffde
+    colorTo: 47f0cb10
+    cone: -30
+}
+{
+    type: ParticleEffect
+    particles: 3
+    baseLength: 2
+length: -30
+    lifetime: 70
+sizeFrom: 2
+sizeTo: 5
+    colorFrom: a5fff7
+    colorTo: 0097ae05
+    cone: -50
+interp: pow5Out
+sizeInterp: pow5In
+}
+]
+}
+lightning: 3
+lightningCone: 45
+homingPower: 0.06
+homingRange: 240
+homingDelay: 4
+lightningLength: 9
+frontColor: b3eeee
+backColor: 47f0cb
+lightningColor: 47f0cb
+lightningDamage: 20
+  }
+}
+  {
+  name: infinitesim-eye
+  inaccuracy: 0
+  shootSound: microHit
+  rotate: false
+top: false
+shootY: 4
+  x: 0
+  y: 0
+  reload: 350
+layerOffset: 0.005
+outlineColor: 00000000
+shootEffect: none
+smokeEffect: none
+shoot: {
+firstShotDelay: 100
+type: ShootAlternate
+barrels: 3
+spread: 2
+shotDelay: 3
+shots: 6
+}
+  bullet: {
+   chargeEffect: {
+type: MultiEffect
+effects: [
+{
+      type: WaveEffect
+      lifetime: 80
+      sizeFrom: 40
+      sizeTo: 3
+      strokeFrom: 0
+      strokeTo: 6
+interp: pow5In
+      colorFrom: 9dffde90
+      colorTo: 9dffde
+}
+{
+ type: ParticleEffect
+    particles: 1
+sizeFrom: 0
+sizeTo: 11
+    baseLength: 0
+length: 0
+    lifetime: 100
+    colorFrom: 47f0cb20
+    colorTo: ffffff
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 10
+line: true
+lenFrom: 0
+lenTo: 7
+strokeFrom: 1
+strokeTo: 4
+    baseLength: 60
+length: -60
+    lifetime: 100
+    colorFrom: 47f0cb20
+    colorTo: 9dffde
+interp: pow10In
+sizeInterp: pow5In
+    cone: 360
+}
+{
+ type: ParticleEffect
+    particles: 10
+line: true
+lenFrom: 0
+lenTo: 5
+strokeFrom: 1
+strokeTo: 3
+    baseLength: 50
+length: -50
+    lifetime: 80
+    colorFrom: 9dffde
+    colorTo: ffffff
+interp: pow5In
+sizeInterp: circleOut
+    cone: 360
+}
+]
+  }  
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+      type: WaveEffect
+      lifetime: 20
+      sizeFrom: 3
+      sizeTo: 50
+      strokeFrom: 6
+      strokeTo: 0
+      colorFrom: 9dffde
+      colorTo: 0bb6ae
+}
+{
+    type: ParticleEffect
+line: true
+    particles: 8
+    baseLength: 2
+length: 50
+    lifetime: 60
+lenFrom: 7
+lenTo: 0
+strokeFrom: 3
+strokeTo: 1
+interp: circleOut
+sizeInterp: pow5In
+    colorFrom: 9dffde
+    colorTo: 47f0cb30
+    cone: 55
+}
+{
+ type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 5
+length: 30
+    lifetime: 150
+interp: pow10Out
+sizeInterp: pow10In
+    colorFrom: ffffff
+    colorTo: 9dffde
+    cone: 360
+}
+]
+}
+lifetime: 30
+ type: LaserBulletType
+      damage: 80
+      length: 240
+pierceCap: 3
+pierceBuilding: true
+sideAngle: 0
+   width: 11
+sideWidth: 0
+      colors: [0bb6ae, 47f0cb, 9dffde5]
+      lightColor: 9dffde66
+lightningSpacing: 15
+lightningDelay: 0
+lightningLength: 3
+lightningDamage: 45
+lightningColor: 47f0cb
+
+recoil: 0.2 
+   }
+}
+]
