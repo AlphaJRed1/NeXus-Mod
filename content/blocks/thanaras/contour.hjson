@@ -192,10 +192,13 @@ statusDuration: 180
   }
 requirements: [
 cryo-compound/125
-silicon/150
+gigantion-alloy/70
 nitinol/80
 ]
 category: turret
-research: turf
 planet: thanaras
-researchCostMultiplier: 1
+researchCost: [
+cryo-compound/2200
+nitinol/220
+gigantion-alloy/400
+]

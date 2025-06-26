@@ -1,0 +1,131 @@
+type: ItemTurret
+Name: Fasces
+description: pending. work in progress.
+size: 3
+scaledHealth: 250
+range: 210
+targetGround: true
+targetAir: true
+reload: 65
+shootY: 0
+hasItems: true
+shootWarmupSpeed: 0.055
+minWarmup: 0.95
+shootEffect: {
+type: WaveEffect
+    lifetime: 10
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 15
+    strokeFrom: 2.5
+    strokeTo: 0
+    colorFrom: ffb6f0
+    colorTo: dd1499
+}
+smokeEffect: generatespark
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.15
+}
+shootSound: microBit
+recoil: 0
+outlineColor: 101220
+rotateSpeed: 1.5
+shootCone: 360
+shoot: {
+type: ShootSpread
+shots: 12
+spread: 30
+shotDelay: 5
+}
+consumes: {
+power: 1.6
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+}
+{
+type: DrawRegion
+suffix: -rotator2
+rotateSpeed: -2.5
+}
+{
+type: DrawRegion
+suffix: -rotator
+rotateSpeed: 2.5
+}
+{
+type: DrawCrucibleFlame
+flameColor: dd149980
+midColor: ffaddf
+flameRad: 2.5
+circleSpace: 4
+alpha: 0.7
+rotateScl: 10
+particleSize: 5
+}
+{
+type: DrawRegion
+suffix: -cover
+}
+]
+}
+ammoTypes: {
+  vionquartz: {
+ammoMultiplier: 6
+    damage: 46
+    speed: 2
+    lifetime: 105
+shrinkY: 0
+    height: 12
+    width: 12
+frontColor: ffaddf
+backColor: dd1499
+pierce: true
+pierceBuilding: true
+pierceArmor: true
+hitColor: dd1499
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+sprite: circle-bullet
+homingPower: 0.03
+homingDelay: 25
+homingRange: 15
+trailInterval: 2
+    trailEffect: {
+ type: ParticleEffect
+    particles: 2
+sizeFrom: 2
+sizeTo: 0
+    length: 2
+    baseLength: 2
+    lifetime: 45
+  interp: pow5Out
+sizeInterp: linear
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: -40
+}
+  }
+  }
+requirements: [
+tungsten/225
+silicon/170
+gigantion-alloy/70
+nickel/225
+]
+category: turret
+research: dunamis
+researchCost: [
+tungsten/3500
+nickel/3500
+silicon/1800
+gigantion-alloy/500
+]
+planet: thanaras

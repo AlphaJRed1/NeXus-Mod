@@ -181,8 +181,8 @@ homingRange: 300
 homingPower: 0.04
 homingDelay: 10
 pierce: true
-absorbable: true
-reflectable: true
+absorbable: false
+reflectable: false
 pierceBuilding: true
 bulletInterval: 5
 intervalBullets: 1
@@ -193,6 +193,15 @@ splashDamage: 222
 splashDamageRadius: 50
 hitSound: microBoom
 fragBullets: 3
+hitEffect: {
+type: ParticleEffect
+particles: 1
+sizeFrom: 2
+sizeTo: 30
+region: nexus-mod-shockwave
+interp: pow2Out
+lifetime: 50
+}
 fragBullet: {
 sprite: nexus-mod-tryphostar
 damage: 20
@@ -201,6 +210,7 @@ splashDamageRadius: 30
 weaveMag: 1
 weaveScl: 1
 homingDelay: 10
+trailInterval: 5
 homingPower: 0.03
 homingRange: 200
 speed: 1

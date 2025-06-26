@@ -164,6 +164,7 @@ sizeInterp: linear
 }
 fragBullets: 1
 fragBullet: {
+sticky: true
 speed: 0
 width: 0.1
 height: 0.1
@@ -226,10 +227,22 @@ pierceBuilding: true
   }
 requirements: [
 plastanium/85
-tungsten/150
+gigantion-alloy/80
 silicon/150
 ]
 category: turret
-research: hoplite
-researchCostMultiplier: 1.1
+research: {
+  parent: vion-path
+  objectives: [
+    {
+      type: OnSector
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCost: [
+gigantion-alloy/400
+plastanium/1500
+silicon/2100
+]
 planet: thanaras

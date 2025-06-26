@@ -16,34 +16,15 @@ outlineColor: 1c2125
 parts: [
     {
         type : FlarePart
-         mirror: false
 under: false
-radius: 6
-radiusTo: 6
-stroke: 3
-rotation: 45
-progress: life
+radius: 0
+radiusTo: 25
+stroke: 5
+rotation: 0
+progress: warmup
 color1: ffb6f0
 color2: ff63e0
 followRotation: true
-layerOffset: 0.001
-flareColor: ffb6f0
-          x: 0
-          y: -14.6
-    }
-    {
-        type : FlarePart
-         mirror: false
-under: false
-radius: 20
-radiusTo: 20
-stroke: 5.5
-rotation: 45
-progress: life
-color1: ffb6f0
-color2: ff63e0
-followRotation: true
-layerOffset: 0.001
 flareColor: ffb6f0
           x: 0
           y: -3
@@ -52,84 +33,255 @@ flareColor: ffb6f0
         type : FlarePart
          mirror: false
 under: false
-radius: 22
-radiusTo: 22
-stroke: 5.5
+radius: 20  
+radiusTo: 20
+stroke: 6
 rotation: 45
 progress: life
 color1: ffb6f0
 color2: ff63e0
 followRotation: true
-layerOffset: 0.001
+layerOffset: 0.01
 flareColor: ffb6f0
           x: 0
-          y: 0
-    }
-    {
-        type : FlarePart
-         mirror: true
-under: true
-radius: 15
-radiusTo: 30
-stroke: 12
-rotation: 45
-progress: life
-color1: ffb6f0
-color2: ff63e0
-followRotation: true
-layerOffset: -0.001
-flareColor: ffb6f0
-          x: 8
-          y: 0
+          y: -3
     }
     {
         type : HoverPart
-         mirror: false
-radius: 17
+         mirror: true
+radius: 12
 phase: 35
 stroke: 4
 layerOffset: -0.0001
 color: ec49cb
-          x: 0
-          y: -23
+          x: 6
+          y: -21
     }
     {
         type : HoverPart
          mirror: false
-radius: 30
+radius: 15
 phase: 45
-stroke: 6
+stroke: 4.8
 layerOffset: -0.0001
 color: ec49cb
           x: 0
-          y: -3
+          y: -23.5
     }
+{
+type: RegionPart
+suffix: -topsec
+mirror: false
+x: 0
+y: 0
+layerOffset: 0.005
+outline: false
+}
+{
+type: RegionPart
+suffix: -lowerwing
+mirror: true
+under: true
+x: 0
+y: 0
+moveY: -0.5
+moveRot: -12
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -lowwing
+mirror: true
+under: true
+x: 0
+y: 0
+moveY: -4
+moveX: -1.5
+moveRot: -27
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -midwing
+mirror: true
+under: true
+x: 0
+y: 0
+moveY: -3
+moveX: -6
+moveRot: -50
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -midsec
+mirror: true
+under: true
+x: 0
+y: 0
+moveY: -3
+moveX: -1.5
+moveRot: -50
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -highwing
+mirror: true
+under: true
+x: 0
+y: 0
+moveY: 2
+moveX: -23
+moveRot: -68
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -highsec
+mirror: true
+under: true
+x: 0
+y: 0
+moveY: -4
+moveX: -12
+moveRot: -68
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -body
+mirror: false
+under: true
+x: 0
+y: 0
+}
   ]
 weapons: [
+{
+name: essencecell
+reload: 900000
+attack: true
+layerOffset: 0.006
+shootCone: 360
+range: 225
+rotate: false
+mirror: false
+x: 0
+y: 0
+bullet: {
+instantDisappear: true
+despawnEffect: none
+range: 225
+maxRange: 225
+hitEffect: none
+shootEffect: none
+smokeEffect: none
+}
+}
+ {
+  name: essencekromer
+  inaccuracy: 0
+  shootSound: microBzz
+  rotate: false
+mirror: true
+shootCone: 50
+  spacing: 0
+  top: false
+  x: 14
+  y: 17
+  reload: 18
+shootY: 0
+shoot: {
+type: ShootHelix
+}
+  bullet: {
+speed: 5
+lifetime: 45
+sprite: nexus-mod-dart
+width: 8
+height: 10
+damage: 27
+frontColor: ff63e0
+backColor: dd1499
+trailInterval: 1
+trailEffect: {
+ type: ParticleEffect
+    particles: 2
+    sizeFrom: 1.8
+    sizeTo: 0
+    length: 10
+    baseLength: 0
+    lifetime: 60
+  interp: pow5Out
+    colorFrom: ffb6f0
+    colorTo: dd1499
+    cone: -45
+
+}
+fragBullets: 1
+fragRandomSpread: 0
+fragBullet: {
+    type: ContinuousFlameBulletType
+damage: 10
+pierceCap: 3
+length: 50
+flareColor: ff63e0
+hitColor: ff63e0
+flareWidth: 5
+flareLength: 15
+colors: [dd1499, ff63e0, ffb6f0]
+lightColor: ff63e066
+}
+   }
+  }
+
   {
   name: essence-cannon
   shootSound: plasmaboom
   rotate: true
   mirror: true
 top: false
-layerOffset: -0.001
+shootCone: 40
+layerOffset: 0.001
   x: 20
   y: 2
   reload: 110
 rotateSpeed: 1
+rotationLimit: 45
 shootY: 9
   recoil: 3
+minWarmup: 0.9
+shootWarmupSpeed: 0.045
   bullet: {
    damage: 45
     splashDamage: 33
     splashDamageRadius: 30
-      sprite: circle-bullet
+      sprite: nexus-mod-saw
       shrinkY: 0
-    lifetime: 25
-    height: 17
-    width: 11
-spin: 10
+	shrinkX: 0
+    lifetime: 40
+    height: 22
+    width: 22
+spin: 14
     speed: 6
+sticky: true
+intervalBullets: 1
+intervalRandomSpread: 0
+bulletInterval: 2
+intervalBullet: {
+    type: ContinuousFlameBulletType
+damage: 8
+pierceCap: 3
+length: 30
+lifetime: 8
+flareColor: ff63e0
+hitColor: ff63e0
+flareWidth: 2
+flareLength: 2
+colors: [dd1499, ff63e0, ffb6f0]
+lightColor: ff63e066
+}
 fragBullets: 8
 fragRandomSpread: 0
 frontColor: ff63e0
@@ -141,17 +293,17 @@ type: MultiEffect
 effects: [
 {
  type: ParticleEffect
-    particles: 6
-    sizeFrom: 2.5
+    particles: 15
+    sizeFrom: 3.5
     sizeTo: 0
-    length: 50
+    length: 45
     baseLength: 3
-    lifetime: 70
+    lifetime: 130
   interp: pow5Out
-sizeInterp: pow2In
+sizeInterp: pow5In
     colorFrom: ffb6f0
     colorTo: dd1499
-    cone: -70
+    cone: 360
 }
 {
 type: WaveEffect
@@ -181,18 +333,37 @@ interp: circleOut
 }
 trailInterval: 2
 trailEffect: {
+type: MultiEffect
+effects: [
+{
  type: ParticleEffect
     particles: 3
-    sizeFrom: 3.1
+    sizeFrom: 2.6
     sizeTo: 0
-    length: 15
-    baseLength: 4
+    length: 20
+    baseLength: 3
     lifetime: 60
   interp: pow5Out
 sizeInterp: pow2In
     colorFrom: ffb6f0
     colorTo: dd1499
     cone: -60
+}
+{
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 0.5
+    sizeTo: 3
+    length: 25
+    baseLength: 4
+    lifetime: 80
+  interp: circle
+sizeInterp: linear
+    colorFrom: ffb6f0
+    colorTo: dd149905
+    cone: -70
+}
+]
 
 }
 fragSpread: 45
@@ -212,48 +383,7 @@ lightColor: ff63e066
 }
    }
  } 
- {
-    name: essence-mouth
-    x: 0
-    y: 15.2
-    rotate: false
-    recoil: 0
-continuous: true
-alwaysContinuous: true
-shootY: 6
-top: false
-layerOffset: -0.001
-parts: [
-    {
-        suffix : -fin
-        type : RegionPart
-         mirror: true
-         under: true
-         moveX: 1.1
-         moveY: 0.1
-         moveRot: 15
-         progress: warmup
-          x: 0
-          y: 0
-    }
-]
-shootWarmupSpeed: 0.04
-minWarmup: 0.95
-    bullet: {
-    type: ContinuousFlameBulletType
-damage: 15
-pierceCap: 4
-length: 130
-flareColor: ff63e0
-hitColor: ff63e0
-flareWidth: 7
-flareLength: 12
-colors: [dd1499, ff63e0, ffb6f0]
-lightColor: ff63e066
-lengthInterp: slope
-    }
- }
-]
+ ]
 abilities: [
   {
     type: ShieldArcAbility

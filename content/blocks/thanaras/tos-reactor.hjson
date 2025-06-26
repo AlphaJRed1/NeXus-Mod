@@ -42,5 +42,14 @@ cryo-compound/200
 depleted-uranium/100
 ]
 category: power
-researchCostMultiplier: 0.6
+research: {
+  parent: vapor-pressurizer
+  objectives: [
+    {
+      type: SectorComplete
+      preset: cratorial-super-quarry
+    }
+  ]
+}
+researchCostMultiplier: 0.7
 planet: thanaras

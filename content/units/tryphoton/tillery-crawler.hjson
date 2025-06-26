@@ -48,7 +48,7 @@ type: RegionPart
 suffix: -wing
 mirror: true
 under: true
-moveX: 14
+moveX: 17
 progress: warmup
 x: 0
 y: -2
@@ -67,8 +67,9 @@ rotationLimit: 30
   top: true
   x: 0
   y: -3.5
-  reload: 70
+  reload: 60
 recoil: 2.5
+layerOffset: 0.002
 shootY: 8
 velocityRnd: 0.1
 shake: 2.5

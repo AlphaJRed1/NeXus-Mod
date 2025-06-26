@@ -1,0 +1,74 @@
+Name: Terror Bomber
+description: a
+type: flying
+flying: true
+useUnitCap: false
+health: 689
+speed: 1
+rotateSpeed: 1.7
+drag: 0.02
+accel: 0.1
+hitSize: 16
+lowAltitude: true
+outlineColor: 071a20
+circleTarget: true
+drawCell: false
+healColor: 5effea
+lightColor: 5effea60
+deathSound: tryphoDeath
+createWreck: false
+deathExplosionEffect: {
+    type: ParticleEffect
+    particles: 13
+    sizeFrom: 4
+    sizeTo: 0
+    baseLength: 5
+	length: 30
+    lifetime: 180
+    colorFrom: 5effea
+    colorTo: 5effea20
+interp: pow10Out
+sizeInterp: pow2In
+    cone: 360
+}
+circleTarget: true
+faceTarget: false
+weapons: [
+   {
+    x: 0
+    y: 0
+    rotate: false
+shootCone: 360
+reload: 25
+    recoil: 0
+shootSound: artillery
+    bullet: {
+type: BombBulletType
+lifetime: 40
+damage: 20
+splashDamage: 45
+splashDamageRadius: 23
+    height: 14
+    width: 11
+frontColor: ccffeb
+backColor: 38ffb0
+hitColor: 38ffb0
+trailColor: 38ffb0
+    }
+ }
+
+]
+
+abilities: [
+  {
+  type: LiquidRegenAbility
+  liquid: tryplasma
+  }
+  {
+  type: LiquidExplodeAbility
+  liquid: tryplasma
+  amount: 95
+radScale: 1.3
+radAmountScale: 1.3
+  }
+]

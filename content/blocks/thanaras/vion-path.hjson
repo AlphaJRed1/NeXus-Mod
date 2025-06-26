@@ -1,0 +1,19 @@
+type: Wall
+name: Vion Path
+description: Unlocks Vion Technology and Vion Sectors.
+details: Vion is an aggressive and powerful family, full of plasmatic charge and quick-witted units that rush and destroy. Always stay on high alert when facing them.
+research: {
+  parent: core-mors
+  objectives: [
+    {
+      type: SectorComplete
+      preset: miscellaneon
+    }
+  ]
+}
+researchCost: [
+vionquartz/2000
+gigantion-alloy/5000
+]
+hidden: true
+buildVisibility: hidden

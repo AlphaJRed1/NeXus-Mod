@@ -128,5 +128,13 @@ nickel/230
 category: crafting
 outputItem: vionquartz/2
 planet: thanaras
-research: tryphoton-press
+research: {
+  parent: tryphoton-press
+  objectives: [
+    {
+      type: SectorComplete
+      preset: miscellaneon
+    }
+  ]
+}
 researchCostMultiplier: 1.3

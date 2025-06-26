@@ -4,8 +4,8 @@ type: flying
 health: 9500
  useEngineElevation: false
 hovering: true
-armor: 18
-speed: 2
+armor: 16
+speed: 1.6
 rotateSpeed: 2.5
 drag: 0.04
 accel: 0.1
@@ -56,13 +56,13 @@ shoot: {
   x: 18
   y: -13
    top: true
-  reload: 45
+  reload: 50
   recoil: 3
   bullet: {
 type: MissileBulletType
 weaveMag: 4
 weaveScale: 6
-    damage: 110
+    damage: 92
 pierce: true
 pierceBuilding: true
     width: 7

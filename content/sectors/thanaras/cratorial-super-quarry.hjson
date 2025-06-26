@@ -1,0 +1,16 @@
+Name: Cratorial Super Quarry
+planet: thanaras
+sector: 54
+difficulty: 6
+research: {
+  parent: festering-oval
+requiresUnlock: false
+  objectives: [core-achlys, pico-reconstructor,
+    {
+      type: SectorComplete
+      preset: festering-oval
+    }
+  ]
+}
+localizedName: Cratorial Super Quarry
+description: Two large craters formed from asteroid impacts a long long time ago are riddled with plentiful resources such as nickel, titanium, and tungsten. Legend says the asteroid had split in two before impact, causing the two distinct side-by-side craters imprinted on this quarry today. The Korru have been using this sector as a means of collecting large quantities of said resources, and have used this super quarry as a research lab and testing grounds aswell, with powerful Anti Aircraft Technology that inhibits enemy flying units from trespassing into their territory, automatically smiting them down when they come into range of the weapons. Utilize the Tier 3 Hover and Crawler units as well as the Unit Cap of the new core to target their weak spots and capture the sector.

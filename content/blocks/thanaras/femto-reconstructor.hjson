@@ -39,7 +39,7 @@ research: {
   objectives: [
     {
       type: SectorComplete
-      preset: frost-mounds
+      preset: cratorial-super-quarry
     }
   ]
 }

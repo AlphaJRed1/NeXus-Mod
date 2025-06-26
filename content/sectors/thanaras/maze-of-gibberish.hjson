@@ -1,0 +1,16 @@
+      captureWave: 46
+planet: thanaras
+sector: 91
+difficulty: 8
+research: {
+requiresUnlock: false
+  parent: vion-path
+  objectives: [
+    {
+      type: SectorComplete
+      preset: miscellaneon
+    }
+  ]
+}
+localizedName: Maze Of Gibberish
+description: Groups of vion gemstones litter the surrounding area, causing blockages and winding pathways that force units to travel across a maze of distorted proportions. Patches of lone tryphoton rock are found around the sector, as the march of Vion enemies tremble the ground with their agility and power. Vion boulders are plentiful across the maze, creating illusions that trick you into thinking they are walls, but do not be deterred. Set up defense and capture this sector despite the Vion onslaught brought down upon you.

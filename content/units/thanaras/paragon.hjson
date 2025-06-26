@@ -67,3 +67,7 @@ lightColor: ff63e066
    }
   }
 ]
+research: {
+parent: vion-fabricator
+requiresUnlock: true
+}

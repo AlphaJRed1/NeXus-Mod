@@ -144,11 +144,11 @@ hasAtmosphere: true
 allowWaveSimulation: true
 clearSectorOnLose: true
 allowWaves: true
-prebuildBase: true
+prebuildBase: false
 defaultCore: core-mors
 parent: sun
 solarSystem: sun
 launchCandidates: []
-itemWhitelist: [nickel, titanium, silicon, tryphoton, noxionite, nitinol, cryo-compound, plastanium, uranium, depleted-uranium, sand, tungsten, vionquartz]
+itemWhitelist: [nickel, titanium, silicon, tryphoton, noxionite, nitinol, cryo-compound, plastanium, uranium, depleted-uranium, sand, tungsten, vionquartz, gigantion-alloy]
 waveTeam: green
 tidalLock: true

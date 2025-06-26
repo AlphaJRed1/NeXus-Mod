@@ -5,6 +5,7 @@ size: 5
 scaledHealth: 120
 range: 400
 targetGround: false
+sandboxOnly: true
 targetAir: true
 recoil: 0
 rotateSpeed: 0

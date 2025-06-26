@@ -1,0 +1,373 @@
+type: mech
+Name: Zulfiqar
+speed: 0.7
+description: pending owu
+health: 25200
+armor: 21
+hitSize: 32
+rotateSpeed: 2.2
+outlineColor: 1c2125
+immunities: [uranium-decay]
+weapons: [
+ {
+    name: zulfiqar-claw
+    x: 12
+    y: 12
+    rotate: true
+    rotateSpeed: 4
+    reload: 25
+rotationLimit: 50
+shootCone: 50
+shootSound: microSlash
+minWarmup: 0.9
+shootWarmupSpeed: 0.09
+ top: false
+    recoil: -3.5
+layerOffset: -0.001
+parts: [
+{
+type: RegionPart
+suffix: -finger
+mirror: false
+moveX: -1
+moveY: -2
+progess: warmup
+}
+{
+type: RegionPart
+suffix: -blade
+mirror: false
+under: true
+moveX: 0
+moveY: 3
+progess: recoil
+}
+]
+    bullet: {
+shootEffect: {
+  type: ParticleEffect
+line: true
+    particles: 4
+    baseLength: 2
+length: -30
+    lifetime: 15
+lenFrom: 4
+lenTo: 0
+strokeFrom: 1.5
+strokeTo: 0
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: -30
+interp: circleOut
+sizeInterp: linear
+}
+smokeEffect: none
+    type: RailBulletType
+    damage: 110
+      buildingDamageMultiplier: 1.2
+    pierce: true
+    length: 35
+    width: 7
+    height: 6
+    lifetime: 15
+sprite: nexus-mod-slash
+status: uranium-decay
+statusDuration: 100
+trailRotation: true
+pierceEffect: {
+    type: ParticleEffect
+line: true
+    particles: 4
+    baseLength: 0
+length: 20
+    lifetime: 30
+lenFrom: 3
+lenTo: 1
+strokeFrom: 1.6
+strokeTo: 0
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: 70
+interp: circleOut
+}
+pointEffect: {
+    type: ParticleEffect
+line: false
+    particles: 1
+    baseLength: 0
+length: 0
+    lifetime: 30
+sizeFrom: 4.5
+sizeTo: 0
+useRotation: true
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: 0
+offset: -90
+interp: circleOut
+useRotation: true
+sizeInterp: pow5Out
+region: nexus-mod-slash
+}
+pointEffectSpace: 6.5
+    }
+  }
+
+ {
+    name: zulfiqar-sword
+    x: 22
+    y: 0
+    rotate: true
+shootSound: microPowerSlash
+minWarmup: 0.9
+shootWarmupSpeed: 0.03
+    rotateSpeed: 1.5
+    reload: 130
+rotationLimit: 20
+shootCone: 50
+ top: false
+    recoil: -10
+shootY: 11
+shoot: {
+type: ShootAlternate
+shots: 2
+barrels: 2
+spread: 6
+}
+parts: [
+{
+type: RegionPart
+suffix: -leftfinger
+mirror: false
+moveX: 1
+moveY: -3
+progess: warmup
+}
+{
+type: RegionPart
+mirror: false
+suffix: -midfinger
+moveX: 0
+moveY: -1.5
+progess: warmup
+}
+{
+type: RegionPart
+mirror: false
+suffix: -rightfinger
+moveX: 2
+moveY: -2
+progess: warmup
+}
+{
+type: RegionPart
+mirror: false
+under: true
+suffix: -blade2
+moveX: 0
+moveY: 5
+progess: warmup
+}
+{
+type: RegionPart
+mirror: false
+under: true
+suffix: -blade1
+moveX: 0
+moveY: 5
+progess: recoil
+}
+]
+    bullet: {
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+  type: ParticleEffect
+line: true
+    particles: 6
+    baseLength: 4
+length: -45
+    lifetime: 25
+lenFrom: 7
+lenTo: 0
+strokeFrom: 2.2
+strokeTo: 0
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: -35
+interp: circleOut
+sizeInterp: linear
+}
+{
+  type: ParticleEffect
+    particles: 5
+    baseLength: 5
+length: -30
+    lifetime: 45
+sizeFrom: 3.2
+sizeTo: 0
+colorFrom: beddb550
+colorTo: 4a694050
+    cone: -60
+interp: pow5Out
+sizeInterp: pow2In
+}
+]
+}
+smokeEffect: none
+    damage: 350
+  recoil: -2
+      buildingDamageMultiplier: 1.2
+status: uranium-decay
+statusDuration: 330
+    pierceCap: 5
+pierceBuilding: true
+    width: 15
+    height: 20
+sprite: nexus-mod-powerslash
+frontColor: dbffa1
+backColor: 9dff00
+trailInterval: 1
+trailRotation: true
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+line: true
+    particles: 3
+    baseLength: 0
+length: -20
+    lifetime: 25
+lenFrom: 5
+lenTo: 0
+strokeFrom: 2
+strokeTo: 1
+    colorFrom: dbffa1
+    colorTo: 9dff00
+interp: circleOut
+cone: -60
+}
+{
+    type: ParticleEffect
+line: false
+    particles: 1
+    baseLength: 0
+length: 0
+    lifetime: 50
+sizeFrom: 6.2
+sizeTo: 0
+useRotation: true
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: 0
+offset: -90
+interp: circleOut
+useRotation: true
+sizeInterp: pow2In
+region: nexus-mod-powerslash
+}
+]
+}
+    lifetime: 5
+speed: 12
+bulletInterval: 1
+intervalBullets: 2
+intervalRandomSpread: 50
+despawnEffect: none
+despawnHit: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+line: true
+    particles: 6
+    baseLength: 0
+length: 30
+    lifetime: 40
+lenFrom: 5
+lenTo: 1
+strokeFrom: 2.2
+strokeTo: 0
+    colorFrom: dbffa1
+    colorTo: 9dff00
+    cone: 80
+interp: circleOut
+}
+{
+type: WaveEffect
+colorFrom: 9dff00
+colorTo: 9dff00
+sizeTo: 25
+lifetime: 25
+interp: pow5Out
+}
+]
+}
+intervalBullet: {
+type: ArtilleryBulletType
+    damage: 12
+status: uranium-decay
+statusDuration: 60
+splashDamage: 35
+splashDamageRadius: 20
+    frontColor: dbffa1
+    backColor: 9dff00
+trailColor: 9dff00
+    width: 10
+    height: 11
+    lifetime: 40
+speed: 4
+despawnEffect: none
+despawnHit: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+colorFrom: beddb550
+colorTo: 4a694050
+sizeFrom: 3.4
+sizeTo: 0
+length: 23
+lifetime: 45
+particles: 4
+interp: pow10Out
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+colorFrom: dbffa1
+colorTo: 9dff00
+sizeFrom: 2.5
+sizeTo: 0
+length: 20
+lifetime: 30
+particles: 4
+interp: circleOut
+sizeInterp: linear
+}
+{
+type: WaveEffect
+colorFrom: 9dff00
+colorTo: 9dff00
+sizeTo: 23
+lifetime: 30
+interp: pow5Out
+}
+]
+}
+}
+    }
+  }
+]
+abilities: [
+{
+type: RegenAbility
+amount: 7.5
+}
+]
+
+

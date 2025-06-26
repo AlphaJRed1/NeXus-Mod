@@ -1,0 +1,37 @@
+Name: Vion Fabricator
+description: Fabricates the Tier 1 Vion, Paragon.
+type: UnitFactory
+size: 4
+scaledHealth: 80
+armor: 5
+configurable: false
+regionSuffix: -mega
+consumes: {
+  power: 6.5
+}
+plans: [
+  {
+    unit: paragon
+    time: 1800
+    requirements: [
+	silicon/50
+	vionquartz/12
+    ]
+  }
+]
+requirements: [
+silicon/150
+gigantion-alloy/50
+tungsten/150
+]
+research: {
+  parent: vion-path
+  objectives: [
+    {
+      type: OnSector
+      preset: maze-of-gibberish
+    }
+  ]
+}
+category: units
+researchCostMultiplier: 0.5

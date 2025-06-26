@@ -2,12 +2,12 @@ Name: Sanction
 description: A giant flying unit, equipped with missile launchers, lightning cannons, and minigun mounts, supporting nearby units with status effects and a forcefield, as well as spawning in Novas.
 type: flying
 flying: true
-health: 15500
+health: 15200
 armor: 9
-speed: 1.5
-rotateSpeed: 2.2
-drag: 0.03
-accel: 0.06
+speed: 1.2
+rotateSpeed: 2
+drag: 0.01
+accel: 0.03
 hitSize: 20
 engineOffset: 25
 engineSize: 7
@@ -28,7 +28,7 @@ shootCone: 360
   mirror: true
   top: false
 layerOffset: -0.0001
-  reload: 65
+  reload: 75
   recoil: 3
 shoot: {
 type: ShootAlternate
@@ -48,7 +48,8 @@ barrels: 4
       splashDamageRadius: 20
       despawnEffect: hitLaser
       smokeEffect: hitLaser
-      homingPower: 0.3
+      homingPower: 0.06
+	homingDelay: 5
       homingRange: 100
       hitEffect: none
       frontColor: ffffff
@@ -57,7 +58,6 @@ barrels: 4
       lightColor: 84f591
       weaveMag: 2
       weaveScale: 6
-
     }
   }
 
@@ -109,12 +109,12 @@ barrels: 2
 }
   shootSound: lasershoot
     bullet: {
-      damage: 55
+      damage: 15
       speed: 6
       lifetime: 30
       collidesTeam: true
       healPercent: 1.5
-      width: 7
+      width: 8
       height: 13
   pierceCap: 2
       despawnEffect: hitBulletColor
@@ -138,11 +138,11 @@ trailEffect: hitLaser
   spacing: 0
   x: 15
   y: -1
-  reload: 20
+  reload: 35
   recoil: 1
   bullet: {
   type: LightningBulletType
-  damage: 22
+  damage: 25
   lightningLength: 16
     collidesTeam: true
     healPercent: 2
@@ -159,11 +159,11 @@ trailEffect: hitLaser
   spacing: 0
   x: 7
   y: 15
-  reload: 20
+  reload: 30
   recoil: 1
   bullet: {
   type: LightningBulletType
-  damage: 22
+  damage: 25
   lightningLength: 16
     collidesTeam: true
     healPercent: 2
@@ -222,8 +222,8 @@ sides: 4
 {
 type: StatusFieldAbility
 effect: overdrive
-range: 100
-duration: 200
+range: 120
+duration: 300
 reload: 400
 }
 ]
