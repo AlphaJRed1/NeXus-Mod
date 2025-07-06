@@ -7,6 +7,23 @@ hasItems: false
 craftTime: 120
 baseEfficiency: 0
 attribute: nitrogenous
+craftEffect: {
+effect: {
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 1
+    sizeTo: 5
+    baseLength: 1
+length: 20
+    lifetime: 90
+    colorFrom: becbd6
+    colorTo: becbd605
+    cone: 50
+}
+amount: 4
+rotationSpacing: 45
+lengthOffset: 5
+}
 maxBoost: 2
 drawer: {
 type: DrawMulti

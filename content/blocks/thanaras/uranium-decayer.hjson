@@ -11,7 +11,20 @@ drawers: [
 {
 type: DrawDefault
 }
+{
+type: DrawSoftParticles
+color: c0ecff50
+color2: 87ceeb50
+particles: 12
+particleSize: 1
+rotateScl: 3
+particleRad: 1
+}
 ]
+}
+craftEffect: {
+type: WrapEffect
+effect: dynamicSpikes
 }
 consumes: {
 power: 1.2

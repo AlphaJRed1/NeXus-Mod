@@ -58,6 +58,7 @@ strokeFrom: 1.7
 strokeTo: 0.5
 pointyScaling: 1.1
 damage: 25
+sprite: nexus-mod-laserthing
 knockback: -2
 status: freezing
 statusDuration: 200

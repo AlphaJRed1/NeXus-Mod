@@ -5,6 +5,51 @@ size: 3
 hasLiquids: true
 hasItems: true
 craftTime: 180
+updateEffect: {
+ type: ParticleEffect
+    particles: 2
+    sizeFrom: 1
+    sizeTo: 4.5
+    baseLength: 0
+length: 6
+    lifetime: 50
+    colorFrom: becbd670
+    colorTo: becbd605
+    cone: 360
+}
+craftEffect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 5
+    sizeFrom: 1
+    sizeTo: 5
+    baseLength: 0
+length: 20
+    lifetime: 100
+    colorFrom: becbd670
+    colorTo: becbd605
+    cone: 360
+	interp: pow2Out
+sizeInterp: pow5Out
+}
+{
+ type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 10
+length: 5
+    lifetime: 60
+    colorFrom: becbd670
+    colorTo: becbd650
+    cone: 360
+	interp: circleOut
+sizeInterp: linear
+}
+]
+}
 drawer: {
 type: DrawMulti
 drawers: [
@@ -39,7 +84,7 @@ carbon/0.15
 }
 }
 requirements: [
-nickel/135
+nickel/125
 titanium/80
 silicon/50
 ]

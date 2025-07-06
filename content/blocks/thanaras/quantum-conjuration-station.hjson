@@ -7,6 +7,10 @@ hasItems: true
 hasLiquids: true
 itemCapacity: 30
 craftTime: 1
+updateEffect: {
+}
+craftEffect: {
+}
 drawer: {
 type: DrawMulti
 drawers: [

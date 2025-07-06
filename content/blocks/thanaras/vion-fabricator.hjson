@@ -28,7 +28,7 @@ research: {
   parent: vion-path
   objectives: [
     {
-      type: OnSector
+      type: SectorComplete
       preset: maze-of-gibberish
     }
   ]

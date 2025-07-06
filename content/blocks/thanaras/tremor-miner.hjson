@@ -10,6 +10,57 @@ arrows: 2
 itemCapacity: 20
 research: impact-miner
 liquidBoostIntensity: 1.5
+drillEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+    lifetime: 45
+    rotation: 0
+    sizeFrom: 0
+    sizeTo: 20
+    strokeFrom: 2.2
+    strokeTo: 0
+    colorFrom: c3c3c3
+    colorTo: c3c3c3
+}
+{
+    type: ParticleEffect
+    particles: 12
+    sizeFrom: 0
+    sizeTo: 5.5
+    baseLength: 6
+length: 25
+    lifetime: 80
+interp: circleOut
+    colorFrom: 92959d
+    colorTo: 4e525c05
+    cone: 360
+}
+{
+type: RadialEffect
+effect: {
+ type: ParticleEffect
+line: true
+    particles: 4
+strokeFrom: 2.2
+strokeTo: 0
+lenFrom: 5
+lenTo: 3
+    baseLength: 0
+length: 25
+    lifetime: 60
+    colorFrom: becbd605
+    colorTo: becbd670
+    cone: 50
+}
+amount: 4
+rotationSpacing: 90
+lengthOffset: 3
+}
+]
+}
+
 consumes: {
 power: 3.2
 liquid: {

@@ -7,7 +7,48 @@ rotate: true
 invertFlip: true
 regionRotated1: 3
 hasItems: true
-craftTime: 120
+craftTime: 20
+craftEffect: {
+type: MultiEffect
+effects: [
+{
+type: RadialEffect
+effect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 6
+    sizeTo: 0.2
+    baseLength: 30
+length: -30
+    lifetime: 60
+    colorFrom: becbd605
+    colorTo: becbd670
+    cone: 60
+}
+amount: 4
+rotationSpacing: 90
+lengthOffset: 2
+}
+{
+type: RadialEffect
+effect: {
+ type: ParticleEffect
+    particles: 3
+    sizeFrom: 6
+    sizeTo: 0.2
+    baseLength: 25
+length: -25
+    lifetime: 60
+    colorFrom: becbd605
+    colorTo: becbd670
+    cone: 60
+}
+amount: 4
+rotationSpacing: 45
+lengthOffset: 2
+}
+]
+}
 liquidOutputDirections: [1, 3]
 liquidCapacity: 40
 drawer: {
@@ -24,6 +65,14 @@ drawLiquid: nitrogen
 {
 type: DrawLiquidTile
 drawLiquid: carbon
+}
+{
+type: DrawSoftParticles
+color: c0ecff50
+color2: 87ceeb50
+particles: 20
+particleSize: 2.2
+particleRad: 10
 }
 {
 type: DrawRegion

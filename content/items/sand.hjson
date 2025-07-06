@@ -1,3 +1,2 @@
-research: {
-parent: nickel
-}
+shownPlanets: [serpulo, erekir, thanaras]
+alwaysUnlocked: true

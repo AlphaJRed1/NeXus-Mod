@@ -7,12 +7,55 @@ hasItems: true
 hasLiquids: true
 craftTime: 120
 updateEffect: generatespark
-craftEffect: generatespark
+craftEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 6
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 1
+length: 15
+    lifetime: 45
+region: nexus-mod-firespark
+    colorFrom: f0ff00
+    colorTo: 9d990045
+    cone: 180
+interp: pow5Out
+sizeInterp: linear
+}
+{
+    type: ParticleEffect
+    particles: 10
+    sizeFrom: 2.5
+    sizeTo: 6
+    baseLength: 8
+length: 20
+    lifetime: 90
+    colorFrom: 877f78
+    colorTo: 45443905
+    cone: 360
+interp: circleOut
+sizeInterp: pow2In
+}
+]
+
+}
 drawer: {
 type: DrawMulti
 drawers: [
 {
 type: DrawDefault
+}
+{
+type: DrawSoftParticles
+color: c0ecff50
+color2: 87ceeb50
+particles: 15
+particleSize: 2
+rotateScl: 3
+particleRad: 3
 }
 ]
 }

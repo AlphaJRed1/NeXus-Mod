@@ -8,6 +8,7 @@ gas: true
 color: 9451db
 gasColor: 9451db
 research: nitrogen
+planet: thanaras
 hiddenOnPlanets: [serpulo, erekir]
 effect: soul-drain
 statusDuration: 300

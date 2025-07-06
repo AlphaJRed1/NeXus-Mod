@@ -8,7 +8,41 @@ hasPower: true
 liquidCapacity: 30
 itemDuration: 300
 powerProduction: 31.5
-generateEffect: generatespark
+updateEffect: generatespark
+generateEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 2.5
+    sizeTo: 0
+    baseLength: 1
+length: 15
+    lifetime: 45
+region: nexus-mod-firespark
+    colorFrom: f0ff00
+    colorTo: 9d990045
+    cone: 180
+interp: pow5Out
+sizeInterp: linear
+}
+{
+    type: ParticleEffect
+    particles: 8
+    sizeFrom: 2.5
+    sizeTo: 6
+    baseLength: 8
+length: 20
+    lifetime: 90
+    colorFrom: 877f78
+    colorTo: 45443905
+    cone: 200
+interp: circleOut
+sizeInterp: pow5In
+}
+]
+}
 drawer: {
 type: DrawMulti
 drawers: [

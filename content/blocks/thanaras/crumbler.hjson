@@ -6,7 +6,7 @@ hasPower: true
 hasItems: true
 craftTime: 210
 updateEffect: generatespark
-craftEffect: generatespark
+craftEffect: flakExplosion
 drawer: {
 type: DrawMulti
 drawers: [

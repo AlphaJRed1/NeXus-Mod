@@ -8,7 +8,63 @@ hasLiquids: true
 craftTime: 90
 itemCapacity: 30
 updateEffect: generatespark
-craftEffect: generatespark
+craftEffect: {
+type: MultiEffect
+effects: [
+{
+    type: ParticleEffect
+    particles: 10
+    sizeFrom: 5
+    sizeTo: 0
+    baseLength: 2
+length: 25
+    lifetime: 80
+    colorFrom: 877f78
+    colorTo: 45443905
+    cone: 360
+interp: pow2Out
+sizeInterp: pow5In
+}
+{
+type: RadialEffect
+effect: {
+type: MultiEffect
+effects: [
+{
+ type: ParticleEffect
+    particles: 5
+    sizeFrom: 5
+    sizeTo: 0
+    baseLength: 2.5
+length: 25
+    lifetime: 110
+    colorFrom: becbd6
+    colorTo: becbd670
+    cone: 60
+}
+{
+    type: ParticleEffect
+    particles: 5
+    sizeFrom: 3
+    sizeTo: 0
+    baseLength: 1
+length: 20
+    lifetime: 70
+region: nexus-mod-firespark
+    colorFrom: f0ff00
+    colorTo: 9d990045
+    cone: 50
+interp: pow5Out
+sizeInterp: linear
+}
+]
+}
+amount: 4
+rotationSpacing: 90
+lengthOffset: 4.5
+}
+]
+}
 drawer: {
 type: DrawMulti
 drawers: [

@@ -1,0 +1,36 @@
+Type: BeamNode
+Name: Vionic Power Pod
+description: pending
+size: 2
+scaledHealth: 80
+armor: 5
+range: 30
+pulseMag: 0.15
+pulseScl: 8.5
+laserWidth: 0.5
+hasPower: true
+laserColor1: ffd6f6
+laserColor2: ff7ae4
+powerCapacity: 166.7
+outputsPower: true
+consumesPower: true
+consumes: {
+  powerBuffered: 3000
+}
+requirements: [
+nitinol/20
+silicon/20
+gigantion-alloy/8
+]
+category: power
+research: {
+  parent: vion-path
+  objectives: [
+    {
+      type: SectorComplete
+      preset: maze-of-gibberish
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 2.5

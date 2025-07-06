@@ -1,0 +1,33 @@
+type: OverdriveProjector
+name: Potention Amplifier
+description: pending
+size: 3
+scaledHealth: 80
+armor: 5
+reload: 300
+range: 220
+consumes: {
+power: 6.6
+items: {
+items: [
+vionquartz/1
+]
+}
+}
+hasBoost: false
+speedBoost: 2
+baseColor: ff71e2
+requirements: [
+gigantion-alloy/45
+tungsten/100
+depleted-uranium/35
+silicon/100
+]
+category: effect
+planet: thanaras
+research: {
+  parent: vionic-power-pod
+  objectives: [
+  ]
+}
+researchCostMultiplier: 0.8

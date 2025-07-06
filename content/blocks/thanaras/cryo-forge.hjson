@@ -20,6 +20,21 @@ type: DrawLiquidTile
 drawLiquid: nitrogen
 }
 {
+type: DrawBubbles
+color: d0eaff
+amount: 10
+spread: 5
+radius: 3.2
+}
+{
+type: DrawSoftParticles
+color: c0ecff50
+color2: 87ceeb50
+particles: 25
+particleSize: 2.5
+rotateScl: 2.5
+}
+{
 type: DrawDefault
 }
 ]
