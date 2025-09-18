@@ -1,0 +1,221 @@
+type: ItemTurret
+Name: Ischyros
+description: pending. work in progress.
+size: 5
+scaledHealth: 255
+range: 350
+targetGround: true
+targetAir: true
+reload: 60
+shootY: 2
+hasItems: true
+shootWarmupSpeed: 0.05
+minWarmup: 0.95
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.25
+}
+shootSound: vionCharge
+recoil: 0
+cooldownTime: 150
+outlineColor: 101220
+inaccuracy: 0
+consumes: {
+power: 10.3
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawTurret
+outlineColor: 101220
+basePrefix: depleted-
+parts: [
+    {
+        suffix : -back
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 1
+         moveY: -1
+         moveRot: -10
+	recoilIndex: 0
+         progress: warmup
+          x: 0
+          y: 0
+    }
+    {
+        suffix : -arm
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 1.2
+         moveY: 2
+         moveRot: -15
+         progress: warmup
+          x: 0
+          y: 0
+    }
+   {
+        suffix : -cover
+        type : RegionPart
+         mirror: false
+         under: false
+          x: 0
+          y: 0
+    }
+]
+}
+{
+type: DrawCrucibleFlame
+flameColor: dd149980
+midColor: ffaddf
+flameRad: 5
+circleSpace: 8
+alpha: 0.5
+rotateScl: 30
+particleSize: 7
+}
+]
+}
+ammoTypes: {
+  vionquartz: {
+continuous: true
+    damage: 1
+speed: 0
+collides: false
+lifetime: 41
+bulletInterval: 10
+intervalBullets: 1
+intervalRandomSpread: 0
+intervalBullet: {
+fragBullets: 1
+fragRandomSpread: 0
+lifetime: 1
+damage: 2
+type: LaserBulletType
+status: unmoving
+length: 350
+width: 10
+despawnSound: microZappers
+fragVelocityMin: 1
+fragBullet: {
+frontColor: ffaddf
+backColor: dd1499
+hitColor: dd1499
+speed: 8.5
+lifetime: 40
+width: 11
+height: 20
+damage: 85
+trailInterval: 1
+    trailEffect: {
+ type: ParticleEffect
+    particles: 2
+sizeFrom: 2
+sizeTo: 1
+    length: 5
+    baseLength: 1
+    lifetime: 30
+  interp: pow5Out
+sizeInterp: linear
+    colorFrom: ffb6f0
+    colorTo: dd149905
+    cone: -20
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+effects: [
+{
+ type: ParticleEffect
+    particles: 8
+    sizeFrom: 1.2
+    sizeTo: 0
+    length: 6
+    baseLength: 10
+    lifetime: 120
+  interp: circleOut
+sizeInterp: pow2In
+    colorFrom: ffaddf
+    colorTo: ffb6f0
+    cone: 360
+sprite: shell
+}
+{
+type: WaveEffect
+    lifetime: 10
+    rotation: 0
+    sizeFrom: 1
+    sizeTo: 23
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: ffb6f0
+    colorTo: dd1499
+interp: linear
+}
+
+]
+}
+}
+}
+fragBullets: 1
+fragRandomSpread: 0
+fragVelocityMin: 1
+hitSound: vionBlast
+fragBullet: {
+hitSound: vionBoom
+lifetime: 80
+frontColor: ffaddf
+backColor: dd1499
+hitColor: dd1499
+shrinkY: 0
+speed: 4.25
+width: 25
+height: 25
+pierce: true
+pierceBuilding: true
+damage: 170
+trailInterval: 1
+    trailEffect: {
+ type: ParticleEffect
+    particles: 4
+sizeFrom: 4
+sizeTo: 0
+    length: 11
+    baseLength: 2
+    lifetime: 65
+  interp: pow2Out
+sizeInterp: pow5In
+    colorFrom: ffb6f0
+    colorTo: dd149950
+    cone: -90
+}
+}
+  }
+}
+requirements: [
+plastanium/85
+gigantion-alloy/80
+silicon/2000
+]
+category: turret
+research: {
+  parent: dunamis
+  objectives: [
+    {
+      type: OnSector
+      preset: tryphoton-research-facility
+    }
+  ]
+}
+researchCost: [
+gigantion-alloy/400
+plastanium/1500
+silicon/2100
+]
+planet: thanaras
