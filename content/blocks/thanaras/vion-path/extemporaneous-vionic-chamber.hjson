@@ -1,0 +1,53 @@
+Name: Extemporaneous Vionic Chamber
+description: WIP
+type: ConsumeGenerator
+size: 5
+hasItems: false
+hasLiquids: true
+hasPower: true
+liquidCapacity: 50
+itemDuration: 10
+powerProduction: 1000
+generateEffect: {
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawDefault
+}
+{
+type: DrawWarmupRegion
+}
+]
+}
+consumes: {
+items: {
+items: [
+vionquartz/2
+    ]
+}
+}
+requirements: [
+silicon/750
+titanium/1500
+gigantion-alloy/550
+nitinol/750
+nickel/1800
+]
+category: power
+research: {
+  parent: vionic-power-pod
+  objectives: [
+    {
+      type: SectorComplete
+      preset: cratorial-super-quarry
+    }
+  ]
+}
+researchCostMultiplier: 0.5
+planet: thanaras

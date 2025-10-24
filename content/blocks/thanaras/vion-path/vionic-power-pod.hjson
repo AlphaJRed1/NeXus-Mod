@@ -9,13 +9,13 @@ pulseMag: 0.15
 pulseScl: 8.5
 laserWidth: 0.5
 hasPower: true
-laserColor1: ffd6f6
+laserColor1: dd1499
 laserColor2: ff7ae4
 powerCapacity: 166.7
 outputsPower: true
 consumesPower: true
 consumes: {
-  powerBuffered: 3000
+  powerBuffered: 8300
 }
 requirements: [
 nitinol/20

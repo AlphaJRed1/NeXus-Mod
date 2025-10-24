@@ -1,0 +1,34 @@
+Type: Battery
+Name: Vionic Power Vault
+description: A large, towering battery that stores an insane amount of power. One of these fully charged could power a small sector for days.
+size: 6
+scaledHealth: 250
+armor: 20
+hasPower: true
+emptyLightColor: f8c266
+fullLightColor: fb9567
+outputsPower: true
+consumesPower: true
+consumes: {
+  powerBuffered: 9000000
+}
+requirements: [
+nitinol/1500
+silicon/2000
+tungsten/2500
+titanium/4000
+plastanium/450
+gigantion-alloy/600
+]
+category: power
+research: {
+  parent: vionic-power-pod
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+planet: thanaras
+researchCostMultiplier: 0.5

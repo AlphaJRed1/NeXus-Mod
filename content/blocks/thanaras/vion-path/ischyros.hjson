@@ -130,7 +130,6 @@ sizeInterp: linear
 hitEffect: {
 type: MultiEffect
 effects: [
-effects: [
 {
  type: ParticleEffect
     particles: 8
@@ -158,7 +157,6 @@ type: WaveEffect
     colorTo: dd1499
 interp: linear
 }
-
 ]
 }
 }

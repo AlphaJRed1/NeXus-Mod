@@ -1,0 +1,56 @@
+type: StackConveyor
+name: Vionic Rail
+description: Transports items in small but quick packages. Speed can be increased drastically with power.
+health: 150
+armor: 7
+itemCapacity: 4
+speed: 3.5
+recharge: 10
+conductivePower: true
+glowColor: ffa3ec
+loadEffect: {
+    type: ParticleEffect
+    particles: 4
+    sizeFrom: 1
+    sizeTo: 0
+    length: 8
+    baseLength: -8
+    lifetime: 15
+   interp: pow2In
+    colorFrom: ffa3ec10
+    colorTo: ffa3ec
+    cone: 360
+}
+unloadEffect: {
+    type: ParticleEffect
+    particles: 4
+    sizeFrom: 0
+    sizeTo: 1
+   interp: pow10Out
+    length: 8
+    baseLength: 0
+    lifetime: 15
+    colorFrom: ffa3ec
+    colorTo: ffa3ec10
+    cone: 360
+
+}
+baseEfficiency: 0.1
+consumes: {
+power: 0.018
+}
+requirements: [
+nitinol/1
+gigantion-alloy/1
+]
+category: distribution
+research: {
+  parent: vion-path
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+planet: thanaras

@@ -1,0 +1,37 @@
+name: Abruptor Quarry
+type: BurstDrill
+description: WIP
+size: 5
+armor: 8
+scaledHealth: 100
+category: production
+tier: 12
+drillTime: 40
+invertedTime: 20
+arrows: 5
+itemCapacity: 80
+research: {
+  parent: vion-path
+  objectives: [
+    {
+      type: SectorComplete
+      preset: luminescent-tendrils
+    }
+  ]
+}
+consumes: {
+power: 10
+liquids: {
+liquids: [
+tryplasma/0.3
+]
+}
+}
+requirements: [
+nitinol/250
+titanium/350
+tungsten/330
+silicon/330
+gigantion-alloy/200
+]
+planet: thanaras
